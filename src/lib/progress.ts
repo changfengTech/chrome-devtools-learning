@@ -6,9 +6,16 @@ export interface LessonProgress {
   note: string;
   hints: number;
 }
+export interface ChapterProgress {
+  note: string;
+  scores: number[];
+  assisted: boolean;
+  completedAt?: string;
+}
 export interface LearningState {
   version: 1;
   records: Record<string, LessonProgress>;
+  chapters?: Record<string, ChapterProgress>;
 }
 export const emptyState = (): LearningState => ({ version: 1, records: {} });
 
@@ -69,6 +76,45 @@ export function parseProgress(
       record.challengeAssisted = item.challengeAssisted;
     }
     records[id] = record;
+  }
+  if (value.chapters !== undefined) {
+    if (
+      !value.chapters ||
+      typeof value.chapters !== "object" ||
+      Array.isArray(value.chapters)
+    )
+      throw new Error("章末记录格式不正确。");
+    const chapters: Record<string, ChapterProgress> = {};
+    for (const [id, raw] of Object.entries(value.chapters)) {
+      const c = raw as ChapterProgress;
+      if (
+        !["network", "application"].includes(id) ||
+        !c ||
+        typeof c.note !== "string" ||
+        c.note.length > 4000 ||
+        typeof c.assisted !== "boolean" ||
+        !Array.isArray(c.scores) ||
+        c.scores.length !== 5 ||
+        c.scores.some(
+          (score) => !Number.isInteger(score) || score < 0 || score > 2,
+        )
+      )
+        throw new Error("章末自评记录格式不正确。");
+      if (
+        c.completedAt !== undefined &&
+        (typeof c.completedAt !== "string" ||
+          !/^\d{4}-\d{2}-\d{2}T/.test(c.completedAt) ||
+          !Number.isFinite(Date.parse(c.completedAt)))
+      )
+        throw new Error("章末完成时间无效。");
+      chapters[id] = {
+        note: c.note,
+        scores: c.scores,
+        assisted: c.assisted,
+        ...(c.completedAt ? { completedAt: c.completedAt } : {}),
+      };
+    }
+    return { version: 1, records, chapters };
   }
   return { version: 1, records };
 }

@@ -4,6 +4,7 @@ import {
   emptyState,
   parseProgress,
   type LessonProgress,
+  type ChapterProgress,
 } from "../lib/progress";
 
 const key = "devtools-lab.learning.v1";
@@ -31,6 +32,7 @@ export function useLearning() {
     )
       return;
     state.value = {
+      ...state.value,
       version: 1,
       records: { ...state.value.records, [id]: { ...record(id), ...patch } },
     };
@@ -38,6 +40,36 @@ export function useLearning() {
       localStorage.setItem(key, JSON.stringify(state.value));
     } catch {
       notice.value = "浏览器未能保存进度。当前记录仍在页面中，请导出备份。";
+    }
+  }
+  function chapterRecord(id: string): ChapterProgress {
+    return (
+      state.value.chapters?.[id] || {
+        note: "",
+        scores: [0, 0, 0, 0, 0],
+        assisted: false,
+      }
+    );
+  }
+  function updateChapter(id: string, patch: Partial<ChapterProgress>) {
+    if (!["network", "application"].includes(id)) return;
+    state.value = {
+      ...state.value,
+      chapters: {
+        ...state.value.chapters,
+        [id]: {
+          ...chapterRecord(id),
+          ...patch,
+          ...(patch.note !== undefined || patch.scores !== undefined
+            ? { completedAt: undefined }
+            : {}),
+        },
+      },
+    };
+    try {
+      localStorage.setItem(key, JSON.stringify(state.value));
+    } catch {
+      notice.value = "章末记录暂未保存，请导出备份。";
     }
   }
   function exportRecords() {
@@ -75,6 +107,8 @@ export function useLearning() {
     notice,
     record,
     update,
+    chapterRecord,
+    updateChapter,
     exportRecords,
     importRecords,
     readCount: computed(

@@ -1,0 +1,5 @@
+{
+  "networkCondition": "本地商城 4174/4175 已停止，worker fetch 实际连接失败",
+  "product": "本次离线/在线读取：版本 2，cache-storage-fallback。\n请在 Network 核对 from ServiceWorker 与离线条件，恢复 Online 后再报告。",
+  "navigation": "当前为本会话离线副本"
+}

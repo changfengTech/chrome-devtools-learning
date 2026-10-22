@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/lessons-19%20%2F%2063-245de8?style=flat-square" alt="19 节可实战，共规划 63 节" />
+  <img src="https://img.shields.io/badge/lessons-31%20%2F%2063-245de8?style=flat-square" alt="31 节可实战，共规划 63 节" />
   <img src="https://img.shields.io/badge/Vue-3-42b883?style=flat-square&amp;logo=vuedotjs&amp;logoColor=white" alt="Vue 3" />
   <img src="https://img.shields.io/badge/TypeScript-6-3178c6?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="TypeScript 6" />
   <img src="https://img.shields.io/badge/Vite-8-646cff?style=flat-square&amp;logo=vite&amp;logoColor=white" alt="Vite 8" />
@@ -39,7 +39,7 @@
 - **换条件独立排查**：挑战更换数据和故障配置，要求原因、证据与验证方案相互对应。
 - **留下自己的方法**：三级提示按需展开；阅读、练习、挑战分别记录，笔记和辅助标记保存在本机，可导入导出。
 
-> 当前是**本地学习版**。第 **01–18、21** 课共 **19 节**已开放实战；其余 **44 节**显示为课程规划。完整范围为 55 节主线、8 节专题及另列的 8 个面板章末挑战，正在分阶段开发。
+> 当前是**本地学习版**。第 **01–26、35–39** 课共 **31 节**已开放实战；其余 **32 节**显示为课程规划。完整范围为 55 节主线、8 节专题及另列的 8 个面板章末挑战，正在分阶段开发。
 
 ## 看看它的样子
 
@@ -63,6 +63,14 @@
     <td><strong>商城实战：用实际结果核对</strong><br />复现故障，检查节点、日志和源码，用同一输入验证修改。</td>
   </tr>
 </table>
+
+### 从真实请求走到持久状态
+
+[![CORS 教学模型：分别验证预检与实际响应](docs/images/network-cors.png)](docs/images/network-cors.png)
+
+[![Cache Storage 实战：商城服务不可用时，worker 返回缓存版本 2](docs/images/application-cache.png)](docs/images/application-cache.png)
+
+Network / Application 章末任务起始隐藏课号和操作步骤；完成案例检查后填写报告与五维自评。自评达到门槛才记录完成，不将自评分数称为自动能力认证。
 
 截图来自当前本地版本，点击可查看原图。教学模型与真实商城在界面中分别标注。
 
@@ -102,8 +110,9 @@ pnpm dev
 | --- | --- | --- |
 | 教程 | [127.0.0.1:5173](http://127.0.0.1:5173/) | 课程、交互模型、提示、挑战与学习记录 |
 | 商城 | [127.0.0.1:4174/shop/](http://127.0.0.1:4174/shop/) | 独立实验页面与本地 HTTP 服务 |
+| 跨源同伴 | `127.0.0.1:4175` | CORS 预检与业务响应，由课程调用 |
 
-`pnpm dev` 同时启动两项服务，只监听本机回环地址；`Ctrl+C` 一起停止。端口被占用时会明确退出，不自动切换到其他端口。
+`pnpm dev` 同时启动三项服务，只监听本机回环地址；`Ctrl+C` 一起停止。端口被占用时会明确退出，不自动切换到其他端口。
 
 ### 3. 完成第一节实战
 
@@ -113,7 +122,7 @@ pnpm dev
 4. 按课程步骤查找证据；手工修改后检查页面，或应用针对性的对照方案。
 5. 回到教程提交观察证据，再生成「独立挑战」，排查新案例并写下复盘。
 
-基础课的会话实验入口为 `/foundations/`，由课程生成。直接访问商城主页适合自由观察；**记录练习与挑战时，请从对应课程准备会话**。
+基础课的会话实验入口为 `/foundations/`，网络与状态课使用 `/labs/<token>/`，由课程生成。直接访问商城主页适合自由观察；**记录练习与挑战时，请从对应课程准备会话**。
 
 ## 每节课怎样展开
 
@@ -129,7 +138,7 @@ pnpm dev
 
 ## 现在可以学什么
 
-### 已开放 · 19 节
+### 已开放 · 31 节
 
 | 章节 | 课次 | 主要练习 |
 | --- | --- | --- |
@@ -137,7 +146,8 @@ pnpm dev
 | Elements | 04–08 | DOM 定位、样式覆盖、网格溢出、遮挡与禁用、名称与标签关联 |
 | Console | 09–12 | 日志过滤、错误与堆栈、iframe 上下文、对象快照与异步计时 |
 | Sources | 13–18 | Source Maps、单步执行、Scope / Watch / Call Stack、条件与事件断点、异常与异步 |
-| Network 样板课 | 21 | Timing：区分响应前等待与主体传输，使用真实慢请求进行对照 |
+| Network | 19–26 | 过滤与 Initiator、请求契约、Timing、瀑布图、HTTP 缓存与 304、CORS、失败恢复、SSE / WebSocket |
+| Application | 35–39 | Cookie、跨标签页存储、IndexedDB 事务、Service Worker 生命周期、Cache Storage 与 Manifest |
 
 基础课各有两种故障配置。引导案例固定，迁移题随机选择配置，并变化价格、数量或 SKU；不同课程使用与其目标相符的检查结果。
 
@@ -146,32 +156,38 @@ pnpm dev
 
 | 课次 | 课程 | 课次 | 课程 |
 | --- | --- | --- | --- |
-| 01 | 认识 DevTools | 10 | 阅读错误与堆栈 |
-| 02 | 用证据排查问题 | 11 | 用表达式验证猜想 |
-| 03 | 管理实验条件 | 12 | 记录可信的值和耗时 |
-| 04 | 从页面定位 DOM | 13 | 找到值得看的源码 |
-| 05 | 为什么样式没生效 | 14 | 暂停与单步执行 |
-| 06 | 看懂布局 | 15 | 检查变量与调用关系 |
-| 07 | 检查状态与事件 | 16 | 只在需要时停下来 |
-| 08 | 页面是否容易使用 | 17 | 从行为追到代码 |
-| 09 | 从日志中找线索 | 18 | 捕获异常与异步问题 |
-| 21 | 慢请求慢在哪里 | | |
+| 01 | 认识 DevTools | 17 | 从行为追到代码 |
+| 02 | 用证据排查问题 | 18 | 捕获异常与异步问题 |
+| 03 | 管理实验条件 | 19 | 找到一次操作的请求 |
+| 04 | 从页面定位 DOM | 20 | 检查请求与响应契约 |
+| 05 | 为什么样式没生效 | 21 | 慢请求慢在哪里 |
+| 06 | 看懂布局 | 22 | 谁发起请求，为什么现在才发 |
+| 07 | 检查状态与事件 | 23 | 为什么总是旧数据 |
+| 08 | 页面是否容易使用 | 24 | 浏览器为什么拦截请求 |
+| 09 | 从日志中找线索 | 25 | 弱网、断网和资源阻断 |
+| 10 | 阅读错误与堆栈 | 26 | 检查持续连接 |
+| 11 | 用表达式验证猜想 | 35 | 登录状态与 Cookie |
+| 12 | 记录可信的值和耗时 | 36 | Local 与 Session Storage |
+| 13 | 找到值得看的源码 | 37 | 检查 IndexedDB |
+| 14 | 暂停与单步执行 | 38 | Service Worker 如何接管请求 |
+| 15 | 检查变量与调用关系 | 39 | 离线资源与应用信息 |
+| 16 | 只在需要时停下来 |  |  |
 
-第 01–18 课的逐课目标、操作、故障合同、三级提示与参考答案，见 [详细脚本](docs/FOUNDATIONS-01-18.md)；第 21 课见 [样板脚本](docs/LESSON-21.md)。
+第 01–18 课见 [基础课脚本](docs/FOUNDATIONS-01-18.md)；第 19–26、35–39 课见 [网络与状态合同](docs/NETWORK-APPLICATION.md)，其中第 21 课沿用 [样板脚本](docs/LESSON-21.md)。均包含目标、操作、故障合同、提示与参考答案。
 
 </details>
 
-### 后续 · 44 节与章末挑战
+### 后续 · 32 节与其余章末挑战
 
 完整规划覆盖八大面板：Elements、Console、Sources、Network、Performance、Memory、Application、Lighthouse。
 
-- [ ] 补齐 Network 与 Application：请求契约、缓存、CORS、弱网、持续连接、存储及 Service Worker。
+- [x] Network 与 Application：13 节完整实战及两个面板章末任务已交付。
 - [ ] Performance 与渲染：有效录制、火焰图、交互响应、布局偏移、Coverage 与 Rendering。
 - [ ] Memory 与回归：堆快照、分配、Retainers、Detached DOM，以及 Recorder。
 - [ ] Lighthouse 与辅助工具：审计、Device Mode、Issues、Animations、Overrides 与 Changes。
-- [ ] 三个综合实战、八个面板章末挑战，以及 Sensors、真机调试、Media、WebAuthn、CDP 等专题。
+- [ ] 三个综合实战、其余六个面板章末挑战，以及 Sensors、真机调试、Media、WebAuthn、CDP 等专题。
 
-这些是**开发计划**，尚未开放对应完整实验。课内迁移题与面板章末挑战分别设计，不将逐课通过当作章末能力认证。具体顺序见 [开发阶段](docs/ROADMAP.md)，逐课四要素见 [完整目录](docs/CURRICULUM.md)。
+以上未勾选项是**开发计划**，尚未开放对应完整实验。课内迁移题与面板章末挑战分别设计，不将逐课通过当作章末能力认证。具体顺序见 [开发阶段](docs/ROADMAP.md)，逐课四要素见 [完整目录](docs/CURRICULUM.md)。
 
 ## 教程与商城为什么分开运行
 
@@ -189,6 +205,7 @@ flowchart LR
 教程负责教学流程；商城提供可检查的实际页面、事件、日志和请求，不注入教程的 Vue 实例或 HMR。两个源使用不同端口，减少教程本身对实验的干扰。核心实验不需要业务账号、真实交易或外部商品接口。
 
 - **源码可以追进去**：`shop-cart.ts` 实际编译为 JavaScript，并生成含源码的 `.map`。
+- **状态各有边界**：真实 HTTP 缓存、IndexedDB、Cookie、SSE / WebSocket 和 Service Worker 分开观察；worker scope、数据库、键和缓存按会话隔离，清理只处理自己的实验，过期会话也能清理。
 - **故障能够恢复**：商城可恢复当前故障；重新准备会话可重新开始观察。
 - **检查依据说清楚**：自动检查核对会话、请求完成、实验页报告与结构化答案，不读取你的 DevTools 点击；自由笔记用于自查，不靠关键词打理解分。
 
@@ -198,12 +215,12 @@ flowchart LR
 
 | 命令 | 用途 |
 | --- | --- |
-| `pnpm dev` | 同时启动教程 5173 与商城 4174 |
+| `pnpm dev` | 同时启动教程 5173、商城 4174 与跨源服务 4175 |
 | `pnpm build` | 商城 TS 检查与编译、Source Map、Vue 类型检查、生产构建 |
-| `pnpm preview:all` | 同时启动生产预览 4173 与商城 4174 |
+| `pnpm preview:all` | 同时启动生产预览 4173、商城 4174 与跨源服务 4175 |
 | `pnpm test` | 运行 Node 测试，覆盖场景接口、判定、Source Map 与记录校验 |
 | `pnpm docs:curriculum` | 根据课程数据重新生成完整目录 |
-| `pnpm docs:lessons` | 生成 01–18 课详细脚本与实验合同 |
+| `pnpm docs:lessons` | 生成 01–18、19–20、22–26、35–39 共 30 份脚本与共同合同 |
 | `pnpm lab:build` | 修改商城 TS 后重新生成调试业务 JS 与 Source Map |
 | `pnpm lab:type-check` | 单独检查商城业务 TypeScript |
 | `pnpm dev:web` / `pnpm dev:lab` | 分别启动教程和商城 |
@@ -220,27 +237,30 @@ pnpm preview:all
 
 ### 已有的验收证据
 
-- `pnpm build` 与 **16 项自动测试**通过，覆盖 18 课两种配置、错误提交、会话隔离、实际运算、条件注入、Source Map 映射及第 21 课回归。
+- `pnpm build` 与 **28 项自动测试**通过，覆盖基础与网络状态两组配置、错误提交、会话隔离、实际协议、Source Map、记录校验和第 21 课回归。
 - 18 课引导实验在浏览器中连续完成 **3 轮**故障与修复；两种故障配置均已覆盖。
 - 18 课分别检查 320、768、1440 三种宽度，共 **54 项**无整页横向溢出。
 - 真实业务代码已验证暂停、调用栈与单步；记录导入导出、刷新保留、辅助标记和错误导入均有检查。
+- 新增 12 课各完成三轮引导、两组独立挑战与模型操作；13 课及两个章末页面另有 **45 项**响应式检查。HTTP 缓存 / 304、CORS、持续连接、状态与 worker 均有实际证据。
+- 两个章末任务检查低分门槛与记录持久化；实际网络失败时缓存回退通过，资源阻断后收尾与恢复重试通过；生产预览 24 / 25 / 39 全链路通过。
 
-以上为已记录环境的结果。浏览器验收使用应用内 Chromium，准确引擎版本未返回；独立 Chrome 的具体版本及原生面板按钮逐项人工复核仍待补齐。详见 [逐课验收](docs/QA-FOUNDATIONS.md) 与 [实施状态](docs/STATUS.md)。
+以上为已记录环境的结果。浏览器验收使用应用内 Chromium，准确引擎版本未返回；独立 Chrome 的具体版本及原生面板按钮逐项人工复核仍待补齐。详见 [基础课验收](docs/QA-FOUNDATIONS.md)、[网络与状态验收](docs/QA-NETWORK-APPLICATION.md) 与 [实施状态](docs/STATUS.md)。
 
 ## 项目结构
 
 ```text
 chrome-devtools-learning/
 ├── src/
-│   ├── components/            # 课程容器、18 种交互模型、Timing 样板
-│   ├── data/                  # 完整目录与基础课脚本
+│   ├── components/            # 课程容器、30 种交互模型、Timing 与章末任务
+│   ├── data/                  # 完整目录、基础课及网络与状态脚本
 │   ├── composables/           # 学习状态
 │   └── lib/                   # 实验通信与记录校验
 ├── public/lab/
 │   ├── foundation/            # 01–18 课独立商城、TS 与 Source Map
+│   ├── network-state/         # 12 个真实网络与状态实验、会话 worker
 │   └── shop.*                 # 第 21 课网络时序商城
 ├── server/                    # 本地 HTTP 服务、会话与结果判定
-├── scripts/                   # 双服务启动、业务编译与文档生成
+├── scripts/                   # 服务启动、业务编译、QA 与文档生成
 ├── tests/                     # 场景、接口、映射与记录测试
 └── docs/                      # 产品、目录、脚本、路线、验收与截图
 ```
@@ -253,10 +273,11 @@ chrome-devtools-learning/
 | 全部课程目标、演示、实战与挑战 | [63 节完整课程目录](docs/CURRICULUM.md) |
 | 每阶段交付与退出条件 | [开发路线](docs/ROADMAP.md) |
 | 01–18 课的操作、实验合同及参考答案 | [基础课详细脚本](docs/FOUNDATIONS-01-18.md) |
+| 19–26、35–39 课的合同、脚本与章末任务 | [网络与状态详细脚本](docs/NETWORK-APPLICATION.md) |
 | 第 21 课的完整教学设计 | [Network 样板课](docs/LESSON-21.md) |
 | 自动检查边界与章末评分规则 | [验收标准](docs/ACCEPTANCE.md) |
-| 实测了什么、还缺什么 | [基础课验收](docs/QA-FOUNDATIONS.md) · [实施状态](docs/STATUS.md) |
-| 双服务、接口、通信与存储 | [实验架构](docs/ARCHITECTURE.md) |
+| 实测了什么、还缺什么 | [基础课验收](docs/QA-FOUNDATIONS.md) · [网络与状态验收](docs/QA-NETWORK-APPLICATION.md) · [实施状态](docs/STATUS.md) |
+| 三个本地服务、接口、通信与存储 | [实验架构](docs/ARCHITECTURE.md) |
 | 视觉与可读性约定 | [界面设计](docs/DESIGN.md) |
 
 ## 常见问题
@@ -307,7 +328,7 @@ Elements 中的 DOM/CSS 修改是临时实验。刷新、恢复故障或重新�
 
 欢迎通过 [Issues](https://github.com/changfengTech/chrome-devtools-learning/issues) 反馈课程疑问、复现问题和新案例。描述问题时附上课号、Chrome 版本、起始条件、操作步骤、预期与实际结果，通常更容易定位。
 
-课程修改以数据源为准：`src/data/curriculum.json` 管完整目录，`src/data/foundations.json` 管基础课内容，合同补充维护在 `scripts/generate-foundations.mjs`。更新后运行对应文档生成命令；修改业务逻辑时一并核对故障、修复、随机挑战和重置行为。
+课程修改以数据源为准：`src/data/curriculum.json` 管完整目录，`src/data/foundations.json` 管基础课内容，`src/data/network-state.json` 管网络与状态课内容，合同补充维护在 `scripts/generate-foundations.mjs` 与 `scripts/generate-network-state.mjs`。更新后运行对应文档生成命令；修改业务逻辑时一并核对故障、修复、随机挑战和重置行为。
 
 提交前运行 `pnpm build` 与 `pnpm test`，并更新实际受影响的验收记录。新增内容验证通过后再标记「可实战」，让课程状态与真实能力保持一致。
 

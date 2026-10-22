@@ -4,6 +4,7 @@ import { randomUUID, randomInt } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { createFoundationHandler, foundationIds } from "./foundations.mjs";
+import { createNetworkState, networkStateIds } from "./network-state.mjs";
 
 const publicDirectory = fileURLToPath(new URL("../public/", import.meta.url));
 const origins = new Set([
@@ -57,9 +58,11 @@ export function createLabServer({
   fixedMs = 45,
   challengeTtl = 30 * 60_000,
   foundationOptions = {},
+  networkOptions = {},
 } = {}) {
   const challenges = new Map();
   const foundations = createFoundationHandler(foundationOptions);
+  const field = createNetworkState(networkOptions);
   function session(id) {
     const entry = challenges.get(id);
     if (!entry || Date.now() - entry.created > challengeTtl) {
@@ -86,6 +89,8 @@ export function createLabServer({
       response.end(JSON.stringify(data));
     };
     try {
+      if (await field.handle({ request, response, url, json, bodyJson }))
+        return;
       if (request.method === "OPTIONS") {
         response.writeHead(origins.has(origin) ? 204 : 403);
         response.end();
@@ -99,8 +104,8 @@ export function createLabServer({
         json({
           ok: true,
           lesson: "21",
-          lessons: [...foundationIds, "21"],
-          version: 2,
+          lessons: [...foundationIds, "21", ...networkStateIds].sort(),
+          version: 3,
         });
         return;
       }
@@ -259,6 +264,32 @@ export function createLabServer({
       else response.end();
     }
   });
+  field.attach(server);
+  const companion = createServer(async (request, response) => {
+    const url = new URL(request.url || "/", "http://127.0.0.1");
+    const json = (data, status = 200) => {
+      response.writeHead(status, {
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store",
+      });
+      response.end(JSON.stringify(data));
+    };
+    try {
+      if (await field.handle({ request, response, url, json, bodyJson }))
+        return;
+      json({ error: "跨源实验资源不存在" }, 404);
+    } catch {
+      if (!response.headersSent) json({ error: "跨源实验请求格式错误" }, 400);
+      else response.end();
+    }
+  });
+  server.companion = companion;
+  server.on("close", () => {
+    if (companion.listening) {
+      companion.close();
+      companion.closeAllConnections();
+    }
+  });
   return server;
 }
 
@@ -272,6 +303,19 @@ if (
     console.error(`实验服务启动失败：${error.message}`);
     process.exitCode = 1;
   });
+  server.companion.on("error", (error) => {
+    console.error(`跨源服务启动失败：${error.message}`);
+    server.close();
+    process.exitCode = 1;
+  });
+  server.on("error", () => {
+    server.companion.close();
+  });
+  server.companion.listen(
+    Number(process.env.CORS_PORT || 4175),
+    "127.0.0.1",
+    () => console.log("跨源实验：http://127.0.0.1:4175/"),
+  );
   server.listen(port, "127.0.0.1", () =>
     console.log(`商城实验：http://127.0.0.1:${port}/shop/`),
   );

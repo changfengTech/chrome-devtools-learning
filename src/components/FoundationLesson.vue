@@ -2,13 +2,21 @@
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { chapters, type Lesson } from "../data/curriculum";
 import book from "../data/foundations.json";
+import networkBook from "../data/network-state.json";
+import NetworkStateDemo from "./NetworkStateDemo.vue";
 import AppIcon from "./AppIcon.vue";
 import FoundationDemo from "./FoundationDemo.vue";
 import { useLearning } from "../composables/useLearning";
 import { labOrigin, labRequest } from "../lib/lab";
 const props = defineProps<{ lesson: Lesson }>();
 const content = computed(
-  () => book.find((item) => item.id === props.lesson.id)!,
+  () => [...book, ...networkBook].find((item) => item.id === props.lesson.id)!,
+);
+const isNetworkState = computed(() =>
+  networkBook.some((item) => item.id === props.lesson.id),
+);
+const apiBase = computed(() =>
+  isNetworkState.value ? "/api/network-state" : "/api/foundations",
 );
 const learning = useLearning();
 const step = ref(0),
@@ -50,7 +58,7 @@ async function prepare(mode: "practice" | "challenge") {
   busy.value = true;
   feedback.value = "";
   try {
-    const session = await labRequest("/api/foundations/sessions", {
+    const session = await labRequest(`${apiBase.value}/sessions`, {
       lesson: props.lesson.id,
       mode,
     });
@@ -84,7 +92,9 @@ function open(mode: "practice" | "challenge") {
     tutorial: location.origin,
   });
   labWindow = window.open(
-    `${labOrigin}/foundations/?${query}`,
+    isNetworkState.value
+      ? `${labOrigin}/labs/${token}/?${query}`
+      : `${labOrigin}/foundations/?${query}`,
     "devtools-foundation-lab",
   );
   if (!labWindow)
@@ -120,7 +130,7 @@ async function completePractice() {
   }
   busy.value = true;
   try {
-    const checked = await labRequest("/api/foundations/grade", {
+    const checked = await labRequest(`${apiBase.value}/grade`, {
       token: practiceToken.value,
       diagnosis: "a",
       evidence: practiceEvidence.value,
@@ -144,7 +154,7 @@ async function completePractice() {
 async function grade(reveal = false) {
   busy.value = true;
   try {
-    const checked: Result = await labRequest("/api/foundations/grade", {
+    const checked: Result = await labRequest(`${apiBase.value}/grade`, {
       token: challengeToken.value,
       diagnosis: diagnosis.value,
       evidence: evidence.value,
@@ -235,7 +245,12 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
           ><p class="section-kicker">用一个小模型理解关键关系</p>
           <h2>{{ lesson.demo }}</h2>
           <p class="body-copy">{{ content.principle }}</p>
+          <NetworkStateDemo
+            v-if="isNetworkState"
+            :key="`${lesson.id}-${demoKey}`"
+            :lesson="lesson.id" />
           <FoundationDemo
+            v-else
             :key="`${lesson.id}-${demoKey}`"
             :lesson="lesson.id" />
           <div class="foundation-demo-actions">

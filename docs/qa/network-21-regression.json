@@ -1,0 +1,12 @@
+[
+  {
+    "scenario": "waiting",
+    "before": "响应前等待 1207 ms　·　主体传输 1 ms　·　页面请求总用时 1211 ms",
+    "after": "响应前等待 47 ms　·　主体传输 1 ms　·　页面请求总用时 50 ms"
+  },
+  {
+    "scenario": "download",
+    "before": "响应前等待 51 ms　·　主体传输 1170 ms　·　页面请求总用时 1223 ms",
+    "after": "响应前等待 47 ms　·　主体传输 0 ms　·　页面请求总用时 50 ms"
+  }
+]

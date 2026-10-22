@@ -1,0 +1,50 @@
+[
+  {
+    "id": "19",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n录制\nPreserve log\n过滤\n触发搜索导航一次清空模型记录\nFetch /search?q=cup\n实际模型记录 2 条；当前可见 1 条。过滤不删除原始记录。"
+  },
+  {
+    "id": "20",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n数量\n发送错误字段 qty\n库存允许下单\n同时判断 data.ok\nPOST /checkout\\n{\n  \"quantity\": 2\n}\\nHTTP 200\\n{\n  \"ok\": false,\n  \"code\": \"OUT_OF_STOCK\"\n}\n页面判定：未创建订单。请比较 HTTP 与业务状态，而不只看 200。"
+  },
+  {
+    "id": "22",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n调用安排\n无关任务串行\n并行启动\n库存重复调用\n推荐接口耗时 500 ms\n\nrecommendations\n\nhero\n\n主图开始于 0 ms，主图自身耗时固定为 80 ms。解除依赖改变的是起点。"
+  },
+  {
+    "id": "23",
+    "text": "原理实验\n教学模型，不改变浏览器设置\nage 秒\nmax-age 秒\n需要网络验证\nETag 与当前表示一致\nCache-Control: max-age=60\\nETag: \"price-v1\"\\n缓存年龄：90s\n服务器 200：传回新表示。304 通常没有新的响应体；no-cache 表示重新验证。"
+  },
+  {
+    "id": "24",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n跨源端口\nX-Shop-Token 自定义头\n预检允许所需方法与请求头\n实际响应允许当前来源\nfetch\nOPTIONS\nPOST 发出\nJSON 可读取\n先看 POST 是否真的发送，再看实际响应是否可读取。同源、预检通过与实际响应许可不是同一个判断。"
+  },
+  {
+    "id": "25",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n网络条件\nOnline\nSlow network\nOffline\nHTTP 503\n阻断目标资源\n失败后收尾与重试\n网络错误：没有 HTTP 响应\n已结束 loading，保留错误与重试入口"
+  },
+  {
+    "id": "26",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n协议\nSSE 自定义事件\nWebSocket JSON\n匹配事件名与 stock 字段\n发送一条模型消息\nevent: inventory / data: {\"stock\":3}\nevent: inventory / data: {\"stock\":3}\n消息数 2；页面库存 3。连接成功与界面更新需要分别验证。"
+  },
+  {
+    "id": "35",
+    "text": "原理实验\n教学模型，不改变浏览器设置\nCookie Path\nMax-Age\nHttpOnly\n请求：/account/profile\\nSet-Cookie: login=active; Path=/account/; Max-Age=3600; HttpOnly\n请求携带 Cookie；document.cookie 无法读取此 HttpOnly 值。端口不隔离 Cookie；模型未模拟完整 SameSite/Secure 策略。"
+  },
+  {
+    "id": "36",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n标签\nA\nB\n存储层\nlocalStorage\nsessionStorage\n购物车值\n写入当前模型刷新当前模型关闭并新开当前标签\nlocal: {\n  \"cart\": \"2\"\n}\\nsession A: {}\\nsession B: {}\n标签 B 当前显示：2。这是独立模型；真实实验使用浏览器 Storage API。"
+  },
+  {
+    "id": "37",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n写入 SKU\n读取 SKU\nrequest success（待提交）提交事务中止事务读取已提交记录\n待提交：无\\n已提交：{\n  \"CUP-42\": \"favorite\"\n}\nget(CUP-42) = favorite。request success 与 transaction complete 分开观察。"
+  },
+  {
+    "id": "38",
+    "text": "原理实验\n教学模型，不改变浏览器设置\nscope\n激活后 clients.claim\n安装新版本 v2激活等待版本导航到 /shop/page\nactive v2\nwaiting none\n当前 controller v2\n注册、激活与当前页面控制分别判断。模型简化升级；真实实验可看到实际 waiting worker 和响应来源。"
+  },
+  {
+    "id": "39",
+    "text": "原理实验\n教学模型，不改变浏览器设置\n策略\ncache-first\nnetwork-first\nOnline\nManifest 图标可访问\n读取商品清理当前模型缓存\n服务版本 2\nCache Storage 2\n页面 2\n图标：404，不可用。网络不可用时回退取决于已有缓存；Disable cache 不等于删除 Cache Storage。"
+  }
+]

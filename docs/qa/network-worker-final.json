@@ -1,0 +1,92 @@
+[
+  {
+    "id": "38",
+    "choice": "a",
+    "cycles": [
+      {
+        "before": "当前返回 workerVersion=1\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=1&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=1&takeover=1&strategy=cache-first\nwaiting=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first",
+        "after": "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none",
+        "checks": "✓ 当前页面由目标版本实际控制"
+      },
+      {
+        "before": "当前返回 workerVersion=1\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=1&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=1&takeover=1&strategy=cache-first\nwaiting=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first",
+        "after": "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none",
+        "checks": "✓ 当前页面由目标版本实际控制"
+      },
+      {
+        "before": "当前返回 workerVersion=1\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=1&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=1&takeover=1&strategy=cache-first\nwaiting=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first",
+        "after": "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none",
+        "checks": "✓ 当前页面由目标版本实际控制"
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "choice": "a",
+    "cycles": [
+      {
+        "before": "商品版本 1 / cache-storage\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/",
+        "after": "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/",
+        "checks": "✓ 缓存商品与实际版本一致\n✓ Manifest 图标资源可用\n✓ 修复后确实从网络更新缓存"
+      },
+      {
+        "before": "商品版本 1 / cache-storage\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/",
+        "after": "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/",
+        "checks": "✓ 缓存商品与实际版本一致\n✓ Manifest 图标资源可用\n✓ 修复后确实从网络更新缓存"
+      },
+      {
+        "before": "商品版本 1 / cache-storage\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/",
+        "after": "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/",
+        "checks": "✓ 缓存商品与实际版本一致\n✓ Manifest 图标资源可用\n✓ 修复后确实从网络更新缓存"
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "choice": "a",
+    "cycles": [
+      {
+        "before": "当前返回 workerVersion=1\ncontroller=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=1&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/\nactive=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=1&takeover=1&strategy=cache-first\nwaiting=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=2&takeover=0&strategy=cache-first",
+        "after": "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/\nactive=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none",
+        "checks": "✓ 当前页面由目标版本实际控制"
+      }
+    ],
+    "challengePassed": true
+  },
+  {
+    "id": "39",
+    "choice": "a",
+    "cycles": [
+      {
+        "before": "商品版本 1 / cache-storage\nManifest 图标 HTTP 200\nscope=/labs/f754917e-431e-4bde-84d9-21e31596408b/\nstart_url=/labs/f754917e-431e-4bde-84d9-21e31596408b/",
+        "after": "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/f754917e-431e-4bde-84d9-21e31596408b/\nstart_url=/labs/f754917e-431e-4bde-84d9-21e31596408b/",
+        "checks": "✓ 缓存商品与实际版本一致\n✓ Manifest 图标资源可用\n✓ 修复后确实从网络更新缓存"
+      }
+    ],
+    "challengePassed": true
+  },
+  {
+    "id": "38",
+    "choice": "b",
+    "cycles": [
+      {
+        "before": "当前返回 workerVersion=0\ncontroller=null\nscope=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/narrow/\nactive=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/worker.js?build=2&takeover=1&strategy=cache-first\nwaiting=none",
+        "after": "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/worker.js?build=2&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/narrow/\nactive=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/worker.js?build=2&takeover=1&strategy=cache-first\nwaiting=none\nscope=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/\nactive=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/worker.js?build=2&takeover=1&strategy=cache-first\nwaiting=none",
+        "checks": "✓ 当前页面由目标版本实际控制"
+      }
+    ],
+    "challengePassed": true
+  },
+  {
+    "id": "39",
+    "choice": "b",
+    "cycles": [
+      {
+        "before": "商品版本 2 / cache-storage\nManifest 图标 HTTP 404\nscope=/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/\nstart_url=/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/",
+        "after": "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/\nstart_url=/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/",
+        "checks": "✓ 缓存商品与实际版本一致\n✓ Manifest 图标资源可用\n✓ 修复后确实从网络更新缓存"
+      }
+    ],
+    "challengePassed": true
+  }
+]

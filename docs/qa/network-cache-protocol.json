@@ -1,0 +1,63 @@
+[
+  {
+    "method": "Network.requestWillBeSent"
+  },
+  {
+    "method": "Network.responseReceivedExtraInfo",
+    "status": 200
+  },
+  {
+    "method": "Network.responseReceived",
+    "status": 200,
+    "fromDiskCache": false,
+    "fromServiceWorker": false
+  },
+  {
+    "method": "Network.requestWillBeSent"
+  },
+  {
+    "method": "Network.responseReceived",
+    "status": 200,
+    "fromDiskCache": true,
+    "fromServiceWorker": false
+  },
+  {
+    "method": "Network.requestWillBeSent"
+  },
+  {
+    "method": "Network.responseReceivedExtraInfo",
+    "status": 200
+  },
+  {
+    "method": "Network.responseReceived",
+    "status": 200,
+    "fromDiskCache": false,
+    "fromServiceWorker": false
+  },
+  {
+    "method": "Network.requestWillBeSent"
+  },
+  {
+    "method": "Network.responseReceivedExtraInfo",
+    "status": 200
+  },
+  {
+    "method": "Network.responseReceived",
+    "status": 200,
+    "fromDiskCache": false,
+    "fromServiceWorker": false
+  },
+  {
+    "method": "Network.requestWillBeSent"
+  },
+  {
+    "method": "Network.responseReceivedExtraInfo",
+    "status": 304
+  },
+  {
+    "method": "Network.responseReceived",
+    "status": 200,
+    "fromDiskCache": false,
+    "fromServiceWorker": false
+  }
+]

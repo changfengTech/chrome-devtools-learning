@@ -169,6 +169,9 @@ importers:
       vue:
         specifier: ^3.5.42
         version: 3.5.44(typescript@6.0.3)
+      ws:
+        specifier: ^8.22.0
+        version: 8.22.0
     devDependencies:
       '@tsconfig/node24':
         specifier: ^24.0.5
@@ -1029,6 +1032,18 @@ packages:
     engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0}
     hasBin: true
 
+  ws@8.22.0:
+    resolution: {integrity: sha1-QPFuHXWIrAV1BBvlxJuOsmHCjnM=, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/ws/download/ws-8.22.0.tgz}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   wsl-utils@1.0.1:
     resolution: {integrity: sha512-c16PKLIRxBYpR3jSWsdS7SFp0COm5SOQdiFjY818dYFHJbMGuLBszpF07LBWmOS1uzrHa9VGdynsEgoeKy0oOQ==, tarball: https://artifactory.devops.xiaohongshu.com/artifactory/api/npm/npm-public/wsl-utils/-/wsl-utils-1.0.1.tgz}
     engines: {node: '>=20'}
@@ -1809,6 +1824,8 @@ snapshots:
   which@7.0.0:
     dependencies:
       isexe: 4.0.0
+
+  ws@8.22.0: {}
 
   wsl-utils@1.0.1:
     dependencies:

@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "records": {
+    "19": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:02.700Z",
+      "challengeAt": "2026-10-22T03:09:33.890Z",
+      "challengeAssisted": false
+    },
+    "20": {
+      "note": "",
+      "hints": 3,
+      "practiceAt": "2026-10-22T03:04:05.767Z",
+      "challengeAt": "2026-10-22T03:17:33.702Z",
+      "challengeAssisted": true
+    },
+    "22": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:10.033Z",
+      "challengeAt": "2026-10-22T03:09:38.191Z",
+      "challengeAssisted": false
+    },
+    "23": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:13.066Z",
+      "challengeAt": "2026-10-22T03:09:40.423Z",
+      "challengeAssisted": false
+    },
+    "24": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:16.051Z",
+      "challengeAt": "2026-10-22T03:09:42.573Z",
+      "challengeAssisted": false
+    },
+    "25": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:19.083Z",
+      "challengeAt": "2026-10-22T03:09:44.756Z",
+      "challengeAssisted": false
+    },
+    "26": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:22.100Z",
+      "challengeAt": "2026-10-22T03:09:46.840Z",
+      "challengeAssisted": false
+    },
+    "35": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:32.484Z",
+      "challengeAt": "2026-10-22T03:09:49.007Z",
+      "challengeAssisted": false
+    },
+    "36": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:35.534Z",
+      "challengeAt": "2026-10-22T03:09:51.207Z",
+      "challengeAssisted": false
+    },
+    "37": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:38.584Z",
+      "challengeAt": "2026-10-22T03:09:53.324Z",
+      "challengeAssisted": false
+    },
+    "38": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:41.584Z",
+      "challengeAt": "2026-10-22T03:09:55.440Z",
+      "challengeAssisted": false
+    },
+    "39": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-22T03:04:44.717Z",
+      "challengeAt": "2026-10-22T03:09:57.640Z",
+      "challengeAssisted": false
+    }
+  },
+  "chapters": {
+    "network": {
+      "note": "验收专用流程记录：故障时 主图完成 361ms；推荐接口完成 357ms。\n请在 Initiator 区分串行与无关依赖。；对照后 主图完成 12ms；推荐接口完成 363ms。\n请在 Initiator 区分串行与无关依赖。。此分数仅用于检查自评记录流程。",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "assisted": false,
+      "completedAt": "2026-10-22T03:02:32.848Z"
+    },
+    "application": {
+      "note": "验收专用：初始 当前返回 workerVersion=1\ncontroller=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=1&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/\nactive=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=1&takeover=1&strategy=cache-first\nwaiting=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=2&takeover=0&strategy=cache-first；修复 当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/\nactive=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none；确认报告与真实结果对应。",
+      "scores": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "assisted": false,
+      "completedAt": "2026-10-22T03:02:46.715Z"
+    }
+  }
+}

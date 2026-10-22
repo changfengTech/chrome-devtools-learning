@@ -1,0 +1,114 @@
+.scope {
+  font:
+    11px/1.8 ui-monospace,
+    monospace;
+  color: #6c8075;
+  overflow-wrap: anywhere;
+  margin-top: 14px;
+}
+.field-product {
+  padding: 24px;
+  border: 1px solid #dbe5df;
+  border-radius: 7px;
+  background: white;
+  min-width: 0;
+}
+.field-product > .product-illustration {
+  max-width: 360px;
+  height: 150px;
+  margin-bottom: 18px;
+}
+.field-product h2 {
+  font-size: 22px;
+  margin: 12px 0;
+}
+.field-product > button,
+.field-product > a {
+  margin: 18px 10px 0 0;
+}
+.field-product > a {
+  display: inline-block;
+  font-size: 13px;
+  color: #355c4a;
+}
+.field-product > a[hidden] {
+  display: none;
+}
+#outcome {
+  background: #f3f7f4;
+  padding: 20px;
+  font-size: 15px;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  margin: 20px 0;
+  overflow-wrap: anywhere;
+}
+#events {
+  padding-left: 16px;
+  font:
+    11px/1.9 ui-monospace,
+    monospace;
+  color: #697d73;
+}
+#events li {
+  margin: 9px 0;
+  overflow-wrap: anywhere;
+}
+.receipt {
+  min-width: 0;
+}
+.receipt h3 {
+  font-size: 13px;
+  margin: 24px 0 14px;
+}
+#checks {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+#image-host > img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+#image-host .fallback {
+  padding: 22px;
+  background: #e7efea;
+  color: #355c4a;
+}
+.isolation {
+  padding: 22px 0;
+  border-top: 1px solid #dbe4de;
+  margin: 28px 0;
+}
+.isolation h2 {
+  font-size: 18px;
+}
+.isolation p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #62766b;
+  margin: 15px 0;
+}
+#steps {
+  font-size: 14px;
+  line-height: 1.9;
+  padding-left: 22px;
+}
+#steps li {
+  margin: 14px 0;
+}
+@media (max-width: 700px) {
+  .field-product {
+    padding: 17px;
+  }
+  #outcome {
+    font-size: 13px;
+    padding: 15px;
+  }
+  .field-product h2 {
+    font-size: 19px;
+  }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "19",
+    "choice": "a",
+    "before": "搜索 cup；实际返回 2 件商品；本次搜索请求 1 次。",
+    "after": "搜索 cup；实际返回 1 件商品；本次搜索请求 1 次。"
+  },
+  {
+    "id": "20",
+    "choice": "a",
+    "before": "HTTP 422 / INVALID_QUANTITY\n页面判定：未创建订单",
+    "after": "HTTP 200 / OK\n页面判定：订单创建成功"
+  },
+  {
+    "id": "22",
+    "choice": "a",
+    "before": "主图完成 367ms；推荐接口完成 364ms。\n请在 Initiator 区分串行与无关依赖。",
+    "after": "主图完成 13ms；推荐接口完成 364ms。\n请在 Initiator 区分串行与无关依赖。"
+  },
+  {
+    "id": "23",
+    "choice": "a",
+    "before": "初次版本 1；服务已发布版本 2；当前价格版本 1，¥36。",
+    "after": "初次版本 1；服务已发布版本 2；当前价格版本 2，¥46。"
+  },
+  {
+    "id": "24",
+    "choice": "a",
+    "before": "浏览器无法读取响应。请比较 OPTIONS 是否通过，以及 POST 有没有真正发送。",
+    "after": "跨源 JSON 可读取：CUP-2210 / ¥34"
+  },
+  {
+    "id": "25",
+    "choice": "a",
+    "before": "正在处理…",
+    "after": "HTTP 503，已结束 loading，可重试。"
+  },
+  {
+    "id": "26",
+    "choice": "a",
+    "before": "库存显示：0；消息中的最终 stock 应为 3。",
+    "after": "库存显示：3；消息中的最终 stock 应为 3。"
+  },
+  {
+    "id": "35",
+    "choice": "a",
+    "before": "profile.authenticated = false\nHttpOnly 登录状态要到 Cookies 与请求头核对。",
+    "after": "profile.authenticated = true\nHttpOnly 登录状态要到 Cookies 与请求头核对。"
+  },
+  {
+    "id": "36",
+    "choice": "a",
+    "before": "localStorage cart = null\nsessionStorage cart = 4\nlocalStorage filter = null\nsessionStorage filter = null",
+    "after": "localStorage cart = 4\nsessionStorage cart = null\nlocalStorage filter = null\nsessionStorage filter = null"
+  },
+  {
+    "id": "37",
+    "choice": "a",
+    "before": "读取键：CUP-9793\n实际已提交记录：undefined",
+    "after": "读取键：CUP-9793\n实际已提交记录：{\"sku\":\"CUP-9793\",\"price\":37,\"favorite\":true}"
+  },
+  {
+    "id": "38",
+    "choice": "a",
+    "before": "当前返回 workerVersion=1\ncontroller=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=1&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/\nactive=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=1&takeover=1&strategy=cache-first\nwaiting=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=2&takeover=0&strategy=cache-first",
+    "after": "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/\nactive=http://127.0.0.1:4174/labs/e8dce3bd-3127-46ae-84e2-1a0bcc57abb1/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none"
+  },
+  {
+    "id": "39",
+    "choice": "a",
+    "before": "商品版本 1 / cache-storage\nManifest 图标 HTTP 200\nscope=/labs/f754917e-431e-4bde-84d9-21e31596408b/\nstart_url=/labs/f754917e-431e-4bde-84d9-21e31596408b/",
+    "after": "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/f754917e-431e-4bde-84d9-21e31596408b/\nstart_url=/labs/f754917e-431e-4bde-84d9-21e31596408b/"
+  }
+]

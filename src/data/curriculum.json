@@ -205,7 +205,7 @@
     "demo": "操作与请求列表联动",
     "lab": "追踪搜索到显示结果的请求",
     "challenge": "在混杂记录中找出一次筛选请求",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -216,7 +216,7 @@
     "demo": "改变请求参数和响应结构",
     "lab": "排查参数错误和 200 业务失败，重放请求",
     "challenge": "找到新字段或状态处理不一致",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -238,7 +238,7 @@
     "demo": "切换串行、并行与重复调用",
     "lab": "找到图片启动晚与重复接口原因",
     "challenge": "区分接口自身慢、启动晚和依赖等待",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -249,7 +249,7 @@
     "demo": "改变响应头与版本观察缓存",
     "lab": "排查价格更新后仍显示旧值",
     "challenge": "区分缓存、应用状态和服务响应问题",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -260,7 +260,7 @@
     "demo": "改变源、方法和请求头",
     "lab": "重现本地跨域问题并关联 Issues",
     "challenge": "区分未发送、预检失败和响应不可读取",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -271,7 +271,7 @@
     "demo": "改变带宽、延迟和资源失败条件",
     "lab": "验证加载提示、重试与图片失败状态",
     "challenge": "设计结算失败测试并恢复条件",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -282,7 +282,7 @@
     "demo": "对比轮询和持续连接时间线",
     "lab": "检查库存和订单进度消息",
     "challenge": "区分连接、消息、解析和界面错误",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -381,7 +381,7 @@
     "demo": "改变属性和请求条件观察发送",
     "lab": "排查登录后未携带预期状态",
     "challenge": "指出 Cookie 丢失环节并关联请求",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -392,7 +392,7 @@
     "demo": "刷新、开新标签、清理并比较",
     "lab": "检查购物车与筛选条件持久化",
     "challenge": "修复另一处错误持久化",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -403,7 +403,7 @@
     "demo": "观察记录写入、读取和更新",
     "lab": "排查本地收藏或草稿未更新",
     "challenge": "找到键、字段或读取条件错误",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -414,7 +414,7 @@
     "demo": "操作生命周期图观察控制关系",
     "lab": "排查新版本仍受旧逻辑影响",
     "challenge": "解释等待中与活动 worker 的关系",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -425,7 +425,7 @@
     "demo": "切换网络优先与缓存优先",
     "lab": "检查离线页、过期缓存和图标",
     "challenge": "找到旧页面的缓存层并验证修复",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {

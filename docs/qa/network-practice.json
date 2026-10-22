@@ -1,0 +1,98 @@
+[
+  {
+    "id": "19",
+    "cycles": [
+      "搜索 cup；实际返回 1 件商品；本次搜索请求 1 次。",
+      "搜索 cup；实际返回 1 件商品；本次搜索请求 1 次。",
+      "搜索 cup；实际返回 1 件商品；本次搜索请求 1 次。"
+    ]
+  },
+  {
+    "id": "20",
+    "cycles": [
+      "HTTP 200 / OK\n页面判定：订单创建成功",
+      "HTTP 200 / OK\n页面判定：订单创建成功",
+      "HTTP 200 / OK\n页面判定：订单创建成功"
+    ]
+  },
+  {
+    "id": "22",
+    "cycles": [
+      "主图完成 12ms；推荐接口完成 362ms。\n请在 Initiator 区分串行与无关依赖。",
+      "主图完成 11ms；推荐接口完成 362ms。\n请在 Initiator 区分串行与无关依赖。",
+      "主图完成 10ms；推荐接口完成 361ms。\n请在 Initiator 区分串行与无关依赖。"
+    ]
+  },
+  {
+    "id": "23",
+    "cycles": [
+      "初次版本 1；服务已发布版本 2；当前价格版本 2，¥46。",
+      "初次版本 1；服务已发布版本 2；当前价格版本 2，¥46。",
+      "初次版本 1；服务已发布版本 2；当前价格版本 2，¥46。"
+    ]
+  },
+  {
+    "id": "24",
+    "cycles": [
+      "跨源 JSON 可读取：CUP-42 / ¥36",
+      "跨源 JSON 可读取：CUP-42 / ¥36",
+      "跨源 JSON 可读取：CUP-42 / ¥36"
+    ]
+  },
+  {
+    "id": "25",
+    "cycles": [
+      "HTTP 503，已结束 loading，可重试。",
+      "HTTP 503，已结束 loading，可重试。",
+      "HTTP 503，已结束 loading，可重试。"
+    ]
+  },
+  {
+    "id": "26",
+    "cycles": [
+      "库存显示：3；消息中的最终 stock 应为 3。",
+      "库存显示：3；消息中的最终 stock 应为 3。",
+      "库存显示：3；消息中的最终 stock 应为 3。"
+    ]
+  },
+  {
+    "id": "35",
+    "cycles": [
+      "profile.authenticated = true\nHttpOnly 登录状态要到 Cookies 与请求头核对。",
+      "profile.authenticated = true\nHttpOnly 登录状态要到 Cookies 与请求头核对。",
+      "profile.authenticated = true\nHttpOnly 登录状态要到 Cookies 与请求头核对。"
+    ]
+  },
+  {
+    "id": "36",
+    "cycles": [
+      "localStorage cart = 2\nsessionStorage cart = null\nlocalStorage filter = null\nsessionStorage filter = null",
+      "localStorage cart = 2\nsessionStorage cart = null\nlocalStorage filter = null\nsessionStorage filter = null",
+      "localStorage cart = 2\nsessionStorage cart = null\nlocalStorage filter = null\nsessionStorage filter = null"
+    ]
+  },
+  {
+    "id": "37",
+    "cycles": [
+      "读取键：CUP-42\n实际已提交记录：{\"sku\":\"CUP-42\",\"price\":36,\"favorite\":true}",
+      "读取键：CUP-42\n实际已提交记录：{\"sku\":\"CUP-42\",\"price\":36,\"favorite\":true}",
+      "读取键：CUP-42\n实际已提交记录：{\"sku\":\"CUP-42\",\"price\":36,\"favorite\":true}"
+    ]
+  },
+  {
+    "id": "38",
+    "cycles": [
+      "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none",
+      "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none",
+      "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/\nactive=http://127.0.0.1:4174/labs/4b6c40be-e923-4cea-8364-618291838ad0/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none"
+    ]
+  },
+  {
+    "id": "39",
+    "cycles": [
+      "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/",
+      "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/",
+      "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/\nstart_url=/labs/46fb02c9-4e6b-4f51-9b49-09e56c65337c/"
+    ]
+  }
+]

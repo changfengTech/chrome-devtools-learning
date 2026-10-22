@@ -48,10 +48,14 @@ test("课程交付合同包含 55 主线、8 专题和唯一课号，仅开放�
   assert.deepEqual(
     lessons.filter((item) => item.status === "ready").map((item) => item.id),
     [
-      ...Array.from({ length: 18 }, (_, index) =>
+      ...Array.from({ length: 26 }, (_, index) =>
         String(index + 1).padStart(2, "0"),
       ),
-      "21",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
     ],
   );
   for (const item of lessons)
@@ -82,4 +86,34 @@ test("基础课完成记录与辅助标记可往返，旧版 21 课记录仍兼�
       ["04"],
     ),
   );
+});
+
+test("章末自评与报告随 v1 导出往返；非法分数、章节和时间不覆盖合法记录", () => {
+  const state = {
+    version: 1,
+    records: { 21: { note: "旧版记录", hints: 0 } },
+    chapters: {
+      network: {
+        note: "请求及修复证据",
+        scores: [2, 2, 2, 1, 2],
+        assisted: false,
+        completedAt: "2026-10-22T03:00:00.000Z",
+      },
+    },
+  };
+  assert.deepEqual(parseProgress(JSON.stringify(state), ["21"]), state);
+  for (const bad of [
+    {
+      ...state,
+      chapters: {
+        network: { ...state.chapters.network, scores: [2, 2, 3, 2, 2] },
+      },
+    },
+    { ...state, chapters: { invalid: state.chapters.network } },
+    {
+      ...state,
+      chapters: { network: { ...state.chapters.network, completedAt: "bad" } },
+    },
+  ])
+    assert.throws(() => parseProgress(JSON.stringify(bad), ["21"]));
 });

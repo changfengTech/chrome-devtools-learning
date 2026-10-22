@@ -1,0 +1,986 @@
+[
+  {
+    "id": "19",
+    "kind": "19",
+    "hook": "哪一行请求属于刚才的搜索？",
+    "symptom": "搜索结果不正确，记录里还混着埋点与重复调用。",
+    "principle": "请求列表需要和一次可重复的用户操作对应，不能只看 URL 长得像不像。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "录制开关决定是否留下记录"
+      },
+      {
+        "title": "再核对证据",
+        "body": "文本、类型、方法过滤只是隐藏行"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "Preserve log 跨导航保留；HAR 可能包含敏感数据，导出前检查"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "清空 Network，确认录制中，再运行故障；只进行一次搜索。",
+      "筛选 search，再比较 Payload、Response 和 Initiator；不要将 analytics 当成搜索。",
+      "勾选 Preserve log 后刷新比较记录；导出 HAR 前核对可能包含的 Cookie、参数与响应。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "搜索参数未随输入发送"
+      },
+      {
+        "id": "b",
+        "label": "同一操作重复发送搜索请求"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "Query String 中缺少 q，返回全部商品"
+      },
+      {
+        "id": "b",
+        "label": "一次动作出现两条相同搜索与调用来源"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "传入当前搜索条件并重发"
+      },
+      {
+        "id": "b",
+        "label": "消除重复调用并用一次动作复测"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "清空 Network，确认录制中，再运行故障；只进行一次搜索。",
+      "比较两个候选解释：搜索参数未随输入发送；同一操作重复发送搜索请求。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/network/reference"
+  },
+  {
+    "id": "20",
+    "kind": "20",
+    "hook": "200 就代表下单成功吗？",
+    "symptom": "结算被拒绝，界面却显示成功或一直等待。",
+    "principle": "HTTP 状态描述传输契约；响应体的业务状态还需要单独判断。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "Headers 看方法与状态；Payload 看实际发送字段"
+      },
+      {
+        "title": "再核对证据",
+        "body": "Response/Preview 看业务结构，不只看 status"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "Edit and resend as fetch 可验证参数，副作用请求重放需限定本地实验"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "选中 checkout，检查 Method、Status、Request Payload 与 Response。",
+      "将 HTTP 422 与 HTTP 200/ok=false 分开解释，记录哪个层面失败。",
+      "在本地教学接口使用 Edit and resend as fetch 修正字段，检查是否真的创建订单。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "数量字段名不符合接口契约"
+      },
+      {
+        "id": "b",
+        "label": "界面只检查 HTTP 成功，忽略业务拒绝"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "POST 中是 qty 而不是 quantity，HTTP 422"
+      },
+      {
+        "id": "b",
+        "label": "HTTP 200 但 ok=false、code=OUT_OF_STOCK"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "使用正确字段并核对响应"
+      },
+      {
+        "id": "b",
+        "label": "同时检查响应体并显示库存不足"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "选中 checkout，检查 Method、Status、Request Payload 与 Response。",
+      "比较两个候选解释：数量字段名不符合接口契约；界面只检查 HTTP 成功，忽略业务拒绝。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/network/reference"
+  },
+  {
+    "id": "22",
+    "kind": "22",
+    "hook": "资源慢，还是开始得太晚？",
+    "symptom": "主图晚出现，或一次页面更新重复读取库存。",
+    "principle": "瀑布图的开始时刻与请求本身持续时间是两件事，Initiator 帮助追依赖。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "串行依赖会推迟后续资源启动"
+      },
+      {
+        "title": "再核对证据",
+        "body": "并行只适用于没有真实依赖的任务"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "Initiator 的调用与依赖要结合同次操作，不能把总时间都归为服务慢"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "查看 Waterfall 的左侧起点和 Duration，区分启动晚与传输慢。",
+      "展开 hero 或 inventory 的 Initiator，定位 runtime.js 中的命名调用。",
+      "用同一条件运行对照；保留真正的业务依赖，不为并行而并行。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "无关推荐接口阻塞主图启动"
+      },
+      {
+        "id": "b",
+        "label": "同一业务入口重复读取库存"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "hero 等 recommendations 完成才开始，主体传输很短"
+      },
+      {
+        "id": "b",
+        "label": "相同 run 的 inventory 出现两次及两个调用位置"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "解除无关串行依赖后公平比较"
+      },
+      {
+        "id": "b",
+        "label": "只保留一次库存读取并检查 Initiator"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "查看 Waterfall 的左侧起点和 Duration，区分启动晚与传输慢。",
+      "比较两个候选解释：无关推荐接口阻塞主图启动；同一业务入口重复读取库存。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/network/reference"
+  },
+  {
+    "id": "23",
+    "kind": "23",
+    "hook": "价格更新了，为什么还是旧值？",
+    "symptom": "服务端价格更新到版本 2，页面还显示版本 1。",
+    "principle": "HTTP 缓存与页面状态、Service Worker 缓存是不同层；先确认响应来自哪里。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "max-age 允许新鲜期内直接复用；no-cache 要验证，并非禁止保存"
+      },
+      {
+        "title": "再核对证据",
+        "body": "ETag 与 If-None-Match 一致时可返回 304；fetch 可能看到合并后的 200"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "Disable cache 仅在 DevTools 打开时作用；它不等于清除 Cache Storage"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "先取消 Disable cache，运行故障；比较 Size、Response 和价格版本。",
+      "勾选 Disable cache 复测，判断旧值来自 HTTP 缓存还是服务响应。",
+      "修复后点「条件验证」，在 Network 查看 ETag、If-None-Match 和 304；随后恢复原缓存设置。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "长 max-age 复用了旧 HTTP 响应"
+      },
+      {
+        "id": "b",
+        "label": "服务端本身仍返回旧版本"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "价格请求来自缓存，响应版本 1，而服务已发布 2"
+      },
+      {
+        "id": "b",
+        "label": "真正网络响应仍为版本 1，禁用缓存也未改变"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "重新验证并采用合适的缓存头"
+      },
+      {
+        "id": "b",
+        "label": "修正服务数据，再核对真实响应"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "先取消 Disable cache，运行故障；比较 Size、Response 和价格版本。",
+      "比较两个候选解释：长 max-age 复用了旧 HTTP 响应；服务端本身仍返回旧版本。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/network/reference"
+  },
+  {
+    "id": "24",
+    "kind": "24",
+    "hook": "请求根本没发，还是响应读不到？",
+    "symptom": "跨到另一个本机端口后，fetch 出现 TypeError。",
+    "principle": "CORS 是浏览器对跨源响应访问的限制；跨源不等于跨站，预检也不是业务请求。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "协议、主机、端口决定 origin；两个本机端口也跨源"
+      },
+      {
+        "title": "再核对证据",
+        "body": "自定义请求头会触发 OPTIONS，预检失败时业务 POST 不会发送"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "实际响应也需要允许来源；不要用 no-cors 伪装修复，opaque 响应无法读取业务内容"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "Network 同时看 OPTIONS 和 remote 请求，不只看 Console 的一句报错。",
+      "比较 Access-Control-Request-Headers 与 Allow-Headers，以及实际响应 Allow-Origin。",
+      "本机 4175 是独立跨源服务；对照后恢复可读取 JSON，记录预检与实际请求分别发生了什么。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "OPTIONS 没有允许需要的自定义请求头"
+      },
+      {
+        "id": "b",
+        "label": "POST 已返回但实际响应缺少允许来源"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "预检拒绝且没有随后的业务 POST"
+      },
+      {
+        "id": "b",
+        "label": "预检通过、POST 存在，响应却不可读取"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "允许具体来源、方法和需要的请求头"
+      },
+      {
+        "id": "b",
+        "label": "在实际响应返回匹配来源的 CORS 头"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "Network 同时看 OPTIONS 和 remote 请求，不只看 Console 的一句报错。",
+      "比较两个候选解释：OPTIONS 没有允许需要的自定义请求头；POST 已返回但实际响应缺少允许来源。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/network/reference"
+  },
+  {
+    "id": "25",
+    "kind": "25",
+    "hook": "请求失败时，页面能恢复吗？",
+    "symptom": "结算失败后加载状态不结束，或图片坏了却没有替代内容。",
+    "principle": "弱网、断网、HTTP 错误与资源阻断有不同表现，需要同时检查网络和界面终态。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "限速影响实际耗时；Offline 和资源阻断可能让请求没有 HTTP 响应"
+      },
+      {
+        "title": "再核对证据",
+        "body": "fetch 对 HTTP 503 不会自动 reject，需要检查 response.ok"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "失败后应结束 loading 并可重试，图片失败需提供可读替代"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "用 Fast 3G 观察 loading，再试 Offline 或 Request Conditions 阻断本课资源。",
+      "观察失败是 HTTP 503、404 还是浏览器网络错误；本课固定故障使用真实 HTTP 错误。",
+      "恢复 No throttling、Online 和阻断设置后再报告；修复案例可重试或展示备用图。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "HTTP 503 后 loading 没有结束"
+      },
+      {
+        "id": "b",
+        "label": "图片请求失败但没有备用展示"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "submit 返回 503，页面仍显示处理中"
+      },
+      {
+        "id": "b",
+        "label": "图片 404，错误分支未显示替代内容"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "检查状态并在 finally 收尾，允许重试"
+      },
+      {
+        "id": "b",
+        "label": "处理 image error 并保留替代内容"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "用 Fast 3G 观察 loading，再试 Offline 或 Request Conditions 阻断本课资源。",
+      "比较两个候选解释：HTTP 503 后 loading 没有结束；图片请求失败但没有备用展示。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/network/reference"
+  },
+  {
+    "id": "26",
+    "kind": "26",
+    "hook": "连接成功了，为什么页面没更新？",
+    "symptom": "库存消息持续到达，页面仍显示旧值。",
+    "principle": "连接、事件类型、消息解析与界面更新是独立环节。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "SSE 是服务端到客户端事件流，event 字段决定事件类型"
+      },
+      {
+        "title": "再核对证据",
+        "body": "WebSocket 是双向消息；握手 101 只证明升级成功"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "检查 Messages / EventStream 中实际 payload，再检查处理分支"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "在 Network 分别筛选 EventStream 或 WS，查看连接状态和逐条消息。",
+      "本课两种配置分别使用真实 SSE 与 WebSocket；比较事件名、字段和页面值。",
+      "等待完整消息后再检查，关闭连接并重跑，区分连接故障和处理故障。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "SSE 客户端监听了错误的事件类型"
+      },
+      {
+        "id": "b",
+        "label": "WebSocket 客户端读取了错误字段"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "EventStream 中 event=inventory，onmessage 没有处理它"
+      },
+      {
+        "id": "b",
+        "label": "Messages 有 stock，处理函数却读取 inventory"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "监听 inventory 自定义事件并解析 data"
+      },
+      {
+        "id": "b",
+        "label": "读取真实 stock 字段并更新页面"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "在 Network 分别筛选 EventStream 或 WS，查看连接状态和逐条消息。",
+      "比较两个候选解释：SSE 客户端监听了错误的事件类型；WebSocket 客户端读取了错误字段。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/network/reference"
+  },
+  {
+    "id": "35",
+    "kind": "35",
+    "hook": "登录 Cookie 为什么没带上？",
+    "symptom": "登录响应设置了 Cookie，后续 profile 仍未登录。",
+    "principle": "存下 Cookie 和随目标请求发送 Cookie，需要分别确认。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "Domain、Path 与有效期影响是否发送，端口不隔离 Cookie"
+      },
+      {
+        "title": "再核对证据",
+        "body": "HttpOnly Cookie 无法由 document.cookie 读取，不代表不存在"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "SameSite 与 Secure 的行为和站点、HTTPS 及浏览器环境有关；本课不模拟完整第三方策略"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "Application → Cookies 选实验源；检查本会话的名称、Path、Expires、HttpOnly。",
+      "Network 查看 login 的 Set-Cookie，再看 account/profile 的 Request Cookies；不要只用 document.cookie 判断。",
+      "修复后 profile 的 authenticated=true；恢复只删除本会话 Cookie，不清理其他课程或真实账号。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "Cookie Path 没覆盖 account/profile"
+      },
+      {
+        "id": "b",
+        "label": "Cookie 的 Max-Age 已过期"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "Set-Cookie 的 Path 指向 unrelated，profile 没有该 Cookie"
+      },
+      {
+        "id": "b",
+        "label": "Set-Cookie 的 Max-Age=0，Cookie 已删除"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "修正 Path 后重新登录并检查请求"
+      },
+      {
+        "id": "b",
+        "label": "设置正确有效期后重新登录并检查请求"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "Application → Cookies 选实验源；检查本会话的名称、Path、Expires、HttpOnly。",
+      "比较两个候选解释：Cookie Path 没覆盖 account/profile；Cookie 的 Max-Age 已过期。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/application/cookies"
+  },
+  {
+    "id": "36",
+    "kind": "36",
+    "hook": "刷新和开新标签，状态该留在哪里？",
+    "symptom": "购物车没有持久保存，或筛选条件错误地串到其他标签。",
+    "principle": "localStorage 跨同源页面共享；sessionStorage 按源与顶层标签会话分组。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "localStorage 持久保存但不自动发到服务器"
+      },
+      {
+        "title": "再核对证据",
+        "body": "sessionStorage 通常跨刷新保留；有 opener 的新标签可能初始复制，不能只看是否开了新标签"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "两个端口是不同源；所有本课键有会话前缀，避免误删其他数据"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "Application 分别查看 Local storage 和 Session storage 的当前实验源与会话前缀。",
+      "运行后刷新，使用「重新读取状态」比较内存显示与真实存储。",
+      "点「新标签验证」打开无 opener 页面，核对标签隔离；最后只清理本会话键。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "购物车被写进临时 sessionStorage"
+      },
+      {
+        "id": "b",
+        "label": "筛选被写进共享 localStorage"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "购物车只有 session 键，本地持久键缺失"
+      },
+      {
+        "id": "b",
+        "label": "localStorage 有筛选值，新标签也会读取它"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "将购物车保存到本地持久存储"
+      },
+      {
+        "id": "b",
+        "label": "将每标签筛选保存到 sessionStorage"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "Application 分别查看 Local storage 和 Session storage 的当前实验源与会话前缀。",
+      "比较两个候选解释：购物车被写进临时 sessionStorage；筛选被写进共享 localStorage。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/storage/localstorage"
+  },
+  {
+    "id": "37",
+    "kind": "37",
+    "hook": "写入成功，为什么读不回来？",
+    "symptom": "收藏草稿写过了，刷新读取还是找不到。",
+    "principle": "IndexedDB 的对象仓库按键读写，单个 request 成功也不等于整个事务提交。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "先确认数据库、版本、object store 和 keyPath"
+      },
+      {
+        "title": "再核对证据",
+        "body": "同一记录写入键与读取键必须一致"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "transaction complete 才证明提交；abort 会回滚；DevTools 记录视图要手动刷新"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "Application → IndexedDB 选本会话数据库，展开 favorites，查看 keyPath=sku。",
+      "手动 Refresh 数据，比较实际键、字段和读取条件；不能靠界面旧值断言提交。",
+      "用修复对照完成事务并重新读取，再刷新页面检查；清理仅删除本会话数据库。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "写入键与读取的 SKU 不一致"
+      },
+      {
+        "id": "b",
+        "label": "事务被中止，request 成功不代表提交"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "favorites 中键是 OLD-SKU，读取使用当前 SKU"
+      },
+      {
+        "id": "b",
+        "label": "request 后出现 abort，仓库没有提交记录"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "统一写读键后重新读取"
+      },
+      {
+        "id": "b",
+        "label": "等待事务 complete，处理 abort 再读取"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "Application → IndexedDB 选本会话数据库，展开 favorites，查看 keyPath=sku。",
+      "比较两个候选解释：写入键与读取的 SKU 不一致；事务被中止，request 成功不代表提交。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/storage/indexeddb"
+  },
+  {
+    "id": "38",
+    "kind": "38",
+    "hook": "安装了 worker，页面就受它控制吗？",
+    "symptom": "新 worker 已安装，页面仍读到旧版本或完全没有 controller。",
+    "principle": "registration、waiting、active 与当前页面 controller 是不同关系。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "scope 决定哪些页面有资格被控制，注册成功不代表当前页面已受控"
+      },
+      {
+        "title": "再核对证据",
+        "body": "新版本可能等待旧客户端退出；skipWaiting 影响等待，clients.claim 影响接管"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "强制接管有兼容成本；实验中明确选择，线上还需版本升级策略"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "Application → Service Workers 对照 installing/waiting/active、scope 与当前受控页面。",
+      "Network 查看 controlled-version.json 是否 from ServiceWorker；记录 navigator.serviceWorker.controller 的 scriptURL。",
+      "本课 v1/v2 只在会话路径生效；对照后确认返回 2，结束点击「清理本实验」注销自身注册。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "新版本在 waiting，当前 controller 仍为旧版"
+      },
+      {
+        "id": "b",
+        "label": "注册 scope 没覆盖当前页面"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "waiting 是 v2，但受控接口仍由 v1 返回"
+      },
+      {
+        "id": "b",
+        "label": "存在 active registration，当前 controller 为 null"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "检查等待关系后激活新版本并复测"
+      },
+      {
+        "id": "b",
+        "label": "注册覆盖当前页面的正确 scope"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "Application → Service Workers 对照 installing/waiting/active、scope 与当前受控页面。",
+      "比较两个候选解释：新版本在 waiting，当前 controller 仍为旧版；注册 scope 没覆盖当前页面。保持其他输入一致再验证。"
+    ],
+    "source": "https://web.dev/articles/service-worker-lifecycle"
+  },
+  {
+    "id": "39",
+    "kind": "39",
+    "hook": "旧页面来自哪一层缓存？",
+    "symptom": "离线商品仍旧，或 Manifest 引用的图标不存在。",
+    "principle": "Cache Storage 是脚本管理的缓存，不等于 HTTP 缓存；Manifest 是应用元数据。",
+    "concepts": [
+      {
+        "title": "先建立边界",
+        "body": "cache-first 可优先返回旧内容；network-first 需要失败回退"
+      },
+      {
+        "title": "再核对证据",
+        "body": "删除 HTTP 缓存或勾 Disable cache 不自动删除 Cache Storage"
+      },
+      {
+        "title": "最后验证结果",
+        "body": "Manifest 的 scope、start_url、图标路径要可访问；本课不宣称完整 PWA 安装认证"
+      }
+    ],
+    "demoSteps": [
+      "先预测一个条件变化的结果",
+      "只改变一个条件，比较输入与输出",
+      "将模型中的关系对应到真实 DevTools"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
+      "Application 检查 Cache Storage 的会话缓存，再到 Network 比较资源版本与来源。",
+      "查看 Manifest 的 scope、start_url、icons，并打开图标请求验证是否真实可用。",
+      "对照后选择 Offline 并点「离线读取」，验证实际 worker 缓存回退；恢复 Online 再报告，并仅清理本实验。",
+      "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
+      "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "cache-first 优先返回旧 Cache Storage 响应"
+      },
+      {
+        "id": "b",
+        "label": "Manifest 引用不存在的图标"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面颜色判断"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "Cache Storage 的商品版本 1，网络资源已是版本 2"
+      },
+      {
+        "id": "b",
+        "label": "Manifest 的 icon 地址返回 404，其他数据正确"
+      },
+      {
+        "id": "c",
+        "label": "没有对应请求或存储证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "改用网络优先并更新缓存，再离线复查"
+      },
+      {
+        "id": "b",
+        "label": "修正图标路径并验证实际资源"
+      },
+      {
+        "id": "c",
+        "label": "同时改变全部条件且不复测"
+      }
+    ],
+    "hints": [
+      "先区分实际请求、浏览器策略、存储与界面处理，记录第一次偏离的环节。",
+      "Application 检查 Cache Storage 的会话缓存，再到 Network 比较资源版本与来源。",
+      "比较两个候选解释：cache-first 优先返回旧 Cache Storage 响应；Manifest 引用不存在的图标。保持其他输入一致再验证。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/storage/cache"
+  }
+]

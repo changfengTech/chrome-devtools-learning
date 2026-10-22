@@ -1,0 +1,23 @@
+{
+  "outcome": "未取得 HTTP 响应，已结束 loading。恢复网络或取消阻断后重试。",
+  "retryVisible": true,
+  "events": [
+    {
+      "sequence": 25,
+      "source": {
+        "tabId": 16
+      },
+      "method": "Network.loadingFailed",
+      "params": {
+        "blockedReason": "inspector",
+        "canceled": false,
+        "errorText": "",
+        "requestId": "75068.1889",
+        "timestamp": 46202.041024,
+        "type": "Fetch"
+      }
+    }
+  ],
+  "firstRetry": "仍失败，已结束等待，可再次重试。",
+  "secondRetry": "重试成功，订单已创建。"
+}

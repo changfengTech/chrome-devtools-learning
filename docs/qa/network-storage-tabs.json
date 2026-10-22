@@ -1,0 +1,5 @@
+{
+  "newTab": "localStorage cart = 2\nsessionStorage cart = null\nlocalStorage filter = null\nsessionStorage filter = null",
+  "refreshed": "localStorage cart = 2\nsessionStorage cart = null\nlocalStorage filter = null\nsessionStorage filter = null",
+  "cleaned": "已清理本会话存储、数据库、缓存和注册。当前 controller 在关闭或刷新页面后释放；教程学习记录保留。"
+}

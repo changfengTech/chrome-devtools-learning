@@ -1,0 +1,21 @@
+[
+  {
+    "id": "25",
+    "completed": 1,
+    "model19Recording": "实际模型记录 2 条；当前可见 2 条。过滤不删除原始记录。"
+  },
+  {
+    "id": "24",
+    "before": "浏览器无法读取响应。请比较 OPTIONS 是否通过，以及 POST 有没有真正发送。",
+    "after": "跨源 JSON 可读取：CUP-42 / ¥36",
+    "wrongEvidence": "证据还没有对应上。回看实际节点、规则、日志或变量，再选择最直接的依据。",
+    "completed": 1
+  },
+  {
+    "id": "39",
+    "before": "商品版本 1 / cache-storage\nManifest 图标 HTTP 200\nscope=/labs/a314c6ed-f7e2-49a0-a827-ed28ffa2a9c2/\nstart_url=/labs/a314c6ed-f7e2-49a0-a827-ed28ffa2a9c2/",
+    "after": "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/a314c6ed-f7e2-49a0-a827-ed28ffa2a9c2/\nstart_url=/labs/a314c6ed-f7e2-49a0-a827-ed28ffa2a9c2/",
+    "completed": 1,
+    "cleanup": "已清理本会话存储、数据库、缓存和注册。当前 controller 在关闭或刷新页面后释放；教程学习记录保留。"
+  }
+]

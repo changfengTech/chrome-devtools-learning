@@ -4,7 +4,7 @@
 
 - 教程：Vue / TypeScript / Vite；开发 127.0.0.1:5173，构建预览 4173。
 - 商城：原生 HTML/CSS/JavaScript；Node HTTP 服务 127.0.0.1:4174；没有 Vue、HMR、Vue DevTools 注入。
-- 两个源隔离存储和控制范围。未来的 Service Worker 仅注册于实验源。
+- 教程与实验源隔离存储和控制范围。Service Worker 仅注册于商城 `/labs/<token>/`，不控制教程或其他会话。跨源同伴服务监听 127.0.0.1:4175，提供实际 CORS 预检和响应；端口跨源不等同跨站。
 - `scripts/dev.mjs` 管理两个子进程和退出；固定端口用于严格的消息来源检查。
 
 ## 第 01–18 课
@@ -51,8 +51,30 @@
 
 ## 进度
 
-localStorage 键 `devtools-lab.learning.v1`。读取/导入有版本、课号、时间、提示数与笔记长度校验。可选布尔值 `challengeAssisted` 保存挑战是否查看解析，兼容已有 v1。导入先完整验证并写入成功再替换内存记录；失败保留旧记录。当前 01–18、21 可以写入完成状态，规划课没有完成按钮。阅读由用户主动记录，练习/挑战经检查后写入。
+localStorage 键 `devtools-lab.learning.v1`。读取/导入有版本、课号、时间、提示数与笔记长度校验。可选布尔值 `challengeAssisted` 保存挑战是否查看解析，兼容已有 v1。导入先完整验证并写入成功再替换内存记录；失败保留旧记录。当前 01–26、35–39 可以写入完成状态，规划课没有完成按钮。阅读由用户主动记录，练习/挑战经检查后写入。
 
 ## 后续扩展
 
-按 ROADMAP.md 增加场景合同，独立管理重置与生命周期。状态、缓存、CORS、流式协议、内存、HTTPS 等实验只有实现并验证后才列为开放；当前 API 不暗示这些已交付。
+按 ROADMAP.md 增加场景合同，独立管理重置与生命周期。内存、性能、HTTPS 等后续实验只有实现并验证后才列为开放；当前状态与验收见 STATUS.md。
+
+## Network / Application 阶段
+
+新增逻辑在 server/network-state.mjs，主服务优先交给此处理器，并使用 ws 接受真实 WebSocket Upgrade；4175 同伴复用会话数据。启动入口仍为 scripts/dev.mjs，管理教程和商城两个子进程，商城进程同时启动 4174、4175 并关联关闭。
+
+| 接口 / 路径 | 用途 |
+| --- | --- |
+| POST /api/network-state/sessions | 指定逐课 practice/challenge |
+| POST /api/network-state/chapter | 指定章节随机选案例，初始只返回会话标识 |
+| GET /api/network-state/lesson?token | 实验页元数据与主动读取的诊断选项；章末界面隐藏课号和步骤 |
+| POST /api/network-state/begin | 创建 baseline/fixed runId，选择实际对照 |
+| POST /api/network-state/report | 核对会话、单次运行、实际资源记录与浏览器检查 |
+| POST /api/network-state/grade | 故障、原因、证据、验证、修复五项共同成立 |
+| /labs/<token>/ | 独立页面、资源、worker、Cookie 清理与各课业务 API |
+
+会话 30 分钟、最多 500 个、每个最多 100 次运行。引导固定配置一，独立挑战随机两组；scripts/qa-network.mjs 0/1 只供测试注入，正常 HTTP 请求不能固定答案。runId、来源与窗口核对沿用逐课完成机制。章末只在学习者主动取诊断选项后暴露对应案例信息。
+
+第 23 课价格 URL 刻意支持 max-age、ETag 和真实 304，不能套用第 21 课无缓存约定。4175 CORS 分别制造预检拒绝与实际响应缺头。SSE 发出命名 inventory 事件，WebSocket 发出真实消息；连接在完成观察或离页时关闭。
+
+Storage 键带 token，IndexedDB 数据库名与 Cache Storage 名分会话，Cookie 独立命名及 Path，worker 使用默认脚本目录 scope。没有全源 clear 或根路径 worker。存储刷新仅重读，IDB 以 transaction complete 确认提交。worker 切换核对完整 scriptURL（含策略）；39 课修复仍从旧缓存开始，要求 network 来源实际更新，不预填成功值。恢复 worker 故障必要时刷新释放旧 controller。过期会话保留可访问的清理页面及仅注销自己 Cookie 的入口，其他资源拒绝继续运行。
+
+学习 v1 可选 chapters 字段保存 network/application 报告、五项 0–2 自评、辅助标记和完成时间；更新逐课记录保留章末字段，旧 v1 可直接导入。章末须案例检查通过、报告非空、自评分数至少 8，证据和验证非零；修改报告或分数撤销完成时间。自评不冒充自动监考。浏览器 DOM/Storage 检查报告仍可被主动修改，服务验证边界见 NETWORK-APPLICATION.md。

@@ -4,6 +4,8 @@ import AppIcon from "./components/AppIcon.vue";
 import TimingDemo from "./components/TimingDemo.vue";
 import LessonTwentyOne from "./components/LessonTwentyOne.vue";
 import FoundationLesson from "./components/FoundationLesson.vue";
+import networkBook from "./data/network-state.json";
+import ChapterChallenge from "./components/ChapterChallenge.vue";
 import { chapters, lessons, getLesson } from "./data/curriculum";
 import { useLearning } from "./composables/useLearning";
 import { labRequest, labUrl } from "./lib/lab";
@@ -316,7 +318,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
                       : "沿着路线，建立排查能力"
                   }}
                 </h2>
-                <p>第 01～18、21 课已开放实战，其余课程可查看课程安排。</p>
+                <p>第 01～26、35～39 课已开放实战，其余课程可查看课程安排。</p>
               </div>
               <label class="search-field"
                 ><AppIcon name="search" :size="17" /><input
@@ -404,13 +406,22 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
               </p>
             </section>
           </section>
+          <ChapterChallenge
+            v-if="
+              activeChapter &&
+              ['network', 'application'].includes(activeChapter)
+            "
+            :key="activeChapter"
+            :chapter="activeChapter"
+          />
         </template>
         <LessonTwentyOne v-else-if="activeLesson?.id === '21'" />
         <FoundationLesson
           v-else-if="
             activeLesson &&
             Number(activeLesson.id) >= 1 &&
-            Number(activeLesson.id) <= 18
+            (Number(activeLesson.id) <= 18 ||
+              networkBook.some((item) => item.id === activeLesson?.id))
           "
           :key="activeLesson.id"
           :lesson="activeLesson"
@@ -551,7 +562,26 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
               /></a>
             </article>
           </div>
-          <h2>Network 时序实验 · 第 21 课</h2>
+          <h2>网络与状态实验</h2>
+          <div class="lab-cases">
+            <article>
+              <AppIcon name="network" :size="25" />
+              <h2>Network · 19–26</h2>
+              <p>真实请求、时序、HTTP 缓存、CORS、失败恢复与持续连接。</p>
+              <a class="button primary" href="#chapter/network"
+                >进入网络课程与章末挑战</a
+              >
+            </article>
+            <article>
+              <AppIcon name="database" :size="25" />
+              <h2>Application · 35–39</h2>
+              <p>Cookie、Storage、IndexedDB、worker 与独立缓存策略。</p>
+              <a class="button primary" href="#chapter/application"
+                >进入状态课程与章末挑战</a
+              >
+            </article>
+          </div>
+          <h2>Network 时序快捷实验 · 第 21 课</h2>
           <div class="lab-cases">
             <article
               v-for="item in [
@@ -618,7 +648,31 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
           <p class="boundary-note">
             导入将替换本机记录，格式校验失败时保留原记录。建议先导出备份。
           </p>
-          <div v-if="!progressRows.length" class="empty-state">
+          <div v-if="learning.state.value.chapters" class="chapter-records">
+            <article
+              v-for="(record, chapter) in learning.state.value.chapters"
+              :key="chapter"
+              class="record-row"
+            >
+              <a :href="`#chapter/${chapter}`"
+                ><h2>{{ chapter }} 章末自评</h2></a
+              >
+              <p>
+                {{ record.completedAt ? "已完成自评" : "自评进行中" }} ·
+                {{ record.scores.reduce((sum, value) => sum + value, 0) }}/10{{
+                  record.assisted ? " · 使用解析" : ""
+                }}
+              </p>
+              <p>{{ record.note }}</p>
+            </article>
+          </div>
+          <div
+            v-if="
+              !progressRows.length &&
+              !Object.keys(learning.state.value.chapters || {}).length
+            "
+            class="empty-state"
+          >
             <AppIcon name="book" :size="30" />
             <h2>从一次真实排查开始</h2>
             <p>阅读、练习或挑战后，记录会出现在这里。</p>

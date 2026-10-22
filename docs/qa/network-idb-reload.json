@@ -1,0 +1,4 @@
+{
+  "beforeReload": "读取键：CUP-42\n实际已提交记录：{\"sku\":\"CUP-42\",\"price\":36,\"favorite\":true}",
+  "afterReload": "读取键：CUP-42\n实际已提交记录：{\"sku\":\"CUP-42\",\"price\":36,\"favorite\":true}"
+}

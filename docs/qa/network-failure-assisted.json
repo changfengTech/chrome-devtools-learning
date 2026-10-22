@@ -1,0 +1,5 @@
+{
+  "wrongFix": "当前结果未通过。检查差异或恢复实验条件后重试。",
+  "assistedSuccess": "✓ 已通过迁移挑战（使用解析）",
+  "wrongEvidenceInProduction": "证据还没有对应上。回看实际节点、规则、日志或变量，再选择最直接的依据。"
+}

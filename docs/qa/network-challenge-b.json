@@ -1,0 +1,98 @@
+[
+  {
+    "id": "19",
+    "choice": "b",
+    "before": "搜索 cup；实际返回 1 件商品；本次搜索请求 2 次。",
+    "after": "搜索 cup；实际返回 1 件商品；本次搜索请求 1 次。",
+    "url": "http://127.0.0.1:4174/labs/182db3ea-5fa6-49c5-984c-02150b1bf520/?lesson=19&token=182db3ea-5fa6-49c5-984c-02150b1bf520&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "20",
+    "choice": "b",
+    "before": "HTTP 200 / OUT_OF_STOCK\n页面判定：订单创建成功",
+    "after": "HTTP 200 / OUT_OF_STOCK\n页面判定：未创建订单，库存不足",
+    "url": "http://127.0.0.1:4174/labs/033b6ffd-61b8-4ab6-9c22-3c2ced137b66/?lesson=20&token=033b6ffd-61b8-4ab6-9c22-3c2ced137b66&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "22",
+    "choice": "b",
+    "before": "本次库存请求 2 次。",
+    "after": "本次库存请求 1 次。",
+    "url": "http://127.0.0.1:4174/labs/fdc124c8-f20f-4ce5-b9de-11acc2f37e13/?lesson=22&token=fdc124c8-f20f-4ce5-b9de-11acc2f37e13&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "23",
+    "choice": "b",
+    "before": "初次版本 1；服务已发布版本 2；当前价格版本 1，¥34。",
+    "after": "初次版本 1；服务已发布版本 2；当前价格版本 2，¥44。",
+    "url": "http://127.0.0.1:4174/labs/ccd20ab5-8f08-4736-998a-a3b06279e138/?lesson=23&token=ccd20ab5-8f08-4736-998a-a3b06279e138&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "24",
+    "choice": "b",
+    "before": "浏览器无法读取响应。请比较 OPTIONS 是否通过，以及 POST 有没有真正发送。",
+    "after": "跨源 JSON 可读取：CUP-3589 / ¥38",
+    "url": "http://127.0.0.1:4174/labs/cf70b16e-99ae-469e-88f5-a28afe52419f/?lesson=24&token=cf70b16e-99ae-469e-88f5-a28afe52419f&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "25",
+    "choice": "b",
+    "before": "图片失败，页面没有替代内容。",
+    "after": "图片失败，已显示替代内容。",
+    "url": "http://127.0.0.1:4174/labs/1422e1fb-99f3-4b1a-8aa8-ba0ce309f1d2/?lesson=25&token=1422e1fb-99f3-4b1a-8aa8-ba0ce309f1d2&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "26",
+    "choice": "b",
+    "before": "库存显示：undefined；消息中的最终 stock 应为 3。",
+    "after": "库存显示：3；消息中的最终 stock 应为 3。",
+    "url": "http://127.0.0.1:4174/labs/11b9bb80-2582-461c-bca8-9c07c97b31d8/?lesson=26&token=11b9bb80-2582-461c-bca8-9c07c97b31d8&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "35",
+    "choice": "b",
+    "before": "profile.authenticated = false\nHttpOnly 登录状态要到 Cookies 与请求头核对。",
+    "after": "profile.authenticated = true\nHttpOnly 登录状态要到 Cookies 与请求头核对。",
+    "url": "http://127.0.0.1:4174/labs/a5b418c1-f428-41e4-b7b5-523b97326b30/?lesson=35&token=a5b418c1-f428-41e4-b7b5-523b97326b30&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "36",
+    "choice": "b",
+    "before": "localStorage cart = null\nsessionStorage cart = null\nlocalStorage filter = cup\nsessionStorage filter = null",
+    "after": "localStorage cart = null\nsessionStorage cart = null\nlocalStorage filter = null\nsessionStorage filter = cup",
+    "url": "http://127.0.0.1:4174/labs/9bfeb791-756d-44b1-916e-53bf72286150/?lesson=36&token=9bfeb791-756d-44b1-916e-53bf72286150&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "37",
+    "choice": "b",
+    "before": "读取键：CUP-6438\n实际已提交记录：undefined",
+    "after": "读取键：CUP-6438\n实际已提交记录：{\"sku\":\"CUP-6438\",\"price\":37,\"favorite\":true}",
+    "url": "http://127.0.0.1:4174/labs/b96c1683-fb93-4e78-9d78-a1c897cd41ef/?lesson=37&token=b96c1683-fb93-4e78-9d78-a1c897cd41ef&tutorial=http%3A%2F%2F127.0.0.1%3A5173",
+    "cleaned": true
+  },
+  {
+    "id": "38",
+    "choice": "b",
+    "before": "当前返回 workerVersion=0\ncontroller=null\nscope=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/narrow/\nactive=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/worker.js?build=2&takeover=1&strategy=cache-first\nwaiting=none",
+    "after": "当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/worker.js?build=2&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/narrow/\nactive=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/worker.js?build=2&takeover=1&strategy=cache-first\nwaiting=none\nscope=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/\nactive=http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/worker.js?build=2&takeover=1&strategy=cache-first\nwaiting=none",
+    "url": "http://127.0.0.1:4174/labs/afb06cf1-c0ff-48ad-9edc-317aaead6430/",
+    "cleaned": true
+  },
+  {
+    "id": "39",
+    "choice": "b",
+    "before": "商品版本 2 / cache-storage\nManifest 图标 HTTP 404\nscope=/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/\nstart_url=/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/",
+    "after": "商品版本 2 / network\nManifest 图标 HTTP 200\nscope=/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/\nstart_url=/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/",
+    "url": "http://127.0.0.1:4174/labs/84f8a1d4-30f5-499b-ba76-3b3105a28c76/",
+    "cleaned": true
+  }
+]
