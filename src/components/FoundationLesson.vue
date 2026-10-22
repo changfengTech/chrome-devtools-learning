@@ -13,7 +13,7 @@ import QualityDemo from "./QualityDemo.vue";
 import AppIcon from "./AppIcon.vue";
 import FoundationDemo from "./FoundationDemo.vue";
 import { useLearning } from "../composables/useLearning";
-import { labOrigin, labRequest } from "../lib/lab";
+import { labOrigin, labRequest, labWindowName } from "../lib/lab";
 const props = defineProps<{ lesson: Lesson }>();
 const content = computed(
   () =>
@@ -131,7 +131,7 @@ function open(mode: "practice" | "challenge") {
           : isNetworkState.value
             ? `${labOrigin}/labs/${token}/?${query}`
             : `${labOrigin}/foundations/?${query}`,
-    "devtools-foundation-lab",
+    `${labWindowName}-lesson`,
   );
   if (!labWindow)
     feedback.value = "窗口被拦截，请允许当前站点打开实验窗口后重试。";

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
-import { labOrigin, labRequest } from "../lib/lab";
+import { labOrigin, labRequest, labWindowName } from "../lib/lab";
 import { useLearning } from "../composables/useLearning";
 const props = defineProps<{ chapter: string }>();
 const apiBase = computed(() =>
@@ -84,7 +84,7 @@ function open() {
           : "labs";
   popup = window.open(
     `${labOrigin}/${path}/${token.value}/?tutorial=${encodeURIComponent(location.origin)}`,
-    "devtools-chapter-lab",
+    `${labWindowName}-chapter`,
   );
 }
 function receive(event: MessageEvent) {

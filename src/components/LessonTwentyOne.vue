@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import AppIcon from "./AppIcon.vue";
 import TimingDemo from "./TimingDemo.vue";
 import { useLearning } from "../composables/useLearning";
-import { labOrigin, labRequest, labUrl } from "../lib/lab";
+import { labOrigin, labRequest, labUrl, labWindowName } from "../lib/lab";
 const learning = useLearning();
 const step = ref(0);
 const steps = ["故障现场", "理解时序", "真实实战", "独立挑战", "排查复盘"];
@@ -48,7 +48,7 @@ function showHint() {
   learning.update("21", { hints: hintLevel.value });
 }
 function openLab(scenario: string, token?: string) {
-  labWindow = window.open(labUrl(scenario, token), "devtools-lesson-21");
+  labWindow = window.open(labUrl(scenario, token), `${labWindowName}-21`);
   if (!labWindow) {
     const message = "实验窗口被拦截，请允许此页面打开实验窗口后重试。";
     if (token) challengeMessage.value = message;

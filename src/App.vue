@@ -11,7 +11,7 @@ import qualityBook from "./data/quality.json";
 import ChapterChallenge from "./components/ChapterChallenge.vue";
 import { chapters, lessons, getLesson } from "./data/curriculum";
 import { useLearning } from "./composables/useLearning";
-import { labRequest, labUrl } from "./lib/lab";
+import { labRequest, labUrl, labWindowName } from "./lib/lab";
 const learning = useLearning();
 const route = ref(location.hash.slice(1) || "home");
 const search = ref("");
@@ -84,7 +84,7 @@ function focusMain() {
   document.getElementById("main-content")?.focus();
 }
 function openLab(scenario = "waiting") {
-  window.open(labUrl(scenario), "devtools-lab-preview");
+  window.open(labUrl(scenario), `${labWindowName}-preview`);
 }
 async function importFile(event: Event) {
   const input = event.target as HTMLInputElement;

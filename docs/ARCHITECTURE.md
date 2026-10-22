@@ -129,3 +129,5 @@ JSON 导入保留 Lighthouse 的版本、URL、时间、设备、类别、限速
 49 使用实际 CSP 响应头、实际内联阻断事件与 host-only / 无关 Domain Cookie；清理仅过期本会话 Cookie。52 的 `product.json` URL 在会话中稳定；服务器对照改变实际响应，“检查手工覆盖”保持故障数据，便于在 Chrome Local overrides 验证。工具内 CSS 用 `product.css`；Changes / Workspaces 的操作由学习者在工具中完成。
 
 会话 30 分钟、每会话最多 100 次运行，全局最多 500 会话；报告限标量、审计限三份。停止 / 离页中止页面自有请求、脚本和定时清理；仅关闭本页打开的审计窗口。浏览器限速、覆盖目录、设备模拟与工作区映射需另在工具恢复。可选 `qa-lighthouse.mjs` 调官方 Lighthouse 13.0.1 CLI 在独立临时 Chrome 运行 Navigation，不连接已有用户浏览器，也不代表原生 Timespan / Snapshot 验收。
+
+实验窗口名称在每个教程文档初始化时生成独立标识；同一教程内复用自己的课内 / 章末窗口，不与另一个教程窗口共用 opener。第 21 课及预览入口遵循同样隔离。结果仍核对实际 source、origin、token 和课程；窗口隔离不代替消息校验。
