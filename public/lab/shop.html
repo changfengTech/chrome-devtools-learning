@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>日常好物 · Network 实验商城</title>
+    <link rel="stylesheet" href="/lab/shop.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <header>
+      <a href="/shop/" class="brand">日常好物<span>Little goods</span></a
+      ><span class="lab-label">第 21 课 · 独立实验页</span>
+    </header>
+    <main>
+      <div class="intro">
+        <div>
+          <p class="eyebrow">给日常，留一点好物</p>
+          <h1>简单的东西，<br />值得慢慢挑。</h1>
+          <p>三个商品，一次请求。用真实的 Network 找到加载慢在哪里。</p>
+        </div>
+        <div class="intro-art" aria-hidden="true">
+          <div class="vase"></div>
+          <div class="stem"></div>
+          <div class="leaf one"></div>
+          <div class="leaf two"></div>
+        </div>
+      </div>
+      <section class="experiment" aria-labelledby="experiment-title">
+        <div>
+          <h2 id="experiment-title">商品列表实验</h2>
+          <p id="scenario-description"></p>
+        </div>
+        <div class="controls">
+          <button id="load" class="primary">重新加载商品</button
+          ><button id="fix">应用修复并加载</button
+          ><button id="reset">恢复故障</button>
+        </div>
+      </section>
+      <div class="instruction">
+        打开
+        <strong>Network → Fetch/XHR</strong
+        >，清空记录，再点击「重新加载商品」。检查 <code>products</code> 请求的
+        <strong>Timing</strong>。
+      </div>
+      <p id="status" role="status" aria-live="polite">
+        商品尚未加载。先打开 DevTools，再开始实验。
+      </p>
+      <div id="products" class="products"></div>
+      <section class="measurement">
+        <h2>浏览器测量辅助</h2>
+        <p>
+          来自本页 Resource Timing，帮助你对照观察；这里不读取 DevTools 操作。
+        </p>
+        <div id="metrics">运行请求后显示响应前等待与传输阶段。</div>
+        <p id="comparison"></p>
+      </section>
+      <details>
+        <summary>实验说明与恢复</summary>
+        <p>
+          这是本地受控故障：等待场景人为延迟发送响应头；传输场景发送较大数据并人为分块间隔。修复仅用于验证对应阶段，不能直接推断真实网站的根因。
+        </p>
+        <p>
+          「恢复故障」只恢复商城状态。请在 DevTools 中自行恢复 Network
+          throttling、请求阻断等设置。教程与商城不同源，商城没有热更新或 Vue
+          调试插件。
+        </p>
+      </details>
+    </main>
+    <footer>DevTools 实验室 · 本地教学商城 · 无真实交易</footer>
+    <script type="module" src="/lab/shop.js"></script>
+  </body>
+</html>

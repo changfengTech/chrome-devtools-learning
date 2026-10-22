@@ -1,0 +1,566 @@
+{
+  "date": "2026-10-20",
+  "engine": "Codex in-app Chromium; exact version unavailable",
+  "practice": [
+    {
+      "id": "01",
+      "checked": "✓ 实际计数与动作一致：2"
+    },
+    {
+      "id": "02",
+      "checked": "✓ 一次动作只处理一次：2"
+    },
+    {
+      "id": "03",
+      "checked": "✓ 实验条件恢复一致：相同输入、正常网络条件"
+    },
+    {
+      "id": "04",
+      "checked": "✓ 价格数字节点正确：34\n✓ 标题节点正确：晨间陶瓷杯 42"
+    },
+    {
+      "id": "05",
+      "checked": "✓ 最终颜色符合预期：rgb(22, 130, 103)"
+    },
+    {
+      "id": "06",
+      "checked": "✓ 商品网格无横向溢出：312 / 312"
+    },
+    {
+      "id": "07",
+      "checked": "✓ 按钮可以接收交互\n✓ 点击能改变数量"
+    },
+    {
+      "id": "08",
+      "checked": "✓ 图标按钮有准确名称\n✓ 数量标签正确关联"
+    },
+    {
+      "id": "09",
+      "checked": "✓ 优惠输入被正确使用"
+    },
+    {
+      "id": "10",
+      "checked": "✓ 结算摘要正确生成"
+    },
+    {
+      "id": "11",
+      "checked": "✓ 在目标上下文查到正确价格：查询结果：34"
+    },
+    {
+      "id": "12",
+      "checked": "✓ 取证保留了当时值"
+    },
+    {
+      "id": "13",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "14",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "15",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "16",
+      "checked": "✓ 库存检查及类型规范正确：已接受 6 条商品；价格类型已规范。"
+    },
+    {
+      "id": "17",
+      "checked": "✓ 一次动作一次状态变化"
+    },
+    {
+      "id": "18",
+      "checked": "✓ 解析与错误状态得到处理"
+    },
+    {
+      "id": "14",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "01",
+      "checked": "✓ 实际计数与动作一致：2"
+    },
+    {
+      "id": "02",
+      "checked": "✓ 一次动作只处理一次：2"
+    },
+    {
+      "id": "03",
+      "checked": "✓ 实验条件恢复一致：相同输入、正常网络条件"
+    },
+    {
+      "id": "04",
+      "checked": "✓ 价格数字节点正确：34\n✓ 标题节点正确：晨间陶瓷杯 42"
+    },
+    {
+      "id": "05",
+      "checked": "✓ 最终颜色符合预期：rgb(22, 130, 103)"
+    },
+    {
+      "id": "06",
+      "checked": "✓ 商品网格无横向溢出：312 / 312"
+    },
+    {
+      "id": "07",
+      "checked": "✓ 按钮可以接收交互\n✓ 点击能改变数量"
+    },
+    {
+      "id": "08",
+      "checked": "✓ 图标按钮有准确名称\n✓ 数量标签正确关联"
+    },
+    {
+      "id": "09",
+      "checked": "✓ 优惠输入被正确使用"
+    },
+    {
+      "id": "10",
+      "checked": "✓ 结算摘要正确生成"
+    },
+    {
+      "id": "11",
+      "checked": "✓ 在目标上下文查到正确价格：查询结果：34"
+    },
+    {
+      "id": "12",
+      "checked": "✓ 取证保留了当时值"
+    },
+    {
+      "id": "13",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "14",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "15",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "16",
+      "checked": "✓ 库存检查及类型规范正确：已接受 6 条商品；价格类型已规范。"
+    },
+    {
+      "id": "17",
+      "checked": "✓ 一次动作一次状态变化"
+    },
+    {
+      "id": "18",
+      "checked": "✓ 解析与错误状态得到处理"
+    },
+    {
+      "id": "01",
+      "checked": "✓ 实际计数与动作一致：2"
+    },
+    {
+      "id": "02",
+      "checked": "✓ 一次动作只处理一次：2"
+    },
+    {
+      "id": "03",
+      "checked": "✓ 实验条件恢复一致：相同输入、正常网络条件"
+    },
+    {
+      "id": "04",
+      "checked": "✓ 价格数字节点正确：34\n✓ 标题节点正确：晨间陶瓷杯 42"
+    },
+    {
+      "id": "05",
+      "checked": "✓ 最终颜色符合预期：rgb(22, 130, 103)"
+    },
+    {
+      "id": "06",
+      "checked": "✓ 商品网格无横向溢出：312 / 312"
+    },
+    {
+      "id": "07",
+      "checked": "✓ 按钮可以接收交互\n✓ 点击能改变数量"
+    },
+    {
+      "id": "08",
+      "checked": "✓ 图标按钮有准确名称\n✓ 数量标签正确关联"
+    },
+    {
+      "id": "09",
+      "checked": "✓ 优惠输入被正确使用"
+    },
+    {
+      "id": "10",
+      "checked": "✓ 结算摘要正确生成"
+    },
+    {
+      "id": "11",
+      "checked": "✓ 在目标上下文查到正确价格：查询结果：34"
+    },
+    {
+      "id": "12",
+      "checked": "✓ 取证保留了当时值"
+    },
+    {
+      "id": "13",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "14",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "15",
+      "checked": "✓ 业务合计与独立预期一致：61 / 61"
+    },
+    {
+      "id": "16",
+      "checked": "✓ 库存检查及类型规范正确：已接受 6 条商品；价格类型已规范。"
+    },
+    {
+      "id": "17",
+      "checked": "✓ 一次动作一次状态变化"
+    },
+    {
+      "id": "18",
+      "checked": "✓ 解析与错误状态得到处理"
+    },
+    {
+      "id": "06",
+      "checked": "✓ 商品网格无横向溢出：312 / 312"
+    }
+  ],
+  "randomChallenges": [
+    {
+      "id": "01",
+      "cause": "a",
+      "checked": "✓ 实际计数与动作一致：2"
+    },
+    {
+      "id": "02",
+      "cause": "a",
+      "checked": "✓ 一次动作只处理一次：3"
+    },
+    {
+      "id": "03",
+      "cause": "b",
+      "checked": "✓ 实验条件恢复一致：相同输入、正常网络条件"
+    },
+    {
+      "id": "04",
+      "cause": "a",
+      "checked": "✓ 价格数字节点正确：27\n✓ 标题节点正确：晨间陶瓷杯 28"
+    },
+    {
+      "id": "05",
+      "cause": "a",
+      "checked": "✓ 最终颜色符合预期：rgb(22, 130, 103)"
+    },
+    {
+      "id": "06",
+      "cause": "b",
+      "checked": "✓ 商品网格无横向溢出：312 / 312"
+    },
+    {
+      "id": "07",
+      "cause": "b",
+      "checked": "✓ 按钮可以接收交互\n✓ 点击能改变数量"
+    },
+    {
+      "id": "08",
+      "cause": "a",
+      "checked": "✓ 图标按钮有准确名称\n✓ 数量标签正确关联"
+    },
+    {
+      "id": "09",
+      "cause": "a",
+      "checked": "✓ 优惠输入被正确使用"
+    },
+    {
+      "id": "10",
+      "cause": "a",
+      "checked": "✓ 结算摘要正确生成"
+    },
+    {
+      "id": "11",
+      "cause": "b",
+      "checked": "✓ 在目标上下文查到正确价格：查询结果：48"
+    },
+    {
+      "id": "12",
+      "cause": "b",
+      "checked": "✓ 计时包含实际异步任务"
+    },
+    {
+      "id": "13",
+      "cause": "a",
+      "checked": "✓ 业务合计与独立预期一致：74 / 74"
+    },
+    {
+      "id": "14",
+      "cause": "a",
+      "checked": "✓ 业务合计与独立预期一致：135 / 135"
+    },
+    {
+      "id": "15",
+      "cause": "b",
+      "checked": "✓ 业务合计与独立预期一致：75 / 75"
+    },
+    {
+      "id": "16",
+      "cause": "a",
+      "checked": "✓ 库存检查及类型规范正确：已接受 6 条商品；价格类型已规范。"
+    },
+    {
+      "id": "17",
+      "cause": "a",
+      "checked": "✓ 一次动作一次状态变化"
+    },
+    {
+      "id": "18",
+      "cause": "a",
+      "checked": "✓ 解析与错误状态得到处理"
+    },
+    {
+      "id": "01",
+      "cause": "b",
+      "checked": "✓ 数值合计正确：95"
+    },
+    {
+      "id": "02",
+      "cause": "b",
+      "checked": "✓ 一次动作只处理一次：2"
+    },
+    {
+      "id": "04",
+      "cause": "b",
+      "checked": "✓ 价格数字节点正确：20\n✓ 标题节点正确：晨间陶瓷杯 15"
+    },
+    {
+      "id": "05",
+      "cause": "b",
+      "checked": "✓ 最终颜色符合预期：rgb(22, 130, 103)"
+    },
+    {
+      "id": "08",
+      "cause": "b",
+      "checked": "✓ 图标按钮有准确名称\n✓ 数量标签正确关联"
+    },
+    {
+      "id": "09",
+      "cause": "b",
+      "checked": "✓ 缺货订单被阻止"
+    },
+    {
+      "id": "10",
+      "cause": "b",
+      "checked": "✓ 结算摘要正确生成"
+    },
+    {
+      "id": "13",
+      "cause": "b",
+      "checked": "✓ 业务合计与独立预期一致：55 / 55"
+    },
+    {
+      "id": "14",
+      "cause": "b",
+      "checked": "✓ 业务合计与独立预期一致：75 / 75"
+    },
+    {
+      "id": "16",
+      "cause": "b",
+      "checked": "✓ 库存检查及类型规范正确：已接受 5 条商品；价格类型已规范。"
+    },
+    {
+      "id": "17",
+      "cause": "b",
+      "checked": "✓ 一次动作一次真实请求：1"
+    },
+    {
+      "id": "18",
+      "cause": "b",
+      "checked": "✓ 保留最新搜索结果"
+    },
+    {
+      "id": "03",
+      "cause": "b",
+      "checked": "✓ 实验条件恢复一致：相同输入、正常网络条件"
+    }
+  ],
+  "demos": [
+    {
+      "id": "01",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n症状\n价格颜色不对\n页面出现报错\n计算中间值异常\n接口返回异常\n输入明显卡顿\n反复操作后内存增长\nElements\nConsole\nSources\nNetwork\nPerformance\nMemory\nApplication\nLighthouse\nConsole 能提供第一组相关证据。接下来仍需验证具体原因。"
+    },
+    {
+      "id": "02",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n绑定两个加购监听器\n只看本次操作\n单击一次加购恢复起始状态\n点击结果：1 件；每次单击只处理一次。\n[heartbeat] 页面保持连接\n[cart] 当前数量 1"
+    },
+    {
+      "id": "03",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n\n基线：https://shop.test:443\n\n协议\nhttps:\nhttp:\n主机\n端口\n基线源\nhttps://shop.test\n不同源\n当前源\nhttps://shop.test:8443\n\n默认端口会被标准化。端口不同也会改变 origin；判断同源还不能代替 Cookie 的同站规则。"
+    },
+    {
+      "id": "04",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\narticle.product\n  h2#product-title\n  strong#price-value\n\n商品卡片\n\n晨间陶瓷杯\n¥ 128\n新文本\n修改选中节点\n只修改 价格数字，其他节点保持原样。"
+    },
+    {
+      "id": "05",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n存在 ID 选择器规则\n同级红色规则后声明\n.sale-price { color: red; }\n.sale-price { color: green; }\n\n最终样式\n\n¥ 68\n胜出：.sale-price 绿色规则（后声明）。相同权重时继续看来源与声明顺序。"
+    },
+    {
+      "id": "06",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n容器宽度 240 px\n子项 min-width: 180px\ngap\n12 px\n100 px\n商品 1\n商品 2\n当前约束允许内容在可用空间中分配。 继续调整宽度，验证其他条件。"
+    },
+    {
+      "id": "07",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n透明层覆盖按钮\ndisabled\n加入购物车\n已接收 1 次点击。可以点击，也请用 Tab 和 Enter 验证。"
+    },
+    {
+      "id": "08",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n添加准确的 aria-label\n关联数量 label\n♡\n数量\nrole: button   name: 收藏商品\nrole: spinbutton   name: 数量\n\n这两个控件也实际应用了所选属性。用键盘移动焦点，再在真实商城检查 Accessibility 树。"
+    },
+    {
+      "id": "09",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n筛选日志\n日志级别\n全部\ndebug\ninfo\nwarn\nerror\n\nerror[checkout] stock=0，订单却被接受\n\n1 条可见。噪声变少以后，仍需对照本次操作、输入和真实结果。"
+    },
+    {
+      "id": "10",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\nreadProductName\n抛出点\nbuildSummary\n调用者\ncheckout\n调用者\nconst product = { name: null }\nreadProductName(product)\n当前检查 buildSummary。沿调用者追入参，区分抛出位置与数据来源。"
+    },
+    {
+      "id": "11",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\nConsole 执行上下文\ntop · 商城外层\n商品预览 iframe\ntop document：商品列表\niframe document：预览价格\n<strong id=\"frame-price\">68</strong>\ndocument.querySelector('#frame-price')\n→ <strong id=\"frame-price\">68</strong>\n\n模型解释上下文；真实商城提供一个实际 iframe，可在 Console 上下文菜单切换。"
+    },
+    {
+      "id": "12",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n保存当前快照\n稍后把对象价格加 5\n当前引用\n{ price: 73 }\n保存的快照\n{ price: 68 }\n先 await 完成，再执行 timeEnd\ntime → 等待异步操作 → timeEnd\n对象引用会变化。需要当时证据就保存当时值；需要操作耗时就让计时包含真正的完成时刻。"
+    },
+    {
+      "id": "13",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n启用 Source Map 视角\n\ncart-compiled.js\n\n1\nexport function calculateTotal(price, quantity) {\n2\n    const subtotal = multiply(price, quantity);\n3\n    return subtotal - 5;\n4\n}\n\nshop-cart.ts\n\n  return subtotal - 5;\n\n点击左侧行查看对应位置。这是关系模型；商城的 .map 文件由 TypeScript 真实生成，并包含原始源码。"
+    },
+    {
+      "id": "14",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\nStep into\nStep over\nStep out\n重置执行\n1\nconst price = \"68\"\n2\nconst quantity = 2\n3\nconst subtotal = multiply(price, quantity)\n4\nreturn Number(price) * quantity\n5\nconst total = subtotal - 5\n6\nrenderReceipt(total)\n7\nnode.textContent = String(total)\n8\n结算完成\n当前帧：checkout\n\nprice: \"68\"\n\nquantity: 2\n\nsubtotal: 136\n\ntotal: 131\n\n指示行表示下一步要执行的语句；Step over 越过调用，Step into 进入，Step out 返回调用者。"
+    },
+    {
+      "id": "15",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\nreadDiscount · Local\ncheckout · Local\nreader · Closure\ndiscount: 8\nconfig.discount: 5\n闭包仍保留创建时的旧值\n切换帧，确认自己正在检查哪一个作用域，再选择要修改的来源。"
+    },
+    {
+      "id": "16",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n条件\ntypeof item.price === 'string'\nitem.stock < 0\nitem.sku === 'LAMP-04'\n方式\nConditional breakpoint\nLogpoint\n运行循环\nCUP-01\nprice: 68\nstock: 5\nCUP-02\nprice: \"89\"\nstock: 3\nBAG-03\nprice: 48\nstock: -2\nLAMP-04\nprice: 128\nstock: 6\n记录 1 条匹配日志，不暂停程序。"
+    },
+    {
+      "id": "17",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n监听的断点\nEvent Listener → click\nDOM → Subtree modifications\nXHR/fetch → /trace\n触发点击\n修改计数节点\n发起 /trace 请求\n在 traceCart 暂停：发起匹配 URL 的请求"
+    },
+    {
+      "id": "18",
+      "text": "原理实验\n教学模拟 · 不计入真实实战\n旧请求完成 150 ms\n新请求完成 30 ms\n提交状态时忽略旧请求结果\n按完成顺序执行\n完成顺序：新请求 → 旧请求。最终显示：新搜索结果。\nPause on caught exceptions\ntry { JSON.parse('{invalid-json') }\ncatch (error) { /* 隐藏错误状态 */ }\n会在抛出点暂停，之后仍可继续进入 catch。"
+    }
+  ],
+  "secondVariant": [
+    {
+      "id": "01",
+      "passed": true
+    },
+    {
+      "id": "02",
+      "passed": true
+    },
+    {
+      "id": "04",
+      "passed": true
+    },
+    {
+      "id": "05",
+      "passed": true
+    },
+    {
+      "id": "08",
+      "passed": true
+    },
+    {
+      "id": "09",
+      "passed": true
+    },
+    {
+      "id": "10",
+      "passed": true
+    },
+    {
+      "id": "13",
+      "passed": true
+    },
+    {
+      "id": "14",
+      "passed": true
+    },
+    {
+      "id": "16",
+      "passed": true
+    },
+    {
+      "id": "17",
+      "passed": true
+    },
+    {
+      "id": "18",
+      "passed": true
+    }
+  ],
+  "firstVariantExtra": [
+    {
+      "id": "03",
+      "choice": "a",
+      "checked": "✓ 实验条件恢复一致：相同输入、正常网络条件"
+    },
+    {
+      "id": "06",
+      "choice": "a",
+      "checked": "✓ 商品网格无横向溢出：360 / 360"
+    },
+    {
+      "id": "07",
+      "choice": "a",
+      "checked": "✓ 按钮可以接收交互\n✓ 点击能改变数量"
+    },
+    {
+      "id": "11",
+      "choice": "a",
+      "checked": "✓ 在目标上下文查到正确价格：查询结果：41"
+    },
+    {
+      "id": "12",
+      "choice": "a",
+      "checked": "✓ 取证保留了当时值"
+    },
+    {
+      "id": "14",
+      "choice": "a",
+      "checked": "✓ 业务合计与独立预期一致：48 / 48"
+    },
+    {
+      "id": "15",
+      "choice": "a",
+      "checked": "✓ 业务合计与独立预期一致：102 / 102"
+    }
+  ],
+  "debugger": {
+    "pause": "multiplyPrice",
+    "callers": [
+      "calculateTotal",
+      "triggerBusiness",
+      "runFault"
+    ],
+    "stepOver": "condition → next branch",
+    "restored": true
+  },
+  "finalPreview": {
+    "date": "2026-10-21",
+    "tutorial": "http://127.0.0.1:4173",
+    "shop": "http://127.0.0.1:4174",
+    "guidedEvidenceFlow": true,
+    "testProgressRestoredEmpty": true,
+    "errorsOnTutorial": []
+  }
+}

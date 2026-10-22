@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "records": {
+    "10": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:48.244Z",
+      "challengeAt": "2026-10-20T13:21:34.830Z",
+      "challengeAssisted": false
+    },
+    "11": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:55.660Z",
+      "challengeAt": "2026-10-20T13:15:59.061Z",
+      "challengeAssisted": false
+    },
+    "12": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:57.493Z",
+      "challengeAt": "2026-10-20T13:16:01.328Z",
+      "challengeAssisted": false
+    },
+    "13": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:13:04.393Z",
+      "challengeAt": "2026-10-20T13:21:36.662Z",
+      "challengeAssisted": false
+    },
+    "14": {
+      "note": "验收笔记：multiplyPrice 的字符串拼接与错误加法，用中间值和调用栈区分。",
+      "hints": 3,
+      "readAt": "2026-10-20T13:23:45.619Z",
+      "practiceAt": "2026-10-20T13:23:00.246Z",
+      "challengeAt": "2026-10-20T13:23:38.995Z",
+      "challengeAssisted": true
+    },
+    "15": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:13:08.144Z",
+      "challengeAt": "2026-10-20T13:16:07.045Z",
+      "challengeAssisted": false
+    },
+    "16": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:13:09.943Z",
+      "challengeAt": "2026-10-20T13:21:40.298Z",
+      "challengeAssisted": false
+    },
+    "17": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:13:11.861Z",
+      "challengeAt": "2026-10-20T13:21:42.212Z",
+      "challengeAssisted": false
+    },
+    "18": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:13:13.677Z",
+      "challengeAt": "2026-10-20T13:21:44.112Z",
+      "challengeAssisted": false
+    },
+    "01": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:26.243Z",
+      "challengeAt": "2026-10-20T13:21:14.228Z",
+      "challengeAssisted": false
+    },
+    "02": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:28.010Z",
+      "challengeAt": "2026-10-20T13:21:16.046Z",
+      "challengeAssisted": false
+    },
+    "03": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:30.743Z",
+      "challengeAt": "2026-10-20T13:14:49.061Z",
+      "challengeAssisted": false
+    },
+    "04": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:32.594Z",
+      "challengeAt": "2026-10-20T13:21:18.046Z",
+      "challengeAssisted": false
+    },
+    "05": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:34.476Z",
+      "challengeAt": "2026-10-20T13:21:19.962Z",
+      "challengeAssisted": false
+    },
+    "06": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:36.411Z",
+      "challengeAt": "2026-10-20T13:14:54.661Z",
+      "challengeAssisted": false
+    },
+    "07": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:42.710Z",
+      "challengeAt": "2026-10-20T13:15:20.078Z",
+      "challengeAssisted": false
+    },
+    "08": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:44.560Z",
+      "challengeAt": "2026-10-20T13:21:21.846Z",
+      "challengeAssisted": false
+    },
+    "09": {
+      "note": "",
+      "hints": 0,
+      "practiceAt": "2026-10-20T13:12:46.427Z",
+      "challengeAt": "2026-10-20T13:21:23.696Z",
+      "challengeAssisted": false
+    }
+  }
+}

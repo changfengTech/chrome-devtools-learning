@@ -1,0 +1,1420 @@
+[
+  {
+    "id": "01",
+    "kind": "panels",
+    "hook": "页面出问题时，先找什么？",
+    "principle": "把症状与工具的观察对象连起来。面板选择是起点，后面还要用证据验证。",
+    "symptom": "商品请求已完成，但购物车数量与实际操作不符。",
+    "demoSteps": [
+      "Elements：看 DOM 和最终样式",
+      "Console：检查错误和表达式",
+      "Sources：暂停并检查运行状态",
+      "Network：查看真实请求"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "右键商品价格选择 Inspect；在 Elements 找到 #price-value 与 #cart-count，核对它们代表什么。",
+      "Console 筛选 [cart]，再点「再次触发业务」，比较一次动作与数量变化。",
+      "Network 筛选 data，查看 Response；Sources 搜索 calculateTotal，判断下一步需要哪层证据。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "页面计数与实际操作不一致"
+      },
+      {
+        "id": "b",
+        "label": "商品价格类型与预期不一致"
+      },
+      {
+        "id": "c",
+        "label": "页面截图颜色相近"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "DOM 文本与点击日志相互印证"
+      },
+      {
+        "id": "b",
+        "label": "变量类型与页面合计相互印证"
+      },
+      {
+        "id": "c",
+        "label": "只看工具图标"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "更新正确的计数目标"
+      },
+      {
+        "id": "b",
+        "label": "转换价格后重新计算"
+      },
+      {
+        "id": "c",
+        "label": "只重载图片"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "点击一次「加入购物车」，分别定位 #cart-count、Console 日志、/api/foundations/data 请求和 shop-cart.ts。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/overview",
+    "concepts": [
+      {
+        "title": "面板观察不同层面",
+        "body": "HTML 是文档结构，CSS 决定外观，JavaScript 改变状态，HTTP 交换数据。Elements 看当前 DOM 和样式；Console 检查值与错误；Sources 看执行过程；Network 看请求，不需要每次打开所有面板。"
+      },
+      {
+        "title": "把抱怨改成可检验的预期",
+        "body": "“加购坏了”不够具体。可以先说：数量为 2，点击一次，购物车应该增加 2。先检查当前文本，再查是谁改了它，才能逐步缩小范围。"
+      },
+      {
+        "title": "工具显示的是证据",
+        "body": "一条成功请求只能说明这次 HTTP 有响应，不能证明后续计算和渲染正确。将输入、处理和页面结果串起来，再决定下一步要看哪个面板。"
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "kind": "evidence",
+    "hook": "先把问题稳定重现",
+    "principle": "记录起始状态、输入、动作和预期。看到现象后，用对照排除其他解释。",
+    "symptom": "一次加购出现了两次变化，或者根本没有发生变化。",
+    "demoSteps": ["先恢复现场", "输入数量 2", "点击一次加购", "对照事件与结果"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "运行故障后先记下数量与购物车变化，不要连续点击。",
+      "Elements 选中 #add，展开 Event Listeners 的 click；Console 过滤 [cart]。",
+      "点「恢复故障」重新开始，比较一份输入对应几次处理；缺失监听器时也记录没有日志与没有变化。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "同一动作被两个监听器处理"
+      },
+      {
+        "id": "b",
+        "label": "按钮未绑定对应监听器"
+      },
+      {
+        "id": "c",
+        "label": "商品图片下载失败"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "单次操作产生两条处理日志"
+      },
+      {
+        "id": "b",
+        "label": "点击后没有处理日志且未产生状态变化"
+      },
+      {
+        "id": "c",
+        "label": "按钮长得很像"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "移除重复监听器再单击"
+      },
+      {
+        "id": "b",
+        "label": "补上缺失监听器再单击"
+      },
+      {
+        "id": "c",
+        "label": "重复点击直到成功"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Elements → Event Listeners 检查 add 按钮。Console 过滤 [cart]，恢复故障后只点击一次按钮。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/overview",
+    "concepts": [
+      {
+        "title": "先稳定复现",
+        "body": "记录起始计数、输入数量和点击次数。恢复故障后只做一次动作；重复点击、刷新或改多个选项会改变现场，让两次结果无法公平比较。"
+      },
+      {
+        "title": "事件处理与页面结果",
+        "body": "addEventListener 给事件绑定处理函数。一个 click 可以触发多个处理函数；缺少监听器则可能没有状态变化。DOM 文本和处理日志分别反映结果与过程。"
+      },
+      {
+        "title": "用对照排除解释",
+        "body": "只移除重复监听器，再用同一输入单击。如果变化从两次恢复为一次，就有证据支持重复处理。仍需检查真实绑定来源，不能把一条重复日志直接当成唯一根因。"
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "kind": "origin",
+    "hook": "两次实验，条件一样吗？",
+    "principle": "同源由协议、主机和端口共同决定；复测要保持缓存、网络、输入和视口一致。",
+    "symptom": "实验页的网络条件或输入条件变化，导致两次运行不可直接比较。",
+    "demoSteps": [
+      "切换端口检查同源",
+      "记录数量与实验延迟",
+      "只改变一个条件",
+      "恢复 DevTools 限速"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Network 勾选 Preserve log，筛选 foundations/data；记录当前限速是否为 No throttling。",
+      "展开故障请求的 Headers / Response / Timing；读取 X-Lab-Condition、quantity 和 baselineQuantity。",
+      "Console 运行 location.origin，分别记录教程 5173/4173 与商城 4174；只改变相关条件后再比较。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "额外网络等待改变了条件"
+      },
+      {
+        "id": "b",
+        "label": "商品数量改变了条件"
+      },
+      {
+        "id": "c",
+        "label": "只是按钮文字改变"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "X-Lab-Condition 与响应前等待不同"
+      },
+      {
+        "id": "b",
+        "label": "quantity 与 baselineQuantity 的输入不同"
+      },
+      {
+        "id": "c",
+        "label": "只看是否 200"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "恢复网络条件后用相同输入复测"
+      },
+      {
+        "id": "b",
+        "label": "恢复数量后保持其他条件复测"
+      },
+      {
+        "id": "c",
+        "label": "同时改变所有设置"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Network 检查 data 响应中的 quantity / baselineQuantity 与 X-Lab-Condition；对比本页与 iframe 的 origin。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/overview",
+    "concepts": [
+      {
+        "title": "origin 由三部分组成",
+        "body": "源由协议、主机和有效端口共同决定，路径不参与同源判断。http://127.0.0.1:5173 和 http://127.0.0.1:4174 是不同源，存储和执行环境要分别看。"
+      },
+      {
+        "title": "比较结果先比较条件",
+        "body": "数量、缓存、限速和服务状态都可能改变结果。仅仅比较“这次快了”或“金额变了”不能证明修复有效；要记录输入并保持其他条件一致。"
+      },
+      {
+        "title": "响应证据有适用范围",
+        "body": "本课 data 的 X-Lab-Condition 是教学服务提供的辅助说明，quantity 与 baselineQuantity 是真实输入。请求慢在哪里仍要看 Timing，不能把这个教学响应头当成线上通用诊断规则。"
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "kind": "dom",
+    "hook": "你改的是哪个节点？",
+    "principle": "页面外观和 DOM 层级不是一回事。优先找承载目标文本的精确节点，避免误改整个容器。",
+    "symptom": "价格数字或商品名称被写进了错误的嵌套节点。",
+    "demoSteps": [
+      "点击页面与节点树双向定位",
+      "修改文本节点",
+      "检查容器和子节点的区别"
+    ],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "使用 Inspect 选商品价格，展开到 #price-value；Ctrl/Cmd+F 搜索本次 data-sku。",
+      "Network 的 data Response 中核对 price 和 name；区分价格数字节点与标题节点。",
+      "在 Elements 双击目标文本，只改回实际数据；保持货币符号和相邻商品，再点「检查当前页面」。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "价格数字节点被错误更新"
+      },
+      {
+        "id": "b",
+        "label": "商品标题节点被错误更新"
+      },
+      {
+        "id": "c",
+        "label": "图片加载失败"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "price-value 的 textContent 与订单数据不一致"
+      },
+      {
+        "id": "b",
+        "label": "product-title 的 textContent 与订单数据不一致"
+      },
+      {
+        "id": "c",
+        "label": "卡片背景色一样"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "只修正价格数字节点"
+      },
+      {
+        "id": "b",
+        "label": "只修正商品标题节点"
+      },
+      {
+        "id": "c",
+        "label": "替换整张卡片 HTML"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Inspect 商品卡片，搜索 data-sku；展开 #price-value 和 #product-title，修改目标文本后点击「检查当前页面」。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/css/reference",
+    "concepts": [
+      {
+        "title": "DOM 是当前页面的对象树",
+        "body": "浏览器把 HTML 解析成节点树，JavaScript 可以继续增删和改写。Elements 显示当前 DOM；View Source 显示最初源码，两者可能不同。"
+      },
+      {
+        "title": "选对节点再修改",
+        "body": "点击 Inspect 再选价格，确认高亮只覆盖目标；父节点可能包含货币符号、数字和其他内容。用 data-sku 或 id 找到目标，再核对 textContent 与接口数据。"
+      },
+      {
+        "title": "临时改动用于验证",
+        "body": "在 Elements 编辑文字会直接改变这次页面，可以验证显示位置。它不会自动修复生成错误值的 JavaScript；恢复故障或刷新会重新渲染。"
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "kind": "cascade",
+    "hook": "为什么你的声明被划掉？",
+    "principle": "Styles 展示规则来源，Computed 展示最终值。先看胜出的规则，再解释层叠、优先级和顺序。",
+    "symptom": "促销价格应该为绿色，实际被更高优先级或同级后置规则覆盖。",
+    "demoSteps": ["切换选择器权重", "交换规则顺序", "预测最终颜色"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Inspect 价格，Styles 筛选 color，找到划掉的 .sale-price 和真正获胜的规则。",
+      "点击规则来源定位 #fault-style；先判断是 ID 权重还是同级后置覆盖。",
+      "修改获胜声明，再到 Computed 筛选 color，确认 rgb(22, 130, 103)，检查相邻内容没有被误改。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "ID 选择器覆盖了 class 规则"
+      },
+      {
+        "id": "b",
+        "label": "同权重后置规则获胜"
+      },
+      {
+        "id": "c",
+        "label": "浏览器不支持 color"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "被划掉的 class 与胜出的 ID 规则"
+      },
+      {
+        "id": "b",
+        "label": "同级声明来源和先后顺序"
+      },
+      {
+        "id": "c",
+        "label": "只看绿色示例"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "修正过强规则的声明"
+      },
+      {
+        "id": "b",
+        "label": "修正后置覆盖规则"
+      },
+      {
+        "id": "c",
+        "label": "给所有节点加 !important"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "选择 #price-value，Styles 筛选 color，追到 #fault-style；用 Computed 验证最终 rgb(22, 130, 103)。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/css/reference",
+    "concepts": [
+      {
+        "title": "先确认规则是否匹配",
+        "body": "选中目标后，Styles 展示匹配规则，划掉的声明通常没有获胜。先检查选择器、拼写和来源，再追是谁覆盖；不要先叠加 !important。"
+      },
+      {
+        "title": "权重比较有前提",
+        "body": "在相同来源、层和重要性等前提下，ID 比 class 更具体；权重相同时通常后面的声明获胜。教学模型简化了 cascade，真实页面还可能有继承、层与重要性因素。"
+      },
+      {
+        "title": "用最终值验证",
+        "body": "Styles 帮你找声明来源，Computed 帮你确认最终使用的值。修正规则后看 computed color，并检查相邻商品，避免一个过强选择器带来新的影响。"
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "kind": "layout",
+    "hook": "是哪一个约束撑开了页面？",
+    "principle": "先观察盒模型与布局约束，再用 Flex/Grid overlay 检查空间分配。修复后要验证相邻内容。",
+    "symptom": "窄商品容器出现横向溢出。",
+    "demoSteps": ["改变最小宽度", "改变列间距", "调整容器宽度"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Elements 选择 #product-grid，点 grid 徽章或 Layout 中的 Grid overlay；查看轨道与间距。",
+      "选中子项查看盒模型、min-width；再检查网格 gap。可在 Console 对 $0 比较 scrollWidth 与 clientWidth。",
+      "只将子项 min-width 改为 0 或把 gap 恢复 12px；换窄窗口确认内容可读后点「检查当前页面」。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "子项 min-width 撑开网格"
+      },
+      {
+        "id": "b",
+        "label": "过大的列间距撑开网格"
+      },
+      {
+        "id": "c",
+        "label": "标题字号不够大"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "子项最小宽度大于可用列宽"
+      },
+      {
+        "id": "b",
+        "label": "column-gap 挤占了列宽"
+      },
+      {
+        "id": "c",
+        "label": "只比较卡片颜色"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "将子项 min-width 改为 0"
+      },
+      {
+        "id": "b",
+        "label": "将网格 gap 恢复为 12px"
+      },
+      {
+        "id": "c",
+        "label": "隐藏整个商品列表"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Elements 选择 #product-grid，开启 Grid overlay；比较 scrollWidth、clientWidth 与子项 min-width / column-gap。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/css/reference",
+    "concepts": [
+      {
+        "title": "布局约束共同决定空间",
+        "body": "网格容器宽度、列定义、子项最小宽度、padding 和 gap 都占用空间。两列并不保证每列内容都能缩进可用宽度，min-width 可能把子项撑开。"
+      },
+      {
+        "title": "overlay 与尺寸互相印证",
+        "body": "Grid overlay 显示轨道和间距；盒模型显示 padding、border 和尺寸。scrollWidth 大于 clientWidth 表示存在横向内容，继续看是哪一项或间距超出。"
+      },
+      {
+        "title": "修约束，再换窗口复测",
+        "body": "子项改 min-width:0 或恢复合理 gap 后，以同样宽度比较。再缩窄窗口，确认内容仍可读。仅隐藏 overflow 可能只是把错误内容裁掉。"
+      }
+    ]
+  },
+  {
+    "id": "07",
+    "kind": "states",
+    "hook": "按钮为什么点不到？",
+    "principle": "交互需要同时检查实际点击目标、disabled 状态、伪类和监听器。hover 外观不能证明按钮能接收点击。",
+    "symptom": "按钮上方存在覆盖层，或者按钮被禁用。",
+    "demoSteps": ["切换覆盖层", "切换 disabled", "强制 focus / hover"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Inspect 按钮所在位置，确认选中的是 #add 还是 #click-shield；查看覆盖层和 disabled 属性。",
+      "Styles 的 :hov 可强制 hover/focus 查看样式；再检查 Event Listeners，区分状态与处理函数。",
+      "取消指针拦截或 disabled 后点「再次触发业务」；核对数量变化，再点「检查当前页面」。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "透明覆盖层截获了点击"
+      },
+      {
+        "id": "b",
+        "label": "disabled 阻止了交互"
+      },
+      {
+        "id": "c",
+        "label": "请求响应过大"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "元素层级与实际点击目标"
+      },
+      {
+        "id": "b",
+        "label": "按钮 disabled 属性"
+      },
+      {
+        "id": "c",
+        "label": "单看 hover 颜色"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "移除遮挡或取消其指针拦截"
+      },
+      {
+        "id": "b",
+        "label": "恢复按钮可用状态"
+      },
+      {
+        "id": "c",
+        "label": "只修改按钮背景"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Elements → :hov 检查 hover/focus；观察按钮 disabled 与 #click-shield，点击一次验证计数。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/css/reference",
+    "concepts": [
+      {
+        "title": "看得见不等于点得到",
+        "body": "浏览器根据层叠与命中测试决定点击目标。透明元素仍可能接收指针事件；覆盖层看起来空白，也能挡住下面的按钮。"
+      },
+      {
+        "title": "状态、属性和监听器不同",
+        "body": "disabled 会让原生按钮不可用；:hover / :focus 是状态样式；监听器执行实际业务。强制 :hover 只便于查看样式，不会补上监听器，也不会解除禁用。"
+      },
+      {
+        "title": "按事件链验证",
+        "body": "先确认鼠标命中的元素，再看 disabled、Event Listeners 和实际数量变化。去除覆盖或禁用后用相同输入再点一次，同时检查键盘能否操作。"
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "kind": "a11y",
+    "hook": "看得见，也能被理解吗？",
+    "principle": "检查可访问性名称、角色和状态，再用键盘验证。自动检查只能覆盖一部分使用体验。",
+    "symptom": "图标按钮没有名称，或者输入框缺少正确关联的标签。",
+    "demoSteps": ["修改 aria-label", "关联 label 与 input", "用 Tab 检查焦点"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Elements 选择 #icon-favorite，打开 Accessibility，查看 role、name；确认 ♡ 是图案还是可访问性名称。",
+      "检查 #quantity-label 的 for 与输入 id；修改名称或关联后重新查看 Accessibility。",
+      "用 Tab 移动焦点、Space/Enter 操作；观察可见焦点及按钮状态，再提交页面检查。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "图标按钮缺少可访问性名称"
+      },
+      {
+        "id": "b",
+        "label": "数量输入缺少关联标签"
+      },
+      {
+        "id": "c",
+        "label": "图片加载速度太快"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "Accessibility 中 name 为空"
+      },
+      {
+        "id": "b",
+        "label": "label 的 for 没有对应 input id"
+      },
+      {
+        "id": "c",
+        "label": "按钮颜色足够亮"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "补充准确的 aria-label"
+      },
+      {
+        "id": "b",
+        "label": "修正 label 的 for 关联"
+      },
+      {
+        "id": "c",
+        "label": "给元素加 title 就算完成"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Elements → Accessibility 检查 #icon-favorite 与 #quantity；用 Tab 和 Space 操作按钮，并观察 :focus-visible。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/accessibility/reference",
+    "concepts": [
+      {
+        "title": "语义提供另一种页面视图",
+        "body": "可访问性树由 DOM、语义和样式等信息生成。辅助技术关心 role、name 和 state；一个心形图案能被看见，并不说明按钮有准确的可访问性名称。"
+      },
+      {
+        "title": "label 关联具体控件",
+        "body": "label 的 for 必须匹配 input 的 id；正确关联能提供名称，并让点击标签聚焦输入。placeholder 和旁边一段文字不能自动代替这种关系。"
+      },
+      {
+        "title": "键盘检查要实际操作",
+        "body": "Tab 逐项移动焦点，观察可见焦点；按钮用 Space 或 Enter 操作。本课自动检查名称和关联，焦点顺序、实际读屏体验仍需人工核对。"
+      }
+    ]
+  },
+  {
+    "id": "09",
+    "kind": "logs",
+    "hook": "在噪声里找到第一条异常",
+    "principle": "日志应围绕一次用户操作组织。级别、分组与 table 帮助筛选，但最后仍需关联输入与结果。",
+    "symptom": "结算链路混入了心跳日志，真正的优惠或库存问题被淹没。",
+    "demoSteps": ["按级别筛选", "按操作筛选", "展开 group 和 table"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Console 先清空显示，再运行故障；按 [checkout] 过滤，并依次查看 warn/error 级别。",
+      "展开结算分组和 table，比较 coupon / couponCode、stock / available 与当前页面结果。",
+      "用表达式检查字段存在性；应用单项修复后以相同输入复测，不能只以日志颜色消失判断成功。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "优惠码字段名读取错误"
+      },
+      {
+        "id": "b",
+        "label": "库存字段被误读为可售"
+      },
+      {
+        "id": "c",
+        "label": "无关心跳日志太多"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "优惠输入与 warn 记录对应"
+      },
+      {
+        "id": "b",
+        "label": "库存 table 与 error 记录对应"
+      },
+      {
+        "id": "c",
+        "label": "最后一条 info 日志"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "读取正确的 coupon 字段"
+      },
+      {
+        "id": "b",
+        "label": "读取真实 stock 数值"
+      },
+      {
+        "id": "c",
+        "label": "关闭所有错误日志"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Console 过滤 [checkout]，展开分组与商品 table，找到最先出现的 warn/error，核对结算输入。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/console/utilities",
+    "concepts": [
+      {
+        "title": "先把业务信号从噪声中分离",
+        "body": "Console 可以按文本和日志级别过滤。先搜 [checkout]，查看当前结算输入，再展开 group 和 table。过滤只影响显示，不会阻止代码执行。"
+      },
+      {
+        "title": "warn 与 error 不是根因标签",
+        "body": "日志级别由编写代码的人选择。红色只提示值得检查；需要把 stock、coupon 等真实字段与最终结果对应，找出哪个输入被错误读取。"
+      },
+      {
+        "title": "用值验证字段猜想",
+        "body": "对象里 coupon 存在、couponCode 不存在时，读取后者会得到 undefined。再看计算是否回退为 0。库存同理，available 为真并不代表 stock 大于 0。"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "kind": "stack",
+    "hook": "沿着堆栈回到错误源头",
+    "principle": "堆栈能帮助回到调用者。区别异常抛出位置、错误数据来源和最终显示位置。",
+    "symptom": "商品字段为空，或者读取了错误字段，导致结算抛出 TypeError。",
+    "demoSteps": ["点击堆栈帧", "对比抛出点与调用入口", "检查错误数据"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "运行故障，Console 展开 TypeError，点击 readProductName 的源位置。",
+      "沿 Call Stack 查看 readProductName ← buildSummary ← checkout；必要时在出错行设断点后再次触发。",
+      "在抛出帧检查 product.name、product.title 及 typeof，核对调用者构造的对象，再验证正确摘要。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "商品 name 为 null 却调用 toUpperCase"
+      },
+      {
+        "id": "b",
+        "label": "读取不存在的 title 字段"
+      },
+      {
+        "id": "c",
+        "label": "价格颜色错误"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "抛出帧中的 name 值为 null"
+      },
+      {
+        "id": "b",
+        "label": "抛出帧中的 title 值为 undefined"
+      },
+      {
+        "id": "c",
+        "label": "页面上存在商品图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "校验 name 后使用明确的回退值"
+      },
+      {
+        "id": "b",
+        "label": "读取正确的 name 字段"
+      },
+      {
+        "id": "c",
+        "label": "在最外层吞掉所有错误"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Console 展开 TypeError，点击 readProductName，再检查 checkout → buildSummary → readProductName 的入参。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/console/utilities",
+    "concepts": [
+      {
+        "title": "错误消息说的是失败操作",
+        "body": "toUpperCase 需要可用的字符串；对 null 或 undefined 调用会抛出 TypeError。先读错误提到的属性，再找抛出时真正的值。"
+      },
+      {
+        "title": "堆栈按调用关系追上去",
+        "body": "最上方通常是当前抛出帧，下面是调用者。readProductName 失败不一定表示错误数据在这里产生；沿 buildSummary、checkout 检查入参是谁构造的。"
+      },
+      {
+        "title": "修复要符合业务语义",
+        "body": "字段拼错应该读正确字段；确实允许缺失时，给出明确回退值或错误状态。随手加可选链可能隐藏结算失败，仍要检查最终摘要。"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "kind": "context",
+    "hook": "相同表达式，为什么结果不同？",
+    "principle": "Console 的执行上下文决定 document 指向哪一页。$0 是最近选中元素，查询函数的结果也受上下文影响。",
+    "symptom": "外层页面与 iframe 有不同的商品节点；另一个案例使用了错误的选择器。",
+    "demoSteps": ["切换父页面和 iframe", "比较同一选择器", "检查选中节点"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "运行故障后，在 Console 的 JavaScript context 下拉框选择 top，运行 document.querySelector(\"#frame-price\")。",
+      "切到商品预览 iframe，先运行 document.URL，再执行同一选择器；确认目标 document。",
+      "比较 #frame-price 与拼错的 #frame-prcie；在 Elements 选中价格后检查 $0，并核对其 ownerDocument.URL。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "查询运行在错误的 frame 上下文"
+      },
+      {
+        "id": "b",
+        "label": "选择器拼错了目标节点"
+      },
+      {
+        "id": "c",
+        "label": "价格需要重装浏览器"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "同一选择器在 iframe 有结果、top 为 null"
+      },
+      {
+        "id": "b",
+        "label": "正确上下文中拼错选择器仍为 null"
+      },
+      {
+        "id": "c",
+        "label": "只看页面截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "切换到目标 iframe 上下文"
+      },
+      {
+        "id": "b",
+        "label": "修正选择器并在相同上下文验证"
+      },
+      {
+        "id": "c",
+        "label": "改动所有页面的 id"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Console 切换 top / 商品预览 iframe，运行 document.querySelector(\"#frame-price\")；检查 $0 与 data-sku。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/console/utilities",
+    "concepts": [
+      {
+        "title": "表达式在选定上下文中运行",
+        "body": "Console 的 top 和 iframe 对应不同全局环境。每个 document 只查询自己的节点；同一选择器在 top 为 null，在 iframe 中可能有结果。"
+      },
+      {
+        "title": "null 是结果，不是完整结论",
+        "body": "querySelector 找不到匹配会返回 null，可能是拼写、上下文、时机或节点已变化。先核对当前 document 的 URL，再验证选择器，逐项排除。"
+      },
+      {
+        "title": "$0 与普通查询相互补充",
+        "body": "$0 指向 Elements 最近选中的元素，适合检查属性和关联。document.querySelector 可以重复验证目标；切换上下文后再确认对象属于哪个 document。"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "kind": "snapshot",
+    "hook": "日志中的对象，是哪个时刻？",
+    "principle": "展开对象时看到的属性可能已变化。取证时保存需要的原始值或快照，计时范围也必须覆盖真正的异步操作。",
+    "symptom": "日志对象被稍后修改，或者异步计时在请求完成前就结束。",
+    "demoSteps": ["对比引用和快照", "推进异步计时", "使用断言与追踪"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Console 保留 [snapshot] 和 [live] 两组记录，展开对象并与原始快照字符串比较。",
+      "Sources → Snippets 新建临时取证片段，保存需要的原始字段；不要依靠稍后展开的对象证明历史值。",
+      "查看 checkout-time 的起止代码，区分启动 Promise 和 await 完成；修复后重复测量并注明环境。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "展开的是后来变化的对象引用"
+      },
+      {
+        "id": "b",
+        "label": "计时未等待异步任务完成"
+      },
+      {
+        "id": "c",
+        "label": "Console 自己算错价格"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "早期快照与后来属性不一致"
+      },
+      {
+        "id": "b",
+        "label": "timeEnd 在 Promise 完成之前"
+      },
+      {
+        "id": "c",
+        "label": "只有日志颜色不同"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "保存需要字段的当时快照"
+      },
+      {
+        "id": "b",
+        "label": "await 操作完成再结束计时"
+      },
+      {
+        "id": "c",
+        "label": "删除所有日志"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Console 比较 [snapshot] JSON 与 [live] 对象；查看 checkout-time 的起止，运行 Snippet 保存需要的原始值。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/console/utilities",
+    "concepts": [
+      {
+        "title": "引用与快照保留不同信息",
+        "body": "对象日志可能在后来展开时读取属性，具体呈现取决于浏览器与对象状态。需要证明“当时是什么”时，保存原始字段或 JSON 快照，并说明记录时机。"
+      },
+      {
+        "title": "计时边界决定测量含义",
+        "body": "console.time / timeEnd 测两次调用之间的时间。启动 Promise 后马上 timeEnd 只测到启动成本；await 完成再结束才包含异步等待。"
+      },
+      {
+        "title": "一次耗时不能当成结论",
+        "body": "定时器、机器负载和调试暂停会影响时间。先说明测的是哪一段，再在相同条件下重复比较；Snippet 适合保存可重复的取证表达式。"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "kind": "sourcemap",
+    "hook": "从打包文件回到业务代码",
+    "principle": "Source Maps 将运行代码对应到原始源码。文件可见不代表断点映射有效，需要以实际命中验证。",
+    "symptom": "合计异常发生在编译后的 cart 模块。",
+    "demoSteps": ["切换 generated / original", "选择源文件", "比较映射位置"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Sources 用 Ctrl/Cmd+P 找 shop-cart.ts；在 Settings → Preferences → Sources 确认 JavaScript source maps 已开启。",
+      "搜索 calculateTotal，查看优惠读取和 applyDiscount 调用；对照已部署的 cart-compiled.js 与 .map 来源。",
+      "在相关语句行号处设断点，点「再次触发业务」；核对 config 与调用次数，Resume 后检查合计。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "优惠读取了错误字段"
+      },
+      {
+        "id": "b",
+        "label": "优惠被应用了两次"
+      },
+      {
+        "id": "c",
+        "label": "商品图片太大"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "映射后的 calculateTotal 读取了不存在的 coupon 字段"
+      },
+      {
+        "id": "b",
+        "label": "映射后的 applyDiscount 调用次数"
+      },
+      {
+        "id": "c",
+        "label": "只看压缩文件体积"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "读取正确的优惠字段"
+      },
+      {
+        "id": "b",
+        "label": "只应用一次优惠"
+      },
+      {
+        "id": "c",
+        "label": "关闭所有 Source Maps"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Sources 搜索 calculateTotal；打开 shop-cart.ts，在 cart-compiled.js 的调用对应处设断点并触发结算。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/javascript/source-maps",
+    "concepts": [
+      {
+        "title": "运行文件和作者文件可能不同",
+        "body": "浏览器执行 JavaScript；项目可能由 TypeScript 编译而来。Sources 中看到原始 TS 不表示浏览器直接运行 TS，而是 Source Map 把位置对应回作者文件。"
+      },
+      {
+        "title": "映射依赖实际文件",
+        "body": "编译 JS 的 sourceMappingURL 指向 .map，map 包含来源和位置。本课同时提供可获取的原始 TS 与 sourcesContent；关闭映射或丢失文件时会看到不同来源视图。"
+      },
+      {
+        "title": "定位业务入口比扫文件更有效",
+        "body": "按函数名搜索 calculateTotal，再跟进优惠字段和 applyDiscount。先找到输入到结果的短路径；pretty print 只重新排版，不能凭空恢复原始变量和类型。"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "kind": "stepper",
+    "hook": "暂停在第一次偏离预期的地方",
+    "principle": "单步检查输入与运算；Step over、into、out 分别控制是否进入调用。不要只盯最后一行显示。",
+    "symptom": "数量与优惠计算出现了拼接或乘法错误。",
+    "demoSteps": ["单步执行运算", "预测下一行", "选择 step into / over / out"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Sources 打开 shop-cart.ts，在 calculateTotal 调用 multiplyPrice 前设断点，再点「再次触发业务」。",
+      "暂停后先记录 config.price、quantity 与 typeof；用 Step into 进入 multiplyPrice。",
+      "逐步观察返回前后的 subtotal；分别试 Step over / Step out，最后 Resume，看结果第一次偏离的位置。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "数字和字符串发生了拼接"
+      },
+      {
+        "id": "b",
+        "label": "单价被错误地只加了一次数量"
+      },
+      {
+        "id": "c",
+        "label": "接口超时"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "运算前后的 typeof 与中间值"
+      },
+      {
+        "id": "b",
+        "label": "multiplyPrice 中使用了加法"
+      },
+      {
+        "id": "c",
+        "label": "只看合计位置"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "转换价格与优惠后做数值运算"
+      },
+      {
+        "id": "b",
+        "label": "用单价乘以数量"
+      },
+      {
+        "id": "c",
+        "label": "直接硬编码最终合计"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "在 calculateTotal / multiplyPrice 设断点，依次检查 price、quantity、subtotal，再检查 renderReceipt。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/javascript/breakpoints",
+    "concepts": [
+      {
+        "title": "暂停发生在下一条语句前",
+        "body": "断点停住时，标记语句通常还没执行。先记下输入和 typeof，再 Step over，看变量第一次在哪里偏离预期，避免把执行前的值误认为执行后。"
+      },
+      {
+        "title": "三个单步各解决一个问题",
+        "body": "Step into 进入可调试调用，Step over 执行它并留在当前层，Step out 运行到当前函数返回。Resume 继续到下一次暂停；它们都会推进真实业务。"
+      },
+      {
+        "title": "中间值比最终错误更能定位",
+        "body": "比如字符串 \"34\" + 2 得到 \"342\"，数值 34 + 2 得到 36，而正常乘积为 68。跟踪 multiplyPrice 返回值，能区分类型错误和运算符错误。"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "kind": "scope",
+    "hook": "同名变量，为什么值不同？",
+    "principle": "沿 Call Stack 切换帧检查 Scope；同名变量可能被局部遮蔽，闭包也可能保留旧值。",
+    "symptom": "页面优惠设置正确，但传入计算函数的优惠不同。",
+    "demoSteps": ["切换调用帧", "观察局部与闭包", "对比同名变量"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Sources 在 readDiscount 或 makeDiscountReader 返回函数处设断点，运行故障并再次触发。",
+      "暂停后展开 Scope 的 Local/Closure；给 Watch 添加 discount 和 config.discount。",
+      "切换到 calculateTotal 调用帧，比较同名变量与配置；记录读取来源，应用正确对照后复测。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "局部同名 discount 遮蔽配置"
+      },
+      {
+        "id": "b",
+        "label": "闭包保留了旧 discount 值"
+      },
+      {
+        "id": "c",
+        "label": "页面缺少刷新动画"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "Local 中 discount 与 config.discount 不同"
+      },
+      {
+        "id": "b",
+        "label": "Closure 中保留的是创建时旧值"
+      },
+      {
+        "id": "c",
+        "label": "只检查 Window 的名字"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "从明确配置读取当前优惠"
+      },
+      {
+        "id": "b",
+        "label": "重建或更新闭包读取值"
+      },
+      {
+        "id": "c",
+        "label": "给全局变量改名就结束"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "在 readDiscount 与 calculateTotal 暂停，切换调用帧，用 Watch 检查 discount、config.discount。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/javascript/breakpoints",
+    "concepts": [
+      {
+        "title": "变量名需要结合作用域理解",
+        "body": "函数里的局部 discount 与 config.discount 不是同一个绑定。同名只说明拼写相同；Local 显示当前函数环境，调用者的值要切换相应帧再看。"
+      },
+      {
+        "title": "闭包保留其词法环境",
+        "body": "函数可以继续访问创建时外层环境中的绑定。若创建 reader 时用了旧优惠值，后来调用仍会读取那份环境；不是每次都自动取最新配置。"
+      },
+      {
+        "title": "Watch 随选中调用帧求值",
+        "body": "Watch 表达式按当前暂停帧的作用域计算。切换帧后可能得到不同值或未定义；每次记录都要注明函数、变量路径和暂停位置。"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "kind": "conditional",
+    "hook": "只停在有问题的那条数据",
+    "principle": "用条件断点定位少量异常，用 Logpoint 观察而不暂停。条件必须根据真实字段制定。",
+    "symptom": "一组商品中只有特定 SKU 或库存值引起结果异常。",
+    "demoSteps": ["筛选条件断点命中", "切换 Logpoint", "比较暂停次数"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Sources 在 auditInventory 的 for 循环体、item 已赋值的位置设条件断点。",
+      "条件用 typeof item.price === \"string\" 或 item.stock < 0；再次触发后查看命中 SKU 与 Scope。",
+      "另设 Logpoint 输出 item.sku、item.price、item.stock；Resume 后比较全部输入及 accepted，完成后移除断点。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "某 SKU 的 price 是字符串"
+      },
+      {
+        "id": "b",
+        "label": "一条库存为负却被当作正常"
+      },
+      {
+        "id": "c",
+        "label": "所有商品都需要删除"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "条件命中时的 price 类型"
+      },
+      {
+        "id": "b",
+        "label": "命中 item.stock < 0 的记录"
+      },
+      {
+        "id": "c",
+        "label": "暂停总次数多"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "规范异常 SKU 的价格类型"
+      },
+      {
+        "id": "b",
+        "label": "拒绝负库存并说明原因"
+      },
+      {
+        "id": "c",
+        "label": "在每行都加 debugger"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "在 auditInventory 循环中设置 item.sku === 目标值 或 item.stock < 0 条件断点；Logpoint 记录 sku 与 stock。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/javascript/breakpoints",
+    "concepts": [
+      {
+        "title": "条件断点降低无关暂停",
+        "body": "循环跑很多次时，普通断点会频繁中断。在 item 已存在的位置添加 typeof item.price === \"string\" 或 item.stock < 0，只在异常条目暂停。"
+      },
+      {
+        "title": "Logpoint 记录而不主动暂停",
+        "body": "Logpoint 在命中位置输出表达式，适合查看多条 SKU 的变化过程。它仍会求值，避免写有副作用的表达式；需要检查 Scope 时使用真正的暂停断点。"
+      },
+      {
+        "title": "查异常还要核对整体结果",
+        "body": "命中负库存或字符串价格后，检查该条如何进入 accepted。修复不只让某个日志消失，还要验证正常商品保留、异常库存排除、总数正确。"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "kind": "triggers",
+    "hook": "不知道函数名，也能停住",
+    "principle": "用事件、DOM 和 XHR/fetch 断点从行为进入代码，定位是谁改变了状态或发起请求。",
+    "symptom": "一次加购导致计数重复修改，或者一个动作发出了重复请求。",
+    "demoSteps": ["将行为与断点类型配对", "切换触发动作", "观察暂停来源"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Elements 选 #cart-count，右键 Break on → Subtree modifications；点「再次触发业务」，追两次修改的调用者。",
+      "Sources 的 XHR/fetch Breakpoints 添加 /api/foundations/trace，再触发并检查发起调用。",
+      "结合 Event Listener Breakpoints 的 Mouse → click 与 Network 的 trace 次数，区分重复监听和重复请求；结束清理断点。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "同一动作的两个监听器都修改 DOM"
+      },
+      {
+        "id": "b",
+        "label": "同一动作重复发起 trace 请求"
+      },
+      {
+        "id": "c",
+        "label": "图片懒加载失败"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "两个调用分别修改同一节点"
+      },
+      {
+        "id": "b",
+        "label": "相同动作产生两次 trace 调用"
+      },
+      {
+        "id": "c",
+        "label": "看加载动画持续时间"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "去掉重复的状态修改监听器"
+      },
+      {
+        "id": "b",
+        "label": "保留一次请求调用"
+      },
+      {
+        "id": "c",
+        "label": "隐藏 Network 面板"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "对 #cart-count 设置 Break on → Subtree modifications；为 /api/foundations/trace 设置 XHR/fetch 断点，再检查 click 事件。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/javascript/breakpoints",
+    "concepts": [
+      {
+        "title": "不知道入口时从行为反查",
+        "body": "知道哪个节点被改，却不知道哪个函数负责时，可以在 Elements 对目标设置 DOM 断点。下一次实际修改会在相关代码位置暂停。"
+      },
+      {
+        "title": "事件和请求有不同断点入口",
+        "body": "Event Listener Breakpoints 从 click 等事件开始；XHR/fetch Breakpoints 按 URL 子串匹配请求调用。Network 看发送结果，Sources 在发起前检查调用原因。"
+      },
+      {
+        "title": "重复结果要追不同调用",
+        "body": "同一次业务可能有两个监听器改 DOM，也可能只改一次却发两次请求。比较调用栈与实际 trace 请求次数，找到重复发生在哪一层再消除它。"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "kind": "async",
+    "hook": "错误被处理了，问题就消失了吗？",
+    "principle": "异常暂停帮助找到被捕获的抛出点；异步顺序需要记录请求与状态更新，避免旧结果覆盖新操作。",
+    "symptom": "错误被 catch 后只显示空白，或者旧搜索结果覆盖新结果。",
+    "demoSteps": ["切换完成顺序", "暂停捕获异常", "关联异步调用链"],
+    "steps": [
+      "从本课准备并打开独立商城；先打开 DevTools，再点「运行故障」。",
+      "Sources 打开异常暂停，启用 Pause on caught exceptions；运行故障，查看 parseDiscount 的输入和 catch 后页面状态。",
+      "若遇到异步覆盖案例，在 commitSearch 设断点，点「再次触发业务」启动两项任务。",
+      "比较 request、latest 和完成顺序；应用修复后旧任务仍较晚完成，但页面必须保留新结果；结束恢复异常开关。",
+      "保持其他条件不变，手工验证或选择针对本故障的对照方案。",
+      "核对正常结果与故障差异，回教程选择直接证据并记录练习。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "异常被 catch 后错误状态被隐藏"
+      },
+      {
+        "id": "b",
+        "label": "较旧异步结果覆盖了最新搜索"
+      },
+      {
+        "id": "c",
+        "label": "按钮字体太小"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "抛出点与 catch 分支显示状态"
+      },
+      {
+        "id": "b",
+        "label": "任务序号与 commitSearch 完成顺序相反"
+      },
+      {
+        "id": "c",
+        "label": "只看最后一次点击"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "保留清晰错误状态并修正解析"
+      },
+      {
+        "id": "b",
+        "label": "用任务序号丢弃过期结果"
+      },
+      {
+        "id": "c",
+        "label": "给所有请求加相同延迟"
+      }
+    ],
+    "hints": [
+      "先稳定复现，找第一次偏离预期的结果；不要同时改变多个条件。",
+      "Sources 开启 Pause on caught exceptions 找到 parseDiscount；另一个案例连续搜索两次，追踪 commitSearch 与请求完成顺序。",
+      "比较真实值、规则或调用位置与预期。引导案例使用第一种故障，迁移案例会更换数据和故障配置。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/javascript/breakpoints",
+    "concepts": [
+      {
+        "title": "捕获异常仍可能留下错误",
+        "body": "try/catch 防止异常继续冒泡，不代表业务成功。默认未捕获暂停可能看不到它；开启 Pause on caught exceptions，才能在抛出位置检查原始输入。"
+      },
+      {
+        "title": "异步完成不保证发起顺序",
+        "body": "旧任务先启动却后完成，可能覆盖新任务结果。本课用两个真实定时异步任务展示该问题；网络搜索也有类似现象，但这里没有伪装 HTTP 请求。"
+      },
+      {
+        "title": "区分因果与状态校验",
+        "body": "异步调用栈帮助追踪任务来源，不是完整历史。提交结果前检查任务序号是否仍为最新；修复后即使完成顺序不变，页面也应保留新结果。"
+      }
+    ]
+  }
+]

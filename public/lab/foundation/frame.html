@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>商品预览 iframe</title>
+    <link rel="icon" href="/favicon.svg" />
+    <style>
+      body {
+        font: 14px system-ui;
+        color: #344e42;
+        padding: 16px;
+        background: #f1f6f0;
+      }
+      strong {
+        font-size: 24px;
+      }
+      p {
+        margin: 8px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p>商品预览 iframe · 独立 document</p>
+    <strong id="frame-price"></strong>
+    <p>Console 切换到此 frame，再查询 #frame-price。</p>
+    <script type="module" src="/lab/foundation/frame.js"></script>
+  </body>
+</html>

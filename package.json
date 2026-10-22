@@ -1,0 +1,40 @@
+{
+  "name": "chrome-devtools-learning",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "dev:web": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "dev:lab": "node server/lab.mjs",
+    "preview:all": "node scripts/dev.mjs --preview",
+    "docs:curriculum": "node scripts/generate-curriculum.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "lab:build": "node scripts/build-lab-source.mjs",
+    "prebuild": "pnpm lab:type-check && pnpm lab:build",
+    "predev": "pnpm lab:build",
+    "lab:type-check": "tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution Bundler --skipLibCheck public/lab/foundation/shop-cart.ts",
+    "docs:lessons": "node scripts/generate-foundations.mjs"
+  },
+  "dependencies": {
+    "vue": "^3.5.42"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.5",
+    "@types/node": "^24.13.4",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "@vue/tsconfig": "^0.9.1",
+    "npm-run-all2": "^9.0.3",
+    "typescript": "~6.0.0",
+    "vite": "^8.2.2",
+    "vite-plugin-vue-devtools": "^8.2.1",
+    "vue-tsc": "^3.3.11"
+  },
+  "engines": {
+    "node": "^22.18.0 || >=24.12.0"
+  }
+}

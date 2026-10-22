@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>日常好物 · 基础排查实验</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/lab/foundation/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/shop/">日常好物<span>Little goods</span></a
+      ><span id="course-label">基础排查实验</span>
+    </header>
+    <main>
+      <div class="lab-intro">
+        <span class="eyebrow">真实 DOM · 真实日志 · 可调试源码</span>
+        <h1 id="title">正在连接本地实验…</h1>
+        <p id="brief">请保留教程窗口，从本课准备实验后进入。</p>
+      </div>
+      <section class="toolbar">
+        <button id="run" class="primary" disabled>运行故障</button
+        ><button id="trigger" disabled>再次触发业务</button
+        ><button id="inspect" disabled>检查当前页面</button
+        ><label
+          >对照方案<select id="correction" disabled>
+            <option value="">先检查证据，再选择</option>
+          </select></label
+        ><button id="apply" disabled>应用所选对照</button
+        ><button id="reset" disabled>恢复故障</button>
+      </section>
+      <p id="status" role="status" aria-live="polite">
+        尚未运行。先打开 DevTools，按教程定位目标。
+      </p>
+      <section class="scene" aria-label="商品与购物车实验">
+        <div id="workspace"></div>
+        <aside class="receipt">
+          <h2>购物车</h2>
+          <p>数量 <strong id="cart-count">0</strong></p>
+          <p>合计 <strong id="total">尚未计算</strong></p>
+          <p id="result">运行后查看结果</p>
+          <p id="business-message" role="status"></p>
+        </aside>
+      </section>
+      <section class="evidence">
+        <h2>页面结果检查</h2>
+        <p>
+          检查实际 DOM、计算结果或请求次数；不读取 DevTools
+          点击。请另外记录你在工具里看到的证据。
+        </p>
+        <ul id="checks">
+          <li>运行故障后，这里显示观察结果。</li>
+        </ul>
+      </section>
+      <details>
+        <summary>操作入口与重置说明</summary>
+        <ol id="steps"></ol>
+        <p>
+          可在 DevTools 直接修改
+          DOM/CSS，再点「检查当前页面」。源码任务可以暂停检查，再选择对照方案验证；“应用所选对照”不是理解认证。
+        </p>
+        <p>
+          恢复故障会重建当前页面，旧节点上的断点可能需要重新设置。请自行清除断点、恢复限速与阻断设置。课程进度不会被清除。
+        </p>
+      </details>
+      <section class="source-info">
+        <h2>可检查的源码</h2>
+        <p>
+          <code>runtime.js</code> 负责页面与事件；<code>cart-compiled.js</code>
+          通过真实 Source Map 映射到 <code>shop-cart.ts</code>。商品预览 iframe
+          有自己的 document 与执行上下文。
+        </p>
+      </section>
+    </main>
+    <footer>DevTools 实验室 · 本地教学商城 · 无真实交易</footer>
+    <script type="module" src="/lab/foundation/runtime.js"></script>
+  </body>
+</html>

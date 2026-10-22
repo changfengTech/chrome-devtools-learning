@@ -1,0 +1,16 @@
+# 项目文档入口
+
+| 文档 | 用途 |
+| --- | --- |
+| [PRODUCT.md](PRODUCT.md) | 已确认的用户、范围、教学与产品约定 |
+| [CURRICULUM.md](CURRICULUM.md) | 63 节逐课四要素与前置关系 |
+| [ROADMAP.md](ROADMAP.md) | 开发阶段和退出条件 |
+| [ACCEPTANCE.md](ACCEPTANCE.md) | 验收标准、评分和八个面板章末挑战 |
+| [LESSON-21.md](LESSON-21.md) | 首个样板课详细脚本与实验合同 |
+| [FOUNDATIONS-01-18.md](FOUNDATIONS-01-18.md) | 基础课共同合同与 18 份详细脚本入口 |
+| [QA-FOUNDATIONS.md](QA-FOUNDATIONS.md) | 逐课演示、两种变体、重复运行及边界检查 |
+| [DESIGN.md](DESIGN.md) | 界面与可读性设计 |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | 当前双服务架构、接口和检查边界 |
+| [STATUS.md](STATUS.md) | 已实现、已验证与剩余工作 |
+
+课程目录由 `src/data/curriculum.json` 生成，基础课脚本由 `src/data/foundations.json` 与合同补充生成。当前 01–18、21 共 19 课开放，44 课规划；正式范围保持 55 主线 + 8 专题及 8 个章末题。
