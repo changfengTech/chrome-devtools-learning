@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-22",
+  "baselineCommit": "7cbe8c2e891d67087ffb33d1042cca86e8680013",
+  "environment": "Chrome Guest, no personal profile data or account",
+  "overrides": [
+    {
+      "lesson": "52",
+      "variant": 0,
+      "url": "http://127.0.0.1:4174/quality/7373313a-02d7-409e-98f9-b78c94454569/product.json",
+      "before": {
+        "sku": "CUP-42",
+        "quantity": 2,
+        "unitPrice": "42",
+        "stock": 9,
+        "currency": "CNY"
+      },
+      "method": "Network → Override content → Sources Code editor",
+      "after": {
+        "sku": "CUP-42",
+        "quantity": 2,
+        "unitPrice": 42,
+        "stock": 9,
+        "currency": "CNY"
+      },
+      "disk": {
+        "sku": "CUP-42",
+        "quantity": 2,
+        "unitPrice": 42,
+        "stock": 9,
+        "currency": "CNY"
+      },
+      "fixedPage": "\t\t\t\t\t\t\t33 文本 检查通过；当前页面未连接教程，请从课程入口重新打开实验。\n\t\t\t\t\t\t\t36 文本 CUP-42 / 数量 2 / 输入校验值 84\n\t\t\t\t\t\t\t\t41 文本 单价 42\n\t\t\t\t\t\t\t\t48 文本 CUP-42 / 数量 2 / 总额 84\n\t\t\t\t\t\t\t55 文本 本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立\n\t84 标签页",
+      "networkMarker": "Request content is overridden",
+      "nativeResponseVerified": true,
+      "disabledFaultReproduced": true,
+      "originResponse": {
+        "status": 200,
+        "body": {
+          "sku": "CUP-42",
+          "quantity": 2,
+          "unitPrice": "42",
+          "stock": 9,
+          "currency": "CNY"
+        }
+      }
+    }
+  ],
+  "autofill": [
+    {
+      "lesson": "T05",
+      "condition": "given-name and street-address swapped",
+      "source": "Chrome built-in Developer tools → United States test address",
+      "fields": {
+        "given": "1600 Fake Street, Apartment 1",
+        "street": "Jon",
+        "postal": "94043"
+      },
+      "nativeFill": true,
+      "predictions": {
+        "given": "Street address (autocomplete attribute)",
+        "street": "First name (autocomplete attribute)",
+        "postal": "ZIP code (autocomplete attribute)"
+      },
+      "panelVerified": true,
+      "reproducedAfterRestoreFault": true
+    },
+    {
+      "lesson": "T05",
+      "condition": "correct shipping given-name / street-address / postal-code",
+      "source": "Same Chrome built-in United States test address",
+      "fields": {
+        "given": "Jon",
+        "street": "1600 Fake Street, Apartment 1",
+        "postal": "94043"
+      },
+      "nativeFill": true,
+      "predictions": {
+        "given": "First name (autocomplete attribute)",
+        "street": "Street address (autocomplete attribute)",
+        "postal": "ZIP code (autocomplete attribute)"
+      },
+      "panelVerified": true
+    }
+  ],
+  "cleanup": {
+    "overridesConfigurationRemoved": true,
+    "autofillTestAddressesOff": true,
+    "networkDisableCacheOff": true,
+    "formStopped": true,
+    "formFieldsCleared": true,
+    "guestAndDevtoolsClosed": true,
+    "ownedBlankWindowClosed": true,
+    "originalProfileUntouched": true,
+    "workspaceDirectory": "Not re-added this follow-up; previous removal remains",
+    "temporaryDirectoriesPreserved": true
+  },
+  "changes": {
+    "method": "Elements → Styles native property edit; Changes native diff",
+    "file": "http://127.0.0.1:4174/lab/quality/product.css",
+    "deletion": "color: #245de8;",
+    "addition": "color: #b64037;",
+    "diffObserved": true,
+    "restored": true,
+    "restoredVia": "Elements Styles manual restoration; observed Chrome 156 Changes UI has no Revert toolbar",
+    "diffCleared": true,
+    "restorationMessage": "File is identical to its unmodified state",
+    "revertButtonVerified": false
+  },
+  "autofillInitialTestAddresses": false,
+  "chromeVersion": "156.0.8078.48",
+  "scope": "Native UI follow-up for lesson 52 variant 0 and T05 swapped-token condition; not a new full 63-lesson regression"
+}

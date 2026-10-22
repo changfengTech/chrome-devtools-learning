@@ -260,7 +260,7 @@ function renderForm() {
   }
   const p = document.createElement("p");
   p.textContent =
-    "执行目标流程将使用虚构地址按 token 填值；这不是 Chrome Autofill。原生填充请主动选择自己的测试资料。";
+    "执行目标流程将使用虚构地址按 token 填值；这不是 Chrome Autofill。原生填充请在 Autofill 开启测试地址，从字段的 Developer tools（开发者工具）菜单选择内置地址，无需私人资料。";
   $("fixture").append(f, p);
 }
 async function begin(phase) {

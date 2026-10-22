@@ -1,0 +1,17 @@
+$ pnpm lab:type-check && pnpm lab:build
+$ tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution Bundler --skipLibCheck public/lab/foundation/shop-cart.ts
+$ node scripts/build-lab-source.mjs
+已编译商城调试模块及真实 Source Map。
+$ run-p type-check "build-only {@}" --
+$ vite build
+$ vue-tsc --build
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 54 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.70 kB │ gzip:   0.49 kB
+dist/assets/index-DIW3Hug3.css   43.00 kB │ gzip:   9.63 kB
+dist/assets/index-Cd9MZrcd.js   396.54 kB │ gzip: 128.13 kB
+
+✓ built in 835ms

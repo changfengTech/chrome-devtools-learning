@@ -10,9 +10,11 @@
 
 修复 Memory 新运行残留上一批功能提示；修复 WebAuthn 默认 IP 页面无法使用有效 RP 域名的问题，补充 localhost 独立原生页、服务端 origin 约束与测试。**60/60 自动测试和生产构建通过**。本轮新生成 34 份 Lighthouse CLI 报告与 3 份原生报告，分别保留条件、摘要及哈希；不混同历史批次的报告数量。
 
+追加完成 [Overrides / Changes 与 Autofill 原生补验](QA-NATIVE-TOOLS.md)：Guest 覆盖响应、禁用回归、CSS diff / 恢复，以及内置测试地址的实际填充与预测核对。临时覆盖配置移除，测试开关恢复，合成字段清空，访客退出。T05 / 52 操作脚本已按真实入口与版本边界更新。
+
 ## 尚需条件或继续补验
 
-Android 真机、Sensors 定位权限、Autofill 实际填充、可用账户下的 AI assistance；Overrides / Changes 完整覆盖闭环及 Workspace 自动映射；Protocol monitor 导航后旧 nodeId 的实际错误，以及其他断点类型、网络 / worker 等未在本轮逐个重走的原生按钮。逐项结果、原因、关闭条件见 [原生剩余项](QA-RELEASE.md#尚未关闭的验收项)。没有用本地夹具替代这些步骤。
+Android 真机、Sensors 定位权限、可用账户下的 AI assistance；Workspace 自动映射、Changes Revert 按钮版本细项、Autofill billing / shipping 双地址组；Protocol monitor 导航后旧 nodeId 的实际错误，以及其他断点类型、网络 / worker 等未在本轮逐个重走的原生按钮。逐项结果、原因、关闭条件见 [原生剩余项](QA-RELEASE.md#尚未关闭的验收项)。没有用本地夹具替代这些步骤。
 
 阶段 0–7 的实现与历史三轮引导保留；62 份生成脚本 + 第 21 课样板覆盖全部 63 课。各批 [基础](QA-FOUNDATIONS.md)、[网络状态](QA-NETWORK-APPLICATION.md)、[性能](QA-PERFORMANCE.md)、[内存](QA-MEMORY.md)、[质量工具](QA-LIGHTHOUSE-TOOLS.md)、[综合专题](QA-CAPSTONE-TOPICS.md) 仍为历史记录；本轮新增和关闭项以 QA-RELEASE 为准。
 

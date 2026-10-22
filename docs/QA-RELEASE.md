@@ -41,6 +41,8 @@
 
 WebAuthn 原生页不携带教程来源参数，课堂夹具与教程回传继续在原页完成。仅适用于本地虚拟测试认证器，不作为生产登录服务。
 
+2026-10-22 后续补验：在无个人资料的 Chrome Guest 完成 Overrides 浏览器覆盖 / 禁用回归、Changes CSS 差异 / 恢复、Autofill 内置地址实际填充与预测对照。详见 [专项原生验收](QA-NATIVE-TOOLS.md)；设备 / 账户条件与版本细项继续分列。
+
 ## 原生工具补验
 
 | 工具 | 本轮实际观察 | 边界与证据 |
@@ -67,6 +69,8 @@ WebAuthn 原生页不携带教程来源参数，课堂夹具与教程回传继�
 | WebAuthn | 原生启用 CTAP2 / usb / resident / UV 虚拟认证器；ES256 / none 注册；故障 NotAllowedError；修复后 authenticated / signatureVerified 均 true | NotAllowedError 不唯一对应某个根因；结束删除认证器并关闭虚拟环境；[截图](qa/release/native-webauthn.png) |
 | Workspaces | 用户授权专用测试目录后，在原生 Code editor 修改 cart.ts 并 Cmd+S；独立读取磁盘确认新增 subtotal 变量；随后 Remove from workspace 确认移除、目录树消失 | 只测试公开源码副本；未声称自动映射动态资源；[截图](qa/release/native-workspace-save.png) |
 | Protocol monitor | 临时启用实验并打开面板，在 Main target 发送 DOM.getDocument / querySelector(html) / getAttributes；得到 lang=zh-CN；导航后 DOM.documentUpdated、新 root | #product 返回 0 如实记录；旧 nodeId 的原生错误返回未确认，不算通过；实验开关已恢复 Off；[截图](qa/release/native-protocol-monitor.png) |
+| Overrides / Changes | Guest 专用目录原生覆盖：数值价格与总额正确，Network 标记及 Response 确认，禁用后原故障复现；CSS Changes 增删行与恢复相同状态 | 独立 HTTP 仍是故障响应；Changes 采用 Styles 恢复，未验证 Revert 按钮；[专项证据](QA-NATIVE-TOOLS.md) |
+| Autofill | Guest 使用 Chrome 内置美国地址，错误 token 填错字段，修复后名称 / 街道 / 邮编正确；Form inspector 预测与值逐项核对 | 同一地址复测并恢复故障再次确认；无个人地址、账户或表单提交；[专项证据](QA-NATIVE-TOOLS.md) |
 
 ![实际第三份 Heap snapshot 的 Comparison](qa/release/native-memory-comparison.png)
 
@@ -78,13 +82,15 @@ WebAuthn 原生页不携带教程来源参数，课堂夹具与教程回传继�
 | --- | --- | --- |
 | Android 真机 | 无已授权连接的 Android 设备，本地拓扑练习通过 | 授权测试设备、USB / inspect 目标、端口转发与恢复 |
 | Sensors 定位 | 未请求位置权限；本地错误分支与方向原生操作分列 | 明确授权测试页位置权限后观察成功 / 错误与恢复 |
-| Autofill 实际填充 | 面板可用；临时开启并恢复内置测试地址。现有地址建议混有个人资料，未选择或提交；自动审批拦截继续检查建议列表 | 使用无个人资料的独立测试配置验证 Chrome 实际填充与字段映射；DOM token / 本地夹具不代替此项 |
+| Autofill 双地址组细项 | 内置地址的单表单用途互换 / 修复原生填充已补齐 | billing / shipping 两组不同地址隔离及各国启发式另测；不把本轮单组结果推断为通过 |
 | AI assistance | 本机无痕面板提示需登录 Google 账户；没有登录、接受条款或提交上下文 | 用户具备可用账户 / 地区并授权后，用公开测试上下文验证建议及独立取证 |
-| Overrides / Changes、Workspace 自动映射 | 两个专用目录已获用户授权，Workspace 实际保存和移除已完成。原配置已有关闭的覆盖目录，未改动；另开访客空白 Overrides，但前台持续切换并多次超时，未成功配置测试目录 | 在稳定的独立配置中验证响应覆盖标记、Changes diff、禁用后故障回归；Workspace 自动映射另补。访客窗口已关闭，没有把未完成操作记为通过 |
+| Workspace 自动映射、Changes 版本细项 | Workspace 实际保存 / 移除及 Overrides 覆盖闭环已补齐；Changes diff / 恢复通过 | Workspace 动态资源自动映射另补；当前 Chrome 156 UI 未显示 Revert 操作栏，未计按钮验收通过 |
 | Protocol monitor 旧节点错误 | 新 root / DOM.documentUpdated 已见，旧 nodeId 错误结果未确认 | 同目标导航后再次发旧节点命令并保留真实错误返回 |
 | 原生细项 | 条件 / 日志 / XHR / DOM / 事件 / 异常断点各类、Network 限速 / 阻断、其他 worker 配置、Performance 修复对照等未在本轮逐个重走按钮 | 代表性 Sources 单步、worker waiting / Offline、Rendering 开关已补验；保留既有 API / 协议 / trace 实测，不能把本轮功能回归算作全部原生按钮复核 |
 
 内存阶段原待办中的第三份 Comparison、另一引用配置、分配工具、monitor 多点趋势、Recorder 原生流程已补充证据。阶段 6 的 Lighthouse 三模式、Issues / Security 及阶段 7 的方向、Media、WebAuthn、Protocol monitor 部分链路已补验。未覆盖的细分条件继续保留，不能笼统把每一面板都标为全通过。
+
+真机 / 账户 / 单独权限条件已在[专项清单](QA-NATIVE-TOOLS.md#需要设备账户或其他条件的项目)分开列出：Android 必需真机，AI assistance 需要可用账户，Sensors 定位需要测试页权限；Autofill 本轮使用内置地址无需个人资料。
 
 ## 记录、可访问性与恢复
 

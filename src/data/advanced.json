@@ -616,10 +616,10 @@
     "steps": [
       "打开真实收货表单，先检查 label、name、type、autocomplete。",
       "用明确标注的本地语义夹具填充，观察实际字段值；数据均为虚构。",
-      "有 Chrome 测试地址时打开 Autofill，主动选择地址，记录匹配字段。",
-      "不需要导入私人地址；没有资料时将原生填充标为未验证。",
-      "应用对应 token 修复，在配送与账单场景分别核对。",
-      "清空本页字段；页面不保存地址、不修改 Chrome 地址资料。"
+      "在无个人资料的访客 / 独立测试配置打开 Autofill，启用 Show test addresses in autofill menu；点击地址字段，在自动填充菜单的 Developer tools（开发者工具）中选择内置测试地址。必要时先右键字段打开菜单。",
+      "记录 Form inspector 的 Form field、Predicted autofill value 与 Value，再与页面实际填值对应；不要导入私人地址或登录账户。",
+      "应用对应 token 修复，用同一内置地址再次填充；配送与账单两组地址的隔离另做专项复核，不从单组表单推断。",
+      "手动清空本页三个字段，再停止实验；关闭测试地址开关，退出访客窗口。页面不保存地址、不修改 Chrome 地址资料。"
     ],
     "diagnoses": [
       {

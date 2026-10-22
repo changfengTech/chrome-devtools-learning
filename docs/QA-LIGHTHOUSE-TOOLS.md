@@ -80,3 +80,7 @@ CLI 只审计本机专用静态商品页，无教程框架、HMR 或 Service Wor
 本轮 45–49、52 与 Lighthouse 章末功能回归通过，新生成 34 份 CLI 13.0.1 报告，另有原生内置 13.5.0 的 Navigation / Timespan / Snapshot 运行与 JSON 导出。Issues CSP 资源展开和 Security 本地 origin 说明已原生补验；用户授权专用目录后的 Workspace 实际落盘与移除已补验；原 Overrides 配置未改动，访客覆盖流程受前台切换 / 控制超时影响，完整 Overrides / Changes 仍待复核。原当批 86 份不计入本轮新报告。
 
 最新逐项证据、剩余项和用户状态恢复见 [整体验收记录](QA-RELEASE.md)。本文件前文保留当批历史结论，不计作本轮重复三轮。
+
+## 后续原生专项补验（2026-10-22）
+
+上述当批待办保留历史范围；最新状态见 [Overrides / Changes 与 Autofill 专项](QA-NATIVE-TOOLS.md)。访客环境已完成响应覆盖 / 禁用回归、Changes CSS 增删 / 恢复，以及内置地址真实填充和字段预测对照；Workspace 自动映射、Changes Revert 按钮版本细项、Autofill 双地址组及设备 / 账户条件仍单列。

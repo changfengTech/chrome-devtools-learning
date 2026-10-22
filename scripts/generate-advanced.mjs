@@ -24,7 +24,7 @@ let index = `# 综合实战与专题实验合同
 - T02：本地健康请求和转发拓扑准备练习可用；USB、Android Chrome、实际 Inspect、端口转发与真机差异独立自报。无设备标记待验证，不称已连接。
 - T03：真实 JS、404 / 旧版本 map、TS 下载和实际计算。Workspace 只授权独立练习目录，保存后在磁盘确认；自动映射检查不证明目录保存。
 - T04：用户点击后通过 canvas.captureStream / MediaRecorder 生成短 WebM，实际 video 加载 / 播放。故障为媒体 404 或业务 play 监听器 pause；不关闭播放保护。不支持录制的环境提示限制，不伪造播放结果。
-- T05：真实收货 form 的 label、name、autocomplete 与虚构地址夹具。夹具不是 Chrome Autofill；原生填充与面板需测试资料并单独取证，不保存私人地址。
+- T05：真实收货 form 的 label、name、autocomplete 与虚构地址夹具。夹具不是 Chrome Autofill；原生填充使用 Chrome 内置测试地址并单独取证，不保存私人地址。
 - T06：课堂候选 ID / UV 协议夹具与真实 WebAuthn 两条路径。真实 create/get 仅允许本地 4174，120 秒一次性挑战，ES256 / P-256 / none attestation；校验 clientData 的 type、challenge、origin、RP hash、UP / UV、credential ID、签名与计数。只供虚拟认证器学习；不实现生产身份、恢复、风险控制或 attestation 信任。
 - T07：预置待验证建议不冒充 AI 回答；实际 DOM 命中、disabled 与购物结果支撑批判。AI assistance 受地区、版本、账号与策略影响，不自动启用或传出上下文。
 - T08：站内消息配对是明确标注的教学数据；真实 Protocol monitor / CDP 使用只读 DOM 命令人工观察。页面观察不是 CDP，不开放远程调试端口。

@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-22",
+  "scope": "Native follow-up and instruction updates; prior full-course browser regression not rerun",
+  "commands": {
+    "pnpm docs:lessons": {
+      "exitCode": 0
+    },
+    "pnpm test": {
+      "exitCode": 0,
+      "tests": 60,
+      "pass": 60,
+      "fail": 0,
+      "log": "tests.txt"
+    },
+    "pnpm build": {
+      "exitCode": 0,
+      "log": "build.txt"
+    }
+  },
+  "nativeScreenshotsReviewed": 12,
+  "screenshotsContain": "Only owned Guest test pages, DevTools, repository public fixtures and Chrome built-in synthetic addresses",
+  "evidenceSha256": {
+    "autofill-cleaned.jpg": "b23365bd5846baa872a5337438dd6c708d4137d37987d4f7ec0fbbcf14634ef0",
+    "autofill-fault-mapping.jpg": "b367337d69b9121215583e74d671ee6918e1c929035969bd112fe87be62c734b",
+    "autofill-fault-page.jpg": "315b2b69f83d13ee1a04ae76f7d8902bb92171e4d17072fcd07c49a0b39f35f9",
+    "autofill-fixed-mapping.jpg": "635a56ec7d19b04730d5aab97708bb2b6a3761e84c51fcfd976b47d61b66dc8d",
+    "autofill-fixed-page.jpg": "22c06f88a47c82e875772813d175c3e5c021369436d251e5a25c82c1fce2de23",
+    "build.txt": "94c7b877f6364e82255a0251db804badec4521580d235ce7d50a4d62ee4a43b2",
+    "changes-css-diff.jpg": "f185eed36378fed2c872cbba50992b0a079f5afcd5d356bb72e4008e19174173",
+    "changes-restored.jpg": "6a2745480a85bf47e750b386262233dd506149882872b98908e2a7abd4959b73",
+    "evidence.json": "bd6a4b466a3a216a0b612552cb48a01ea0c0be69239266911101c9035421aba0",
+    "network-overridden-response.jpg": "6d617db4ee30cefb68082e1dd5aabe0b4874806e6fb21a9604591df4d9526bd4",
+    "network-overrides-marker.jpg": "dad630eef65befc1ae08b2510e82a65cff22eb3ed78d559fc019863f654ea62d",
+    "overrides-before.jpg": "acbb3ce428481ad522a875d559f3c843a2fadae140cc403414a2596931c9f76b",
+    "overrides-disabled-page.jpg": "f2e30a29a9706698406a5bb0e1501ddf498bfd54c8a8480df14ac15274c8fe5c",
+    "overrides-fixed-page.jpg": "7fb30e8449c18ba9a6fa3eab43e028cfaed3920cf32c023fea225285fc47a0f7",
+    "tests.txt": "3bdec814bef3503b11b4a7de1ff1a9451fd06261ad62303670e23d633c076cff"
+  },
+  "markdownLinks": {
+    "checked": 556,
+    "missing": []
+  },
+  "gitDiffCheck": {
+    "staged": true,
+    "exitCode": 0
+  }
+}

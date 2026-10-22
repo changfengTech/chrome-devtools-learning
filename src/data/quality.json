@@ -439,7 +439,7 @@
       "在 Sources > Overrides 选择专用临时目录并按 Chrome 提示授权；从 Network Override content 或 Sources 保存本地覆盖。",
       "只修改当前错误字段为本课正常输入，保持 SKU、数量和其它字段；观察 Network 的覆盖标记。",
       "点“检查手工覆盖”重新读取同一 URL；它不会修正服务器数据。也可单独使用“应用所选服务器对照”作正常参考，二者不混称。",
-      "修改本页 product.css 的价格颜色，在 Changes 看 CSS diff；说明 Overrides、Changes、Workspaces 与仓库落盘的差别。",
+      "在 Elements > Styles 修改本页 product.css 的价格颜色，在 Changes 看 CSS 增删 diff；恢复原值并确认 File is identical to its unmodified state。若当前版本提供 Revert，可另测该按钮；说明 Overrides、Changes、Workspaces 与仓库落盘的差别。",
       "禁用 / 删除本课覆盖并恢复故障，确认原响应仍错；恢复所有工具设置，再提交依据与最小验证。"
     ],
     "diagnoses": [

@@ -244,7 +244,7 @@ pnpm dev
 
 Elements、Console、Sources、Network、Performance、Memory、Application、Lighthouse 八个章末均已开放。初始不指定课号和根因，先独立取证，再读取选项；案例检查、排查报告与五维自评分开。综合三课使用同样的 ≥8/10 自评门槛，证据 / 验证不得为零。
 
-本地专题练习包含可复现业务条件，原生步骤与课堂夹具分别记录。本轮已补验 Sensors 方向、Media、WebAuthn 虚拟认证器、Workspace 磁盘保存及 Protocol monitor 部分命令链；Android 真机、定位权限、Autofill、可用账户下的 AI 和剩余细项按环境继续验证。没有设备或功能时明确标记待验证，不能把模型点击当作实际完成。真实 WebAuthn 从 T06 提供的 `localhost:4174` 独立原生页进入。
+本地专题练习包含可复现业务条件，原生步骤与课堂夹具分别记录。本轮已补验 Sensors 方向、Media、WebAuthn 虚拟认证器、Workspace 磁盘保存及 Protocol monitor 部分命令链；后续在 Guest 中补齐 Autofill 内置地址实际填充与预测对照；Android 真机、定位权限、可用账户下的 AI 和剩余细项按环境继续验证。没有设备或功能时明确标记待验证，不能把模型点击当作实际完成。真实 WebAuthn 从 T06 提供的 `localhost:4174` 独立原生页进入。
 
 具体阶段见 [开发阶段](docs/ROADMAP.md)，本轮完整回归与原生证据见 [整体验收](docs/QA-RELEASE.md)，剩余事项见 [当前状态](docs/STATUS.md)。
 
@@ -304,6 +304,7 @@ pnpm preview:all
 
 - `pnpm build` 与 **60 项自动测试**通过，覆盖基础、网络状态、性能与内存、质量与综合专题配置、认证签名和 RP 域名、自评门槛、错误提交、会话隔离、实际协议、Source Map、记录校验和第 21 课回归。
 - 本轮新增 **34 份 Lighthouse CLI 13.0.1 报告**，另在 Chrome 156 内置 Lighthouse 13.5.0 面板实际运行、导出三种模式报告。47 的固定条件三次中位数：引导 LCP 1432.9 → 79.2 ms，迁移配置 0 的 LCP 1434.3 → 51.9 ms，配置 1 的 TBT 430.3 → 70.4 ms；业务键盘流程另行复核。数字是本机受控故障对照，不是跨设备性能承诺。
+- [Guest 原生专项补验](docs/QA-NATIVE-TOOLS.md)完成 Overrides 响应覆盖与禁用回归、Changes CSS diff / 恢复、Autofill 内置合成地址实际填充；操作指南同步更新。Android 真机、AI 账户与定位权限分列，Revert 按钮和双地址组等细项保留。
 - 原生补验含 Comparison、两种 Retainers、分配工具、monitor 趋势，Recorder 录制 / 编辑 / 导入导出 / Replay；Performance 保存重载、Coverage、Animations；Issues / Security、Sensors 方向、Media、WebAuthn、Protocol monitor 部分链路。详细边界逐项保留，未声称所有工具原生步骤全部完成。
 
 以下为各开发阶段的历史记录，未重复计作本轮新实测：
@@ -317,7 +318,7 @@ pnpm preview:all
 - 综合 / 专题 11 课各三轮引导、两配置挑战，三个新增章末共 12 组病例通过；72 项三视口检查、八章末 v1、综合评分、错误导入保护与跨窗口同步有记录。真实 CDP DOM 命令与导航失效已有证据，原生面板 / 真机待办单列。
 - Network / Application 两个章末任务检查低分门槛与记录持久化；实际网络失败时缓存回退通过，资源阻断后收尾与恢复重试通过；生产预览 24 / 25 / 39 全链路通过。
 
-以上为已记录环境的结果。流程验收使用应用内 Chromium；本轮原生面板在独立 Google Chrome 156.0.8078.48 取得证据。设备、权限 / 账户、Overrides / Changes 与部分工具细项仍有待办。最新汇总见 [整体验收](docs/QA-RELEASE.md)，历史详见 [基础课](docs/QA-FOUNDATIONS.md)、[网络与状态](docs/QA-NETWORK-APPLICATION.md)、[性能](docs/QA-PERFORMANCE.md)、[内存](docs/QA-MEMORY.md)、[质量工具](docs/QA-LIGHTHOUSE-TOOLS.md)、[综合专题](docs/QA-CAPSTONE-TOPICS.md)。
+以上为已记录环境的结果。流程验收使用应用内 Chromium；本轮原生面板在独立 Google Chrome 156.0.8078.48 取得证据。后续 Guest 专项已补齐 Overrides 覆盖 / 禁用回归、Changes CSS 差异 / 恢复和 Autofill 实际填充；设备、权限 / 账户与部分工具细项仍有待办。最新汇总见 [整体验收](docs/QA-RELEASE.md)，历史详见 [基础课](docs/QA-FOUNDATIONS.md)、[网络与状态](docs/QA-NETWORK-APPLICATION.md)、[性能](docs/QA-PERFORMANCE.md)、[内存](docs/QA-MEMORY.md)、[质量工具](docs/QA-LIGHTHOUSE-TOOLS.md)、[综合专题](docs/QA-CAPSTONE-TOPICS.md)。
 
 ## 项目结构
 
@@ -357,6 +358,7 @@ chrome-devtools-learning/
 | 第 21 课的完整教学设计 | [Network 样板课](docs/LESSON-21.md) |
 | 53–55、T01–T08 的前置、真实场景、三章末与检查边界 | [综合与专题合同](docs/CAPSTONE-TOPICS.md) |
 | 本批三轮引导、两种挑战、原生能力与待办 | [综合与专题验收](docs/QA-CAPSTONE-TOPICS.md) |
+| Overrides / Changes、Autofill 原生截图与设备 / 账户条件 | [原生专项补验](docs/QA-NATIVE-TOOLS.md) |
 | 全 63 课 / 8 章末回归、修复与最新原生证据 | [整体验收](docs/QA-RELEASE.md) |
 | 自动检查边界与章末评分规则 | [验收标准](docs/ACCEPTANCE.md) |
 | 实测了什么、还缺什么 | [基础课验收](docs/QA-FOUNDATIONS.md) · [网络与状态验收](docs/QA-NETWORK-APPLICATION.md) · [性能验收](docs/QA-PERFORMANCE.md) · [内存验收](docs/QA-MEMORY.md) · [质量与工具验收](docs/QA-LIGHTHOUSE-TOOLS.md) · [实施状态](docs/STATUS.md) |

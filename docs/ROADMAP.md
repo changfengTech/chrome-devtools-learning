@@ -64,4 +64,8 @@
 
 补齐原生 Memory Comparison、分配工具、monitor 多点趋势、Recorder 录制至两条件 Replay；Performance 保存重载、Coverage、Animations；Lighthouse 三模式；Issues / Security、Sensors 方向、Media、WebAuthn 虚拟认证器与部分 Protocol monitor。新证据和每项限制见 [QA-RELEASE.md](QA-RELEASE.md)。
 
-**阶段 8 功能回归完成，原生退出条件尚未全部关闭。** Android、权限 / 账户、Overrides / Changes 闭环及未逐个复走的面板细项明确保留，不能将历史 API / CLI 证据自动升格为本轮原生通过。后续按整体验收剩余项继续，不新增未约定课程来代替退出验收。
+**阶段 8 功能回归完成，原生退出条件尚未全部关闭。** Android、权限 / 账户及未逐个复走的面板细项明确保留，不能将历史 API / CLI 证据自动升格为本轮原生通过。后续按整体验收剩余项继续，不新增未约定课程来代替退出验收。
+
+### 阶段 8 原生专项补验（2026-10-22）
+
+独立 Guest 环境完成 52 的 Overrides 响应替换 / 禁用回归与 Changes CSS diff / 恢复，以及 T05 内置测试地址的原生填充和 Form inspector 对照。课程说明同步更新；目录权限、开关、合成字段和验收窗口完成收尾。[专项记录](QA-NATIVE-TOOLS.md)单列真机、账户、定位权限和本地细项，不将未出现的 Revert 按钮或未测双地址组视为通过。

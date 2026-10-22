@@ -86,3 +86,7 @@ T06 自动测试使用临时生成的真实 EC P-256 密钥构造 none attestati
 本轮 53–55、T01–T08 与三基础面板章末功能回归通过。原生补验 Sensors 方向、Media 解码 / 事件 / 时间线、WebAuthn 虚拟认证器与签名，以及 Protocol monitor 命令链和导航新 root；修复真实 WebAuthn 的 localhost RP 域名入口。另补原生 Workspace 磁盘保存与目录移除；Android、位置权限、Autofill、AI 账户、Workspace 自动映射与旧 nodeId 错误等细项继续保留。
 
 最新逐项证据、剩余项和用户状态恢复见 [整体验收记录](QA-RELEASE.md)。本文件前文保留当批历史结论，不计作本轮重复三轮。
+
+## 后续原生专项补验（2026-10-22）
+
+上述当批待办保留历史范围；最新状态见 [Overrides / Changes 与 Autofill 专项](QA-NATIVE-TOOLS.md)。访客环境已完成响应覆盖 / 禁用回归、Changes CSS 增删 / 恢复，以及内置地址真实填充和字段预测对照；Workspace 自动映射、Changes Revert 按钮版本细项、Autofill 双地址组及设备 / 账户条件仍单列。
