@@ -22,6 +22,11 @@ function load() {
   }
 }
 const state = ref(load());
+if (typeof window !== "undefined") {
+  window.addEventListener("storage", (event) => {
+    if (event.key === key || event.key === null) state.value = load();
+  });
+}
 const record = (id: string): LessonProgress =>
   state.value.records[id] || { note: "", hints: 0 };
 

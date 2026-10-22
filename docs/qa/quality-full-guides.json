@@ -1,0 +1,1142 @@
+[
+  {
+    "id": "45",
+    "cycle": 1,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 54967,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/hero-800.svg?run=d81cabe8-b50e-47c3-a7e4-fcd16ee16f1f"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=d81cabe8-b50e-47c3-a7e4-fcd16ee16f1f",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:34:35.451Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 60.959,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "45",
+    "cycle": 1,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 74631,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/hero-800.svg?run=44fe9053-642e-40ef-b740-63b5fb06c2c1"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=44fe9053-642e-40ef-b740-63b5fb06c2c1",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:35:37.760Z",
+          "formFactor": "mobile",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 60.879,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "45",
+    "cycle": 1,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 45 课\n约 20 分钟\n先对齐问题，再开始审计。\n\n理解模式、设备、类别和实验室结果边界\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n运行商城审计并记录条件\n从课程打开实验，准备故障；打开本轮独立审计目标。记录 URL、目标状态与设备条件。\n在 DevTools Lighthouse 识别 Navigation / Timespan / Snapshot；为首次加载选择 Navigation，当前展开状态使用 Snapshot，交互区间使用 Timespan。\n本课引导故意用 Desktop 运行；另一配置只跑 Performance。导出真实 JSON 并导入本页，先识别条件不匹配。\n针对本次目标选择正确 Mobile 条件，或完整四类结果；不要通过改变所有条件追求分数。\n应用对应服务器对照，审计新的目标地址，导入同一轮报告，核对类别、formFactor、版本和时间。\n回教程说明报告回答了什么、不能回答什么。CLI Navigation 与原生 Timespan / Snapshot 的实测分开记录。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n报告 configSettings.formFactor 与 Mobile 目标不符\ncategories 中缺 accessibility / best-practices / seo\n不同版本和条件的分数差异就是修复效果\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n理解模式、设备、类别和实验室结果边界\n\n原理实验可以试试\n选择加载 / 交互区间 / 当前弹窗的目标\n改变模式、设备和类别，观察可回答的问题\n对照两个条件记录，不演算虚构分数\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "45",
+    "cycle": 2,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 47748,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/hero-800.svg?run=8738466f-25bd-43ca-b6a3-4e53ee8cbd35"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=8738466f-25bd-43ca-b6a3-4e53ee8cbd35",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:37:20.113Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 65.791,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "45",
+    "cycle": 2,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 40215,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/hero-800.svg?run=59ba6d99-0d00-4a2f-87fe-cfe704aa22b0"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=59ba6d99-0d00-4a2f-87fe-cfe704aa22b0",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:38:01.960Z",
+          "formFactor": "mobile",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 56.749,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "45",
+    "cycle": 2,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 45 课\n约 20 分钟\n先对齐问题，再开始审计。\n\n理解模式、设备、类别和实验室结果边界\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n运行商城审计并记录条件\n从课程打开实验，准备故障；打开本轮独立审计目标。记录 URL、目标状态与设备条件。\n在 DevTools Lighthouse 识别 Navigation / Timespan / Snapshot；为首次加载选择 Navigation，当前展开状态使用 Snapshot，交互区间使用 Timespan。\n本课引导故意用 Desktop 运行；另一配置只跑 Performance。导出真实 JSON 并导入本页，先识别条件不匹配。\n针对本次目标选择正确 Mobile 条件，或完整四类结果；不要通过改变所有条件追求分数。\n应用对应服务器对照，审计新的目标地址，导入同一轮报告，核对类别、formFactor、版本和时间。\n回教程说明报告回答了什么、不能回答什么。CLI Navigation 与原生 Timespan / Snapshot 的实测分开记录。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n报告 configSettings.formFactor 与 Mobile 目标不符\ncategories 中缺 accessibility / best-practices / seo\n不同版本和条件的分数差异就是修复效果\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n理解模式、设备、类别和实验室结果边界\n\n原理实验可以试试\n选择加载 / 交互区间 / 当前弹窗的目标\n改变模式、设备和类别，观察可回答的问题\n对照两个条件记录，不演算虚构分数\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "45",
+    "cycle": 3,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 39581,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 465,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/hero-800.svg?run=288c99f9-eb8e-4a92-9031-4aa9e28d60e7"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=288c99f9-eb8e-4a92-9031-4aa9e28d60e7",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:38:43.490Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 47.022,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "45",
+    "cycle": 3,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 44682,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 465,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/hero-800.svg?run=d6cc5012-1b3a-44be-a676-b3c04df7424c"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=d6cc5012-1b3a-44be-a676-b3c04df7424c",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:39:22.312Z",
+          "formFactor": "mobile",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 81.706,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "45",
+    "cycle": 3,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 45 课\n约 20 分钟\n先对齐问题，再开始审计。\n\n理解模式、设备、类别和实验室结果边界\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n运行商城审计并记录条件\n从课程打开实验，准备故障；打开本轮独立审计目标。记录 URL、目标状态与设备条件。\n在 DevTools Lighthouse 识别 Navigation / Timespan / Snapshot；为首次加载选择 Navigation，当前展开状态使用 Snapshot，交互区间使用 Timespan。\n本课引导故意用 Desktop 运行；另一配置只跑 Performance。导出真实 JSON 并导入本页，先识别条件不匹配。\n针对本次目标选择正确 Mobile 条件，或完整四类结果；不要通过改变所有条件追求分数。\n应用对应服务器对照，审计新的目标地址，导入同一轮报告，核对类别、formFactor、版本和时间。\n回教程说明报告回答了什么、不能回答什么。CLI Navigation 与原生 Timespan / Snapshot 的实测分开记录。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n报告 configSettings.formFactor 与 Mobile 目标不符\ncategories 中缺 accessibility / best-practices / seo\n不同版本和条件的分数差异就是修复效果\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n理解模式、设备、类别和实验室结果边界\n\n原理实验可以试试\n选择加载 / 交互区间 / 当前弹窗的目标\n改变模式、设备和类别，观察可回答的问题\n对照两个条件记录，不演算虚构分数\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "46",
+    "cycle": 1,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 50637,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/hero-800.svg?run=e1bfc277-c30c-4248-ad3b-dd1cd2c8761f"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=e1bfc277-c30c-4248-ad3b-dd1cd2c8761f",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:46:01.395Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 0.93,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 0,
+          "description": 1,
+          "lcp": 68.484,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "46",
+    "cycle": 1,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 43399,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": true,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/hero-800.svg?run=b8e2e45c-a426-4fa2-a294-0abe20bddcfd"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=b8e2e45c-a426-4fa2-a294-0abe20bddcfd",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:46:45.719Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 59.749,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "46",
+    "cycle": 1,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 46 课\n约 20 分钟\n一条建议，能追到哪一个元素？\n\n从检查项追证据，理解自动检查边界\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n检查图片、名称、元信息和建议\n准备故障并打开目标，在相同条件下运行四类 Lighthouse 审计，导出 JSON。\n导入后展开 button-name 或 meta-description 及原始 details；到 Elements 核对真实按钮或 head。\n用 Tab / Enter 验证详情与加购，记录自动报告之外仍需检查的焦点、名称和业务路径。\n选择当前问题对应对照，重新审计新的目标；目标 audit 应恢复，但不要要求所有类别 100。\n导入对照报告，核对同一 audit ID 与正常 SKU、数量，勾选已实际完成的人工检查。\n提交原因、直接证据与验证；说明其它检查项和未覆盖范围。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nbutton-name 失败并指向无名称按钮\nmeta-description 失败且 head 缺少 description\n只有总分截图，没有元素或 audit ID\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n从检查项追证据，理解自动检查边界\n\n原理实验可以试试\n选择报告类别与具体检查项\n定位关联元素、资源或文档\n打开人工检查清单，区分自动发现与人工结论\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "46",
+    "cycle": 2,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 44897,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/hero-800.svg?run=62d67d53-873a-4a18-a3dc-ed1dcd202193"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=62d67d53-873a-4a18-a3dc-ed1dcd202193",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:47:31.012Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 0.93,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 0,
+          "description": 1,
+          "lcp": 66.972,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "46",
+    "cycle": 2,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 63915,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": true,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/hero-800.svg?run=3b1bf203-5c0d-4bfd-afc3-013d8d0dd6db"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=3b1bf203-5c0d-4bfd-afc3-013d8d0dd6db",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:48:12.362Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 56.334,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "46",
+    "cycle": 2,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 46 课\n约 20 分钟\n一条建议，能追到哪一个元素？\n\n从检查项追证据，理解自动检查边界\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n检查图片、名称、元信息和建议\n准备故障并打开目标，在相同条件下运行四类 Lighthouse 审计，导出 JSON。\n导入后展开 button-name 或 meta-description 及原始 details；到 Elements 核对真实按钮或 head。\n用 Tab / Enter 验证详情与加购，记录自动报告之外仍需检查的焦点、名称和业务路径。\n选择当前问题对应对照，重新审计新的目标；目标 audit 应恢复，但不要要求所有类别 100。\n导入对照报告，核对同一 audit ID 与正常 SKU、数量，勾选已实际完成的人工检查。\n提交原因、直接证据与验证；说明其它检查项和未覆盖范围。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nbutton-name 失败并指向无名称按钮\nmeta-description 失败且 head 缺少 description\n只有总分截图，没有元素或 audit ID\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n从检查项追证据，理解自动检查边界\n\n原理实验可以试试\n选择报告类别与具体检查项\n定位关联元素、资源或文档\n打开人工检查清单，区分自动发现与人工结论\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "46",
+    "cycle": 3,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 45916,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/hero-800.svg?run=34dd54ec-01b6-4fb4-9237-d5c01961faef"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=34dd54ec-01b6-4fb4-9237-d5c01961faef",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:49:19.609Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 0.93,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 0,
+          "description": 1,
+          "lcp": 67.203,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "46",
+    "cycle": 3,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 88297,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": true,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/hero-800.svg?run=40106eb0-2f10-4f8c-a186-0df4e72846e4"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=40106eb0-2f10-4f8c-a186-0df4e72846e4",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:50:18.368Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 266.074,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "46",
+    "cycle": 3,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 46 课\n约 20 分钟\n一条建议，能追到哪一个元素？\n\n从检查项追证据，理解自动检查边界\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n检查图片、名称、元信息和建议\n准备故障并打开目标，在相同条件下运行四类 Lighthouse 审计，导出 JSON。\n导入后展开 button-name 或 meta-description 及原始 details；到 Elements 核对真实按钮或 head。\n用 Tab / Enter 验证详情与加购，记录自动报告之外仍需检查的焦点、名称和业务路径。\n选择当前问题对应对照，重新审计新的目标；目标 audit 应恢复，但不要要求所有类别 100。\n导入对照报告，核对同一 audit ID 与正常 SKU、数量，勾选已实际完成的人工检查。\n提交原因、直接证据与验证；说明其它检查项和未覆盖范围。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nbutton-name 失败并指向无名称按钮\nmeta-description 失败且 head 缺少 description\n只有总分截图，没有元素或 audit ID\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n从检查项追证据，理解自动检查边界\n\n原理实验可以试试\n选择报告类别与具体检查项\n定位关联元素、资源或文档\n打开人工检查清单，区分自动发现与人工结论\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "47",
+    "cycle": 1,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 124785,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 465,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/hero-800.svg?run=8bce41b9-c6ac-4a55-b212-ad1a0f3aaba8"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=8bce41b9-c6ac-4a55-b212-ad1a0f3aaba8",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:55:10.087Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.95,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1465.295,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=8bce41b9-c6ac-4a55-b212-ad1a0f3aaba8",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:55:31.819Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.96,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1431.455,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=8bce41b9-c6ac-4a55-b212-ad1a0f3aaba8",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:55:53.735Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.96,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1416.624,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "47",
+    "cycle": 1,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 85865,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": true,
+        "width": 465,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/hero-800.svg?run=54d3fd40-294c-4b2f-a351-445fb9cc4462"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=54d3fd40-294c-4b2f-a351-445fb9cc4462",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:57:16.848Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 79.326,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=54d3fd40-294c-4b2f-a351-445fb9cc4462",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:57:36.693Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 55.652,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=54d3fd40-294c-4b2f-a351-445fb9cc4462",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:57:56.182Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 55.672,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "47",
+    "cycle": 1,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 47 课\n约 20 分钟\n预算有限，先改哪一项？\n\n按影响、证据和成本排序并公平复测\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n完成一轮质量改进并深入定位\n准备故障并打开目标，固定 Desktop、四类别、限速方法；分别运行三次 Navigation 并导入 JSON。\n在 Network / Performance 关联主图等待或 normalizeCatalog 重复工作，记录实际证据。\n按影响、证据和成本排序，选择最小针对性方案；颜色调整不算性能修复。\n应用服务器对照，在相同设置下对新目标再运行三次；不要导入同一 fetchTime 的重复文件。\n比较 LCP 或 TBT 中位数、正常结果和其它检查项；本地受控负载要求趋势改善，不把数值当线上目标。\n完成实际人工路径检查，记录剩余限制和恢复条件，再提交章内 / 章末报告。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n三份 LCP 与主图等待证据一致\n三份 TBT 与 normalizeCatalog 重复调用对应\n只看一次最高分或调过限速后的结果\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n按影响、证据和成本排序并公平复测\n\n原理实验可以试试\n在三点预算内选择改动\n比较影响、依据与成本，而不是只数任务\n读取多轮示意样本的中位数，识别条件变化\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "47",
+    "cycle": 2,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 129030,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 465,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/hero-800.svg?run=5fd2309a-b446-47f0-9918-f2fc7a9e56c8"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=5fd2309a-b446-47f0-9918-f2fc7a9e56c8",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:58:40.990Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.96,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1430.035,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=5fd2309a-b446-47f0-9918-f2fc7a9e56c8",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:59:02.028Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.96,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1417.256,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=5fd2309a-b446-47f0-9918-f2fc7a9e56c8",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T06:59:22.752Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.96,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1420.93,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "47",
+    "cycle": 2,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 157518,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": true,
+        "width": 465,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/hero-800.svg?run=e91f75ab-0f1b-4f79-b5ef-2531eb6a75ec"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=e91f75ab-0f1b-4f79-b5ef-2531eb6a75ec",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:01:42.622Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 82.363,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=e91f75ab-0f1b-4f79-b5ef-2531eb6a75ec",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:02:02.638Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 61.628,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=e91f75ab-0f1b-4f79-b5ef-2531eb6a75ec",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:02:21.780Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 49.297,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "47",
+    "cycle": 2,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 47 课\n约 20 分钟\n预算有限，先改哪一项？\n\n按影响、证据和成本排序并公平复测\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n完成一轮质量改进并深入定位\n准备故障并打开目标，固定 Desktop、四类别、限速方法；分别运行三次 Navigation 并导入 JSON。\n在 Network / Performance 关联主图等待或 normalizeCatalog 重复工作，记录实际证据。\n按影响、证据和成本排序，选择最小针对性方案；颜色调整不算性能修复。\n应用服务器对照，在相同设置下对新目标再运行三次；不要导入同一 fetchTime 的重复文件。\n比较 LCP 或 TBT 中位数、正常结果和其它检查项；本地受控负载要求趋势改善，不把数值当线上目标。\n完成实际人工路径检查，记录剩余限制和恢复条件，再提交章内 / 章末报告。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n三份 LCP 与主图等待证据一致\n三份 TBT 与 normalizeCatalog 重复调用对应\n只看一次最高分或调过限速后的结果\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n按影响、证据和成本排序并公平复测\n\n原理实验可以试试\n在三点预算内选择改动\n比较影响、依据与成本，而不是只数任务\n读取多轮示意样本的中位数，识别条件变化\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "47",
+    "cycle": 3,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 93465,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 465,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/hero-800.svg?run=2dc3fa3c-28ee-4a51-bd74-bdf29dc99d04"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=2dc3fa3c-28ee-4a51-bd74-bdf29dc99d04",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:03:30.338Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.96,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1426.36,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=2dc3fa3c-28ee-4a51-bd74-bdf29dc99d04",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:03:51.376Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.96,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1430.65,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=2dc3fa3c-28ee-4a51-bd74-bdf29dc99d04",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:04:12.232Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 0.96,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 1418.963,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "47",
+    "cycle": 3,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 210249,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": true,
+        "width": 465,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/hero-800.svg?run=66dd3541-0dfb-4c36-931f-5ea05ab95751"
+      },
+      "importedReports": [
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=66dd3541-0dfb-4c36-931f-5ea05ab95751",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:05:01.781Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 50.344,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=66dd3541-0dfb-4c36-931f-5ea05ab95751",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:05:21.328Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 61.054,
+          "tbt": 0
+        },
+        {
+          "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=66dd3541-0dfb-4c36-931f-5ea05ab95751",
+          "version": "13.0.1",
+          "fetchTime": "2026-10-22T07:05:41.269Z",
+          "formFactor": "desktop",
+          "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+          "categories": {
+            "performance": 1,
+            "accessibility": 1,
+            "best-practices": 0.96,
+            "seo": 1
+          },
+          "buttonName": 1,
+          "description": 1,
+          "lcp": 62.712,
+          "tbt": 0
+        }
+      ]
+    }
+  },
+  {
+    "id": "47",
+    "cycle": 3,
+    "phase": "tutorial-grade",
+    "result": "返回本章\nLighthouse\n第 47 课\n约 20 分钟\n预算有限，先改哪一项？\n\n按影响、证据和成本排序并公平复测\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n完成一轮质量改进并深入定位\n准备故障并打开目标，固定 Desktop、四类别、限速方法；分别运行三次 Navigation 并导入 JSON。\n在 Network / Performance 关联主图等待或 normalizeCatalog 重复工作，记录实际证据。\n按影响、证据和成本排序，选择最小针对性方案；颜色调整不算性能修复。\n应用服务器对照，在相同设置下对新目标再运行三次；不要导入同一 fetchTime 的重复文件。\n比较 LCP 或 TBT 中位数、正常结果和其它检查项；本地受控负载要求趋势改善，不把数值当线上目标。\n完成实际人工路径检查，记录剩余限制和恢复条件，再提交章内 / 章末报告。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n三份 LCP 与主图等待证据一致\n三份 TBT 与 normalizeCatalog 重复调用对应\n只看一次最高分或调过限速后的结果\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n按影响、证据和成本排序并公平复测\n\n原理实验可以试试\n在三点预算内选择改动\n比较影响、依据与成本，而不是只数任务\n读取多轮示意样本的中位数，识别条件变化\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  }
+]

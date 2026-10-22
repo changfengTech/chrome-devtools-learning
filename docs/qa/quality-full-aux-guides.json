@@ -1,0 +1,614 @@
+[
+  {
+    "id": "48",
+    "cycle": 1,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 1063,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 390,
+        "dpr": 1,
+        "gridOverflow": 370,
+        "panelOverflow": 357,
+        "rootOverflow": 405,
+        "filterWorked": true,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/762bd1d2-0599-4f19-9ac7-285cf884c866/hero-400.svg?run=f1ddf202-9945-4c2a-b7b3-b1f3afb651f8"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "48",
+    "cycle": 1,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 1060,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 390,
+        "dpr": 1,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": true,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/762bd1d2-0599-4f19-9ac7-285cf884c866/hero-400.svg?run=189a7a5d-40fb-43f1-b6ad-aabf78b2995b"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "48",
+    "cycle": 1,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 48 课\n约 20 分钟\n画面缩小了，布局真的适配了吗？\n\n检查视口、DPR、方向、触摸和媒体查询\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n检查移动筛选面板、图片与购物车\n准备故障，在 Device Mode 设 390 CSS px 并记录实际 innerWidth；本课检查需在 280–500 的窄视口进行。\n打开筛选和加入购物车，检查根文档 scrollWidth、网格与面板边界；不要用截屏缩放代替检查。\n改变 DPR 与方向，读当前图片 currentSrc、pointer / hover 条件；浏览器可自行选择资源。\n选择网格或面板对应修复，在相同窄屏重新检查，业务 SKU 和数量应一致。\n补查 768、1440 及键盘路径，恢复模拟设置；大视口不能单独证明窄屏通过。\n列出本轮未覆盖的真机检查，再选择原因、证据和验证。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n390 CSS px 下网格右边界超出根视口\n打开筛选后面板宽度超过实际视口\n只在 1440 截一张图\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n检查视口、DPR、方向、触摸和媒体查询\n\n原理实验可以试试\n独立切换视口、DPR、方向和指针\n观察媒体查询、示意布局与资源选择\n比较模拟覆盖范围与真机待办\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "48",
+    "cycle": 2,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 1148,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 390,
+        "dpr": 1,
+        "gridOverflow": 370,
+        "panelOverflow": 357,
+        "rootOverflow": 405,
+        "filterWorked": true,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/762bd1d2-0599-4f19-9ac7-285cf884c866/hero-400.svg?run=df3e9956-8488-4eac-afe9-06adb2a558b3"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "48",
+    "cycle": 2,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 1094,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 390,
+        "dpr": 1,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": true,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/762bd1d2-0599-4f19-9ac7-285cf884c866/hero-400.svg?run=64baaa41-b58e-4f3f-89ec-90f331745ee0"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "48",
+    "cycle": 2,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 48 课\n约 20 分钟\n画面缩小了，布局真的适配了吗？\n\n检查视口、DPR、方向、触摸和媒体查询\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n检查移动筛选面板、图片与购物车\n准备故障，在 Device Mode 设 390 CSS px 并记录实际 innerWidth；本课检查需在 280–500 的窄视口进行。\n打开筛选和加入购物车，检查根文档 scrollWidth、网格与面板边界；不要用截屏缩放代替检查。\n改变 DPR 与方向，读当前图片 currentSrc、pointer / hover 条件；浏览器可自行选择资源。\n选择网格或面板对应修复，在相同窄屏重新检查，业务 SKU 和数量应一致。\n补查 768、1440 及键盘路径，恢复模拟设置；大视口不能单独证明窄屏通过。\n列出本轮未覆盖的真机检查，再选择原因、证据和验证。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n390 CSS px 下网格右边界超出根视口\n打开筛选后面板宽度超过实际视口\n只在 1440 截一张图\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n检查视口、DPR、方向、触摸和媒体查询\n\n原理实验可以试试\n独立切换视口、DPR、方向和指针\n观察媒体查询、示意布局与资源选择\n比较模拟覆盖范围与真机待办\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "48",
+    "cycle": 3,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 1063,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 390,
+        "dpr": 1,
+        "gridOverflow": 370,
+        "panelOverflow": 357,
+        "rootOverflow": 405,
+        "filterWorked": true,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/762bd1d2-0599-4f19-9ac7-285cf884c866/hero-400.svg?run=e9ac9644-b284-4ad2-9a0b-e237f052e0ce"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "48",
+    "cycle": 3,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 1066,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 390,
+        "dpr": 1,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": true,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/762bd1d2-0599-4f19-9ac7-285cf884c866/hero-400.svg?run=a51aaa73-ce15-4326-b749-126a45ededce"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "48",
+    "cycle": 3,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 48 课\n约 20 分钟\n画面缩小了，布局真的适配了吗？\n\n检查视口、DPR、方向、触摸和媒体查询\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n检查移动筛选面板、图片与购物车\n准备故障，在 Device Mode 设 390 CSS px 并记录实际 innerWidth；本课检查需在 280–500 的窄视口进行。\n打开筛选和加入购物车，检查根文档 scrollWidth、网格与面板边界；不要用截屏缩放代替检查。\n改变 DPR 与方向，读当前图片 currentSrc、pointer / hover 条件；浏览器可自行选择资源。\n选择网格或面板对应修复，在相同窄屏重新检查，业务 SKU 和数量应一致。\n补查 768、1440 及键盘路径，恢复模拟设置；大视口不能单独证明窄屏通过。\n列出本轮未覆盖的真机检查，再选择原因、证据和验证。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\n390 CSS px 下网格右边界超出根视口\n打开筛选后面板宽度超过实际视口\n只在 1440 截一张图\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n检查视口、DPR、方向、触摸和媒体查询\n\n原理实验可以试试\n独立切换视口、DPR、方向和指针\n观察媒体查询、示意布局与资源选择\n比较模拟覆盖范围与真机待办\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "49",
+    "cycle": 1,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 530,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 1,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5a8fc553-e71b-4f72-8289-7aaebf754a23/hero-800.svg?run=a945346d-2daf-4783-bb6d-b2a511c532bf"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "49",
+    "cycle": 1,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 531,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": true,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5a8fc553-e71b-4f72-8289-7aaebf754a23/hero-800.svg?run=27ec2c3e-16a1-47b3-b35a-3c5e0231232c"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "49",
+    "cycle": 1,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 49 课\n约 20 分钟\n安全提示出现了，是哪条规则阻止了什么？\n\n从提示追到证书、资源与隐私限制\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n排查受阻资源或 Cookie 提示\n准备故障，打开 Issues、Console 和 Privacy and security，记录当前源与协议。\n执行优惠 / 会话检查，定位被拒的 inline script 或 Set-Cookie Domain；关联真实响应与请求。\n在安全面板区分连接与内容限制：本机 HTTP 没有 TLS 证书；不要绕过浏览器证书警告。\n选择同源外部脚本或 host-only Cookie 对照，重新执行；只清理本会话 Cookie。\n核对优惠实际可用或后续 profile 请求带会话；其它提示不代表本功能仍失败。\n恢复实验并写下原因、请求 / 规则证据和未覆盖的 HTTPS / 跨站场景。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nsecuritypolicyviolation 指向 script-src 和 inline\nSet-Cookie 含无关 Domain，后续 profile 不含会话\n只有 Issues 总数，没有具体资源或规则\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n从提示追到证书、资源与隐私限制\n\n原理实验可以试试\n选择 CSP / Cookie / 连接提示\n沿规则、源与请求找到受影响功能\n选择最小修改，对照恢复而非清空提示\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "49",
+    "cycle": 2,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 494,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 1,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5a8fc553-e71b-4f72-8289-7aaebf754a23/hero-800.svg?run=8a46684a-347e-4c54-86db-d67fe8055131"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "49",
+    "cycle": 2,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 531,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": true,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5a8fc553-e71b-4f72-8289-7aaebf754a23/hero-800.svg?run=2e808c8b-555f-4b63-a99f-2df6800daf29"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "49",
+    "cycle": 2,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 49 课\n约 20 分钟\n安全提示出现了，是哪条规则阻止了什么？\n\n从提示追到证书、资源与隐私限制\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n排查受阻资源或 Cookie 提示\n准备故障，打开 Issues、Console 和 Privacy and security，记录当前源与协议。\n执行优惠 / 会话检查，定位被拒的 inline script 或 Set-Cookie Domain；关联真实响应与请求。\n在安全面板区分连接与内容限制：本机 HTTP 没有 TLS 证书；不要绕过浏览器证书警告。\n选择同源外部脚本或 host-only Cookie 对照，重新执行；只清理本会话 Cookie。\n核对优惠实际可用或后续 profile 请求带会话；其它提示不代表本功能仍失败。\n恢复实验并写下原因、请求 / 规则证据和未覆盖的 HTTPS / 跨站场景。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nsecuritypolicyviolation 指向 script-src 和 inline\nSet-Cookie 含无关 Domain，后续 profile 不含会话\n只有 Issues 总数，没有具体资源或规则\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n从提示追到证书、资源与隐私限制\n\n原理实验可以试试\n选择 CSP / Cookie / 连接提示\n沿规则、源与请求找到受影响功能\n选择最小修改，对照恢复而非清空提示\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "49",
+    "cycle": 3,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 531,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 1,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5a8fc553-e71b-4f72-8289-7aaebf754a23/hero-800.svg?run=ee701c74-32d8-4ddc-a950-8a80b5e849ef"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "49",
+    "cycle": 3,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 529,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": true,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/5a8fc553-e71b-4f72-8289-7aaebf754a23/hero-800.svg?run=39b424d6-5ba3-4031-a18f-7ea8728096d6"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "49",
+    "cycle": 3,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 49 课\n约 20 分钟\n安全提示出现了，是哪条规则阻止了什么？\n\n从提示追到证书、资源与隐私限制\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n排查受阻资源或 Cookie 提示\n准备故障，打开 Issues、Console 和 Privacy and security，记录当前源与协议。\n执行优惠 / 会话检查，定位被拒的 inline script 或 Set-Cookie Domain；关联真实响应与请求。\n在安全面板区分连接与内容限制：本机 HTTP 没有 TLS 证书；不要绕过浏览器证书警告。\n选择同源外部脚本或 host-only Cookie 对照，重新执行；只清理本会话 Cookie。\n核对优惠实际可用或后续 profile 请求带会话；其它提示不代表本功能仍失败。\n恢复实验并写下原因、请求 / 规则证据和未覆盖的 HTTPS / 跨站场景。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nsecuritypolicyviolation 指向 script-src 和 inline\nSet-Cookie 含无关 Domain，后续 profile 不含会话\n只有 Issues 总数，没有具体资源或规则\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n从提示追到证书、资源与隐私限制\n\n原理实验可以试试\n选择 CSP / Cookie / 连接提示\n沿规则、源与请求找到受影响功能\n选择最小修改，对照恢复而非清空提示\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "52",
+    "cycle": 1,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 528,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "string",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/b0ac1955-ba99-4d2e-b2ab-d984435d8e88/hero-800.svg?run=3219abfa-ae9b-44e3-94eb-587473f63e54"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "52",
+    "cycle": 1,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 792,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/b0ac1955-ba99-4d2e-b2ab-d984435d8e88/hero-800.svg?run=fd718455-f9f2-4ca9-95de-f1258d904192"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "52",
+    "cycle": 1,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 52 课\n约 20 分钟\n改了响应，怎么证明改的是浏览器这一层？\n\n覆盖资源、检查差异并理解作用范围\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n覆盖商品响应验证异常数据猜想\n准备故障，执行商品请求，在 Network 找 HTTP 200 的 product.json，检查 unitPrice 类型或 stock。\n在 Sources > Overrides 选择专用临时目录并按 Chrome 提示授权；从 Network Override content 或 Sources 保存本地覆盖。\n只修改当前错误字段为本课正常输入，保持 SKU、数量和其它字段；观察 Network 的覆盖标记。\n点“检查手工覆盖”重新读取同一 URL；它不会修正服务器数据。也可单独使用“应用所选服务器对照”作正常参考，二者不混称。\n修改本页 product.css 的价格颜色，在 Changes 看 CSS diff；说明 Overrides、Changes、Workspaces 与仓库落盘的差别。\n禁用 / 删除本课覆盖并恢复故障，确认原响应仍错；恢复所有工具设置，再提交依据与最小验证。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nproduct.json 单价类型与页面计算错误对应\nproduct.json 的 stock=null 与错误售罄对应\n只凭界面变好了，没有检查实际响应\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n覆盖资源、检查差异并理解作用范围\n\n原理实验可以试试\n切换服务器响应、本地覆盖与工作区\n逐字段比较原始与覆盖数据\n禁用覆盖，确认原故障是否仍可复现\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "52",
+    "cycle": 2,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 531,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "string",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/b0ac1955-ba99-4d2e-b2ab-d984435d8e88/hero-800.svg?run=f13bf323-6778-49ea-ba5b-898a3909fb1e"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "52",
+    "cycle": 2,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 798,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/b0ac1955-ba99-4d2e-b2ab-d984435d8e88/hero-800.svg?run=e1b163f9-dd84-4198-9caf-9b69f2eb470c"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "52",
+    "cycle": 2,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 52 课\n约 20 分钟\n改了响应，怎么证明改的是浏览器这一层？\n\n覆盖资源、检查差异并理解作用范围\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n覆盖商品响应验证异常数据猜想\n准备故障，执行商品请求，在 Network 找 HTTP 200 的 product.json，检查 unitPrice 类型或 stock。\n在 Sources > Overrides 选择专用临时目录并按 Chrome 提示授权；从 Network Override content 或 Sources 保存本地覆盖。\n只修改当前错误字段为本课正常输入，保持 SKU、数量和其它字段；观察 Network 的覆盖标记。\n点“检查手工覆盖”重新读取同一 URL；它不会修正服务器数据。也可单独使用“应用所选服务器对照”作正常参考，二者不混称。\n修改本页 product.css 的价格颜色，在 Changes 看 CSS diff；说明 Overrides、Changes、Workspaces 与仓库落盘的差别。\n禁用 / 删除本课覆盖并恢复故障，确认原响应仍错；恢复所有工具设置，再提交依据与最小验证。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nproduct.json 单价类型与页面计算错误对应\nproduct.json 的 stock=null 与错误售罄对应\n只凭界面变好了，没有检查实际响应\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n覆盖资源、检查差异并理解作用范围\n\n原理实验可以试试\n切换服务器响应、本地覆盖与工作区\n逐字段比较原始与覆盖数据\n禁用覆盖，确认原故障是否仍可复现\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  },
+  {
+    "id": "52",
+    "cycle": 3,
+    "phase": "baseline",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标异常已在本次观察中出现",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 530,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": false,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "string",
+        "stockMissing": false,
+        "actualTotal": 0,
+        "currentSrc": "http://127.0.0.1:4174/quality/b0ac1955-ba99-4d2e-b2ab-d984435d8e88/hero-800.svg?run=2f98cfed-aed7-48af-b3c6-73124bb3b2be"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "52",
+    "cycle": 3,
+    "phase": "fixed",
+    "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+    "observation": {
+      "page": {
+        "visible": true,
+        "duration": 812,
+        "checksum": 84,
+        "expected": 84,
+        "manualChecked": false,
+        "width": 1280,
+        "dpr": 2,
+        "gridOverflow": 0,
+        "panelOverflow": 0,
+        "rootOverflow": 0,
+        "filterWorked": false,
+        "cartWorked": true,
+        "imageLoaded": true,
+        "violations": 0,
+        "offerReady": false,
+        "profileAccepted": false,
+        "priceType": "number",
+        "stockMissing": false,
+        "actualTotal": 84,
+        "currentSrc": "http://127.0.0.1:4174/quality/b0ac1955-ba99-4d2e-b2ab-d984435d8e88/hero-800.svg?run=bbf3b82b-c96d-47aa-ad19-a4de7f432666"
+      },
+      "importedReports": []
+    }
+  },
+  {
+    "id": "52",
+    "cycle": 3,
+    "phase": "tutorial-grade",
+    "result": "返回本章\n辅助工具\n第 52 课\n约 20 分钟\n改了响应，怎么证明改的是浏览器这一层？\n\n覆盖资源、检查差异并理解作用范围\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n覆盖商品响应验证异常数据猜想\n准备故障，执行商品请求，在 Network 找 HTTP 200 的 product.json，检查 unitPrice 类型或 stock。\n在 Sources > Overrides 选择专用临时目录并按 Chrome 提示授权；从 Network Override content 或 Sources 保存本地覆盖。\n只修改当前错误字段为本课正常输入，保持 SKU、数量和其它字段；观察 Network 的覆盖标记。\n点“检查手工覆盖”重新读取同一 URL；它不会修正服务器数据。也可单独使用“应用所选服务器对照”作正常参考，二者不混称。\n修改本页 product.css 的价格颜色，在 Changes 看 CSS diff；说明 Overrides、Changes、Workspaces 与仓库落盘的差别。\n禁用 / 删除本课覆盖并恢复故障，确认原响应仍错；恢复所有工具设置，再提交依据与最小验证。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n✓ 故障已复现\n✓ 页面修复检查通过\n你观察到的关键证据\n根据真实观察选择\nproduct.json 单价类型与页面计算错误对应\nproduct.json 的 stock=null 与错误售罄对应\n只凭界面变好了，没有检查实际响应\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n引导练习已记录：商城观察与修复检查完成，证据选择一致。\n\n本课学习目标\n\n覆盖资源、检查差异并理解作用范围\n\n原理实验可以试试\n切换服务器响应、本地覆盖与工作区\n逐字段比较原始与覆盖数据\n禁用覆盖，确认原故障是否仍可复现\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n○ 已通过迁移挑战\n\nChrome 官方参考"
+  }
+]

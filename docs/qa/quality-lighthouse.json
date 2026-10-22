@@ -1,7 +1,13 @@
 {
-  "boundary": "Field projections from unedited official Lighthouse JSON; hashes identify original local reports. No synthetic scores. Representative complete report: quality-lighthouse-example.json. URLs are expired local teaching sessions.",
-  "count": 46,
+  "boundary": "Field projections from unedited official Lighthouse JSON; hashes identify original local reports. No synthetic scores. Representative complete report: quality-lighthouse-example.json. URLs are expired local teaching sessions. Discarded multi-window flow attempts are excluded.",
+  "count": 86,
   "repeatedNavigations": 24,
+  "completeGuidedCycles": 18,
+  "lighthouseGuidedCycles": 9,
+  "guidedEvidenceFiles": [
+    "quality-full-guides.json",
+    "quality-full-aux-guides.json"
+  ],
   "performance": {
     "47-png": {
       "metric": "lcp",
@@ -999,6 +1005,514 @@
       }
     },
     {
+      "file": "quality-challenge-a-45-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "40172c997c1fa2e853b1a88773dcc4618f40ee8bad17d3398281eeba61c8599f",
+      "bytes": 370161,
+      "url": "http://127.0.0.1:4174/quality/9abdae97-bb0a-4617-a914-71f4f9ffdaff/audit/?run=7fc942e0-b047-4c36-a547-e9ddcfeb45ea",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:40:24.152Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 75.76,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-45-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "eac136f45e396ea9681ec6463944c66c95877cdcdc9951c005dbe6634e909b47",
+      "bytes": 407439,
+      "url": "http://127.0.0.1:4174/quality/9abdae97-bb0a-4617-a914-71f4f9ffdaff/audit/?run=c5ae11d7-9d45-4fb7-907c-1d78a578edb8",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:41:07.239Z",
+      "formFactor": "mobile",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 50.521,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-46-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "a93272abc6d6b0e589dadb1e9ced9e7ff75b7330283e3f902506a6e073ad14cf",
+      "bytes": 371258,
+      "url": "http://127.0.0.1:4174/quality/43439d4e-6df3-44f2-9d44-6f1ab6e9811e/audit/?run=1f2b8826-2b03-4478-a579-1995033699a3",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:51:44.982Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 0.93,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 0,
+      "description": 1,
+      "lcp": 66.347,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 0,
+          "title": "Buttons do not have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "1-0-BUTTON",
+                  "path": "1,HTML,1,BODY,1,MAIN,2,SECTION,2,BUTTON",
+                  "selector": "body > main#product > section > button#details",
+                  "boundingRect": {
+                    "top": 737,
+                    "bottom": 792,
+                    "left": 243,
+                    "right": 293,
+                    "width": 50,
+                    "height": 55
+                  },
+                  "snippet": "<button id=\"details\">",
+                  "nodeLabel": "◫",
+                  "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "impact": "critical",
+              "tags": [
+                "cat.name-role-value",
+                "wcag2a",
+                "wcag412",
+                "section508",
+                "section508.22.a",
+                "TTv5",
+                "TT6.a",
+                "EN-301-549",
+                "EN-9.4.1.2",
+                "ACT",
+                "RGAAv4",
+                "RGAA-11.9.1"
+              ]
+            }
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-46-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "cd7ebb637a8bf92884af53a14c4d391c1f1d0b842322e62a26a24ec41292680a",
+      "bytes": 370019,
+      "url": "http://127.0.0.1:4174/quality/43439d4e-6df3-44f2-9d44-6f1ab6e9811e/audit/?run=8f1ad2ee-b60d-43cb-be4f-4a46208dac46",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:53:39.827Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 73.257,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-47-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "8453630b3b3c01bcbadc70d83a8fd5b0b2716d33a353a283351e75fe0e0b3193",
+      "bytes": 364584,
+      "url": "http://127.0.0.1:4174/quality/c2b6aab5-7342-4fc9-a3c4-f975655b9142/audit/?run=e93ce977-2225-4f73-846f-f5a29ba07060",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:09:17.165Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1460.187,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-47-baseline-2.json",
+      "type": "tutorial-browser-import",
+      "sha256": "218dffa1ccdedff7077af235d28fea8703682e70d26699fed197a1ad0952cc0f",
+      "bytes": 364530,
+      "url": "http://127.0.0.1:4174/quality/c2b6aab5-7342-4fc9-a3c4-f975655b9142/audit/?run=e93ce977-2225-4f73-846f-f5a29ba07060",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:09:38.395Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.95,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1472.591,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-47-baseline-3.json",
+      "type": "tutorial-browser-import",
+      "sha256": "c110ac97c237f64893c2407ef807ebba546c809b4fb85a1ae85b3f43bbe70415",
+      "bytes": 364509,
+      "url": "http://127.0.0.1:4174/quality/c2b6aab5-7342-4fc9-a3c4-f975655b9142/audit/?run=e93ce977-2225-4f73-846f-f5a29ba07060",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:09:59.298Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1426.385,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-47-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "9435f6687bcc84da4c5d685751c0e6ffad00bd481b8a2ccb93f352f0b6720d1a",
+      "bytes": 369609,
+      "url": "http://127.0.0.1:4174/quality/c2b6aab5-7342-4fc9-a3c4-f975655b9142/audit/?run=849b2ffe-2718-4ba9-9578-79e0191115e1",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:11:30.472Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 57.643,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-47-fixed-2.json",
+      "type": "tutorial-browser-import",
+      "sha256": "f6f95323fb8258115e7581a805b4e273a9d44e3c327c871cc340b78f575fdb2f",
+      "bytes": 369554,
+      "url": "http://127.0.0.1:4174/quality/c2b6aab5-7342-4fc9-a3c4-f975655b9142/audit/?run=849b2ffe-2718-4ba9-9578-79e0191115e1",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:11:50.163Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 57.469,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-challenge-a-47-fixed-3.json",
+      "type": "tutorial-browser-import",
+      "sha256": "6c2fbe759a44603a2ba71171a0adaecb01c94a29ebba9d2a93ced67aa6c55367",
+      "bytes": 369633,
+      "url": "http://127.0.0.1:4174/quality/c2b6aab5-7342-4fc9-a3c4-f975655b9142/audit/?run=849b2ffe-2718-4ba9-9578-79e0191115e1",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:12:10.411Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 54.893,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
       "file": "quality-chapter-baseline-1.json",
       "type": "tutorial-browser-import",
       "sha256": "07b0c53a5052fba4008ab24ab11bf2550fb44be03b6bdab5efed5cf3917a4f64",
@@ -1102,6 +1616,1530 @@
       "buttonName": 1,
       "description": 1,
       "lcp": 58.084,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-45-1-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "f07ea42e78e8a0c55f8ff58183a369f0500920bd9dd0a33808aa7fbe70a7c9c0",
+      "bytes": 368881,
+      "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=d81cabe8-b50e-47c3-a7e4-fcd16ee16f1f",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:34:35.451Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 60.959,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-45-1-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "3e79736ce7a0fb9a204e059be0ad0f563656cc3ae29639ba9d9c29f3d58e2316",
+      "bytes": 403403,
+      "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=44fe9053-642e-40ef-b740-63b5fb06c2c1",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:35:37.760Z",
+      "formFactor": "mobile",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 60.879,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-45-2-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "c2e52e9600f645a877c5a3cd14c6404c5e35524abc2f910061afec0180983379",
+      "bytes": 368014,
+      "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=8738466f-25bd-43ca-b6a3-4e53ee8cbd35",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:37:20.113Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 65.791,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-45-2-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "d3efc44303b35d3e23c39ea79faf6233bc53e21bdb7bdac646083ab7956128a5",
+      "bytes": 403352,
+      "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=59ba6d99-0d00-4a2f-87fe-cfe704aa22b0",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:38:01.960Z",
+      "formFactor": "mobile",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 56.749,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-45-3-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "b755c59515d638bff85c77c942adfe7775745459a835cb5cd1abc4b54b2f5a0a",
+      "bytes": 368005,
+      "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=288c99f9-eb8e-4a92-9031-4aa9e28d60e7",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:38:43.490Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 47.022,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-45-3-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "549aea78764a120932de515a5f09c5a01ce66acefbfbbd9705dc696b612148b9",
+      "bytes": 403180,
+      "url": "http://127.0.0.1:4174/quality/5360c8e3-08d4-4e8e-a6a6-809de3e5f9af/audit/?run=d6cc5012-1b3a-44be-a676-b3c04df7424c",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:39:22.312Z",
+      "formFactor": "mobile",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 81.706,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-46-1-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "acd452a318f3a0a991bdce92e61c59520b2bce6ac7f55b1a7f00c936cb72f91f",
+      "bytes": 369135,
+      "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=e1bfc277-c30c-4248-ad3b-dd1cd2c8761f",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:46:01.395Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 0.93,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 0,
+      "description": 1,
+      "lcp": 68.484,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 0,
+          "title": "Buttons do not have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "1-0-BUTTON",
+                  "path": "1,HTML,1,BODY,1,MAIN,2,SECTION,2,BUTTON",
+                  "selector": "body > main#product > section > button#details",
+                  "boundingRect": {
+                    "top": 737,
+                    "bottom": 792,
+                    "left": 243,
+                    "right": 293,
+                    "width": 50,
+                    "height": 55
+                  },
+                  "snippet": "<button id=\"details\">",
+                  "nodeLabel": "◫",
+                  "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "impact": "critical",
+              "tags": [
+                "cat.name-role-value",
+                "wcag2a",
+                "wcag412",
+                "section508",
+                "section508.22.a",
+                "TTv5",
+                "TT6.a",
+                "EN-301-549",
+                "EN-9.4.1.2",
+                "ACT",
+                "RGAAv4",
+                "RGAA-11.9.1"
+              ]
+            }
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-46-1-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "8e34fe52279391a5a9ba90100caa22fa76ea06674a35635366bda292ce210211",
+      "bytes": 367978,
+      "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=b8e2e45c-a426-4fa2-a294-0abe20bddcfd",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:46:45.719Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 59.749,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-46-2-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "d6de8fc668c7d9d4e30ffb3810f58fe0a29adef7b055b9bb82012c92a6713427",
+      "bytes": 369151,
+      "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=62d67d53-873a-4a18-a3dc-ed1dcd202193",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:47:31.012Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 0.93,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 0,
+      "description": 1,
+      "lcp": 66.972,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 0,
+          "title": "Buttons do not have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "1-0-BUTTON",
+                  "path": "1,HTML,1,BODY,1,MAIN,2,SECTION,2,BUTTON",
+                  "selector": "body > main#product > section > button#details",
+                  "boundingRect": {
+                    "top": 737,
+                    "bottom": 792,
+                    "left": 243,
+                    "right": 293,
+                    "width": 50,
+                    "height": 55
+                  },
+                  "snippet": "<button id=\"details\">",
+                  "nodeLabel": "◫",
+                  "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "impact": "critical",
+              "tags": [
+                "cat.name-role-value",
+                "wcag2a",
+                "wcag412",
+                "section508",
+                "section508.22.a",
+                "TTv5",
+                "TT6.a",
+                "EN-301-549",
+                "EN-9.4.1.2",
+                "ACT",
+                "RGAAv4",
+                "RGAA-11.9.1"
+              ]
+            }
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-46-2-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "aae8a2e387974f64e67fa1029c9e8f8070af77852b0113ecd7448796b14fb35f",
+      "bytes": 368106,
+      "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=3b1bf203-5c0d-4bfd-afc3-013d8d0dd6db",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:48:12.362Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 56.334,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-46-3-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "75901649b90f06eff409001c7c3f61ac25d914de5e6443afd6393daaeb306a2c",
+      "bytes": 369152,
+      "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=34dd54ec-01b6-4fb4-9237-d5c01961faef",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:49:19.609Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 0.93,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 0,
+      "description": 1,
+      "lcp": 67.203,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 0,
+          "title": "Buttons do not have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "1-0-BUTTON",
+                  "path": "1,HTML,1,BODY,1,MAIN,2,SECTION,2,BUTTON",
+                  "selector": "body > main#product > section > button#details",
+                  "boundingRect": {
+                    "top": 737,
+                    "bottom": 792,
+                    "left": 243,
+                    "right": 293,
+                    "width": 50,
+                    "height": 55
+                  },
+                  "snippet": "<button id=\"details\">",
+                  "nodeLabel": "◫",
+                  "explanation": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                }
+              }
+            ],
+            "debugData": {
+              "type": "debugdata",
+              "impact": "critical",
+              "tags": [
+                "cat.name-role-value",
+                "wcag2a",
+                "wcag412",
+                "section508",
+                "section508.22.a",
+                "TTv5",
+                "TT6.a",
+                "EN-301-549",
+                "EN-9.4.1.2",
+                "ACT",
+                "RGAAv4",
+                "RGAA-11.9.1"
+              ]
+            }
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-46-3-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "519247b64e251fb35aabb39234c963ec50bb117814aa7ed84438f57ead57473b",
+      "bytes": 370114,
+      "url": "http://127.0.0.1:4174/quality/0febad5b-9fd8-4b99-a1ce-1e42c9f2fb7d/audit/?run=40106eb0-2f10-4f8c-a186-0df4e72846e4",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:50:18.368Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 266.074,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-1-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "5eee6cbd82755bba2eebf8ef8e58d9f8eeeeff55123218cd2bf1e1aa98563d91",
+      "bytes": 363478,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=8bce41b9-c6ac-4a55-b212-ad1a0f3aaba8",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:55:10.087Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.95,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1465.295,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-1-baseline-2.json",
+      "type": "tutorial-browser-import",
+      "sha256": "13fe4c3ecade41bec0b6328a0b91a0d61bc09f43278d35eacb54aee37a79ed2d",
+      "bytes": 362945,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=8bce41b9-c6ac-4a55-b212-ad1a0f3aaba8",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:55:31.819Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1431.455,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-1-baseline-3.json",
+      "type": "tutorial-browser-import",
+      "sha256": "39799f88f2336eacccd159c7e9234963b3f5ea19b4b44e25d30d003f08b3612e",
+      "bytes": 362791,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=8bce41b9-c6ac-4a55-b212-ad1a0f3aaba8",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:55:53.735Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1416.624,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-1-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "ef893b1d4144bd5a7c22db069e40cddb1662110d8f61b1af71f3e12e83258b08",
+      "bytes": 367951,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=54d3fd40-294c-4b2f-a351-445fb9cc4462",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:57:16.848Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 79.326,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-1-fixed-2.json",
+      "type": "tutorial-browser-import",
+      "sha256": "b81ede305773fa332051917c258a2869f88b7b7891247254711043dbb4cf6cef",
+      "bytes": 367900,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=54d3fd40-294c-4b2f-a351-445fb9cc4462",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:57:36.693Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 55.652,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-1-fixed-3.json",
+      "type": "tutorial-browser-import",
+      "sha256": "bee09ec788b0fe21e7ba9b595c5e65a53978d7484db0e6d7b2c672558ddffb0e",
+      "bytes": 368022,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=54d3fd40-294c-4b2f-a351-445fb9cc4462",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:57:56.182Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 55.672,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-2-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "88e72743a0659a369ba3cef9f5a56e9bbd2beb0d24fe7df7564c2981eabb84e4",
+      "bytes": 362884,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=5fd2309a-b446-47f0-9918-f2fc7a9e56c8",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:58:40.990Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1430.035,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-2-baseline-2.json",
+      "type": "tutorial-browser-import",
+      "sha256": "032e2b7d1eec00ac7a6ecf6165a0896aa65e3a50bd0413be81384cf68befa1f0",
+      "bytes": 362843,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=5fd2309a-b446-47f0-9918-f2fc7a9e56c8",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:59:02.028Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1417.256,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-2-baseline-3.json",
+      "type": "tutorial-browser-import",
+      "sha256": "a84e79e0917031a4066f63ecf3cb07e6ff08285464bf9d06bd75a1d723967481",
+      "bytes": 362859,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=5fd2309a-b446-47f0-9918-f2fc7a9e56c8",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T06:59:22.752Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1420.93,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-2-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "88639941bb900c4df4e2a4ff4b781caa178b44fede9cb235fbe6f00881bb8f66",
+      "bytes": 368119,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=e91f75ab-0f1b-4f79-b5ef-2531eb6a75ec",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:01:42.622Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 82.363,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-2-fixed-2.json",
+      "type": "tutorial-browser-import",
+      "sha256": "75957ecb91911832dde5b1d3471c017f3a55b911556036f05bf7879f0607db54",
+      "bytes": 367887,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=e91f75ab-0f1b-4f79-b5ef-2531eb6a75ec",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:02:02.638Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 61.628,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-2-fixed-3.json",
+      "type": "tutorial-browser-import",
+      "sha256": "fd540b8b4be8c5fee470c135c0fe24ef13e0bd61df848b7ed2cbb46e16e1c7bf",
+      "bytes": 367891,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=e91f75ab-0f1b-4f79-b5ef-2531eb6a75ec",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:02:21.780Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 49.297,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-3-baseline-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "c25d30c5f0f1c32776dbb9e4ad3ade73b30cb4ee11a3b2e161e80fcb9ab791f4",
+      "bytes": 363111,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=2dc3fa3c-28ee-4a51-bd74-bdf29dc99d04",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:03:30.338Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1426.36,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-3-baseline-2.json",
+      "type": "tutorial-browser-import",
+      "sha256": "9319882b90da61e3af56cbf4a4df06d98d0d31b2e294783bb0ef9dfce4fe4513",
+      "bytes": 362962,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=2dc3fa3c-28ee-4a51-bd74-bdf29dc99d04",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:03:51.376Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1430.65,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-3-baseline-3.json",
+      "type": "tutorial-browser-import",
+      "sha256": "e0fa445287794395eca06d6818b9d6b58ad6154336ba4e4a4401ea208b44b321",
+      "bytes": 362826,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=2dc3fa3c-28ee-4a51-bd74-bdf29dc99d04",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:04:12.232Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 1418.963,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-3-fixed-1.json",
+      "type": "tutorial-browser-import",
+      "sha256": "17f10a56dacdbb6a8fe0b5841168c0e339a80dad7b9c6cabecc328199c202452",
+      "bytes": 367994,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=66dd3541-0dfb-4c36-931f-5ea05ab95751",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:05:01.781Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 50.344,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-3-fixed-2.json",
+      "type": "tutorial-browser-import",
+      "sha256": "1bd7eccc0641d8bd9573903c1cb421c5f128418acd13b1d7b9e1014c1a0e2332",
+      "bytes": 368019,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=66dd3541-0dfb-4c36-931f-5ea05ab95751",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:05:21.328Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 61.054,
+      "tbt": 0,
+      "details": {
+        "button-name": {
+          "score": 1,
+          "title": "Buttons have an accessible name",
+          "details": {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "subItemsHeading": {
+                  "key": "relatedNode",
+                  "valueType": "node"
+                },
+                "label": "Failing Elements"
+              }
+            ],
+            "items": []
+          }
+        },
+        "meta-description": {
+          "score": 1,
+          "title": "Document has a meta description",
+          "details": null
+        }
+      }
+    },
+    {
+      "file": "quality-full-guide-47-3-fixed-3.json",
+      "type": "tutorial-browser-import",
+      "sha256": "26e5d824c53472b1b70659fa141238a122a2969e8837d4e04d801049040886d8",
+      "bytes": 367872,
+      "url": "http://127.0.0.1:4174/quality/9c4b4713-bb83-4e9a-a66e-2dfe5cbe1d79/audit/?run=66dd3541-0dfb-4c36-931f-5ea05ab95751",
+      "version": "13.0.1",
+      "fetchTime": "2026-10-22T07:05:41.269Z",
+      "formFactor": "desktop",
+      "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+      "categories": {
+        "performance": 1,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "buttonName": 1,
+      "description": 1,
+      "lcp": 62.712,
       "tbt": 0,
       "details": {
         "button-name": {

@@ -291,7 +291,7 @@ pnpm preview:all
 - 新增 12 课各完成三轮引导、两组独立挑战与模型操作；13 课及两个章末页面另有 **45 项**响应式检查。HTTP 缓存 / 304、CORS、持续连接、状态与 worker 均有实际证据。
 - 性能阶段新增 9 个模型、三轮引导和两组挑战，30 项响应式检查通过；原生 trace 采样到目标函数，LayoutCount 对照、JS / CSS Coverage 及真实 reduce 媒体条件均有证据。Performance 章末及三个章末记录兼容检查通过。
 - Memory / 回归 6 课三轮引导、两组挑战和 21 项响应式检查通过，原生快照显示命名对象与实际 Retainers；四章末兼容、非法导入保护和 Recorder 格式逐步执行有记录。第三份原生快照比较、分配工具及 Recorder 原生 Replay 仍待复核。
-- 质量与辅助工具六个模型、46 份真实 Lighthouse 报告、21 项课程 / 章末及 9 项商城布局检查通过；LCP / TBT 三次中位数对照、CSP / Cookie 真实诊断、响应替换、第五个章末和五章末导入均有记录。原生面板及补充控制流程复核仍列待办。
+- 质量与辅助工具六个模型、86 份真实 Lighthouse 报告、21 项课程 / 章末及 9 项商城布局检查通过；LCP / TBT 三次中位数对照、CSP / Cookie 真实诊断、响应替换、第五个章末和五章末导入均有记录。六课三轮完整引导和两组挑战已覆盖；原生面板人工复核仍列待办。
 - Network / Application 两个章末任务检查低分门槛与记录持久化；实际网络失败时缓存回退通过，资源阻断后收尾与恢复重试通过；生产预览 24 / 25 / 39 全链路通过。
 
 以上为已记录环境的结果。流程验收使用应用内 Chromium；原生 Memory 另在 Google Chrome 英文面板取得部分证据。完整版本及原生工具逐项复核仍有待办，未把示例脚本称为原生回放。详见 [基础课验收](docs/QA-FOUNDATIONS.md)、[网络与状态验收](docs/QA-NETWORK-APPLICATION.md)、[性能验收](docs/QA-PERFORMANCE.md)、[内存验收](docs/QA-MEMORY.md)、[质量与工具验收](docs/QA-LIGHTHOUSE-TOOLS.md) 与 [实施状态](docs/STATUS.md)。
@@ -329,9 +329,10 @@ chrome-devtools-learning/
 | 19–26、35–39 课的合同、脚本与章末任务 | [网络与状态详细脚本](docs/NETWORK-APPLICATION.md) |
 | 27–34、51 课的实验边界与脚本 | [性能与渲染合同](docs/PERFORMANCE-RENDERING.md) |
 | 40–44、50 课的引用、清理及回归约定 | [内存与回归合同](docs/MEMORY-REGRESSION.md) |
+| 45–49、52 课的真实审计、设备、规则与覆盖约定 | [质量与辅助工具合同](docs/LIGHTHOUSE-TOOLS.md) |
 | 第 21 课的完整教学设计 | [Network 样板课](docs/LESSON-21.md) |
 | 自动检查边界与章末评分规则 | [验收标准](docs/ACCEPTANCE.md) |
-| 实测了什么、还缺什么 | [基础课验收](docs/QA-FOUNDATIONS.md) · [网络与状态验收](docs/QA-NETWORK-APPLICATION.md) · [性能验收](docs/QA-PERFORMANCE.md) · [内存验收](docs/QA-MEMORY.md) · [实施状态](docs/STATUS.md) |
+| 实测了什么、还缺什么 | [基础课验收](docs/QA-FOUNDATIONS.md) · [网络与状态验收](docs/QA-NETWORK-APPLICATION.md) · [性能验收](docs/QA-PERFORMANCE.md) · [内存验收](docs/QA-MEMORY.md) · [质量与工具验收](docs/QA-LIGHTHOUSE-TOOLS.md) · [实施状态](docs/STATUS.md) |
 | 三个本地服务、接口、通信与存储 | [实验架构](docs/ARCHITECTURE.md) |
 | 视觉与可读性约定 | [界面设计](docs/DESIGN.md) |
 
@@ -383,7 +384,7 @@ Elements 中的 DOM/CSS 修改是临时实验。刷新、恢复故障或重新�
 
 欢迎通过 [Issues](https://github.com/changfengTech/chrome-devtools-learning/issues) 反馈课程疑问、复现问题和新案例。描述问题时附上课号、Chrome 版本、起始条件、操作步骤、预期与实际结果，通常更容易定位。
 
-课程修改以数据源为准：`src/data/curriculum.json` 管完整目录，`src/data/foundations.json` 管基础课内容，`src/data/network-state.json` 管网络与状态课内容，`src/data/performance.json` 管性能与渲染课内容，`src/data/memory.json` 管内存与回归课内容，合同补充维护在 `scripts/generate-foundations.mjs` 、`scripts/generate-network-state.mjs` 、`scripts/generate-performance.mjs` 与 `scripts/generate-memory.mjs`。更新后运行对应文档生成命令；修改业务逻辑时一并核对故障、修复、随机挑战和重置行为。
+课程修改以数据源为准：`src/data/curriculum.json` 管完整目录，`src/data/foundations.json` 管基础课内容，`src/data/network-state.json` 管网络与状态课内容，`src/data/performance.json` 管性能与渲染课内容，`src/data/memory.json` 管内存与回归课内容，`src/data/quality.json` 管质量与辅助工具课内容，合同补充维护在 `scripts/generate-foundations.mjs` 、`scripts/generate-network-state.mjs` 、`scripts/generate-performance.mjs` 、`scripts/generate-memory.mjs` 与 `scripts/generate-quality.mjs`。更新后运行对应文档生成命令；修改业务逻辑时一并核对故障、修复、随机挑战和重置行为。
 
 提交前运行 `pnpm build` 与 `pnpm test`，并更新实际受影响的验收记录。新增内容验证通过后再标记「可实战」，让课程状态与真实能力保持一致。
 

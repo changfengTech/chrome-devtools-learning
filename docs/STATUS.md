@@ -12,9 +12,9 @@ Network / Application / Performance / Memory / Lighthouse 五个章末可用；E
 
 ## 验证与退出待办
 
-构建、47 项测试、六个模型操作 / 复位及实际三视口检查已有记录。46 份真实审计、逐课流程与章末细项见 [QA-LIGHTHOUSE-TOOLS.md](QA-LIGHTHOUSE-TOOLS.md)；合同及 6 份脚本见 [LIGHTHOUSE-TOOLS.md](LIGHTHOUSE-TOOLS.md)。51 份生成详细脚本另加第 21 课样板，共覆盖 52 个开放课程。
+构建、47 项测试、六个模型操作 / 复位及实际三视口检查已有记录。86 份真实审计、逐课流程与章末细项见 [QA-LIGHTHOUSE-TOOLS.md](QA-LIGHTHOUSE-TOOLS.md)；合同及 6 份脚本见 [LIGHTHOUSE-TOOLS.md](LIGHTHOUSE-TOOLS.md)。51 份生成详细脚本另加第 21 课样板，共覆盖 52 个开放课程。
 
-原生 Lighthouse Navigation / Timespan / Snapshot、Issues / Privacy and security、Overrides / Changes / Workspaces 的面板按钮与本地目录操作需按验收表补充人工复核。CLI、协议和页面检查分别记录，不冒称原生操作或全面质量认证。阶段 6 的连续三轮和两配置实际覆盖以本批 QA 表为准，未完成项不关闭。
+原生 Lighthouse Navigation / Timespan / Snapshot、Issues / Privacy and security、Overrides / Changes / Workspaces 的面板按钮与本地目录操作需按验收表补充人工复核。CLI、协议和页面检查分别记录，不冒称原生操作或全面质量认证。六课三轮完整引导、两组挑战、多窗口结果隔离及进度同步均已有实际证据；剩余原生工具人工复核仍按本批 QA 表保留。
 
 阶段 5 原有原生待办继续保留：第三份快照 Comparison、Allocation timeline / sampling、Performance monitor 多点趋势、其余配置 Retainers，以及 Recorder 实际录制 / 编辑 / Replay / 导出。已有证据见 [QA-MEMORY.md](QA-MEMORY.md)。前批 [基础](QA-FOUNDATIONS.md)、[网络状态](QA-NETWORK-APPLICATION.md)、[性能渲染](QA-PERFORMANCE.md) 的历史检查不称为本轮重新全部实测。
 
