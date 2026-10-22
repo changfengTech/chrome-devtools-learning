@@ -7,6 +7,11 @@ import {
 } from "node:crypto";
 const b64 = (b) => Buffer.from(b).toString("base64url");
 const hash = (b) => createHash("sha256").update(b).digest();
+function relyingParty(origin) {
+  if (origin !== "http://localhost:4174")
+    throw Error("真实 WebAuthn 请在 http://localhost:4174 的独立原生取证页运行；IP 地址不能作为 RP 域名。");
+  return "localhost";
+}
 // Bounded CBOR subset for none attestation and ES256 COSE keys. No tags or indefinite lengths.
 export function decodeCbor(buffer) {
   let offset = 0,
@@ -87,7 +92,7 @@ function authData(raw, rp, uv) {
   return { count: raw.readUInt32BE(33), flags: raw[32] };
 }
 export function authOptions(s, action, origin) {
-  const rp = new URL(origin).hostname;
+  const rp = relyingParty(origin);
   s.authChallenge = {
     value: b64(randomBytes(32)),
     created: Date.now(),
@@ -137,7 +142,7 @@ export function registerCredential(s, input, origin) {
     throw Error("本课仅接受 none attestation");
   const raw = obj.get("authData");
   if (!Buffer.isBuffer(raw)) throw Error("Missing authData");
-  const { flags, count } = authData(raw, new URL(origin).hostname, false);
+  const { flags, count } = authData(raw, relyingParty(origin), false);
   if (!(flags & 64) || raw.length < 55)
     throw Error("Missing attested credential");
   const len = raw.readUInt16BE(53),
@@ -171,7 +176,7 @@ export function verifyCredential(s, input, origin) {
   if (!s.credential || input.id !== s.credential.id)
     throw Error("Credential mismatch");
   const raw = decode(input.authenticatorData),
-    { count } = authData(raw, new URL(origin).hostname, s.variant === 1);
+    { count } = authData(raw, relyingParty(origin), s.variant === 1);
   if (!s.currentGood && s.variant === 0)
     throw Error("Credential was not allowed for this case");
   if ((count || s.credential.count) && count <= s.credential.count)

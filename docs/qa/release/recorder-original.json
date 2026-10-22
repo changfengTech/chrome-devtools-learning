@@ -1,0 +1,177 @@
+{
+    "title": "Release QA 50 · stable SKU",
+    "selectorAttribute": "data-testid",
+    "steps": [
+        {
+            "type": "setViewport",
+            "width": 1905,
+            "height": 929,
+            "deviceScaleFactor": 1,
+            "isMobile": false,
+            "hasTouch": false,
+            "isLandscape": false
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "[data-testid='reset-flow']"
+                ],
+                [
+                    "xpath///*[@data-testid=\"reset-flow\"]"
+                ],
+                [
+                    "pierce/[data-testid='reset-flow']"
+                ],
+                [
+                    "aria/重置购物流程"
+                ]
+            ],
+            "offsetY": 23.40625,
+            "offsetX": 59.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "[data-testid='search']"
+                ],
+                [
+                    "xpath///*[@data-testid=\"search\"]"
+                ],
+                [
+                    "pierce/[data-testid='search']"
+                ],
+                [
+                    "aria/搜索商品"
+                ]
+            ],
+            "offsetY": 24.40625,
+            "offsetX": 94.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "[data-testid='search-submit']"
+                ],
+                [
+                    "xpath///*[@data-testid=\"search-submit\"]"
+                ],
+                [
+                    "pierce/[data-testid='search-submit']"
+                ],
+                [
+                    "aria/搜索"
+                ]
+            ],
+            "offsetY": 23.40625,
+            "offsetX": 29
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "[data-testid='search']"
+                ],
+                [
+                    "xpath///*[@data-testid=\"search\"]"
+                ],
+                [
+                    "pierce/[data-testid='search']"
+                ],
+                [
+                    "aria/搜索商品"
+                ]
+            ],
+            "offsetY": 24.40625,
+            "offsetX": 94.5
+        },
+        {
+            "type": "change",
+            "value": "杯",
+            "selectors": [
+                [
+                    "[data-testid='search']"
+                ],
+                [
+                    "xpath///*[@data-testid=\"search\"]"
+                ],
+                [
+                    "pierce/[data-testid='search']"
+                ],
+                [
+                    "aria/搜索商品"
+                ]
+            ],
+            "target": "main"
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "[data-testid='search-submit']"
+                ],
+                [
+                    "xpath///*[@data-testid=\"search-submit\"]"
+                ],
+                [
+                    "pierce/[data-testid='search-submit']"
+                ],
+                [
+                    "aria/搜索"
+                ]
+            ],
+            "offsetY": 23.40625,
+            "offsetX": 29
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "[data-testid='open-primary']"
+                ],
+                [
+                    "xpath///*[@data-testid=\"open-primary\"]"
+                ],
+                [
+                    "pierce/[data-testid='open-primary']"
+                ],
+                [
+                    "aria/查看 晨间陶瓷杯"
+                ],
+                [
+                    "text/查看 晨间陶瓷杯"
+                ]
+            ],
+            "offsetY": 23.4140625,
+            "offsetX": 69.5
+        },
+        {
+            "type": "click",
+            "target": "main",
+            "selectors": [
+                [
+                    "[data-testid='add-to-cart']"
+                ],
+                [
+                    "xpath///*[@data-testid=\"add-to-cart\"]"
+                ],
+                [
+                    "pierce/[data-testid='add-to-cart']"
+                ],
+                [
+                    "aria/加入购物车"
+                ]
+            ],
+            "offsetY": 22.7421875,
+            "offsetX": 51.5
+        }
+    ]
+}

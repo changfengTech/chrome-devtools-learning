@@ -22,5 +22,6 @@
 | [DESIGN.md](DESIGN.md) | 界面与可读性设计 |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | 当前三个本地服务的架构、接口和检查边界 |
 | [STATUS.md](STATUS.md) | 已实现、已验证与剩余工作 |
+| [QA-RELEASE.md](QA-RELEASE.md) | 本轮 63 课 / 8 章末整体验收、两处修复、原生截图与剩余项 |
 
 课程目录由 `src/data/curriculum.json` 生成，基础课脚本由 `src/data/foundations.json` 与合同补充生成。网络与状态脚本由 `src/data/network-state.json` 和生成器维护。性能脚本由 `src/data/performance.json` 和生成器维护。内存脚本由 `src/data/memory.json` 与生成器维护。质量脚本由 `src/data/quality.json` 与生成器维护。综合 / 专题脚本由 `src/data/advanced.json` 与生成器维护。当前 63 课学习流程与 8 章末功能开放，原生工具 / 设备退出验收仍分列；62 份生成脚本加第 21 课样板覆盖 55 主线 + 8 专题。

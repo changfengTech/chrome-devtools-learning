@@ -1,0 +1,828 @@
+{
+  "boundary": "34 new official Lighthouse CLI 13.0.1 Navigation reports. Actual UI import / manual keyboard and business checks recorded separately in flows.json. Native DevTools modes are separate evidence.",
+  "reports": [
+    {
+      "file": "45-challenge-0-baseline-1.json",
+      "sha256": "770041eab1b684348e3590cb7d2e47143633aa14ca18fff11871eb61fb53e330",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/49bfbb66-aa74-4964-804b-0ec76b500f29/audit/?run=ae5991d6-aa33-41ad-a05e-0c8a5cfd4209",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T08:59:23.609Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 46.529,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "45-challenge-0-fixed-1.json",
+      "sha256": "1d001a87788171a428c4c927297af56745ec0fa6719d97e936792c5433b6bb20",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/49bfbb66-aa74-4964-804b-0ec76b500f29/audit/?run=3082c4d3-8d12-4a5a-a68b-d51d5bf0244f",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:00:45.138Z",
+        "formFactor": "mobile",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 59.822,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "45-challenge-1-baseline-1.json",
+      "sha256": "7721cbf4f3264c244adbc3cb03fb8180097e921fab59a72cc7870b6e8a7826eb",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/f33ca511-70da-4fd9-b370-e21d88d939f4/audit/?run=eaa39e3a-821f-4ca6-8212-8f4cab9d3b3b",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:01:40.940Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"performance\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1
+        },
+        "buttonName": null,
+        "description": null,
+        "lcp": 48.709,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "45-challenge-1-fixed-1.json",
+      "sha256": "f1b335edaafefe344557a5e26a4b72adf9716b1b59a9221791e0ad7183ec6484",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/f33ca511-70da-4fd9-b370-e21d88d939f4/audit/?run=d51484a0-efb1-4b96-b96c-914122ff1931",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:02:28.901Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 44.105,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "45-practice-0-baseline-1.json",
+      "sha256": "7522ed9352b8439dbfaa859f94f234f0986f336515199a672dd8313fae0ebb4c",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/40042d01-11ff-4456-9555-85126266f868/audit/?run=e2ed1ef8-1696-4528-b21a-acbe2fdf4f41",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T08:57:25.290Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 117.387,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "45-practice-0-fixed-1.json",
+      "sha256": "ef752e573d49d36880f48db7b54dd53e53d2c3e135d652f474228632ecb76377",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/40042d01-11ff-4456-9555-85126266f868/audit/?run=31aeeeb4-3625-40c5-ba9a-b1c84499e07a",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T08:58:26.987Z",
+        "formFactor": "mobile",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"mobile\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":150,\"throughputKbps\":1638.4,\"requestLatencyMs\":562.5,\"downloadThroughputKbps\":1474.5600000000002,\"uploadThroughputKbps\":675,\"cpuSlowdownMultiplier\":4},\"screen\":{\"mobile\":true,\"width\":412,\"height\":823,\"deviceScaleFactor\":1.75,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 68.831,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-challenge-0-baseline-1.json",
+      "sha256": "2d9541d4d173b27d25c539d63b36f74319af9c2003ec36285eb8004ab4f83732",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/5bede518-79e7-4715-92eb-44e37f9643aa/audit/?run=0fb56567-8b8e-48c2-bd02-a834d228daa0",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:06:32.000Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 0.93,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 0,
+        "description": 1,
+        "lcp": 120.736,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-challenge-0-fixed-1.json",
+      "sha256": "3e29d04ad806258b6fd759a0eb158dffb81e4e63f3eee55fce9bba491f8bff09",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/5bede518-79e7-4715-92eb-44e37f9643aa/audit/?run=4f2a68cb-2ca1-44bb-bf84-1920244cab34",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:07:46.202Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 59.183,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-challenge-1-baseline-1.json",
+      "sha256": "588559782ce53bb1cc322b715c7fbefac3089743043b565795c695057f9b134e",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/92a73b85-bbd7-47cf-9396-fa8c47569da0/audit/?run=aa5f5f27-7660-4d40-bb72-0a2980a6fbd9",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:09:17.772Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 0.91
+        },
+        "buttonName": 1,
+        "description": 0,
+        "lcp": 58.171,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-challenge-1-fixed-1.json",
+      "sha256": "9a1e315943f613d686cee28320628d5bb745c726831d89759fc869c68fef7276",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/92a73b85-bbd7-47cf-9396-fa8c47569da0/audit/?run=1aef3ed5-9f10-4f85-9036-c9b745afc620",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:10:47.877Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 111.25,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-chapter-0-baseline-1.json",
+      "sha256": "48b4ea278dbc7d15f8b82047b18a2ee4455c8d4ea5ae8ba744cf813e4bd8b86f",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/e259fbad-f013-4660-9735-a78c2970900d/audit/?run=f4b44fc2-90e3-489b-8429-51fd57564704",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:36:16.932Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 0.93,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 0,
+        "description": 1,
+        "lcp": 90.574,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-chapter-0-fixed-1.json",
+      "sha256": "f39683a52f0e26aa4a44da8b0a9648212e1b9e2934e0da80001cc8384dde79c3",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/e259fbad-f013-4660-9735-a78c2970900d/audit/?run=a7c52509-252b-458f-b520-13c007ec498f",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:37:26.069Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 84.007,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-chapter-1-baseline-1.json",
+      "sha256": "a240674741ef81a81751c01bdc039dd291856e0f4ac6d1b64af09525f4bf7ea2",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/ae0a7574-ecbc-4a87-ac90-401135b4655c/audit/?run=d98cf0d9-993d-4937-a30c-55eec12e70e8",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:43:06.637Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 0.91
+        },
+        "buttonName": 1,
+        "description": 0,
+        "lcp": 62.855,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-chapter-1-fixed-1.json",
+      "sha256": "e297a4fc440da59bb64e20863a52644b01aa65c42a552f5f3119c09e0e5242d9",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/ae0a7574-ecbc-4a87-ac90-401135b4655c/audit/?run=95323bc0-b3bb-49d7-8df0-ff6c80a42d50",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:44:47.079Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 119.725,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-practice-0-baseline-1.json",
+      "sha256": "e8a85ce39b888d0a07bfc7b5e07ec6fd81218feec783f11e7021bed9b0fe6011",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/3506e043-ec59-4cd1-8023-03b1a4e5a119/audit/?run=0c088cff-cb97-41ff-bf5c-10801facac7d",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:03:28.004Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 0.93,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 0,
+        "description": 1,
+        "lcp": 58.253,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "46-practice-0-fixed-1.json",
+      "sha256": "f5b5833534986b62dc51d897734007e0923e1b6fd0d78c101d19c6cc74363eda",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/3506e043-ec59-4cd1-8023-03b1a4e5a119/audit/?run=cd942358-2248-47aa-9740-6d7f54a9d019",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:04:23.231Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 47.184,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-challenge-0-baseline-1.json",
+      "sha256": "a0fa40d9a6ef45304fb63f2c832985d66c763cd1bc47d8e7352aa83ef00e76dc",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/abf0e659-413f-4abb-a9b9-81c93231b554/audit/?run=0b39bca2-17f5-4de2-b2a8-ee83aa0b4cd9",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:17:56.717Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.96,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 1434.321,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-challenge-0-baseline-2.json",
+      "sha256": "5f8e9f470460172ce1f386020e85d1cd2c0e30e9ff43295ed7a719d200333a3c",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/abf0e659-413f-4abb-a9b9-81c93231b554/audit/?run=0b39bca2-17f5-4de2-b2a8-ee83aa0b4cd9",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:18:18.684Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.96,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 1431.612,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-challenge-0-baseline-3.json",
+      "sha256": "79bd7816736e49a3642483085d911b5015a0276bfd849cf1010a7b0ce921981b",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/abf0e659-413f-4abb-a9b9-81c93231b554/audit/?run=0b39bca2-17f5-4de2-b2a8-ee83aa0b4cd9",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:18:40.988Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.96,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 1445.335,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-challenge-0-fixed-1.json",
+      "sha256": "e2afec2cb39957b2adc8ba421c6866f58e504bb4f2edfa94ef0b48b08c5116cc",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/abf0e659-413f-4abb-a9b9-81c93231b554/audit/?run=a0f7ff90-7dd7-47dc-9e23-6dbe1b30468a",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:22:40.124Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 118.786,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-challenge-0-fixed-2.json",
+      "sha256": "8e27b0f8a42f67937ee71ad526fb77072528904b3d6b4719a3be8539ada71774",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/abf0e659-413f-4abb-a9b9-81c93231b554/audit/?run=a0f7ff90-7dd7-47dc-9e23-6dbe1b30468a",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:23:00.320Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 50.53,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-challenge-0-fixed-3.json",
+      "sha256": "92146f75d244fdbf12327caa7bdaf179b7365bc98c20d4f3c81af74299fcfed7",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/abf0e659-413f-4abb-a9b9-81c93231b554/audit/?run=a0f7ff90-7dd7-47dc-9e23-6dbe1b30468a",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:23:20.283Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 51.893,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-challenge-1-baseline-1.json",
+      "sha256": "4752a0659e280a9b6d06aed7a9624b16b7671c6abdf66a1216d68078d8e76a15",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/f5641bda-0e77-4d7a-8379-99bc11553d8e/audit/?run=9e7da2d2-51dc-4e2f-9d27-cb3aed0aa5e0",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:24:16.692Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.81,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 64.433,
+        "tbt": 430.30600000000004
+      }
+    },
+    {
+      "file": "47-challenge-1-baseline-2.json",
+      "sha256": "e6f691a65cbf21a739a81ea93b5e195b2417401657678a3bbb35591402ebb0c3",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/f5641bda-0e77-4d7a-8379-99bc11553d8e/audit/?run=9e7da2d2-51dc-4e2f-9d27-cb3aed0aa5e0",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:24:37.378Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.81,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 52.486,
+        "tbt": 430.31600000000003
+      }
+    },
+    {
+      "file": "47-challenge-1-baseline-3.json",
+      "sha256": "2f71e84854ccf31e2d7b86303c0e2967dab5e76adba3e2d640332c1b4aa7fb33",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/f5641bda-0e77-4d7a-8379-99bc11553d8e/audit/?run=9e7da2d2-51dc-4e2f-9d27-cb3aed0aa5e0",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:24:58.050Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.81,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 86.523,
+        "tbt": 431.5049999923706
+      }
+    },
+    {
+      "file": "47-challenge-1-fixed-1.json",
+      "sha256": "fad798cd56099d8053e8070ddff7f1dc20c1408d60c2e07a87ce5d60b55b16ae",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/f5641bda-0e77-4d7a-8379-99bc11553d8e/audit/?run=69f13587-2f6e-4e86-9d3d-76b2215a0a13",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:27:34.762Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 66.965,
+        "tbt": 70.81
+      }
+    },
+    {
+      "file": "47-challenge-1-fixed-2.json",
+      "sha256": "315fdf5fc41af654c6198dc0844208ab0584a8aa1cc8257740a75b1ff8614fe7",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/f5641bda-0e77-4d7a-8379-99bc11553d8e/audit/?run=69f13587-2f6e-4e86-9d3d-76b2215a0a13",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:27:55.269Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 64.005,
+        "tbt": 70.392
+      }
+    },
+    {
+      "file": "47-challenge-1-fixed-3.json",
+      "sha256": "66dfa95dd451a3f06217acbbe81b9e18a2357a2bd1691d7825e2cf00c259e085",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/f5641bda-0e77-4d7a-8379-99bc11553d8e/audit/?run=69f13587-2f6e-4e86-9d3d-76b2215a0a13",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:28:16.725Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 63.33,
+        "tbt": 70.328
+      }
+    },
+    {
+      "file": "47-practice-0-baseline-1.json",
+      "sha256": "097b314b15469eea288ffe17a6cf9a54ef1e3bcfe13fb9d1648a14b7a9e44af0",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/a642b66d-47fa-4994-8946-ee1d4d870370/audit/?run=d6c7eed8-5936-4446-8e36-c8f2c6f2a772",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:12:12.106Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.96,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 1432.939,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-practice-0-baseline-2.json",
+      "sha256": "8a35c04f04a33df55c65c2fe1ba47ab9a2a602a8ae82ba4304bc4260c53d16cb",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/a642b66d-47fa-4994-8946-ee1d4d870370/audit/?run=d6c7eed8-5936-4446-8e36-c8f2c6f2a772",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:12:35.278Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.96,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 1426.367,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-practice-0-baseline-3.json",
+      "sha256": "6182919f548e229239170c30a72f79016b0d30aa9d468fa61fd108457f9c005d",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/a642b66d-47fa-4994-8946-ee1d4d870370/audit/?run=d6c7eed8-5936-4446-8e36-c8f2c6f2a772",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:13:00.698Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 0.96,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 1458.265,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-practice-0-fixed-1.json",
+      "sha256": "6cc4a8c89e4a5e95b7ebf02d4c97ca8add3b22c89f0dab17754e40b872306ec4",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/a642b66d-47fa-4994-8946-ee1d4d870370/audit/?run=47f35a85-6887-4b3c-8855-f6d8f60e5a7c",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:15:54.269Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 83.188,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-practice-0-fixed-2.json",
+      "sha256": "2babc020fd6f595179f3721e85e211546d1f9c9a327bd8cd8fd244276ec19821",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/a642b66d-47fa-4994-8946-ee1d4d870370/audit/?run=47f35a85-6887-4b3c-8855-f6d8f60e5a7c",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:16:14.752Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 60.222,
+        "tbt": 0
+      }
+    },
+    {
+      "file": "47-practice-0-fixed-3.json",
+      "sha256": "0e7401b82a0ca1cf4a383bf54c076ac5118e670f27e49e575a5d8b61496c7618",
+      "report": {
+        "url": "http://127.0.0.1:4174/quality/a642b66d-47fa-4994-8946-ee1d4d870370/audit/?run=47f35a85-6887-4b3c-8855-f6d8f60e5a7c",
+        "version": "13.0.1",
+        "fetchTime": "2026-10-22T09:16:35.726Z",
+        "formFactor": "desktop",
+        "condition": "{\"version\":\"13.0.1\",\"formFactor\":\"desktop\",\"throttlingMethod\":\"provided\",\"throttling\":{\"rttMs\":40,\"throughputKbps\":10240,\"requestLatencyMs\":0,\"downloadThroughputKbps\":0,\"uploadThroughputKbps\":0,\"cpuSlowdownMultiplier\":1},\"screen\":{\"mobile\":false,\"width\":1350,\"height\":940,\"deviceScaleFactor\":1,\"disabled\":false},\"storageResetDisabled\":false,\"locale\":\"en-US\",\"onlyAudits\":null,\"skipAudits\":null,\"blockedUrlPatterns\":null,\"load\":{\"maxWaitForFcp\":30000,\"maxWaitForLoad\":45000,\"pauseAfterFcpMs\":5250,\"pauseAfterLoadMs\":5250,\"networkQuietThresholdMs\":5250,\"cpuQuietThresholdMs\":5250},\"categories\":[\"accessibility\",\"best-practices\",\"performance\",\"seo\"],\"userAgent\":\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36\"}",
+        "categories": {
+          "performance": 1,
+          "accessibility": 1,
+          "best-practices": 0.96,
+          "seo": 1
+        },
+        "buttonName": 1,
+        "description": 1,
+        "lcp": 79.181,
+        "tbt": 0
+      }
+    }
+  ],
+  "medians": {
+    "45-challenge-0-baseline": {
+      "samples": 1,
+      "lcp": 46.529,
+      "tbt": 0
+    },
+    "45-challenge-0-fixed": {
+      "samples": 1,
+      "lcp": 59.822,
+      "tbt": 0
+    },
+    "45-challenge-1-baseline": {
+      "samples": 1,
+      "lcp": 48.709,
+      "tbt": 0
+    },
+    "45-challenge-1-fixed": {
+      "samples": 1,
+      "lcp": 44.105,
+      "tbt": 0
+    },
+    "45-practice-0-baseline": {
+      "samples": 1,
+      "lcp": 117.387,
+      "tbt": 0
+    },
+    "45-practice-0-fixed": {
+      "samples": 1,
+      "lcp": 68.831,
+      "tbt": 0
+    },
+    "46-challenge-0-baseline": {
+      "samples": 1,
+      "lcp": 120.736,
+      "tbt": 0
+    },
+    "46-challenge-0-fixed": {
+      "samples": 1,
+      "lcp": 59.183,
+      "tbt": 0
+    },
+    "46-challenge-1-baseline": {
+      "samples": 1,
+      "lcp": 58.171,
+      "tbt": 0
+    },
+    "46-challenge-1-fixed": {
+      "samples": 1,
+      "lcp": 111.25,
+      "tbt": 0
+    },
+    "46-chapter-0-baseline": {
+      "samples": 1,
+      "lcp": 90.574,
+      "tbt": 0
+    },
+    "46-chapter-0-fixed": {
+      "samples": 1,
+      "lcp": 84.007,
+      "tbt": 0
+    },
+    "46-chapter-1-baseline": {
+      "samples": 1,
+      "lcp": 62.855,
+      "tbt": 0
+    },
+    "46-chapter-1-fixed": {
+      "samples": 1,
+      "lcp": 119.725,
+      "tbt": 0
+    },
+    "46-practice-0-baseline": {
+      "samples": 1,
+      "lcp": 58.253,
+      "tbt": 0
+    },
+    "46-practice-0-fixed": {
+      "samples": 1,
+      "lcp": 47.184,
+      "tbt": 0
+    },
+    "47-challenge-0-baseline": {
+      "samples": 3,
+      "lcp": 1434.321,
+      "tbt": 0
+    },
+    "47-challenge-0-fixed": {
+      "samples": 3,
+      "lcp": 51.893,
+      "tbt": 0
+    },
+    "47-challenge-1-baseline": {
+      "samples": 3,
+      "lcp": 64.433,
+      "tbt": 430.31600000000003
+    },
+    "47-challenge-1-fixed": {
+      "samples": 3,
+      "lcp": 64.005,
+      "tbt": 70.392
+    },
+    "47-practice-0-baseline": {
+      "samples": 3,
+      "lcp": 1432.939,
+      "tbt": 0
+    },
+    "47-practice-0-fixed": {
+      "samples": 3,
+      "lcp": 79.181,
+      "tbt": 0
+    }
+  }
+}

@@ -1,0 +1,43 @@
+[
+  {
+    "mode": "navigation",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-22T10:08:15.245Z",
+    "sha256": "919e55a7f30d9fa3f96b24519732140961f4b38e7f24bf4e43fd6ae5fe738cd0",
+    "formFactor": "desktop",
+    "categories": {
+      "performance": 1,
+      "accessibility": 0.93,
+      "best-practices": 0.96,
+      "seo": 1
+    },
+    "buttonName": 0,
+    "description": 1
+  },
+  {
+    "mode": "timespan",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-22T10:11:05.385Z",
+    "sha256": "4146393bd25c9931bb7b03325cd76f79ee56dcf519c2bd64cc5c0c06084ac581",
+    "formFactor": "desktop",
+    "categories": {
+      "performance": 1,
+      "best-practices": 0.95
+    }
+  },
+  {
+    "mode": "snapshot",
+    "version": "13.5.0",
+    "fetchTime": "2026-10-22T10:12:39.877Z",
+    "sha256": "5851edfe745b9acf41d8bda06354c5ac8d2be417105c7bbeba84979023c18226",
+    "formFactor": "desktop",
+    "categories": {
+      "performance": 0,
+      "accessibility": 0.93,
+      "best-practices": 0.83,
+      "seo": 1
+    },
+    "buttonName": 0,
+    "description": 1
+  }
+]

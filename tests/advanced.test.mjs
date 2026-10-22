@@ -355,7 +355,7 @@ function length(m, n) {
 }
 function cryptoFixture() {
   const s = { token: "test-token", seed: 42, variant: 1, currentGood: true };
-  const origin = "http://127.0.0.1:4174";
+  const origin = "http://localhost:4174";
   const { publicKey, privateKey } = generateKeyPairSync("ec", {
     namedCurve: "prime256v1",
   });
@@ -371,7 +371,7 @@ function cryptoFixture() {
     }),
   );
   const header = Buffer.concat([
-    hash("127.0.0.1"),
+    hash("localhost"),
     Buffer.from([0x45]),
     Buffer.alloc(4),
     Buffer.alloc(16),
@@ -412,7 +412,7 @@ function cryptoFixture() {
       }),
     );
     const raw = Buffer.concat([
-      hash(overrides.rp || "127.0.0.1"),
+      hash(overrides.rp || "localhost"),
       Buffer.from([overrides.flags ?? 5]),
       Buffer.from([0, 0, 0, overrides.count ?? 1]),
     ]);
@@ -430,6 +430,15 @@ function cryptoFixture() {
   }
   return { s, origin, assertion };
 }
+test("真实 WebAuthn：只向有效的 localhost RP 域名签发挑战", () => {
+  const session = { token: "test-domain", seed: 42, variant: 0 };
+  for (const origin of ["http://127.0.0.1:4174", "http://localhost:4173", "https://example.org"])
+    assert.throws(() => authOptions(session, "register", origin), /localhost:4174/);
+  assert.equal(session.authChallenge, undefined);
+  const options = authOptions(session, "register", "http://localhost:4174");
+  assert.equal(options.rp.id, "localhost");
+  assert.equal(session.authChallenge.type, "webauthn.create");
+});
 test("真实 WebAuthn：ES256 注册与签名校验，挑战单次使用", () => {
   const { s, origin, assertion } = cryptoFixture();
   const a = assertion();
@@ -444,7 +453,7 @@ test("真实 WebAuthn：拒绝伪造签名、错误 origin / challenge / RP、�
   for (const mismatch of [
     { client: { origin: "http://evil.invalid" } },
     { client: { challenge: "different" } },
-    { rp: "localhost" },
+    { rp: "127.0.0.1" },
     { flags: 4 },
     { flags: 1 },
   ]) {

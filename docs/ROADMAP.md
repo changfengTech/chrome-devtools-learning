@@ -56,4 +56,12 @@
 
 专题按前置依赖与环境分层：本地业务 / 协议夹具、真实浏览器 API 和实际原生面板 / 设备结果分开。真实请求、媒体、映射、表单及 WebAuthn 校验已实现；没有设备或原生能力时标注待验证，不用模型替代。详见 [合同](CAPSTONE-TOPICS.md) 与 [验收](QA-CAPSTONE-TOPICS.md)。
 
-下一阶段为阶段 8 的完整退出验收与原生待办补齐；功能目录开放不意味着全部人工验收关闭。此前各批未闭环项目继续保留，当前清单以 STATUS.md 为准。
+阶段 8 的本轮进展见下文；功能目录开放不意味着全部人工验收关闭。此前各批未闭环项目按最新证据更新，当前清单以 STATUS.md 为准。
+
+## 2026-10-22 整体验收
+
+63 课逐课模型、引导与两配置挑战，8 个章末两配置、评分门槛，213 项三视口检查，以及记录往返 / 错误保护 / 跨窗口 / 刷新完成回归。修复 Memory 运行复位提示和 WebAuthn RP 域名两处问题，60/60 测试及生产构建通过，验收后恢复用户原记录。
+
+补齐原生 Memory Comparison、分配工具、monitor 多点趋势、Recorder 录制至两条件 Replay；Performance 保存重载、Coverage、Animations；Lighthouse 三模式；Issues / Security、Sensors 方向、Media、WebAuthn 虚拟认证器与部分 Protocol monitor。新证据和每项限制见 [QA-RELEASE.md](QA-RELEASE.md)。
+
+**阶段 8 功能回归完成，原生退出条件尚未全部关闭。** Android、权限 / 账户、Overrides / Changes 闭环及未逐个复走的面板细项明确保留，不能将历史 API / CLI 证据自动升格为本轮原生通过。后续按整体验收剩余项继续，不新增未约定课程来代替退出验收。

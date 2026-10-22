@@ -74,3 +74,9 @@ CLI 只审计本机专用静态商品页，无教程框架、HMR 或 Service Wor
 尚待原生英文面板复核：Lighthouse Navigation / Timespan / Snapshot 的界面选择与导出；Issues 卡片展开、Privacy and security 的连接 / 证书界面；Sources Overrides 专用目录、Network 覆盖标记、Changes diff 与 Workspaces 的实际映射保存。CLI、CDP 或页面模型不冒称完成这些操作。连续三轮完整引导及两组挑战已由上述实际记录补齐，剩余为原生面板人工复核。
 
 阶段 5 的原生堆 / 分配 / Recorder 待办保留在 [QA-MEMORY.md](QA-MEMORY.md)。阶段 6 功能交付与上述退出待办分开；本批没有把全部课程或所有原生面板标为最终验收关闭。
+
+## 2026-10-22 整体验收补充
+
+本轮 45–49、52 与 Lighthouse 章末功能回归通过，新生成 34 份 CLI 13.0.1 报告，另有原生内置 13.5.0 的 Navigation / Timespan / Snapshot 运行与 JSON 导出。Issues CSP 资源展开和 Security 本地 origin 说明已原生补验；用户授权专用目录后的 Workspace 实际落盘与移除已补验；原 Overrides 配置未改动，访客覆盖流程受前台切换 / 控制超时影响，完整 Overrides / Changes 仍待复核。原当批 86 份不计入本轮新报告。
+
+最新逐项证据、剩余项和用户状态恢复见 [整体验收记录](QA-RELEASE.md)。本文件前文保留当批历史结论，不计作本轮重复三轮。

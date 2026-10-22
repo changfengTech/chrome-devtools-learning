@@ -83,6 +83,7 @@ function setBusy(v) {
     $(id).disabled =
       v ||
       !meta ||
+      (["register", "authenticate"].includes(id) && location.hostname !== "localhost") ||
       ([
         "execute",
         "inspect",
@@ -982,6 +983,11 @@ try {
   $("instructions").hidden =
     Boolean(meta.chapter) || ["53", "54", "55"].includes(meta.id);
   $("environment").textContent = navigator.userAgent;
+  const authURL = new URL(location.href);
+  authURL.hostname = "localhost";
+  authURL.searchParams.delete("tutorial");
+  $("auth-localhost").href = authURL.href;
+  $("auth-origin-note").hidden = location.hostname === "localhost";
   $("status").textContent = "会话已准备。先运行故障，再执行目标流程。";
   setBusy(false);
   setTimeout(

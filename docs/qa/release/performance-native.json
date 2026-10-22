@@ -1,0 +1,42 @@
+{
+  "method": "Chrome 156 native Performance UI record → Save trace JSON → Load trace",
+  "sha256": "1c54b1d79a470320e88e6768bc6116c2bfb0ac9b4b387c21aee96fb7cfe36d05",
+  "bytes": 2929553,
+  "events": 12579,
+  "metadata": {
+    "source": "DevTools",
+    "startTime": "2026-10-22T10:37:25.421Z",
+    "dataOrigin": "TraceEvents",
+    "hostDPR": 2,
+    "modifications": {
+      "entriesModifications": {
+        "hiddenEntries": [],
+        "expandableEntries": []
+      },
+      "initialBreadcrumb": {
+        "window": {
+          "min": 72398347338,
+          "max": 72409471029,
+          "range": 11123691
+        },
+        "child": null
+      },
+      "annotations": {
+        "entryLabels": [],
+        "labelledTimeRanges": [],
+        "linksBetweenEntries": []
+      }
+    }
+  },
+  "observation": {
+    "normalizeProduct": {
+      "selfMs": 0.545,
+      "totalMs": 179.831
+    },
+    "consumeCPU": {
+      "selfMs": 177.5,
+      "totalMs": 179.3
+    }
+  },
+  "limits": "Single fault trace; UI measured scope. No new fixed trace comparison claimed. Full local trace intentionally not published."
+}

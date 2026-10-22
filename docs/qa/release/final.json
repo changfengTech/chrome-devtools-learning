@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-22",
+  "baselineCommit": "12c1d7f255cf4cd389d8e43a35a9839626319198",
+  "production": {
+    "uiStatus": 200,
+    "labHealth": true,
+    "lessons": 63,
+    "normalRandomServer": true,
+    "observedChallengeVariants": [
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "webauthnIP": {
+      "status": 400,
+      "message": "真实 WebAuthn 请在 http://localhost:4174 的独立原生取证页运行；IP 地址不能作为 RP 域名。"
+    },
+    "webauthnLocalhost": {
+      "status": 200,
+      "rp": "localhost"
+    },
+    "localhostUI": {
+      "buttonsEnabled": true,
+      "originExplanationHidden": true
+    }
+  },
+  "userProgressRestored": true,
+  "tests": {
+    "total": 60,
+    "pass": 60,
+    "fail": 0
+  },
+  "build": true,
+  "settingsRestored": true,
+  "directoryGrants": {
+    "authorizedByUser": [
+      "/private/tmp/devtools-release-workspace",
+      "/private/tmp/devtools-release-overrides"
+    ],
+    "workspace": {
+      "granted": true,
+      "diskSaveVerified": true,
+      "removed": true
+    },
+    "overrides": {
+      "testDirectoryGrantCompleted": false,
+      "originalConfigurationUnchanged": true
+    },
+    "guestClosed": true,
+    "createdBlankWindowsClosed": 2
+  },
+  "pendingNative": "See ../../QA-RELEASE.md remaining-items matrix",
+  "scope": "Functional regression complete; not all native/device exit checks closed.",
+  "documentChecks": {
+    "markdownFiles": 85,
+    "localLinks": 529,
+    "missing": 0,
+    "diffCheck": true,
+    "lessonGeneration": true
+  },
+  "cleanup": {
+    "nativeQAWindowClosed": true,
+    "currentTemporaryIABTabsClosed": true,
+    "learningHomeRetained": true
+  },
+  "counts": {
+    "lessons": 63,
+    "chapters": 8,
+    "models": 63,
+    "layouts": 213,
+    "cliReports": 34,
+    "nativeLighthouseReports": 3
+  }
+}

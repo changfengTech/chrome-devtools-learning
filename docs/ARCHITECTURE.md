@@ -144,6 +144,6 @@ JSON 导入保留 Lighthouse 的版本、URL、时间、设备、类别、限速
 
 专题的本地条件检查与原生状态独立。T03 提供真实 JS/map/TS；T04 用户触发 MediaRecorder 生成无外网短视频，真实 video 记录播放结果；T05 使用真实 form 与明确的虚构语义夹具。T01 只有主动点击才读取位置 / 方向；T02 提供转发后可打开的会话地址，但不自动建立 USB 或公网访问。
 
-`native-options|native-register|native-verify` 仅处理本地 4174 的 T06 当前运行。120 秒一次性挑战，none attestation / P-256 ES256；有界 CBOR 解析，校验 clientData type / challenge / origin、rpIdHash、UP / UV、凭据、签名和计数。公钥仅在临时会话内；不提供生产账号系统。真实调用支持 AbortSignal，停止会取消；原生结果带动作、运行与时间，失败不沿用上次成功。观察导出保留页面检查时间和最新人工 / 原生字段，二者不混为自动完成证据。
+`native-options|native-register|native-verify` 仅处理 `http://localhost:4174` 的 T06 当前运行，RP ID 为 localhost；不向 IP origin 或错误端口签发真实挑战。127.0.0.1 课页给出独立 localhost 原生取证入口，去掉教程参数，避免不同来源的回传混用；原课堂夹具保持原来源。120 秒一次性挑战，none attestation / P-256 ES256；有界 CBOR 解析，校验 clientData type / challenge / origin、rpIdHash、UP / UV、凭据、签名和计数。公钥仅在临时会话内；不提供生产账号系统。真实调用支持 AbortSignal，停止会取消；原生结果带动作、运行与时间，失败不沿用上次成功。观察导出保留页面检查时间和最新人工 / 原生字段，二者不混为自动完成证据。
 
 学习 v1 新增可选 `capstoneScores`，仅适用于 53–55；验证五个 0–2 整数，旧记录不补分。综合挑战同时满足案例、非空报告、自评 ≥8 且证据 / 验证非零才写通过；分数由学习者填写。源码和页面报告可主动修改，课程不作为可信监考。停止 / 离页 / 到期只清理本页请求、认证操作、引用、订阅、媒体 tracks 与 Blob；浏览器工具条件另行恢复。

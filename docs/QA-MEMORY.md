@@ -61,3 +61,9 @@ Node.js 25.9.0、pnpm 12.14.0，构建预览教程 4173、原生商城 4174。�
 - pnpm build：商城 TS / Source Map、Vue 类型与生产构建通过。
 - 文档生成：完整 63 节目录，45 份详细脚本，另有第 21 课样板。
 - 未完成的原生工具人工复核保留为阶段验收待办；不把完整正式范围或所有面板章末任务标为全部完成。
+
+## 2026-10-22 整体验收补充
+
+本轮 40–44、50 与 Memory 章末功能回归通过，修复新运行残留上一批功能提示。新增第三份 Heap snapshot Comparison（删除 5 个 DetachedProductDialog）、Map 引用配置、Allocation sampling / timeline、Performance monitor 多点趋势，以及原生 Recorder 录制、UI 编辑、导入导出与换序 / 延迟两条件 Replay。以下历史待办已由新证据部分关闭；分配窄选区等细项仍保留。
+
+最新逐项证据、剩余项和用户状态恢复见 [整体验收记录](QA-RELEASE.md)。本文件前文保留当批历史结论，不计作本轮重复三轮。

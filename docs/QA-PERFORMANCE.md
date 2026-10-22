@@ -82,3 +82,9 @@
 - 正常随机服务的 28 / 30 / 31 课已通过教程→商城→回传→证据记录。28 课的新导航保留所选方案，独立打开页面准确显示未连接教程；最终记录恢复与备份一致。详见[最终生产检查](qa/performance-production.json)。
 
 当前保留 pnpm preview:all，教程 [127.0.0.1:4173](http://127.0.0.1:4173/#chapter/performance)。独立 Chrome 版本、英文面板按钮逐项人工复核仍待整体验收补齐；以上原生协议和页面浏览器检查已实际执行。
+
+## 2026-10-22 整体验收补充
+
+本轮 27–34、51 与 Performance 章末功能回归通过；补原生 Performance Record / Save / Load、Bottom-up 业务成本，Coverage Reload / Stop 、Animations 分组 / 暂停 / Replay 和 Rendering 开关 / 恢复。新录制只有故障侧，不冒称已补同条件原生修复 trace；阶段 4 原协议证据仍独立保留。
+
+最新逐项证据、剩余项和用户状态恢复见 [整体验收记录](QA-RELEASE.md)。本文件前文保留当批历史结论，不计作本轮重复三轮。

@@ -360,6 +360,7 @@ async function begin(phase) {
     run = { ...data.run, reported: false };
     state.clear();
     resetCounters();
+    $("feature").textContent = "本轮尚未执行预览开关。先记录基线，再重复相同批次。";
     started = performance.now();
     $("correction").value = run.correction || $("correction").value;
     $("check-status").textContent = "尚未报告";

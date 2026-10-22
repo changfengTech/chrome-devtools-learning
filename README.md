@@ -244,9 +244,9 @@ pnpm dev
 
 Elements、Console、Sources、Network、Performance、Memory、Application、Lighthouse 八个章末均已开放。初始不指定课号和根因，先独立取证，再读取选项；案例检查、排查报告与五维自评分开。综合三课使用同样的 ≥8/10 自评门槛，证据 / 验证不得为零。
 
-本地专题练习包含可复现业务条件；Android 真机、Sensors、Workspace 保存、Media / Autofill 面板、虚拟认证器、AI 与 Protocol monitor 需要按环境完成原生步骤，状态和证据单独导出。没有设备或功能时明确标记待验证，不能把模型点击当作实际完成。
+本地专题练习包含可复现业务条件，原生步骤与课堂夹具分别记录。本轮已补验 Sensors 方向、Media、WebAuthn 虚拟认证器、Workspace 磁盘保存及 Protocol monitor 部分命令链；Android 真机、定位权限、Autofill、可用账户下的 AI 和剩余细项按环境继续验证。没有设备或功能时明确标记待验证，不能把模型点击当作实际完成。真实 WebAuthn 从 T06 提供的 `localhost:4174` 独立原生页进入。
 
-具体阶段见 [开发阶段](docs/ROADMAP.md)，人工退出验收与已有证据见 [当前状态](docs/STATUS.md) 和 [本批 QA](docs/QA-CAPSTONE-TOPICS.md)。
+具体阶段见 [开发阶段](docs/ROADMAP.md)，本轮完整回归与原生证据见 [整体验收](docs/QA-RELEASE.md)，剩余事项见 [当前状态](docs/STATUS.md)。
 
 ## 教程与商城为什么分开运行
 
@@ -296,18 +296,28 @@ pnpm preview:all
 
 ### 已有的验收证据
 
-- `pnpm build` 与 **59 项自动测试**通过，覆盖基础、网络状态、性能与内存、质量与综合专题配置、认证签名、自评门槛、错误提交、会话隔离、实际协议、Source Map、记录校验和第 21 课回归。
+**本轮整体验收：63/63 课、8/8 章末功能回归通过，213 项三视口检查通过。** 每课引导及两个迁移配置、章末报告 / 自评门槛、记录往返和跨窗口同步均有证据；发现的 Memory 提示复位与 WebAuthn RP 域名问题已修复。验收后恢复用户原学习记录。[查看逐课矩阵、原生补验与剩余项 →](docs/QA-RELEASE.md)
+
+| 实际 Heap snapshot Comparison | 原生 Recorder 两条件回放 |
+| --- | --- |
+| [![三份快照比较：删除 5 个残留对象](docs/qa/release/native-memory-comparison.png)](docs/qa/release/native-memory-comparison.png) | [![真实 Recorder 录制与回放](docs/qa/release/native-recorder-replay.png)](docs/qa/release/native-recorder-replay.png) |
+
+- `pnpm build` 与 **60 项自动测试**通过，覆盖基础、网络状态、性能与内存、质量与综合专题配置、认证签名和 RP 域名、自评门槛、错误提交、会话隔离、实际协议、Source Map、记录校验和第 21 课回归。
+- 本轮新增 **34 份 Lighthouse CLI 13.0.1 报告**，另在 Chrome 156 内置 Lighthouse 13.5.0 面板实际运行、导出三种模式报告。47 的固定条件三次中位数：引导 LCP 1432.9 → 79.2 ms，迁移配置 0 的 LCP 1434.3 → 51.9 ms，配置 1 的 TBT 430.3 → 70.4 ms；业务键盘流程另行复核。数字是本机受控故障对照，不是跨设备性能承诺。
+- 原生补验含 Comparison、两种 Retainers、分配工具、monitor 趋势，Recorder 录制 / 编辑 / 导入导出 / Replay；Performance 保存重载、Coverage、Animations；Issues / Security、Sensors 方向、Media、WebAuthn、Protocol monitor 部分链路。详细边界逐项保留，未声称所有工具原生步骤全部完成。
+
+以下为各开发阶段的历史记录，未重复计作本轮新实测：
 - 18 课引导实验在浏览器中连续完成 **3 轮**故障与修复；两种故障配置均已覆盖。
 - 18 课分别检查 320、768、1440 三种宽度，共 **54 项**无整页横向溢出。
 - 真实业务代码已验证暂停、调用栈与单步；记录导入导出、刷新保留、辅助标记和错误导入均有检查。
 - 新增 12 课各完成三轮引导、两组独立挑战与模型操作；13 课及两个章末页面另有 **45 项**响应式检查。HTTP 缓存 / 304、CORS、持续连接、状态与 worker 均有实际证据。
 - 性能阶段新增 9 个模型、三轮引导和两组挑战，30 项响应式检查通过；原生 trace 采样到目标函数，LayoutCount 对照、JS / CSS Coverage 及真实 reduce 媒体条件均有证据。Performance 章末及三个章末记录兼容检查通过。
-- Memory / 回归 6 课三轮引导、两组挑战和 21 项响应式检查通过，原生快照显示命名对象与实际 Retainers；四章末兼容、非法导入保护和 Recorder 格式逐步执行有记录。第三份原生快照比较、分配工具及 Recorder 原生 Replay 仍待复核。
-- 质量与辅助工具六个模型、86 份真实 Lighthouse 报告、21 项课程 / 章末及 9 项商城布局检查通过；LCP / TBT 三次中位数对照、CSP / Cookie 真实诊断、响应替换、第五个章末和五章末导入均有记录。六课三轮完整引导和两组挑战已覆盖；原生面板人工复核仍列待办。
+- Memory / 回归 6 课三轮引导、两组挑战和 21 项响应式检查通过，原生快照显示命名对象与实际 Retainers；四章末兼容、非法导入保护和 Recorder 格式逐步执行有记录。当批待办中的第三份 Comparison、分配工具与原生 Replay 已在整体验收补充证据。
+- 质量与辅助工具六个模型、当批 86 份真实 Lighthouse 报告、21 项课程 / 章末及 9 项商城布局检查通过；LCP / TBT 三次中位数对照、CSP / Cookie 真实诊断、响应替换、第五个章末和五章末导入均有记录。六课三轮完整引导和两组挑战已覆盖；原生补验更新见整体验收。
 - 综合 / 专题 11 课各三轮引导、两配置挑战，三个新增章末共 12 组病例通过；72 项三视口检查、八章末 v1、综合评分、错误导入保护与跨窗口同步有记录。真实 CDP DOM 命令与导航失效已有证据，原生面板 / 真机待办单列。
 - Network / Application 两个章末任务检查低分门槛与记录持久化；实际网络失败时缓存回退通过，资源阻断后收尾与恢复重试通过；生产预览 24 / 25 / 39 全链路通过。
 
-以上为已记录环境的结果。流程验收使用应用内 Chromium；原生 Memory 另在 Google Chrome 英文面板取得部分证据。完整版本及原生工具逐项复核仍有待办，未把示例脚本称为原生回放。详见 [基础课验收](docs/QA-FOUNDATIONS.md)、[网络与状态验收](docs/QA-NETWORK-APPLICATION.md)、[性能验收](docs/QA-PERFORMANCE.md)、[内存验收](docs/QA-MEMORY.md)、[质量与工具验收](docs/QA-LIGHTHOUSE-TOOLS.md)、[综合与专题验收](docs/QA-CAPSTONE-TOPICS.md) 与 [实施状态](docs/STATUS.md)。
+以上为已记录环境的结果。流程验收使用应用内 Chromium；本轮原生面板在独立 Google Chrome 156.0.8078.48 取得证据。设备、权限 / 账户、Overrides / Changes 与部分工具细项仍有待办。最新汇总见 [整体验收](docs/QA-RELEASE.md)，历史详见 [基础课](docs/QA-FOUNDATIONS.md)、[网络与状态](docs/QA-NETWORK-APPLICATION.md)、[性能](docs/QA-PERFORMANCE.md)、[内存](docs/QA-MEMORY.md)、[质量工具](docs/QA-LIGHTHOUSE-TOOLS.md)、[综合专题](docs/QA-CAPSTONE-TOPICS.md)。
 
 ## 项目结构
 
@@ -347,6 +357,7 @@ chrome-devtools-learning/
 | 第 21 课的完整教学设计 | [Network 样板课](docs/LESSON-21.md) |
 | 53–55、T01–T08 的前置、真实场景、三章末与检查边界 | [综合与专题合同](docs/CAPSTONE-TOPICS.md) |
 | 本批三轮引导、两种挑战、原生能力与待办 | [综合与专题验收](docs/QA-CAPSTONE-TOPICS.md) |
+| 全 63 课 / 8 章末回归、修复与最新原生证据 | [整体验收](docs/QA-RELEASE.md) |
 | 自动检查边界与章末评分规则 | [验收标准](docs/ACCEPTANCE.md) |
 | 实测了什么、还缺什么 | [基础课验收](docs/QA-FOUNDATIONS.md) · [网络与状态验收](docs/QA-NETWORK-APPLICATION.md) · [性能验收](docs/QA-PERFORMANCE.md) · [内存验收](docs/QA-MEMORY.md) · [质量与工具验收](docs/QA-LIGHTHOUSE-TOOLS.md) · [实施状态](docs/STATUS.md) |
 | 三个本地服务、接口、通信与存储 | [实验架构](docs/ARCHITECTURE.md) |

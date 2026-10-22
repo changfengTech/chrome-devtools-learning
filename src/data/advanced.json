@@ -689,7 +689,7 @@
       },
       {
         "title": "两条练习路径",
-        "body": "本地协议夹具理解失败条件，真实 WebAuthn 使用你启用的虚拟认证器，记录分别保存。"
+        "body": "本地协议夹具理解失败条件；真实 WebAuthn 从独立 localhost:4174 页面调用虚拟认证器。IP 地址即使属于安全上下文，也不能充当有效 RP 域名。两条路径分别取证。"
       }
     ],
     "demoSteps": [
@@ -699,6 +699,7 @@
     ],
     "steps": [
       "先完成本地协议夹具，理解两种条件失败；它不调用真实认证器。",
+      "从原页打开独立 localhost 原生取证页并先运行故障；127.0.0.1 不可作为 RP 域名，原页课堂夹具与教程回传继续保留。",
       "WebAuthn 面板启用 virtual authenticator environment，添加 CTAP2 / internal，支持 resident key 与 User Verification。",
       "点击本页真实注册，检查面板 Credential ID 与服务接收的公钥；仅使用测试虚拟凭据。",
       "点击真实认证；故障 A 更换候选 ID，故障 B 要求 UV，可在面板切换 Is user verified 重现。",

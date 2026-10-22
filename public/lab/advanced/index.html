@@ -68,6 +68,11 @@
           ><button id="orientation" class="secondary">开始观察方向</button>
         </div>
         <div id="auth-controls" hidden>
+          <p id="auth-origin-note">
+            真实 WebAuthn 需要有效的 RP 域名。127.0.0.1 的安全上下文不代表它能作为 RP ID。
+            <a id="auth-localhost" target="_blank" rel="noopener">在 localhost 打开独立原生取证页</a>；
+            新页先运行故障，再启用虚拟认证器。课内夹具与教程回传仍在原页完成。
+          </p>
           <button id="register">真实 WebAuthn 注册</button
           ><button id="authenticate">真实 WebAuthn 认证</button>
           <p>
