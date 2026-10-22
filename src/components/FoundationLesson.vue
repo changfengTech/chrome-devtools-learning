@@ -8,6 +8,8 @@ import performanceBook from "../data/performance.json";
 import PerformanceDemo from "./PerformanceDemo.vue";
 import memoryBook from "../data/memory.json";
 import MemoryDemo from "./MemoryDemo.vue";
+import qualityBook from "../data/quality.json";
+import QualityDemo from "./QualityDemo.vue";
 import AppIcon from "./AppIcon.vue";
 import FoundationDemo from "./FoundationDemo.vue";
 import { useLearning } from "../composables/useLearning";
@@ -15,9 +17,16 @@ import { labOrigin, labRequest } from "../lib/lab";
 const props = defineProps<{ lesson: Lesson }>();
 const content = computed(
   () =>
-    [...book, ...networkBook, ...performanceBook, ...memoryBook].find(
-      (item) => item.id === props.lesson.id,
-    )!,
+    [
+      ...book,
+      ...networkBook,
+      ...performanceBook,
+      ...memoryBook,
+      ...qualityBook,
+    ].find((item) => item.id === props.lesson.id)!,
+);
+const isQuality = computed(() =>
+  qualityBook.some((item) => item.id === props.lesson.id),
 );
 const isMemory = computed(() =>
   memoryBook.some((item) => item.id === props.lesson.id),
@@ -29,13 +38,15 @@ const isNetworkState = computed(() =>
   networkBook.some((item) => item.id === props.lesson.id),
 );
 const apiBase = computed(() =>
-  isMemory.value
-    ? "/api/memory"
-    : isPerformance.value
-      ? "/api/performance"
-      : isNetworkState.value
-        ? "/api/network-state"
-        : "/api/foundations",
+  isQuality.value
+    ? "/api/quality"
+    : isMemory.value
+      ? "/api/memory"
+      : isPerformance.value
+        ? "/api/performance"
+        : isNetworkState.value
+          ? "/api/network-state"
+          : "/api/foundations",
 );
 const learning = useLearning();
 const step = ref(0),
@@ -111,13 +122,15 @@ function open(mode: "practice" | "challenge") {
     tutorial: location.origin,
   });
   labWindow = window.open(
-    isMemory.value
-      ? `${labOrigin}/memory/${token}/?${query}`
-      : isPerformance.value
-        ? `${labOrigin}/performance/${token}/?${query}`
-        : isNetworkState.value
-          ? `${labOrigin}/labs/${token}/?${query}`
-          : `${labOrigin}/foundations/?${query}`,
+    isQuality.value
+      ? `${labOrigin}/quality/${token}/?${query}`
+      : isMemory.value
+        ? `${labOrigin}/memory/${token}/?${query}`
+        : isPerformance.value
+          ? `${labOrigin}/performance/${token}/?${query}`
+          : isNetworkState.value
+            ? `${labOrigin}/labs/${token}/?${query}`
+            : `${labOrigin}/foundations/?${query}`,
     "devtools-foundation-lab",
   );
   if (!labWindow)
@@ -268,8 +281,12 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
           ><p class="section-kicker">用一个小模型理解关键关系</p>
           <h2>{{ lesson.demo }}</h2>
           <p class="body-copy">{{ content.principle }}</p>
+          <QualityDemo
+            v-if="isQuality"
+            :key="`${lesson.id}-${demoKey}`"
+            :lesson="lesson.id" />
           <MemoryDemo
-            v-if="isMemory"
+            v-else-if="isMemory"
             :key="`${lesson.id}-${demoKey}`"
             :lesson="lesson.id" />
           <PerformanceDemo
@@ -353,7 +370,12 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
           >
             检查证据并记录练习<AppIcon name="check" :size="16" />
           </button>
-          <p v-if="isMemory" class="boundary-note">
+          <p v-if="isQuality" class="boundary-note">
+            Lighthouse
+            只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides
+            和原生工具操作分别取证；固定条件再复测。
+          </p>
+          <p v-else-if="isMemory" class="boundary-note">
             内存课在同一文档比较多批开关和清理后的引用；页面只统计自有资源，不能证明
             GC 或工具操作。第 50 课需在 Chrome Recorder
             实际录制、编辑和回放；页面示例不等于 Recorder。

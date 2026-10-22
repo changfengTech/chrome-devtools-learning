@@ -1,0 +1,61 @@
+{
+  "chapters": [
+    {
+      "chapter": "network",
+      "note": "验收专用流程记录：故障时 主图完成 361ms；推荐接口完成 357ms。\n请在 Initiator 区分串行与无关依赖。；对照后 主图完成 12ms；推荐接口完成 363ms。\n请在 Initiator 区分串行与无关依赖。。此分数仅用于检查自评记录流程。",
+      "scores": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "chapter": "application",
+      "note": "验收专用：初始 当前返回 workerVersion=1\ncontroller=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=1&takeover=1&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/\nactive=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=1&takeover=1&strategy=cache-first\nwaiting=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=2&takeover=0&strategy=cache-first；修复 当前返回 workerVersion=2\ncontroller=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=2&takeover=0&strategy=cache-first\nscope=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/\nactive=http://127.0.0.1:4174/labs/5f6a45a7-85eb-496e-8aa4-504a30d446c0/worker.js?build=2&takeover=0&strategy=cache-first\nwaiting=none；确认报告与真实结果对应。",
+      "scores": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "chapter": "performance",
+      "note": "验收专用：固定视口与可见前台录制一次搜索。微任务链连续占用约 204ms；任务级让出后最长分块约 34ms，校验值一致。分数仅用于验证自评流程。",
+      "scores": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "chapter": "memory",
+      "note": "QA 流程样本：同一文档每组 5 次开关，关闭后 TimerLease 仍由 interval 闭包保留；原 ID clearInterval 后同批次为零且刷新功能仍可用。页面计数与实际快照分开记录。",
+      "scores": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    },
+    {
+      "chapter": "lighthouse",
+      "note": "QA导入样本；章末真实流程另见 quality-chapter.json。",
+      "scores": [
+        "2",
+        "2",
+        "2",
+        "2",
+        "2"
+      ]
+    }
+  ],
+  "invalidImportPreserved": true,
+  "assisted52": true
+}

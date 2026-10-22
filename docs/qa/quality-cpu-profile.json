@@ -1,0 +1,31 @@
+{
+  "boundary": "Actual CDP Profiler samples from this lesson; not a native Performance panel recording. Complete interval includes the delayed task; initial short interval discarded.",
+  "nodes": [
+    {
+      "callFrame": {
+        "columnNumber": 25,
+        "functionName": "normalizeCatalog",
+        "lineNumber": 0,
+        "scriptId": "43",
+        "url": "http://127.0.0.1:4174/quality/530bf25c-e57c-496c-801f-6c5b692db318/work.js?run=d9b17022-24c6-4528-9a9a-a3c1eb395679"
+      },
+      "children": [
+        77
+      ],
+      "hitCount": 281,
+      "id": 76,
+      "positionTicks": [
+        {
+          "line": 1,
+          "ticks": 1
+        },
+        {
+          "line": 1,
+          "ticks": 280
+        }
+      ]
+    }
+  ],
+  "matchedSamples": 282,
+  "seedResult": "校验值 14504"
+}

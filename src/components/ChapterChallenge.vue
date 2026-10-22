@@ -4,11 +4,13 @@ import { labOrigin, labRequest } from "../lib/lab";
 import { useLearning } from "../composables/useLearning";
 const props = defineProps<{ chapter: string }>();
 const apiBase = computed(() =>
-  props.chapter === "memory"
-    ? "/api/memory"
-    : props.chapter === "performance"
-      ? "/api/performance"
-      : "/api/network-state",
+  props.chapter === "lighthouse"
+    ? "/api/quality"
+    : props.chapter === "memory"
+      ? "/api/memory"
+      : props.chapter === "performance"
+        ? "/api/performance"
+        : "/api/network-state",
 );
 const chapterTitle = computed(
   () =>
@@ -17,7 +19,15 @@ const chapterTitle = computed(
       application: "Application",
       performance: "Performance",
       memory: "Memory",
-    })[props.chapter as "network" | "application" | "performance" | "memory"],
+      lighthouse: "Lighthouse",
+    })[
+      props.chapter as
+        | "network"
+        | "application"
+        | "performance"
+        | "memory"
+        | "lighthouse"
+    ],
 );
 const learning = useLearning(),
   token = ref(""),
@@ -64,8 +74,16 @@ async function prepare() {
   }
 }
 function open() {
+  const path =
+    props.chapter === "lighthouse"
+      ? "quality"
+      : props.chapter === "memory"
+        ? "memory"
+        : props.chapter === "performance"
+          ? "performance"
+          : "labs";
   popup = window.open(
-    `${labOrigin}/${props.chapter === "memory" ? "memory" : props.chapter === "performance" ? "performance" : "labs"}/${token.value}/?tutorial=${encodeURIComponent(location.origin)}`,
+    `${labOrigin}/${path}/${token.value}/?tutorial=${encodeURIComponent(location.origin)}`,
     "devtools-chapter-lab",
   );
 }

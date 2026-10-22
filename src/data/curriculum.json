@@ -491,7 +491,7 @@
     "demo": "改变运行条件比较报告",
     "lab": "运行商城审计并记录条件",
     "challenge": "为加载与特定状态选择审计方式",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -502,7 +502,7 @@
     "demo": "关联报告与资源、语义和页面",
     "lab": "检查图片、名称、元信息和建议",
     "challenge": "找出报告之外仍需手工检查的问题",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -513,7 +513,7 @@
     "demo": "在修改预算内选任务并验证",
     "lab": "完成一轮质量改进并深入定位",
     "challenge": "提交改善依据和剩余限制",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -524,7 +524,7 @@
     "demo": "切换设备条件观察变化",
     "lab": "检查移动筛选面板、图片与购物车",
     "challenge": "跨尺寸验证并列出真机检查项",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -535,7 +535,7 @@
     "demo": "对应提示、请求、源和连接信息",
     "lab": "排查受阻资源或 Cookie 提示",
     "challenge": "区分相关提示和根因并验证",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -568,7 +568,7 @@
     "demo": "切换原始与覆盖响应并恢复",
     "lab": "覆盖商品响应验证异常数据猜想",
     "challenge": "用最小修改验证新猜想并说明落盘范围",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {

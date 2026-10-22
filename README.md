@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/lessons-46%20%2F%2063-245de8?style=flat-square" alt="46 节可实战，共规划 63 节" />
+  <img src="https://img.shields.io/badge/lessons-52%20%2F%2063-245de8?style=flat-square" alt="52 节可实战，共规划 63 节" />
   <img src="https://img.shields.io/badge/Vue-3-42b883?style=flat-square&amp;logo=vuedotjs&amp;logoColor=white" alt="Vue 3" />
   <img src="https://img.shields.io/badge/TypeScript-6-3178c6?style=flat-square&amp;logo=typescript&amp;logoColor=white" alt="TypeScript 6" />
   <img src="https://img.shields.io/badge/Vite-8-646cff?style=flat-square&amp;logo=vite&amp;logoColor=white" alt="Vite 8" />
@@ -39,7 +39,7 @@
 - **换条件独立排查**：挑战更换数据和故障配置，要求原因、证据与验证方案相互对应。
 - **留下自己的方法**：三级提示按需展开；阅读、练习、挑战分别记录，笔记和辅助标记保存在本机，可导入导出。
 
-> 当前是**本地学习版**。第 **01–44、50–51** 课共 **46 节**已开放实战；其余 **17 节**显示为课程规划。完整范围为 55 节主线、8 节专题及另列的 8 个面板章末挑战，正在分阶段开发。
+> 当前是**本地学习版**。第 **01–52** 课共 **52 节**已开放实战；其余 **11 节**显示为课程规划。完整范围为 55 节主线、8 节专题及另列的 8 个面板章末挑战，正在分阶段开发。
 
 ## 看看它的样子
 
@@ -94,6 +94,14 @@ Network / Application 章末任务起始隐藏课号和操作步骤；完成案�
 [![Recorder 课程的真实购物流程：换序、异步搜索与结果断言](docs/images/memory-shop.png)](docs/images/memory-shop.png)
 
 内存实验在同一文档做相同操作批次，真实创建对象、节点、事件和定时器；页面计数与原生堆证据分开。Recorder 课提供真实换序 / 异步购物流程，示例脚本不冒充原生 Replay。已验证内容与待补项目见[内存与回归验收](docs/QA-MEMORY.md)。
+
+### 从质量建议走到具体原因与公平复测
+
+[![Lighthouse 原理模型：改动预算、因果证据与相同条件复测](docs/images/quality-model.png)](docs/images/quality-model.png)
+
+[![真实 Lighthouse JSON 导入与审计项](docs/images/quality-report.png)](docs/images/quality-report.png)
+
+45–47 只展示导入的真实 Lighthouse 报告；47 每阶段三份独立报告比较中位数。48–49、52 提供真实布局、CSP / Cookie 与商品响应故障。服务器对照与手工 Overrides 分开；[本批证据与待补复核](docs/QA-LIGHTHOUSE-TOOLS.md)明确记录检查范围。
 
 截图来自本地验收会话，点击可查看原图。教学模型与真实商城在界面中分别标注。
 
@@ -161,7 +169,7 @@ pnpm dev
 
 ## 现在可以学什么
 
-### 已开放 · 46 节
+### 已开放 · 52 节
 
 | 章节 | 课次 | 主要练习 |
 | --- | --- | --- |
@@ -173,6 +181,8 @@ pnpm dev
 | Performance | 27–34 | 测量目标、有效录制、火焰图、任务切分、关键路径、Layout shifts、Rendering 与 Coverage |
 | Application | 35–39 | Cookie、跨标签页存储、IndexedDB 事务、Service Worker 生命周期、Cache Storage 与 Manifest |
 | Memory | 40–44 | 可达性、GC、Heap snapshot、Shallow / Retained Size、Comparison、分配、Retainers、Detached DOM、监听器与 timer 清理 |
+| Lighthouse | 45–47 | 审计模式与条件、四类别、具体元素与资源、优先级与三次中位数复测 |
+| 辅助工具 | 48–49、52 | Device Mode、Issues / Privacy and security、Local overrides、Changes 与 Workspaces 范围 |
 | Recorder | 50 | 稳定业务定位、异步条件、重置、购物结果断言与回归流程 |
 | Animations | 51 | 捕获、时长与延迟、暂停 / 重放、真实 prefers-reduced-motion 对照 |
 
@@ -206,20 +216,23 @@ pnpm dev
 | 21 | 慢请求慢在哪里 | 44 | 找到对象为何无法释放 |
 | 22 | 谁发起请求，为什么现在才发 | 50 | Recorder 复现与回归 |
 | 23 | 为什么总是旧数据 | 51 | Animations 调试 |
+| 45 | 正确运行一次审计 | 48 | Device Mode |
+| 46 | 解读质量检查结果 | 49 | Issues 与安全检查 |
+| 47 | 优先级与公平复测 | 52 | Overrides、Changes 与 Workspaces |
 
-第 01–18 课见 [基础课脚本](docs/FOUNDATIONS-01-18.md)；第 19–26、35–39 课见 [网络与状态合同](docs/NETWORK-APPLICATION.md)，其中第 21 课沿用 [样板脚本](docs/LESSON-21.md)；27–34、51 见 [性能与渲染合同](docs/PERFORMANCE-RENDERING.md)；40–44、50 见 [内存与回归合同](docs/MEMORY-REGRESSION.md)。均包含目标、操作、故障合同、提示与参考答案。
+第 01–18 课见 [基础课脚本](docs/FOUNDATIONS-01-18.md)；第 19–26、35–39 课见 [网络与状态合同](docs/NETWORK-APPLICATION.md)，其中第 21 课沿用 [样板脚本](docs/LESSON-21.md)；27–34、51 见 [性能与渲染合同](docs/PERFORMANCE-RENDERING.md)；40–44、50 见 [内存与回归合同](docs/MEMORY-REGRESSION.md)；45–49、52 见 [质量与工具合同](docs/LIGHTHOUSE-TOOLS.md)。均包含目标、操作、故障合同、提示与参考答案。
 
 </details>
 
-### 后续 · 17 节与其余章末挑战
+### 后续 · 11 节与其余章末挑战
 
 完整规划覆盖八大面板：Elements、Console、Sources、Network、Performance、Memory、Application、Lighthouse。
 
 - [x] Network 与 Application：13 节完整实战及两个面板章末任务已交付。
 - [x] Performance 与渲染：27–34、51 共 9 课及性能章末任务已交付。
 - [x] Memory 与回归：40–44、50 共 6 课和 Memory 章末功能已交付；原生工具补充验收待办见记录。
-- [ ] Lighthouse 与辅助工具：审计、Device Mode、Issues、Overrides 与 Changes。
-- [ ] 三个综合实战、其余四个面板章末挑战，以及 Sensors、真机调试、Media、WebAuthn、CDP 等专题。
+- [x] Lighthouse 与辅助工具：45–49、52 共六课和 Lighthouse 章末功能；原生面板补充复核见验收记录。
+- [ ] 三个综合实战、其余三个面板章末挑战，以及 Sensors、真机调试、Media、WebAuthn、CDP 等专题。
 
 以上未勾选项是**开发计划**，尚未开放对应完整实验。课内迁移题与面板章末挑战分别设计，不将逐课通过当作章末能力认证。具体顺序见 [开发阶段](docs/ROADMAP.md)，逐课四要素见 [完整目录](docs/CURRICULUM.md)。
 
@@ -254,7 +267,7 @@ flowchart LR
 | `pnpm preview:all` | 同时启动生产预览 4173、商城 4174 与跨源服务 4175 |
 | `pnpm test` | 运行 Node 测试，覆盖场景接口、判定、Source Map 与记录校验 |
 | `pnpm docs:curriculum` | 根据课程数据重新生成完整目录 |
-| `pnpm docs:lessons` | 生成 01–18、19–20、22–26、35–39、27–34、51、40–44、50 共 45 份脚本与共同合同 |
+| `pnpm docs:lessons` | 生成 01–18、19–20、22–26、35–39、27–34、51、40–44、50、45–49、52 共 51 份脚本与共同合同 |
 | `pnpm lab:build` | 修改商城 TS 后重新生成调试业务 JS 与 Source Map |
 | `pnpm lab:type-check` | 单独检查商城业务 TypeScript |
 | `pnpm dev:web` / `pnpm dev:lab` | 分别启动教程和商城 |
@@ -271,24 +284,25 @@ pnpm preview:all
 
 ### 已有的验收证据
 
-- `pnpm build` 与 **40 项自动测试**通过，覆盖基础、网络状态、性能与内存配置、错误提交、会话隔离、实际协议、Source Map、记录校验和第 21 课回归。
+- `pnpm build` 与 **47 项自动测试**通过，覆盖基础、网络状态、性能与内存配置、错误提交、会话隔离、实际协议、Source Map、记录校验和第 21 课回归。
 - 18 课引导实验在浏览器中连续完成 **3 轮**故障与修复；两种故障配置均已覆盖。
 - 18 课分别检查 320、768、1440 三种宽度，共 **54 项**无整页横向溢出。
 - 真实业务代码已验证暂停、调用栈与单步；记录导入导出、刷新保留、辅助标记和错误导入均有检查。
 - 新增 12 课各完成三轮引导、两组独立挑战与模型操作；13 课及两个章末页面另有 **45 项**响应式检查。HTTP 缓存 / 304、CORS、持续连接、状态与 worker 均有实际证据。
 - 性能阶段新增 9 个模型、三轮引导和两组挑战，30 项响应式检查通过；原生 trace 采样到目标函数，LayoutCount 对照、JS / CSS Coverage 及真实 reduce 媒体条件均有证据。Performance 章末及三个章末记录兼容检查通过。
 - Memory / 回归 6 课三轮引导、两组挑战和 21 项响应式检查通过，原生快照显示命名对象与实际 Retainers；四章末兼容、非法导入保护和 Recorder 格式逐步执行有记录。第三份原生快照比较、分配工具及 Recorder 原生 Replay 仍待复核。
+- 质量与辅助工具六个模型、46 份真实 Lighthouse 报告、21 项课程 / 章末及 9 项商城布局检查通过；LCP / TBT 三次中位数对照、CSP / Cookie 真实诊断、响应替换、第五个章末和五章末导入均有记录。原生面板及补充控制流程复核仍列待办。
 - Network / Application 两个章末任务检查低分门槛与记录持久化；实际网络失败时缓存回退通过，资源阻断后收尾与恢复重试通过；生产预览 24 / 25 / 39 全链路通过。
 
-以上为已记录环境的结果。流程验收使用应用内 Chromium；原生 Memory 另在 Google Chrome 英文面板取得部分证据。完整版本及原生工具逐项复核仍有待办，未把示例脚本称为原生回放。详见 [基础课验收](docs/QA-FOUNDATIONS.md)、[网络与状态验收](docs/QA-NETWORK-APPLICATION.md)、[性能验收](docs/QA-PERFORMANCE.md)、[内存验收](docs/QA-MEMORY.md) 与 [实施状态](docs/STATUS.md)。
+以上为已记录环境的结果。流程验收使用应用内 Chromium；原生 Memory 另在 Google Chrome 英文面板取得部分证据。完整版本及原生工具逐项复核仍有待办，未把示例脚本称为原生回放。详见 [基础课验收](docs/QA-FOUNDATIONS.md)、[网络与状态验收](docs/QA-NETWORK-APPLICATION.md)、[性能验收](docs/QA-PERFORMANCE.md)、[内存验收](docs/QA-MEMORY.md)、[质量与工具验收](docs/QA-LIGHTHOUSE-TOOLS.md) 与 [实施状态](docs/STATUS.md)。
 
 ## 项目结构
 
 ```text
 chrome-devtools-learning/
 ├── src/
-│   ├── components/            # 课程容器、45 种交互模型、Timing 与章末任务
-│   ├── data/                  # 完整目录、基础、网络状态、性能及内存脚本
+│   ├── components/            # 课程容器、51 种交互模型、Timing 与章末任务
+│   ├── data/                  # 完整目录、基础、网络状态、性能、内存及质量脚本
 │   ├── composables/           # 学习状态
 │   └── lib/                   # 实验通信与记录校验
 ├── public/lab/
@@ -296,6 +310,7 @@ chrome-devtools-learning/
 │   ├── network-state/         # 12 个真实网络与状态实验、会话 worker
 │   ├── performance/           # 9 个真实性能 / 渲染实验及独立动画
 │   ├── memory/                # 6 个真实内存 / 稳定购物流程实验
+│   ├── quality/               # 6 个真实质量 / 辅助工具实验与独立审计目标
 │   └── shop.*                 # 第 21 课网络时序商城
 ├── server/                    # 本地 HTTP 服务、会话与结果判定
 ├── scripts/                   # 服务启动、业务编译、QA 与文档生成

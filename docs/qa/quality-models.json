@@ -1,0 +1,38 @@
+[
+  {
+    "id": "45",
+    "changed": true,
+    "reset": true,
+    "after": "原理模型 · 不运行真实审计，不生成 Lighthouse 分数，不计实战完成。\n\n目标\n首次加载\n一段交互\n当前弹窗状态\n模式\nNavigation\nTimespan\nSnapshot\n设备\nmobile\ndesktop\n类别\n四类结果\n仅 Performance\n观察范围匹配\n\nmobile / 仅覆盖性能，不能推断其余类别\n\n在一段操作中收集，先说明区间起止。"
+  },
+  {
+    "id": "46",
+    "changed": true,
+    "reset": true,
+    "after": "原理模型 · 不运行真实审计，不生成 Lighthouse 分数，不计实战完成。\n\n具体检查项\nAccessibility · button-name\nSEO · meta-description\nPerformance · LCP\nBest Practices · 浏览器提示\n展开人工补查\n报告：meta-description\n证据：文档 head 的描述\n修复后对同一项复查，保持业务功能\n\n人工补查：Tab / Enter、焦点位置、名称是否准确、实际详情 / 加购路径。自动检查通过不等于全面可用。"
+  },
+  {
+    "id": "47",
+    "changed": true,
+    "reset": true,
+    "after": "原理模型 · 不运行真实审计，不生成 Lighthouse 分数，不计实战完成。\n\n三点预算：先选有根因证据的任务。\n\n主图等待 · 成本 2\n重复工作 · 成本 2\n按钮颜色 · 成本 1\n设备、版本和限速保持一致\n已用 4 / 3\n\n超出预算；用证据排序，再缩小改动。\n\n条件已变化，这两组中位数不能归因到修复。 数值是模型样本，不是审计结果。"
+  },
+  {
+    "id": "48",
+    "changed": true,
+    "reset": true,
+    "after": "原理模型 · 不运行真实审计，不生成 Lighthouse 分数，不计实战完成。\n\nCSS 视口\nDPR\n1\n2\n3\n横向\n粗指针\n商品\n筛选\n购物车\n\n示意 CSS 宽 740px；资源像素需求约 2220px；fine pointer。DPR 不把媒体查询宽度变成 2220px。真机软键盘与触控仍需检查。"
+  },
+  {
+    "id": "49",
+    "changed": true,
+    "reset": true,
+    "after": "原理模型 · 不运行真实审计，不生成 Lighthouse 分数，不计实战完成。\n\n线索\nCSP 阻断\nCookie 拒绝\n本机 HTTP\n采用最小修复\nSet-Cookie → unrelated Domain\nhost-only Cookie → profile 接收\n到实际请求与面板验证；不要关闭保护来清除提示。"
+  },
+  {
+    "id": "52",
+    "changed": true,
+    "reset": true,
+    "after": "原理模型 · 不运行真实审计，不生成 Lighthouse 分数，不计实战完成。\n\n错误字段\nunitPrice 字符串\nstock = null\n本地覆盖启用\n工作区映射已配置\n服务器原始响应\nstock: null\n浏览器实际读取\nstock: 9\n\n本地覆盖影响匹配资源，不修改服务器。 Changes 显示工具内编辑差异；配置了工作区仍要核对具体映射与保存文件。"
+  }
+]

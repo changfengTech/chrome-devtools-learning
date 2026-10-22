@@ -1,0 +1,494 @@
+[
+  {
+    "id": "45",
+    "kind": "45",
+    "hook": "先对齐问题，再开始审计。",
+    "symptom": "同一商城得到了不同分数：一份使用桌面条件，另一份只勾选了 Performance，不能回答原来的问题。",
+    "principle": "审计模式、页面状态、设备与类别决定报告能回答什么。Navigation、Timespan、Snapshot 的范围不同；实验室分数不等于线上用户体验。",
+    "concepts": [
+      {
+        "title": "先选观察范围",
+        "body": "Navigation 从新导航测加载；Timespan 观察一段操作；Snapshot 检查当前状态且不重新加载。具体支持项随版本和模式变化。"
+      },
+      {
+        "title": "记录条件再比较",
+        "body": "保存 form factor、类别、限速方式、版本、URL、状态与清理选项；跨条件分数不能直接比高低。"
+      },
+      {
+        "title": "真实报告与自报边界",
+        "body": "本页只解析你导入的 Lighthouse JSON，显示其中的分数；不会生成模拟分数。导入不能证明你操作过原生面板。"
+      }
+    ],
+    "demoSteps": [
+      "选择加载 / 交互区间 / 当前弹窗的目标",
+      "改变模式、设备和类别，观察可回答的问题",
+      "对照两个条件记录，不演算虚构分数"
+    ],
+    "steps": [
+      "从课程打开实验，准备故障；打开本轮独立审计目标。记录 URL、目标状态与设备条件。",
+      "在 DevTools Lighthouse 识别 Navigation / Timespan / Snapshot；为首次加载选择 Navigation，当前展开状态使用 Snapshot，交互区间使用 Timespan。",
+      "本课引导故意用 Desktop 运行；另一配置只跑 Performance。导出真实 JSON 并导入本页，先识别条件不匹配。",
+      "针对本次目标选择正确 Mobile 条件，或完整四类结果；不要通过改变所有条件追求分数。",
+      "应用对应服务器对照，审计新的目标地址，导入同一轮报告，核对类别、formFactor、版本和时间。",
+      "回教程说明报告回答了什么、不能回答什么。CLI Navigation 与原生 Timespan / Snapshot 的实测分开记录。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "用 Desktop 报告回答 Mobile 首次加载问题"
+      },
+      {
+        "id": "b",
+        "label": "只选择 Performance 却声称覆盖四类质量"
+      },
+      {
+        "id": "c",
+        "label": "把一次总分当作线上所有用户体验"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "报告 configSettings.formFactor 与 Mobile 目标不符"
+      },
+      {
+        "id": "b",
+        "label": "categories 中缺 accessibility / best-practices / seo"
+      },
+      {
+        "id": "c",
+        "label": "不同版本和条件的分数差异就是修复效果"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "固定 Mobile 与所需类别，重新导航审计"
+      },
+      {
+        "id": "b",
+        "label": "保持 Desktop 目标并补齐四类审计"
+      },
+      {
+        "id": "c",
+        "label": "改设备、限速、URL 后只保留最高分"
+      }
+    ],
+    "hints": [
+      "从课程打开实验，准备故障；打开本轮独立审计目标。记录 URL、目标状态与设备条件。",
+      "本课引导故意用 Desktop 运行；另一配置只跑 Performance。导出真实 JSON 并导入本页，先识别条件不匹配。",
+      "比较两种可能原因：用 Desktop 报告回答 Mobile 首次加载问题；只选择 Performance 却声称覆盖四类质量。用本次实际证据选择最小对照。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/lighthouse"
+  },
+  {
+    "id": "46",
+    "kind": "46",
+    "hook": "一条建议，能追到哪一个元素？",
+    "symptom": "图标按钮没有名称，或商品页缺少描述；报告给出检查项，但仍有人无法用键盘完成操作。",
+    "principle": "Performance、Accessibility、Best Practices、SEO 从不同角度检查质量。先读具体 audit 和元素 / 请求证据，再做人工补充；自动通过不是全面合格。",
+    "concepts": [
+      {
+        "title": "检查项比总分具体",
+        "body": "使用 audit ID、details 与元素片段关联实际页面。button-name 与 meta-description 对应不同根因。"
+      },
+      {
+        "title": "自动检查有边界",
+        "body": "名称存在不保证名称合适；自动 accessibility 检查不能替代键盘路径、读屏与业务可理解性。SEO 分数不是搜索排名。"
+      },
+      {
+        "title": "修复保持业务",
+        "body": "补语义和元信息，验证按钮仍可打开详情与加入同一商品；不要靠删控件或隐藏内容通过。"
+      }
+    ],
+    "demoSteps": [
+      "选择报告类别与具体检查项",
+      "定位关联元素、资源或文档",
+      "打开人工检查清单，区分自动发现与人工结论"
+    ],
+    "steps": [
+      "准备故障并打开目标，在相同条件下运行四类 Lighthouse 审计，导出 JSON。",
+      "导入后展开 button-name 或 meta-description 及原始 details；到 Elements 核对真实按钮或 head。",
+      "用 Tab / Enter 验证详情与加购，记录自动报告之外仍需检查的焦点、名称和业务路径。",
+      "选择当前问题对应对照，重新审计新的目标；目标 audit 应恢复，但不要要求所有类别 100。",
+      "导入对照报告，核对同一 audit ID 与正常 SKU、数量，勾选已实际完成的人工检查。",
+      "提交原因、直接证据与验证；说明其它检查项和未覆盖范围。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "图标按钮缺少可访问名称"
+      },
+      {
+        "id": "b",
+        "label": "文档没有有效 meta description"
+      },
+      {
+        "id": "c",
+        "label": "Accessibility 通过就证明所有人都能使用"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "button-name 失败并指向无名称按钮"
+      },
+      {
+        "id": "b",
+        "label": "meta-description 失败且 head 缺少 description"
+      },
+      {
+        "id": "c",
+        "label": "只有总分截图，没有元素或 audit ID"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "为按钮补准确名称，保留实际交互"
+      },
+      {
+        "id": "b",
+        "label": "补充对应商品的真实描述，复测 SEO 检查项"
+      },
+      {
+        "id": "c",
+        "label": "删除按钮或把内容全部隐藏"
+      }
+    ],
+    "hints": [
+      "准备故障并打开目标，在相同条件下运行四类 Lighthouse 审计，导出 JSON。",
+      "用 Tab / Enter 验证详情与加购，记录自动报告之外仍需检查的焦点、名称和业务路径。",
+      "比较两种可能原因：图标按钮缺少可访问名称；文档没有有效 meta description。用本次实际证据选择最小对照。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/lighthouse"
+  },
+  {
+    "id": "47",
+    "kind": "47",
+    "hook": "预算有限，先改哪一项？",
+    "symptom": "主图返回很晚，或重复的商品处理阻塞主线程；只改按钮颜色后，体验并没有相应改善。",
+    "principle": "按用户影响、因果证据和成本排序。固定条件做多轮前后对照，比较指标中位数及实际业务，而不只挑一次最高分。",
+    "concepts": [
+      {
+        "title": "优先级来自证据",
+        "body": "主图等待需要 Network / LCP 关联；重复主线程工作需要 Performance 栈证据。改动预算不替代根因确认。"
+      },
+      {
+        "title": "同条件多轮",
+        "body": "每阶段导入三份独立 Navigation 报告，固定版本、设备、限速方法、类别和目标状态。比较 LCP 或 TBT 中位数，说明波动。"
+      },
+      {
+        "title": "指标之外",
+        "body": "小实验的改善不构成线上预算。检查结果一致、其余指标、人工键盘与遗留问题，避免把负担转移到别处。"
+      }
+    ],
+    "demoSteps": [
+      "在三点预算内选择改动",
+      "比较影响、依据与成本，而不是只数任务",
+      "读取多轮示意样本的中位数，识别条件变化"
+    ],
+    "steps": [
+      "准备故障并打开目标，固定 Desktop、四类别、限速方法；分别运行三次 Navigation 并导入 JSON。",
+      "在 Network / Performance 关联主图等待或 normalizeCatalog 重复工作，记录实际证据。",
+      "按影响、证据和成本排序，选择最小针对性方案；颜色调整不算性能修复。",
+      "应用服务器对照，在相同设置下对新目标再运行三次；不要导入同一 fetchTime 的重复文件。",
+      "比较 LCP 或 TBT 中位数、正常结果和其它检查项；本地受控负载要求趋势改善，不把数值当线上目标。",
+      "完成实际人工路径检查，记录剩余限制和恢复条件，再提交章内 / 章末报告。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "关键主图响应被延迟"
+      },
+      {
+        "id": "b",
+        "label": "商品归一化被重复执行"
+      },
+      {
+        "id": "c",
+        "label": "所有审计建议同样优先"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "三份 LCP 与主图等待证据一致"
+      },
+      {
+        "id": "b",
+        "label": "三份 TBT 与 normalizeCatalog 重复调用对应"
+      },
+      {
+        "id": "c",
+        "label": "只看一次最高分或调过限速后的结果"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "缩短实际关键图片等待，保持内容"
+      },
+      {
+        "id": "b",
+        "label": "复用商品处理结果，保留相同输出"
+      },
+      {
+        "id": "c",
+        "label": "只改颜色并选择最好的一次结果"
+      }
+    ],
+    "hints": [
+      "准备故障并打开目标，固定 Desktop、四类别、限速方法；分别运行三次 Navigation 并导入 JSON。",
+      "按影响、证据和成本排序，选择最小针对性方案；颜色调整不算性能修复。",
+      "比较两种可能原因：关键主图响应被延迟；商品归一化被重复执行。用本次实际证据选择最小对照。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/lighthouse"
+  },
+  {
+    "id": "48",
+    "kind": "48",
+    "hook": "画面缩小了，布局真的适配了吗？",
+    "symptom": "窄屏商品网格撑出页面，或筛选面板仍保持桌面固定宽度，关键操作跑到视口外。",
+    "principle": "Device Mode 改变的是模拟条件。CSS 像素、DPR、方向与指针能力是不同维度；模拟不能替代真机性能、软键盘和手势。",
+    "concepts": [
+      {
+        "title": "CSS 视口与物理像素",
+        "body": "媒体查询通常按 CSS px；DPR 改变像素密度与资源选择，不应把布局宽度简单乘以 DPR。"
+      },
+      {
+        "title": "条件分别验证",
+        "body": "记录 innerWidth、devicePixelRatio、orientation、pointer / hover 与 currentSrc；缩放浏览器窗口不自动等于移动触摸。"
+      },
+      {
+        "title": "从模拟到真机",
+        "body": "在 320 / 390、768、1440 检查网格、筛选与购物车，再列出真机软键盘、触控、滚动、安全区域及性能检查。"
+      }
+    ],
+    "demoSteps": [
+      "独立切换视口、DPR、方向和指针",
+      "观察媒体查询、示意布局与资源选择",
+      "比较模拟覆盖范围与真机待办"
+    ],
+    "steps": [
+      "准备故障，在 Device Mode 设 390 CSS px 并记录实际 innerWidth；本课检查需在 280–500 的窄视口进行。",
+      "打开筛选和加入购物车，检查根文档 scrollWidth、网格与面板边界；不要用截屏缩放代替检查。",
+      "改变 DPR 与方向，读当前图片 currentSrc、pointer / hover 条件；浏览器可自行选择资源。",
+      "选择网格或面板对应修复，在相同窄屏重新检查，业务 SKU 和数量应一致。",
+      "补查 768、1440 及键盘路径，恢复模拟设置；大视口不能单独证明窄屏通过。",
+      "列出本轮未覆盖的真机检查，再选择原因、证据和验证。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "商品网格固定最小宽度撑出窄视口"
+      },
+      {
+        "id": "b",
+        "label": "筛选面板仍是桌面固定宽度"
+      },
+      {
+        "id": "c",
+        "label": "提高 DPR 就能修复 CSS 网格"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "390 CSS px 下网格右边界超出根视口"
+      },
+      {
+        "id": "b",
+        "label": "打开筛选后面板宽度超过实际视口"
+      },
+      {
+        "id": "c",
+        "label": "只在 1440 截一张图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "改为可收缩网格，跨尺寸保留功能"
+      },
+      {
+        "id": "b",
+        "label": "将筛选面板限制在可用视口内"
+      },
+      {
+        "id": "c",
+        "label": "把设备截图缩小但不改布局"
+      }
+    ],
+    "hints": [
+      "准备故障，在 Device Mode 设 390 CSS px 并记录实际 innerWidth；本课检查需在 280–500 的窄视口进行。",
+      "改变 DPR 与方向，读当前图片 currentSrc、pointer / hover 条件；浏览器可自行选择资源。",
+      "比较两种可能原因：商品网格固定最小宽度撑出窄视口；筛选面板仍是桌面固定宽度。用本次实际证据选择最小对照。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/device-mode"
+  },
+  {
+    "id": "49",
+    "kind": "49",
+    "hook": "安全提示出现了，是哪条规则阻止了什么？",
+    "symptom": "优惠脚本被 CSP 拦截，或服务设置的会话 Cookie 因 Domain 不属于当前站点而被浏览器拒绝。",
+    "principle": "从 Issues 或 Console 提示追到具体资源、响应头、来源和阻断原因。连接安全、内容策略和 Cookie 接收是不同问题；不要为消除提示关闭保护。",
+    "concepts": [
+      {
+        "title": "关联受阻对象",
+        "body": "查看 CSP 的 effectiveDirective / blockedURI 与源脚本，或 Set-Cookie 和被拒原因，不能仅根据 Issues 条数猜根因。"
+      },
+      {
+        "title": "localhost 的边界",
+        "body": "本地 HTTP 可以属于 potentially trustworthy / secure context，但并没有 TLS 证书。isSecureContext 为 true 不等于经过 HTTPS 加密。"
+      },
+      {
+        "title": "最小修复",
+        "body": "把需要执行的逻辑移到允许的同源外部脚本；Cookie 去掉错误 Domain 使用本机 host-only。不要全局放宽策略或关闭隐私保护。"
+      }
+    ],
+    "demoSteps": [
+      "选择 CSP / Cookie / 连接提示",
+      "沿规则、源与请求找到受影响功能",
+      "选择最小修改，对照恢复而非清空提示"
+    ],
+    "steps": [
+      "准备故障，打开 Issues、Console 和 Privacy and security，记录当前源与协议。",
+      "执行优惠 / 会话检查，定位被拒的 inline script 或 Set-Cookie Domain；关联真实响应与请求。",
+      "在安全面板区分连接与内容限制：本机 HTTP 没有 TLS 证书；不要绕过浏览器证书警告。",
+      "选择同源外部脚本或 host-only Cookie 对照，重新执行；只清理本会话 Cookie。",
+      "核对优惠实际可用或后续 profile 请求带会话；其它提示不代表本功能仍失败。",
+      "恢复实验并写下原因、请求 / 规则证据和未覆盖的 HTTPS / 跨站场景。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "CSP 拒绝没有授权的内联优惠脚本"
+      },
+      {
+        "id": "b",
+        "label": "Cookie Domain 与当前站点不匹配而被拒"
+      },
+      {
+        "id": "c",
+        "label": "isSecureContext 为 true 就说明具有 TLS 证书"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "securitypolicyviolation 指向 script-src 和 inline"
+      },
+      {
+        "id": "b",
+        "label": "Set-Cookie 含无关 Domain，后续 profile 不含会话"
+      },
+      {
+        "id": "c",
+        "label": "只有 Issues 总数，没有具体资源或规则"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "改用被策略允许的同源外部脚本"
+      },
+      {
+        "id": "b",
+        "label": "使用当前站点的 host-only Cookie"
+      },
+      {
+        "id": "c",
+        "label": "关闭 CSP 或浏览器隐私保护"
+      }
+    ],
+    "hints": [
+      "准备故障，打开 Issues、Console 和 Privacy and security，记录当前源与协议。",
+      "在安全面板区分连接与内容限制：本机 HTTP 没有 TLS 证书；不要绕过浏览器证书警告。",
+      "比较两种可能原因：CSP 拒绝没有授权的内联优惠脚本；Cookie Domain 与当前站点不匹配而被拒。用本次实际证据选择最小对照。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/issues"
+  },
+  {
+    "id": "52",
+    "kind": "52",
+    "hook": "改了响应，怎么证明改的是浏览器这一层？",
+    "symptom": "接口仍返回 HTTP 200，但单价类型错误导致计算失败，或 stock=null 让商品错误地显示售罄。",
+    "principle": "Local overrides 在浏览器本地替换匹配资源 / 响应头，不能修复服务器和代码仓库；Changes 跟踪 DevTools 编辑，Workspaces 才涉及映射源文件。",
+    "concepts": [
+      {
+        "title": "稳定资源地址",
+        "body": "本会话 product.json 地址在各运行之间保持稳定，便于真实覆盖；更换 token 则匹配地址改变。缓存 / Service Worker 也可能影响判断。"
+      },
+      {
+        "title": "覆盖与服务器对照",
+        "body": "本页服务器对照会真实改变服务响应；手工覆盖入口保持故障服务响应，重新读取同一 URL。页面不声称能够读取 Overrides 开关。"
+      },
+      {
+        "title": "差异与恢复",
+        "body": "在 Sources / Elements 修改演示 CSS，用 Changes 看 diff、复制或撤销。JSON 覆盖并不等于仓库修改；用 Network 覆盖标记与原始响应 / 禁用后复现确认。"
+      }
+    ],
+    "demoSteps": [
+      "切换服务器响应、本地覆盖与工作区",
+      "逐字段比较原始与覆盖数据",
+      "禁用覆盖，确认原故障是否仍可复现"
+    ],
+    "steps": [
+      "准备故障，执行商品请求，在 Network 找 HTTP 200 的 product.json，检查 unitPrice 类型或 stock。",
+      "在 Sources > Overrides 选择专用临时目录并按 Chrome 提示授权；从 Network Override content 或 Sources 保存本地覆盖。",
+      "只修改当前错误字段为本课正常输入，保持 SKU、数量和其它字段；观察 Network 的覆盖标记。",
+      "点“检查手工覆盖”重新读取同一 URL；它不会修正服务器数据。也可单独使用“应用所选服务器对照”作正常参考，二者不混称。",
+      "修改本页 product.css 的价格颜色，在 Changes 看 CSS diff；说明 Overrides、Changes、Workspaces 与仓库落盘的差别。",
+      "禁用 / 删除本课覆盖并恢复故障，确认原响应仍错；恢复所有工具设置，再提交依据与最小验证。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "HTTP 200 的 unitPrice 是字符串而不是数值"
+      },
+      {
+        "id": "b",
+        "label": "stock=null 被页面当作无库存"
+      },
+      {
+        "id": "c",
+        "label": "有 HTTP 200 就说明业务数据一定正确"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "product.json 单价类型与页面计算错误对应"
+      },
+      {
+        "id": "b",
+        "label": "product.json 的 stock=null 与错误售罄对应"
+      },
+      {
+        "id": "c",
+        "label": "只凭界面变好了，没有检查实际响应"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "只将单价改为正常数值，保留其它字段"
+      },
+      {
+        "id": "b",
+        "label": "只恢复实际库存，保持 SKU 与价格"
+      },
+      {
+        "id": "c",
+        "label": "把计算错误的组件隐藏"
+      }
+    ],
+    "hints": [
+      "准备故障，执行商品请求，在 Network 找 HTTP 200 的 product.json，检查 unitPrice 类型或 stock。",
+      "只修改当前错误字段为本课正常输入，保持 SKU、数量和其它字段；观察 Network 的覆盖标记。",
+      "比较两种可能原因：HTTP 200 的 unitPrice 是字符串而不是数值；stock=null 被页面当作无库存。用本次实际证据选择最小对照。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/overrides"
+  }
+]

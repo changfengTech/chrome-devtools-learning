@@ -1,0 +1,6 @@
+{
+  "reportEnabled": false,
+  "executeEnabled": false,
+  "status": "本页任务已停止，本会话 Cookie 已请求清理。工具中的限速、覆盖与视口设置请手动恢复。",
+  "tutorial": "返回本章\n辅助工具\n第 49 课\n约 20 分钟\n安全提示出现了，是哪条规则阻止了什么？\n\n从提示追到证书、资源与隐私限制\n\n可实战\n1\n故障现场\n2\n理解与演示\n3\n商城实战\n4\n独立挑战\n5\n排查复盘\n\n使用真实的页面与 DevTools\n\n排查受阻资源或 Cookie 提示\n准备故障，打开 Issues、Console 和 Privacy and security，记录当前源与协议。\n执行优惠 / 会话检查，定位被拒的 inline script 或 Set-Cookie Domain；关联真实响应与请求。\n在安全面板区分连接与内容限制：本机 HTTP 没有 TLS 证书；不要绕过浏览器证书警告。\n选择同源外部脚本或 host-only Cookie 对照，重新执行；只清理本会话 Cookie。\n核对优惠实际可用或后续 profile 请求带会话；其它提示不代表本功能仍失败。\n恢复实验并写下原因、请求 / 规则证据和未覆盖的 HTTPS / 跨站场景。\n引导案例\n\n固定故障配置，先找证据，再修改并检查。实验与教程使用不同源。\n\n重新准备引导实验打开引导商城\n○ 等待故障观察\n○ 等待修复检查\n你观察到的关键证据\n根据真实观察选择\nsecuritypolicyviolation 指向 script-src 和 inline\nSet-Cookie 含无关 Domain，后续 profile 不含会话\n只有 Issues 总数，没有具体资源或规则\n检查证据并记录练习\n\nLighthouse 只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides 和原生工具操作分别取证；固定条件再复测。\n\n实验已准备。打开独立商城，先运行故障；保留教程窗口用于接收结果。\n\n本课学习目标\n\n从提示追到证书、资源与隐私限制\n\n原理实验可以试试\n选择 CSP / Cookie / 连接提示\n沿规则、源与请求找到受影响功能\n选择最小修改，对照恢复而非清空提示\n按需展开提示\n展开第 1 级提示\n我的学习记录\n\n○ 已阅读\n\n✓ 已完成引导练习\n\n✓ 已通过迁移挑战\n\nChrome 官方参考"
+}

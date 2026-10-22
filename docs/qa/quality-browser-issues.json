@@ -1,0 +1,33 @@
+{
+  "cursor": 148,
+  "events": [
+    {
+      "sequence": 148,
+      "source": {
+        "tabId": 33
+      },
+      "method": "Audits.issueAdded",
+      "params": {
+        "issue": {
+          "code": "ContentSecurityPolicyIssue",
+          "details": {
+            "contentSecurityPolicyIssueDetails": {
+              "contentSecurityPolicyViolationType": "kInlineViolation",
+              "isReportOnly": false,
+              "sourceCodeLocation": {
+                "columnNumber": 24,
+                "lineNumber": 263,
+                "scriptId": "9",
+                "url": "http://127.0.0.1:4174/lab/quality/runtime.js"
+              },
+              "violatedDirective": "script-src-elem",
+              "violatingNodeId": 1893
+            }
+          }
+        }
+      }
+    }
+  ],
+  "hasMore": false,
+  "truncated": false
+}

@@ -9,6 +9,8 @@ import { createPerformanceHandler, performanceIds } from "./performance.mjs";
 
 import { createMemoryHandler, memoryIds } from "./memory.mjs";
 
+import { createQualityHandler, qualityIds } from "./quality.mjs";
+
 const publicDirectory = fileURLToPath(new URL("../public/", import.meta.url));
 const origins = new Set([
   "http://localhost:5173",
@@ -64,12 +66,14 @@ export function createLabServer({
   networkOptions = {},
   performanceOptions = {},
   memoryOptions = {},
+  qualityOptions = {},
 } = {}) {
   const challenges = new Map();
   const foundations = createFoundationHandler(foundationOptions);
   const field = createNetworkState(networkOptions);
   const performanceLab = createPerformanceHandler(performanceOptions);
   const memoryLab = createMemoryHandler(memoryOptions);
+  const qualityLab = createQualityHandler(qualityOptions);
   function session(id) {
     const entry = challenges.get(id);
     if (!entry || Date.now() - entry.created > challengeTtl) {
@@ -96,7 +100,8 @@ export function createLabServer({
       response.end(JSON.stringify(data));
     };
     try {
-      if (await memoryLab({request,response,url,json,bodyJson})) return;
+      if (await qualityLab({ request, response, url, json, bodyJson })) return;
+      if (await memoryLab({ request, response, url, json, bodyJson })) return;
       if (await performanceLab({ request, response, url, json, bodyJson }))
         return;
       if (await field.handle({ request, response, url, json, bodyJson }))
@@ -120,8 +125,9 @@ export function createLabServer({
             ...networkStateIds,
             ...performanceIds,
             ...memoryIds,
+            ...qualityIds,
           ].sort(),
-          version: 5,
+          version: 6,
         });
         return;
       }

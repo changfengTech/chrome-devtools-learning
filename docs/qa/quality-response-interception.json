@@ -1,0 +1,20 @@
+{
+  "method": "CDP Fetch interception; not native Local overrides UI",
+  "original": {
+    "sku": "CUP-42",
+    "quantity": 2,
+    "unitPrice": "42",
+    "stock": 9,
+    "currency": "CNY"
+  },
+  "replacement": {
+    "sku": "CUP-42",
+    "quantity": 2,
+    "unitPrice": 42,
+    "stock": 9,
+    "currency": "CNY"
+  },
+  "result": "本轮检查通过。✓ 实验输入校验值一致；✓ 目标对照条件成立",
+  "interceptionCleared": true,
+  "afterClearing": "实际数据类型 string；尚未得到正常购物结果。"
+}

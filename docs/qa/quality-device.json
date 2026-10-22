@@ -1,0 +1,58 @@
+[
+  {
+    "requested": {
+      "width": 320,
+      "dpr": 1,
+      "mobile": false
+    },
+    "cart": "CUP-42 / 数量 2 / 总额 84",
+    "coarse": false,
+    "currentSrc": "http://127.0.0.1:4174/quality/14df9ab4-a753-48ab-b484-b7eef978097c/hero-400.svg?run=9b27162c-e439-47e7-85a8-f39d3b9c8a34",
+    "dpr": 1,
+    "hover": true,
+    "overflow": -15,
+    "width": 320
+  },
+  {
+    "requested": {
+      "width": 390,
+      "dpr": 2,
+      "mobile": true
+    },
+    "cart": "CUP-42 / 数量 2 / 总额 84",
+    "coarse": true,
+    "currentSrc": "http://127.0.0.1:4174/quality/14df9ab4-a753-48ab-b484-b7eef978097c/hero-800.svg?run=9b27162c-e439-47e7-85a8-f39d3b9c8a34",
+    "dpr": 2,
+    "hover": false,
+    "overflow": 0,
+    "width": 390
+  },
+  {
+    "requested": {
+      "width": 768,
+      "dpr": 1,
+      "mobile": false
+    },
+    "cart": "CUP-42 / 数量 2 / 总额 84",
+    "coarse": false,
+    "currentSrc": "http://127.0.0.1:4174/quality/14df9ab4-a753-48ab-b484-b7eef978097c/hero-800.svg?run=9b27162c-e439-47e7-85a8-f39d3b9c8a34",
+    "dpr": 1,
+    "hover": true,
+    "overflow": -15,
+    "width": 768
+  },
+  {
+    "requested": {
+      "width": 1440,
+      "dpr": 1,
+      "mobile": false
+    },
+    "cart": "CUP-42 / 数量 2 / 总额 84",
+    "coarse": false,
+    "currentSrc": "http://127.0.0.1:4174/quality/14df9ab4-a753-48ab-b484-b7eef978097c/hero-800.svg?run=9b27162c-e439-47e7-85a8-f39d3b9c8a34",
+    "dpr": 1,
+    "hover": true,
+    "overflow": -15,
+    "width": 1440
+  }
+]

@@ -119,3 +119,13 @@ MemoryLabState 是显式业务根。实际数组 / Map、命名载荷、DOM 子�
 50 使用实际 DOM 搜索结果及异步任务，可变商品顺序 / 延迟。业务断言由实际选择的 SKU、数量、单价产生；两种条件下至少两次成功才满足对照。下载 Recorder 示例带运行上下文和必需点击坐标，默认导航后可继续操作；跨条件需编辑 / 移除默认导航，参考课程说明。示例脚本、格式逐步执行和真正 Chrome Recorder Replay 分列。
 
 服务校验不能独立读取整个堆或防止主动篡改页面报告。自有计数不称作浏览器整体 DOM / listener，容器归零不等于 GC 完成；快照、分配栈、面板操作与自由解释另行留证。学习 v1 新增可选 memory 章末，与旧三个章末及旧课程向后兼容。
+
+## 质量与辅助工具
+
+`quality.json`、`QualityDemo.vue` 与 `server/quality*.mjs` 服务 45–49、52；`/quality/:token/` 是无框架控制页，`/quality/:token/audit/?run=` 是不含控制面板的真实审计目标。`/api/quality/sessions|chapter|begin|audit|report|grade` 分别准备会话、抽题、开始运行、接收导入摘要、核对观察和检查结构化证据。Lighthouse 章末在五个已交付章末列表中，与旧 v1 兼容。
+
+JSON 导入保留 Lighthouse 的版本、URL、时间、设备、类别、限速及环境条件；只显示真实报告的类别分数。服务限制本机当前运行、报告时间和数量，拒绝重复报告；47 要求两阶段各三份、条件一致并按 LCP / TBT 中位数比较。页面报告及导入文件都可被主动修改，系统不验证报告签名或面板点击，不作为监考或全面质量认证。
+
+49 使用实际 CSP 响应头、实际内联阻断事件与 host-only / 无关 Domain Cookie；清理仅过期本会话 Cookie。52 的 `product.json` URL 在会话中稳定；服务器对照改变实际响应，“检查手工覆盖”保持故障数据，便于在 Chrome Local overrides 验证。工具内 CSS 用 `product.css`；Changes / Workspaces 的操作由学习者在工具中完成。
+
+会话 30 分钟、每会话最多 100 次运行，全局最多 500 会话；报告限标量、审计限三份。停止 / 离页中止页面自有请求、脚本和定时清理；仅关闭本页打开的审计窗口。浏览器限速、覆盖目录、设备模拟与工作区映射需另在工具恢复。可选 `qa-lighthouse.mjs` 调官方 Lighthouse 13.0.1 CLI 在独立临时 Chrome 运行 Navigation，不连接已有用户浏览器，也不代表原生 Timespan / Snapshot 验收。

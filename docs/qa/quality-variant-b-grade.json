@@ -1,0 +1,182 @@
+{
+  "boundary": "Grade API after real browser flows; not tutorial UI submission",
+  "out": [
+    {
+      "lesson": "48",
+      "wrong": {
+        "passed": false,
+        "checks": [
+          {
+            "label": "本会话已观察故障",
+            "passed": true
+          },
+          {
+            "label": "根因与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "证据与本次案例一致",
+            "passed": false
+          },
+          {
+            "label": "验证针对实际原因",
+            "passed": true
+          },
+          {
+            "label": "本会话正常对照已通过",
+            "passed": true
+          }
+        ],
+        "expectedChoice": "b",
+        "explanation": "关联本次真实报告、元素、响应与业务结果；固定条件复测并说明检查边界。",
+        "boundary": "服务检查实验访问、导入摘要与页面报告；可被主动修改，不证明原生面板操作，不是全面质量认证。"
+      },
+      "correct": {
+        "passed": true,
+        "checks": [
+          {
+            "label": "本会话已观察故障",
+            "passed": true
+          },
+          {
+            "label": "根因与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "证据与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "验证针对实际原因",
+            "passed": true
+          },
+          {
+            "label": "本会话正常对照已通过",
+            "passed": true
+          }
+        ],
+        "expectedChoice": "b",
+        "explanation": "关联本次真实报告、元素、响应与业务结果；固定条件复测并说明检查边界。",
+        "boundary": "服务检查实验访问、导入摘要与页面报告；可被主动修改，不证明原生面板操作，不是全面质量认证。"
+      }
+    },
+    {
+      "lesson": "49",
+      "wrong": {
+        "passed": false,
+        "checks": [
+          {
+            "label": "本会话已观察故障",
+            "passed": true
+          },
+          {
+            "label": "根因与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "证据与本次案例一致",
+            "passed": false
+          },
+          {
+            "label": "验证针对实际原因",
+            "passed": true
+          },
+          {
+            "label": "本会话正常对照已通过",
+            "passed": true
+          }
+        ],
+        "expectedChoice": "b",
+        "explanation": "关联本次真实报告、元素、响应与业务结果；固定条件复测并说明检查边界。",
+        "boundary": "服务检查实验访问、导入摘要与页面报告；可被主动修改，不证明原生面板操作，不是全面质量认证。"
+      },
+      "correct": {
+        "passed": true,
+        "checks": [
+          {
+            "label": "本会话已观察故障",
+            "passed": true
+          },
+          {
+            "label": "根因与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "证据与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "验证针对实际原因",
+            "passed": true
+          },
+          {
+            "label": "本会话正常对照已通过",
+            "passed": true
+          }
+        ],
+        "expectedChoice": "b",
+        "explanation": "关联本次真实报告、元素、响应与业务结果；固定条件复测并说明检查边界。",
+        "boundary": "服务检查实验访问、导入摘要与页面报告；可被主动修改，不证明原生面板操作，不是全面质量认证。"
+      }
+    },
+    {
+      "lesson": "52",
+      "wrong": {
+        "passed": false,
+        "checks": [
+          {
+            "label": "本会话已观察故障",
+            "passed": true
+          },
+          {
+            "label": "根因与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "证据与本次案例一致",
+            "passed": false
+          },
+          {
+            "label": "验证针对实际原因",
+            "passed": true
+          },
+          {
+            "label": "本会话正常对照已通过",
+            "passed": true
+          }
+        ],
+        "expectedChoice": "b",
+        "explanation": "关联本次真实报告、元素、响应与业务结果；固定条件复测并说明检查边界。",
+        "boundary": "服务检查实验访问、导入摘要与页面报告；可被主动修改，不证明原生面板操作，不是全面质量认证。"
+      },
+      "correct": {
+        "passed": true,
+        "checks": [
+          {
+            "label": "本会话已观察故障",
+            "passed": true
+          },
+          {
+            "label": "根因与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "证据与本次案例一致",
+            "passed": true
+          },
+          {
+            "label": "验证针对实际原因",
+            "passed": true
+          },
+          {
+            "label": "本会话正常对照已通过",
+            "passed": true
+          }
+        ],
+        "expectedChoice": "b",
+        "explanation": "关联本次真实报告、元素、响应与业务结果；固定条件复测并说明检查边界。",
+        "boundary": "服务检查实验访问、导入摘要与页面报告；可被主动修改，不证明原生面板操作，不是全面质量认证。"
+      }
+    }
+  ]
+}

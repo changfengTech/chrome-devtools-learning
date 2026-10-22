@@ -48,11 +48,9 @@ test("课程交付合同包含 55 主线、8 专题和唯一课号，仅开放�
   assert.deepEqual(
     lessons.filter((item) => item.status === "ready").map((item) => item.id),
     [
-      ...Array.from({ length: 44 }, (_, index) =>
+      ...Array.from({ length: 52 }, (_, index) =>
         String(index + 1).padStart(2, "0"),
       ),
-      "50",
-      "51",
     ],
   );
   for (const item of lessons)

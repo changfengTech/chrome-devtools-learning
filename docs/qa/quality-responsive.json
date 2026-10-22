@@ -1,0 +1,149 @@
+[
+  {
+    "lesson": "45",
+    "requested": 320,
+    "overflow": 0,
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "lesson": "45",
+    "requested": 768,
+    "overflow": 0,
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "lesson": "45",
+    "requested": 1440,
+    "overflow": 0,
+    "scroll": 1440,
+    "width": 1440
+  },
+  {
+    "lesson": "46",
+    "requested": 320,
+    "overflow": 0,
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "lesson": "46",
+    "requested": 768,
+    "overflow": 0,
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "lesson": "46",
+    "requested": 1440,
+    "overflow": 0,
+    "scroll": 1440,
+    "width": 1440
+  },
+  {
+    "lesson": "47",
+    "requested": 320,
+    "overflow": 0,
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "lesson": "47",
+    "requested": 768,
+    "overflow": 0,
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "lesson": "47",
+    "requested": 1440,
+    "overflow": 0,
+    "scroll": 1440,
+    "width": 1440
+  },
+  {
+    "lesson": "48",
+    "requested": 320,
+    "overflow": 0,
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "lesson": "48",
+    "requested": 768,
+    "overflow": 0,
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "lesson": "48",
+    "requested": 1440,
+    "overflow": 0,
+    "scroll": 1440,
+    "width": 1440
+  },
+  {
+    "lesson": "49",
+    "requested": 320,
+    "overflow": 0,
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "lesson": "49",
+    "requested": 768,
+    "overflow": 0,
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "lesson": "49",
+    "requested": 1440,
+    "overflow": 0,
+    "scroll": 1440,
+    "width": 1440
+  },
+  {
+    "lesson": "52",
+    "requested": 320,
+    "overflow": 0,
+    "scroll": 320,
+    "width": 320
+  },
+  {
+    "lesson": "52",
+    "requested": 768,
+    "overflow": 0,
+    "scroll": 768,
+    "width": 768
+  },
+  {
+    "lesson": "52",
+    "requested": 1440,
+    "overflow": 0,
+    "scroll": 1440,
+    "width": 1440
+  },
+  {
+    "page": "lighthouse-chapter",
+    "requested": 320,
+    "overflow": -15,
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "page": "lighthouse-chapter",
+    "requested": 768,
+    "overflow": -15,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "page": "lighthouse-chapter",
+    "requested": 1440,
+    "overflow": -15,
+    "scroll": 1425,
+    "width": 1440
+  }
+]

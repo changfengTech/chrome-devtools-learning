@@ -7,6 +7,7 @@ import FoundationLesson from "./components/FoundationLesson.vue";
 import networkBook from "./data/network-state.json";
 import performanceBook from "./data/performance.json";
 import memoryBook from "./data/memory.json";
+import qualityBook from "./data/quality.json";
 import ChapterChallenge from "./components/ChapterChallenge.vue";
 import { chapters, lessons, getLesson } from "./data/curriculum";
 import { useLearning } from "./composables/useLearning";
@@ -320,7 +321,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
                       : "沿着路线，建立排查能力"
                   }}
                 </h2>
-                <p>第 01～44、50～51 课已开放实战，其余课程可查看课程安排。</p>
+                <p>第 01～52 课已开放实战，其余课程可查看课程安排。</p>
               </div>
               <label class="search-field"
                 ><AppIcon name="search" :size="17" /><input
@@ -411,9 +412,13 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
           <ChapterChallenge
             v-if="
               activeChapter &&
-              ['network', 'application', 'performance', 'memory'].includes(
-                activeChapter,
-              )
+              [
+                'network',
+                'application',
+                'performance',
+                'memory',
+                'lighthouse',
+              ].includes(activeChapter)
             "
             :key="activeChapter"
             :chapter="activeChapter"
@@ -425,9 +430,12 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
             activeLesson &&
             Number(activeLesson.id) >= 1 &&
             (Number(activeLesson.id) <= 18 ||
-              [...networkBook, ...performanceBook, ...memoryBook].some(
-                (item) => item.id === activeLesson?.id,
-              ))
+              [
+                ...networkBook,
+                ...performanceBook,
+                ...memoryBook,
+                ...qualityBook,
+              ].some((item) => item.id === activeLesson?.id))
           "
           :key="activeLesson.id"
           :lesson="activeLesson"
@@ -610,6 +618,18 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
               <a class="button primary" href="#chapter/memory"
                 >进入内存课程与章末挑战</a
               ><a class="button secondary" href="#lesson/50">Recorder 回归</a>
+            </article>
+          </div>
+          <div class="lab-cases">
+            <article>
+              <AppIcon name="lighthouse" :size="25" />
+              <h2>Lighthouse · 45–47 / 辅助工具 · 48–49、52</h2>
+              <p>真实审计报告、同条件复测、Device Mode、受阻资源与手工覆盖。</p>
+              <a class="button primary" href="#chapter/lighthouse"
+                >进入质量课程与章末挑战</a
+              ><a class="button secondary" href="#lesson/48"
+                >Device Mode 与工具实战</a
+              >
             </article>
           </div>
           <h2>Network 时序快捷实验 · 第 21 课</h2>

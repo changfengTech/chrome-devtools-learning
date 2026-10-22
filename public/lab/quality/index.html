@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>日常好物 · 质量与工具实验</title>
+    <link rel="stylesheet" href="/lab/quality/style.css" />
+    <link rel="stylesheet" href="/lab/quality/product.css" />
+    <script type="module" src="/lab/quality/runtime.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong>日常好物 <small>Little goods</small></strong
+      ><span id="context">质量与工具实验</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p>从检查项追到实际证据</p>
+        <h1 id="title">正在准备实验…</h1>
+        <p id="symptom"></p>
+        <div class="controls">
+          <button id="baseline">运行故障</button
+          ><label
+            >对照方案<select
+              id="correction"
+              aria-label="对照方案"
+            ></select></label
+          ><button id="fixed" class="secondary">应用所选服务器对照</button
+          ><button id="restore" class="secondary">恢复故障</button
+          ><button id="manual" class="secondary" hidden>检查手工覆盖</button
+          ><button id="stop" class="secondary">停止并清理本页</button>
+        </div>
+        <p id="status" role="status">从教程准备会话后开始。</p>
+      </section>
+      <section id="audit-panel" hidden>
+        <h2>本轮真实审计</h2>
+        <p id="audit-goal"></p>
+        <a
+          id="audit-target"
+          class="button"
+          href="#"
+          target="quality-audit-target"
+          >打开本轮审计目标</a
+        ><label class="url-label"
+          >审计地址<input id="audit-url" readonly aria-label="本轮审计地址"
+        /></label>
+        <p>
+          在 Lighthouse 运行并导出 JSON，再导入这里。页面不会计算模拟分数；CLI
+          Navigation 与原生 Timespan / Snapshot 的操作分别记录。
+        </p>
+        <button id="import-audit" class="secondary" disabled>
+          导入 Lighthouse JSON</button
+        ><input
+          type="file"
+          id="audit-file"
+          accept="application/json,.json"
+          hidden
+        />
+        <p id="audit-status" role="status">尚未导入报告。</p>
+        <div id="audit-scores" class="audit-scores">
+          只有真实导入后才显示类别分数。
+        </div>
+        <p id="audit-metrics" class="audit-readout">
+          导入后显示真实指标与样本中位数。
+        </p>
+        <p id="audit-checks" class="muted"></p>
+        <details>
+          <summary>本次条件与具体检查项</summary>
+          <pre id="audit-details">尚无报告</pre>
+        </details>
+        <label id="manual-label"
+          ><input
+            type="checkbox"
+            id="manual-check"
+          />已完成实际键盘与业务路径检查（自报）</label
+        >
+        <p class="muted">
+          导入只核对本次
+          URL、运行编号、时间、条件和内容；它不验证文件来源真实性，也不证明操作过原生面板。
+        </p>
+      </section>
+      <section id="shop-panel" hidden>
+        <h2>晨间陶瓷杯</h2>
+        <p id="product-context"></p>
+        <div id="shop-stage">
+          <div id="product-grid" class="product-grid">
+            <article>
+              <img id="hero" width="400" height="240" alt="白色陶瓷杯" />
+              <h3>晨间陶瓷杯</h3>
+              <p id="price" class="product-price"></p>
+            </article>
+            <article>
+              <h3>购物选项</h3>
+              <p id="stock"></p>
+              <button id="filter">打开筛选</button>
+              <div id="filter-panel" class="filter-panel" hidden>
+                <label
+                  >只看有库存<input
+                    type="checkbox"
+                    id="in-stock"
+                    checked /></label
+                ><button id="close-filter" class="secondary">关闭筛选</button>
+              </div>
+              <button id="add-cart">加入购物车</button
+              ><button id="reset-cart" class="secondary">重置购物车</button>
+              <p id="cart" aria-live="polite">购物车为空</p>
+            </article>
+          </div>
+        </div>
+        <button id="execute" disabled>执行目标检查</button>
+        <p id="scene-message" role="status">先运行故障。</p>
+        <p id="scene-boundary" class="muted"></p>
+      </section>
+      <section>
+        <h2>本轮观察</h2>
+        <button id="report" disabled>记录检查并回传</button>
+        <p id="check-status" role="status">尚未记录</p>
+        <details>
+          <summary>页面观察与导入摘要</summary>
+          <pre id="metrics">{}</pre>
+        </details>
+        <button id="export" class="secondary" disabled>导出观察 JSON</button>
+        <p class="muted">
+          页面报告可被主动修改；课堂检查不代替自由解释、实际工具操作或全面质量认证。
+        </p>
+      </section>
+      <details id="instructions">
+        <summary>本课取证步骤</summary>
+        <ol id="steps"></ol>
+      </details>
+      <section>
+        <h2>恢复与范围</h2>
+        <p id="recovery">
+          恢复只清理本会话；独立审计目标与教程分离，没有框架、HMR 或 Service
+          Worker。会话 30 分钟后或服务重启失效。
+        </p>
+        <p id="environment" class="muted"></p>
+      </section>
+    </main>
+    <footer>DevTools 实验室 · 本地教学商城 · 无真实交易</footer>
+  </body>
+</html>
