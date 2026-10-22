@@ -4,17 +4,22 @@ import { labOrigin, labRequest, labWindowName } from "../lib/lab";
 import { useLearning } from "../composables/useLearning";
 const props = defineProps<{ chapter: string }>();
 const apiBase = computed(() =>
-  props.chapter === "lighthouse"
-    ? "/api/quality"
-    : props.chapter === "memory"
-      ? "/api/memory"
-      : props.chapter === "performance"
-        ? "/api/performance"
-        : "/api/network-state",
+  ["elements", "console", "sources"].includes(props.chapter)
+    ? "/api/advanced"
+    : props.chapter === "lighthouse"
+      ? "/api/quality"
+      : props.chapter === "memory"
+        ? "/api/memory"
+        : props.chapter === "performance"
+          ? "/api/performance"
+          : "/api/network-state",
 );
 const chapterTitle = computed(
   () =>
     ({
+      elements: "Elements",
+      console: "Console",
+      sources: "Sources",
       network: "Network",
       application: "Application",
       performance: "Performance",
@@ -22,6 +27,9 @@ const chapterTitle = computed(
       lighthouse: "Lighthouse",
     })[
       props.chapter as
+        | "elements"
+        | "console"
+        | "sources"
         | "network"
         | "application"
         | "performance"
@@ -74,8 +82,9 @@ async function prepare() {
   }
 }
 function open() {
-  const path =
-    props.chapter === "lighthouse"
+  const path = ["elements", "console", "sources"].includes(props.chapter)
+    ? "advanced"
+    : props.chapter === "lighthouse"
       ? "quality"
       : props.chapter === "memory"
         ? "memory"
@@ -211,7 +220,7 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
         :placeholder="
           chapter === 'performance'
             ? '记录动作、有效选区、耗时活动、相同条件下的复测与结果。'
-            : '记录请求、存储条目、控制关系或响应来源的具体值。'
+            : '记录具体节点、日志、调用帧、请求或存储条目的实际值。'
         "
       ></textarea>
     </label>

@@ -579,7 +579,7 @@
     "demo": "提交后重放请求和状态变化",
     "lab": "排查快速搜索错乱与刷新状态异常",
     "challenge": "在新配置提交证据链与回归结果",
-    "status": "planned",
+    "status": "ready",
     "minutes": 50
   },
   {
@@ -590,7 +590,7 @@
     "demo": "提交后叠加任务与内存变化",
     "lab": "排查反复开详情后卡顿和节点增长",
     "challenge": "分别证明性能和内存改善",
-    "status": "planned",
+    "status": "ready",
     "minutes": 50
   },
   {
@@ -601,7 +601,7 @@
     "demo": "根据证据生成关系图和遗漏提示",
     "lab": "检查功能、网络、状态、性能、内存与质量",
     "challenge": "完成新故障配置并记录遗留问题",
-    "status": "planned",
+    "status": "ready",
     "minutes": 50
   },
   {
@@ -612,7 +612,7 @@
     "demo": "改变位置观察业务分支",
     "lab": "检查附近门店与定位失败降级",
     "challenge": "设计成功、拒绝与不可用测试",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -623,7 +623,7 @@
     "demo": "演示手机、电脑与服务连接",
     "lab": "真机检查移动商城",
     "challenge": "比较模拟与真机差异并提交证据",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -634,7 +634,7 @@
     "demo": "打断映射观察断点和修改",
     "lab": "关联实验源码并保存修改",
     "challenge": "修复映射并验证实际保存位置",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -645,7 +645,7 @@
     "demo": "改变媒体加载和播放状态",
     "lab": "排查商品视频缓冲和失败",
     "challenge": "区分加载、策略与播放器逻辑",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -656,7 +656,7 @@
     "demo": "改变表单结构观察匹配",
     "lab": "修复收货地址未填或填错",
     "challenge": "验证另一组表单语义与填充",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -667,7 +667,7 @@
     "demo": "对应挑战、凭据和验证过程",
     "lab": "在本地练习服务完成模拟登录",
     "challenge": "排查凭据或用户验证条件问题",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -678,7 +678,7 @@
     "demo": "比较有无证据的建议",
     "lab": "功能可用时辅助排查样式或性能",
     "challenge": "找出未验证假设并提交验证",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -689,7 +689,7 @@
     "demo": "对应 UI 操作与协议消息",
     "lab": "观察检查商城时的协议交互",
     "challenge": "解释一次协议请求和响应的作用",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   }
 ]

@@ -1,0 +1,926 @@
+[
+  {
+    "id": "53",
+    "kind": "53",
+    "hook": "结果正确，才能谈速度。",
+    "symptom": "连续搜索后显示了上一次商品；刷新又恢复旧筛选。先记录预期与实际，不预设工具。",
+    "principle": "为一次操作建立输入、请求、提交和持久化的时间线；同时检查正确性和刷新后的状态。",
+    "prerequisites": "18、19、20、36",
+    "concepts": [
+      {
+        "title": "请求完成不等于允许提交",
+        "body": "用递增序号绑定当前查询，较早请求可以较晚完成。"
+      },
+      {
+        "title": "持久化也有契约",
+        "body": "记录 schemaVersion、筛选与结果的关系；刷新不能信任旧结构。"
+      },
+      {
+        "title": "先独立提交，再看重放",
+        "body": "第一次检查后解锁证据模型，避免先看到根因再找佐证。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "记录搜索词、目标商品和刷新前后状态；先不要看答案。",
+      "运行故障，执行一次快速搜索与恢复；保留实际请求及页面状态。",
+      "自主选择工具，追踪输入到最终显示的顺序与持久化值。",
+      "提交初步判断后，回原理步骤重放因果链，检查遗漏。",
+      "只应用一个对应对照，保持查询和数量一致，重新执行。",
+      "用新查询、重载恢复和购物车验证；记录排除的假设。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "过期搜索响应覆盖了当前查询"
+      },
+      {
+        "id": "b",
+        "label": "旧版本筛选记录未经迁移就恢复"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "两个真实搜索请求先新后旧完成，页面却提交旧序号"
+      },
+      {
+        "id": "b",
+        "label": "本会话 Storage 的 schemaVersion=1，恢复后分类不符合当前输入"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "只提交最新请求并保存当前筛选，重复快速搜索与恢复"
+      },
+      {
+        "id": "b",
+        "label": "迁移或拒绝旧结构，只清理本会话键并复测恢复"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 连续搜索后显示了上一次商品；刷新又恢复旧筛选。先记录预期与实际，不预设工具。",
+      "对照实际证据：两个真实搜索请求先新后旧完成，页面却提交旧序号；或 本会话 Storage 的 schemaVersion=1，恢复后分类不符合当前输入",
+      "一次只改变对应原因：只提交最新请求并保存当前筛选，重复快速搜索与恢复；或 迁移或拒绝旧结构，只清理本会话键并复测恢复"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/javascript/reference",
+    "boundary": "实际请求和独立会话 Storage；页面恢复按钮重读存储，真正刷新另行手工验证。"
+  },
+  {
+    "id": "54",
+    "kind": "54",
+    "hook": "把越用越卡拆成可证明的问题。",
+    "symptom": "反复打开商品详情后越来越卡，节点与后台工作也增加。先判断哪些指标需要复测。",
+    "principle": "在同一文档重复同一动作，分别测工作成本与资源保留；清理引用和减少工作需要独立证据。",
+    "prerequisites": "28–30、33、40–44",
+    "concepts": [
+      {
+        "title": "动作次数是共同横轴",
+        "body": "固定五次打开关闭，比较同一批业务结果和实际任务耗时。"
+      },
+      {
+        "title": "移除不等于释放",
+        "body": "外部数组、事件订阅仍能保留脱离文档的详情节点。"
+      },
+      {
+        "title": "分别证明两类改善",
+        "body": "本页资源计数不能证明 GC；需在原生快照与 trace 核对。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "固定条件记录五次打开关闭、正常结果与当前资源数。",
+      "运行故障，执行五次详情循环，先记录变化再选择工具。",
+      "分别取性能和内存证据；不要以一次堆大小认定泄漏。",
+      "提交初步判断后返回模型，检查是否只修了一半。",
+      "应用对应清理与工作方案，在同一文档重复同样次数。",
+      "用 trace、快照和本页资源计数分别复核；停止时清理本页资源。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "关闭的详情被数组保留且每次重复同步计算"
+      },
+      {
+        "id": "b",
+        "label": "详情订阅未注销并执行重复布局读写"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "五次关闭后数组仍持有五个节点，同步任务反复出现"
+      },
+      {
+        "id": "b",
+        "label": "五次关闭后仍有五个订阅，消息触发多次布局工作"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "清空本页引用并拆分计算，按同样五次操作复测"
+      },
+      {
+        "id": "b",
+        "label": "注销本页订阅并合并布局写入，再核对业务结果"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 反复打开商品详情后越来越卡，节点与后台工作也增加。先判断哪些指标需要复测。",
+      "对照实际证据：五次关闭后数组仍持有五个节点，同步任务反复出现；或 五次关闭后仍有五个订阅，消息触发多次布局工作",
+      "一次只改变对应原因：清空本页引用并拆分计算，按同样五次操作复测；或 注销本页订阅并合并布局写入，再核对业务结果"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/memory-problems",
+    "boundary": "只统计本页拥有的对象和订阅，不报告伪造堆大小或声称 GC 完成。"
+  },
+  {
+    "id": "55",
+    "kind": "55",
+    "hook": "发布结论要能追到证据。",
+    "symptom": "商城看似能购买，但发布检查发现多处不一致。先制定检查顺序与通过条件。",
+    "principle": "用功能契约串联八面板，按风险和证据决定顺序，修复后回归并记录尚未验证的范围。",
+    "prerequisites": "01–54",
+    "concepts": [
+      {
+        "title": "检查矩阵",
+        "body": "功能、响应、执行、状态、资源成本与可用性分别有证据入口。"
+      },
+      {
+        "title": "证据关系图",
+        "body": "输入→响应→执行→页面→存储，录制与审计作为旁证。"
+      },
+      {
+        "title": "发布有范围",
+        "body": "通过课堂病例不代表安全、SEO、性能或无障碍全面合格。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "先写发布检查顺序、正常输入和失败判据，不先指定根因。",
+      "运行故障并执行商城流程；自主选择工具，记录至少三条相互关联的证据。",
+      "逐项记录八面板与辅助工具的实际结果或未检查原因。",
+      "提交初步判断后查看关系图，找遗漏而非追求总分。",
+      "应用最小相关对照，重复查询、数量、结算和详情操作。",
+      "填写发布记录与剩余风险；实际 Lighthouse、Recorder、快照另行导出。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "价格类型、按钮名称与购物布局同时不符合契约"
+      },
+      {
+        "id": "b",
+        "label": "过期状态、重复结算处理和详情引用共同残留"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "真实响应 price 为 string、图标无名称且商品区横向溢出"
+      },
+      {
+        "id": "b",
+        "label": "Storage 为旧结构，一次点击执行两次且关闭详情仍被保留"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "统一价格类型、恢复准确名称与弹性布局，再完成检查矩阵"
+      },
+      {
+        "id": "b",
+        "label": "迁移状态、去重处理并清理引用，重复购买与详情流程"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 商城看似能购买，但发布检查发现多处不一致。先制定检查顺序与通过条件。",
+      "对照实际证据：真实响应 price 为 string、图标无名称且商品区横向溢出；或 Storage 为旧结构，一次点击执行两次且关闭详情仍被保留",
+      "一次只改变对应原因：统一价格类型、恢复准确名称与弹性布局，再完成检查矩阵；或 迁移状态、去重处理并清理引用，重复购买与详情流程"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/overview",
+    "boundary": "矩阵是人工记录，不自动操作八面板，也不生成审计、trace 或快照。"
+  },
+  {
+    "id": "T01",
+    "kind": "T01",
+    "hook": "位置是一项输入，也可能没有结果。",
+    "symptom": "附近门店选错城市，或者定位失败后一直显示加载。",
+    "principle": "区分坐标、权限和业务降级；Sensors 的位置与方向模拟不能覆盖全部真机环境。",
+    "prerequisites": "24、48",
+    "concepts": [
+      {
+        "title": "坐标顺序",
+        "body": "Geolocation 返回 latitude、longitude；业务函数须保持一致。"
+      },
+      {
+        "title": "失败也属于契约",
+        "body": "拒绝、不可用和超时是不同错误；都有可操作的降级。"
+      },
+      {
+        "title": "方向不是视口",
+        "body": "deviceorientation 的角度与 Device Mode 的横竖屏不是同一输入。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "先用本地坐标与错误夹具理解三个分支；它们不是浏览器传感器。",
+      "打开 Sensors，选择 Shanghai 或自定义 31.23、121.47；在页面主动点击读取浏览器位置。",
+      "记录真实 coords 或 error.code；授权由你选择，不要求提供真实位置。",
+      "测试 Location unavailable，并与站点权限拒绝区分。",
+      "使用 Sensors 的 Orientation 预设，点击开始观察方向，对比 Device Mode 的视口。",
+      "应用针对性对照，再验证成功与三个失败分支，结束后恢复 Sensors 并停止监听。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "业务把 latitude 与 longitude 颠倒"
+      },
+      {
+        "id": "b",
+        "label": "定位错误没有清除加载状态和显示手动选择"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "输入 31.23/121.47 却传入 121.47/31.23"
+      },
+      {
+        "id": "b",
+        "label": "error.code=1/2/3 后仍处于 loading，手动选择不可用"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "保持坐标顺序，使用 Sensors 改位置并核对门店"
+      },
+      {
+        "id": "b",
+        "label": "分别触发拒绝、不可用和超时，显示手动选店"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 附近门店选错城市，或者定位失败后一直显示加载。",
+      "对照实际证据：输入 31.23/121.47 却传入 121.47/31.23；或 error.code=1/2/3 后仍处于 loading，手动选择不可用",
+      "一次只改变对应原因：保持坐标顺序，使用 Sensors 改位置并核对门店；或 分别触发拒绝、不可用和超时，显示手动选店"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/sensors",
+    "boundary": "本地夹具完成与原生 Sensors / 权限结果分列；不强制获取真实定位。"
+  },
+  {
+    "id": "T02",
+    "kind": "T02",
+    "hook": "先画清楚手机如何找到电脑。",
+    "symptom": "电脑能访问商城，手机打开同一地址却失败，或端口转发到了错误服务。",
+    "principle": "手机的 localhost 指手机；远程 DevTools 目标和 HTTP 端口转发是两条连接。",
+    "prerequisites": "25、48",
+    "concepts": [
+      {
+        "title": "设备连接",
+        "body": "开发者选项、USB debugging、数据线、解锁与信任决定设备发现。"
+      },
+      {
+        "title": "服务连接",
+        "body": "在 chrome://inspect/#devices 配置端口转发，手机端 localhost:4174 指向电脑服务。"
+      },
+      {
+        "title": "真机差异",
+        "body": "记录设备 Chrome、触摸、输入法、帧率；测性能时关闭 screencast。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "运行本地准备检查，确认商城健康端点与两个连接的区别。",
+      "有 Android 时开启开发者选项和 USB debugging，连接数据线并在设备确认信任。",
+      "电脑 chrome://inspect/#devices 勾选 Discover USB devices，记录设备与 Chrome 版本。",
+      "Port forwarding 配置 4174→localhost:4174；在手机打开本次会话地址并选择 Inspect。",
+      "真机操作筛选、键盘输入、加购，记录与 Device Mode 的差异；测量时关闭 screencast。",
+      "没有设备时只完成准备流程并标记待真机；结束撤销转发与调试授权。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "把手机 loopback 当成电脑，未配置对应转发"
+      },
+      {
+        "id": "b",
+        "label": "目标端口映射到不存在的 HTTP 服务"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "本地健康端点正常，但拓扑中手机端口没有映射"
+      },
+      {
+        "id": "b",
+        "label": "转发目标不是电脑 4174，健康检查返回连接失败"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "配置手机 4174→电脑 localhost:4174，再 Inspect 目标页"
+      },
+      {
+        "id": "b",
+        "label": "纠正转发目标到实际 4174，并检查相同会话地址"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 电脑能访问商城，手机打开同一地址却失败，或端口转发到了错误服务。",
+      "对照实际证据：本地健康端点正常，但拓扑中手机端口没有映射；或 转发目标不是电脑 4174，健康检查返回连接失败",
+      "一次只改变对应原因：配置手机 4174→电脑 localhost:4174，再 Inspect 目标页；或 纠正转发目标到实际 4174，并检查相同会话地址"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/remote-debugging",
+    "boundary": "本地拓扑练习不冒称 Android 已连接；设备步骤独立自报，可标记待验证。"
+  },
+  {
+    "id": "T03",
+    "kind": "T03",
+    "hook": "源码、产物和磁盘分别是哪一份？",
+    "symptom": "断点跳到错误行，或者 Sources 中修改后磁盘文件没有变化。",
+    "principle": "Source Maps 连接产物和源码；Workspaces 连接网络资源和本地文件，保存与构建仍是不同步骤。",
+    "prerequisites": "13、52",
+    "concepts": [
+      {
+        "title": "映射链",
+        "body": "脚本 sourceMappingURL → map → sources / sourcesContent；先确认下载与版本。"
+      },
+      {
+        "title": "磁盘保存",
+        "body": "只授权本课下载的练习目录，保存后在磁盘读取确认，再构建或刷新。"
+      },
+      {
+        "title": "失败证据",
+        "body": "404 与旧 sourcesContent 的排查路径不同；不能只看漂亮的 TS 文件名。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "执行计算并打开实际 cart.js，记录 sourceMappingURL 与结果。",
+      "Sources / Developer Resources 核对 map 下载状态、sources 与 sourcesContent。",
+      "下载本课 cart.ts，保存到独立练习目录；Workspaces Add folder manually 只授权该目录。",
+      "对照网络源码建立映射，保存一个注释，回磁盘确认实际落盘位置。",
+      "应用映射对照后重新加载脚本，在乘法位置断点核对 Scope 和结果。",
+      "移除 Workspace 连接并恢复文件；页面映射检查不证明目录授权和保存已经执行。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "sourceMappingURL 指向不存在的 map"
+      },
+      {
+        "id": "b",
+        "label": "map 的 sourcesContent 来自旧版本源码"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "Developer Resources / Network 中映射地址返回 404"
+      },
+      {
+        "id": "b",
+        "label": "已加载 map 内容仍是加法版本，与实际乘法结果不一致"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "修正映射 URL，清除错误条件并核对断点行"
+      },
+      {
+        "id": "b",
+        "label": "同步当前源码与 map，确认磁盘文件和运行结果一致"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 断点跳到错误行，或者 Sources 中修改后磁盘文件没有变化。",
+      "对照实际证据：Developer Resources / Network 中映射地址返回 404；或 已加载 map 内容仍是加法版本，与实际乘法结果不一致",
+      "一次只改变对应原因：修正映射 URL，清除错误条件并核对断点行；或 同步当前源码与 map，确认磁盘文件和运行结果一致"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/workspaces",
+    "boundary": "提供真实 JS/map/TS 和下载文件；原生 Workspace 保存仍需要人工核对。"
+  },
+  {
+    "id": "T04",
+    "kind": "T04",
+    "hook": "先看媒体发生了什么，再猜为什么。",
+    "symptom": "商品演示无法加载，或已播放却被脚本立刻暂停。",
+    "principle": "HTMLMediaElement 状态、事件和 play() Promise 共同解释加载、策略与播放器逻辑；Media 日志提供另一条证据。",
+    "prerequisites": "10、19、25",
+    "concepts": [
+      {
+        "title": "网络与解码",
+        "body": "404、MIME、codec、error.code 和 networkState 分别记录。"
+      },
+      {
+        "title": "播放策略",
+        "body": "NotAllowedError 不等于资源不存在；本课播放由用户点击且静音。"
+      },
+      {
+        "title": "播放器行为",
+        "body": "playing 后紧接 pause 可能是业务监听器；从 Sources 调用栈追查。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "运行故障后主动点击播放；本地 canvas 录制短视频作为无外网素材。",
+      "打开 Media 选择本页播放器，检查 Properties、Events、Messages / Timeline（随版本）。",
+      "把 Network 的资源结果、video.error 与 play() Promise 对应。",
+      "区分加载失败、浏览器策略拒绝和业务暂停，不通过关闭浏览器保护排错。",
+      "应用对照，再点击播放并观察 currentTime 推进；浏览器不支持 MediaRecorder 时记录限制。",
+      "停止后暂停播放器、停止录制 tracks 并撤销本页 Blob URL。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "媒体地址不存在，真实请求返回 404"
+      },
+      {
+        "id": "b",
+        "label": "业务 play 监听器立即调用 pause()"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "video.error 与媒体 404 对应，未进入正常播放"
+      },
+      {
+        "id": "b",
+        "label": "play / playing 后立刻 pause，资源已正常生成"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "修复资源地址，核对 loadedmetadata 和实际时间推进"
+      },
+      {
+        "id": "b",
+        "label": "移除错误 pause 逻辑，在相同手势条件下复测"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 商品演示无法加载，或已播放却被脚本立刻暂停。",
+      "对照实际证据：video.error 与媒体 404 对应，未进入正常播放；或 play / playing 后立刻 pause，资源已正常生成",
+      "一次只改变对应原因：修复资源地址，核对 loadedmetadata 和实际时间推进；或 移除错误 pause 逻辑，在相同手势条件下复测"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/media-panel",
+    "boundary": "实际 video 与 MediaRecorder；录制素材是测试内容，事件观察不冒充 Media 面板已操作。"
+  },
+  {
+    "id": "T05",
+    "kind": "T05",
+    "hook": "表单字段的语义也是接口。",
+    "symptom": "收货人被填成街道，或配送地址使用了账单分区。",
+    "principle": "autocomplete token 描述字段用途与分区；浏览器有自己的填充策略，DOM 语义正确也需实际自动填充复核。",
+    "prerequisites": "08、48",
+    "concepts": [
+      {
+        "title": "字段用途",
+        "body": "given-name、family-name、street-address 与 postal-code 不可混用。"
+      },
+      {
+        "title": "分区",
+        "body": "section-*、shipping / billing 区分地址组，label / name 保持清晰。"
+      },
+      {
+        "title": "夹具与浏览器",
+        "body": "本地测试数据按 token 填充只验证语义，不模拟原生 Autofill 的启发式。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "打开真实收货表单，先检查 label、name、type、autocomplete。",
+      "用明确标注的本地语义夹具填充，观察实际字段值；数据均为虚构。",
+      "有 Chrome 测试地址时打开 Autofill，主动选择地址，记录匹配字段。",
+      "不需要导入私人地址；没有资料时将原生填充标为未验证。",
+      "应用对应 token 修复，在配送与账单场景分别核对。",
+      "清空本页字段；页面不保存地址、不修改 Chrome 地址资料。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "收货人与街道 autocomplete 用途互换"
+      },
+      {
+        "id": "b",
+        "label": "配送表单使用 billing 分区"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "实际 input autocomplete 与 label 用途不一致"
+      },
+      {
+        "id": "b",
+        "label": "配送字段 token 含 billing，本地夹具填入账单测试值"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "为名称与街道恢复正确 token，再检查标签与填充"
+      },
+      {
+        "id": "b",
+        "label": "统一 shipping 分区并检查两套地址互不覆盖"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 收货人被填成街道，或配送地址使用了账单分区。",
+      "对照实际证据：实际 input autocomplete 与 label 用途不一致；或 配送字段 token 含 billing，本地夹具填入账单测试值",
+      "一次只改变对应原因：为名称与街道恢复正确 token，再检查标签与填充；或 统一 shipping 分区并检查两套地址互不覆盖"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/autofill",
+    "boundary": "只自动检查 DOM token 与本地夹具结果，原生 Autofill 行为另行自报。"
+  },
+  {
+    "id": "T06",
+    "kind": "T06",
+    "hook": "认证是挑战与凭据的双向核对。",
+    "symptom": "认证找不到已注册凭据，或要求用户验证但认证器未满足。",
+    "principle": "区分 RP、origin、一次性 challenge、凭据 ID 和 UV；虚拟认证器用于测试，不是生产登录方案。",
+    "prerequisites": "20、35、49",
+    "concepts": [
+      {
+        "title": "注册与认证",
+        "body": "create() 生成凭据，get() 签署新挑战；服务端验证 clientData、rpIdHash 与签名。"
+      },
+      {
+        "title": "选择与验证",
+        "body": "allowCredentials 决定候选凭据；UP 与 UV 是不同标志。"
+      },
+      {
+        "title": "两条练习路径",
+        "body": "本地协议夹具理解失败条件，真实 WebAuthn 使用你启用的虚拟认证器，记录分别保存。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "先完成本地协议夹具，理解两种条件失败；它不调用真实认证器。",
+      "WebAuthn 面板启用 virtual authenticator environment，添加 CTAP2 / internal，支持 resident key 与 User Verification。",
+      "点击本页真实注册，检查面板 Credential ID 与服务接收的公钥；仅使用测试虚拟凭据。",
+      "点击真实认证；故障 A 更换候选 ID，故障 B 要求 UV，可在面板切换 Is user verified 重现。",
+      "应用对应对照；使用新 challenge，验证服务实际签名、origin、RP、UP / UV。",
+      "删除本课虚拟凭据和认证器并关闭虚拟环境；会话重启失效，不作为生产身份系统。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "认证 allowCredentials 不包含刚注册的凭据 ID"
+      },
+      {
+        "id": "b",
+        "label": "认证要求 UV，但认证器未报告用户验证"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "注册 ID 与候选 ID 不一致，get() 无匹配凭据"
+      },
+      {
+        "id": "b",
+        "label": "authenticatorData 的 UV 位未置位，required 条件不成立"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "保持同一 RP 和凭据 ID，使用新挑战完成认证"
+      },
+      {
+        "id": "b",
+        "label": "配置支持并通过 User Verification 的虚拟认证器，保持 required"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 认证找不到已注册凭据，或要求用户验证但认证器未满足。",
+      "对照实际证据：注册 ID 与候选 ID 不一致，get() 无匹配凭据；或 authenticatorData 的 UV 位未置位，required 条件不成立",
+      "一次只改变对应原因：保持同一 RP 和凭据 ID，使用新挑战完成认证；或 配置支持并通过 User Verification 的虚拟认证器，保持 required"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/webauthn/",
+    "boundary": "课堂协议夹具不等于真实 create/get；真实结果独立显示。支持 ES256、none attestation，非生产认证服务。"
+  },
+  {
+    "id": "T07",
+    "kind": "T07",
+    "hook": "把 AI 建议变成可证伪的假设。",
+    "symptom": "建议修改 z-index 或颜色，但没有解释为什么按钮仍点不到。",
+    "principle": "给出上下文、实际证据和预期，让工具检查建议；生成式回答不是事实，功能不可用也能完成验证练习。",
+    "prerequisites": "05、07、28、52",
+    "concepts": [
+      {
+        "title": "选择上下文",
+        "body": "定位实际元素、请求或 trace，描述稳定复现和已排除项。"
+      },
+      {
+        "title": "最小验证",
+        "body": "本课提供预置建议供批判，不发送真实 AI 请求；逐条保留或推翻。"
+      },
+      {
+        "title": "可用性与数据",
+        "body": "AI assistance 受版本、地区、账号及管理策略影响；只用本地合成内容。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "记录当前元素、实际命中目标和业务预期，阅读明确标注的预置待验证建议。",
+      "写一条包含证据、条件和问题的上下文，避免只问“为什么不工作”。",
+      "功能可用时从实际 Elements / Network / Performance / Sources 上下文打开 AI assistance。",
+      "检查建议引用的事实，用实际样式、命中测试或调用栈验证；不可用时完成同一批判流程。",
+      "应用最小对应对照，保留被推翻的假设与反例。",
+      "结束恢复修改；不要提交私人页面、账号或敏感请求内容。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "按钮被透明层拦截，修改颜色无法恢复点击"
+      },
+      {
+        "id": "b",
+        "label": "按钮自身 disabled，提升 z-index 无效"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "elementFromPoint 命中覆盖层，按钮并未收到点击"
+      },
+      {
+        "id": "b",
+        "label": "元素 disabled=true，没有发生预期业务处理"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "移除拦截层的 pointer-events，验证业务与邻近交互"
+      },
+      {
+        "id": "b",
+        "label": "修复禁用条件并核对库存，不盲目覆盖 CSS"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 建议修改 z-index 或颜色，但没有解释为什么按钮仍点不到。",
+      "对照实际证据：elementFromPoint 命中覆盖层，按钮并未收到点击；或 元素 disabled=true，没有发生预期业务处理",
+      "一次只改变对应原因：移除拦截层的 pointer-events，验证业务与邻近交互；或 修复禁用条件并核对库存，不盲目覆盖 CSS"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/ai-assistance/chat",
+    "boundary": "站内建议为预置练习材料，不伪造 AI 响应；不自动启用云端功能或发送内容。"
+  },
+  {
+    "id": "T08",
+    "kind": "T08",
+    "hook": "面板背后是一条条有上下文的消息。",
+    "symptom": "把事件当作请求响应，或导航后继续使用旧 nodeId，导致协议解释错误。",
+    "principle": "CDP 的请求用 id 对应响应，事件没有请求 id；session 和导航生命周期影响句柄有效性。",
+    "prerequisites": "04、19、28",
+    "concepts": [
+      {
+        "title": "请求与事件",
+        "body": "method / params 是请求或事件，响应按 id 对应；完成顺序不保证请求顺序。"
+      },
+      {
+        "title": "目标与生命周期",
+        "body": "nodeId 属于目标文档，导航后需重新 getDocument 和 querySelector。"
+      },
+      {
+        "title": "只读观察开始",
+        "body": "Protocol monitor 看 DOM.getDocument、DOM.querySelector 和 DOM.getAttributes；本页不暴露调试端口。"
+      }
+    ],
+    "demoSteps": [
+      "改变本课输入条件并预测结果",
+      "对照请求、状态或约束的关系",
+      "切换最小修复并复位，核对改变的范围"
+    ],
+    "steps": [
+      "先操作消息配对模型；本地消息明确为教学数据，不是浏览器协议采集。",
+      "Settings / Experiments 启用 Protocol Monitor（若版本需要），Command menu 打开。",
+      "在 Elements 选择商品，观察 DOM 命令、响应 id 与事件；不要将整份会话日志公开。",
+      "用编辑器发送 DOM.getDocument，再根据 root.nodeId 发送 DOM.querySelector，selector 为 #product。",
+      "用返回 nodeId 发 DOM.getAttributes，刷新后重新获取，解释旧句柄为何失效。",
+      "记录真实方法和字段；停止记录、清除过滤并恢复实验选项，不开启远程调试端口。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "按消息到达顺序配对，误把事件当作响应"
+      },
+      {
+        "id": "b",
+        "label": "导航后继续使用上一文档的 nodeId"
+      },
+      {
+        "id": "c",
+        "label": "只根据表面现象修改无关条件"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "响应 id 与当前请求不同，中间插入无 id 的事件"
+      },
+      {
+        "id": "b",
+        "label": "新文档已更新，旧 nodeId 收到错误而非当前属性"
+      },
+      {
+        "id": "c",
+        "label": "没有保留条件与输入的一次截图"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "按 id / sessionId 匹配，区分无 id 的事件"
+      },
+      {
+        "id": "b",
+        "label": "重新取得 root 与节点句柄，再发只读属性命令"
+      },
+      {
+        "id": "c",
+        "label": "同时改变设备、数据与逻辑，只保留成功结果"
+      }
+    ],
+    "hints": [
+      "先复现 把事件当作请求响应，或导航后继续使用旧 nodeId，导致协议解释错误。",
+      "对照实际证据：响应 id 与当前请求不同，中间插入无 id 的事件；或 新文档已更新，旧 nodeId 收到错误而非当前属性",
+      "一次只改变对应原因：按 id / sessionId 匹配，区分无 id 的事件；或 重新取得 root 与节点句柄，再发只读属性命令"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/protocol-monitor",
+    "boundary": "页面 DOM / MutationObserver 结果不是 CDP；本地配对练习与真实协议操作分别记录。"
+  }
+]

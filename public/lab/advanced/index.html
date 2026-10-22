@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>日常好物 · 综合与专题实验</title>
+    <link rel="stylesheet" href="/lab/advanced/style.css" />
+    <script type="module" src="/lab/advanced/runtime.js"></script>
+  </head>
+  <body>
+    <header>
+      <strong>日常好物 <small>Little goods</small></strong
+      ><span>从现象走向证据</span>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">本地教学商城</p>
+        <h1 id="title">正在准备实验…</h1>
+        <p id="symptom"></p>
+        <div class="controls">
+          <button id="baseline">运行故障</button
+          ><button id="restore" class="secondary">恢复故障</button
+          ><button id="stop" class="secondary">停止并清理本页</button>
+        </div>
+        <div id="repair" hidden class="controls">
+          <label
+            >对照方案<select
+              id="correction"
+              aria-label="对照方案"
+            ></select></label
+          ><button id="fixed">应用所选对照</button>
+        </div>
+        <p id="status" role="status">从教程准备会话后开始。</p>
+      </section>
+      <section id="scene" hidden>
+        <div class="shop-heading">
+          <h2>晨间陶瓷杯</h2>
+          <span id="sku"></span>
+        </div>
+        <div id="product">
+          <div class="illustration" aria-hidden="true">☕</div>
+          <div>
+            <h3>把问题留在可观察的页面里。</h3>
+            <p id="price" class="price"></p>
+            <label
+              >数量<input id="quantity" type="number" min="1" max="9" readonly
+            /></label>
+            <div class="action-host">
+              <button id="add">加入购物车</button>
+              <div id="shield" hidden></div>
+            </div>
+            <button id="favorite" aria-label="收藏陶瓷杯">♡</button>
+            <p id="cart" aria-live="polite">尚未加购</p>
+          </div>
+        </div>
+        <div id="fixture"></div>
+        <div class="controls">
+          <button id="execute">执行目标流程</button
+          ><button id="inspect" class="secondary">重新检查当前页面</button>
+        </div>
+        <p id="scene-message" role="status">先运行，再执行目标流程。</p>
+      </section>
+      <section id="native" hidden>
+        <h2>原生工具练习</h2>
+        <p id="native-boundary"></p>
+        <div id="sensor-controls" hidden>
+          <button id="geo">读取浏览器位置</button
+          ><button id="orientation" class="secondary">开始观察方向</button>
+        </div>
+        <div id="auth-controls" hidden>
+          <button id="register">真实 WebAuthn 注册</button
+          ><button id="authenticate">真实 WebAuthn 认证</button>
+          <p>
+            先启用 DevTools 虚拟认证器；这些按钮会调用真实 create() /
+            get()。取消不会完成认证。
+          </p>
+        </div>
+        <div id="workspace-controls" hidden>
+          <a href="/lab/advanced/workspace/cart.ts" download="cart.ts"
+            >下载本课 cart.ts</a
+          >
+          <p>仅将单独的练习目录授权给 Workspaces；源码修改后在磁盘确认。</p>
+        </div>
+        <pre id="native-result">尚未执行原生步骤。</pre>
+        <label
+          >原生步骤状态（自报）<select id="native-state">
+            <option value="pending">待原生验证 / 无设备或功能</option>
+            <option value="performed">已实际操作并保留独立证据</option>
+            <option value="unavailable">本环境不可用，已记录限制</option>
+          </select></label
+        ><label
+          >原生证据与限制（不会自动评分）<textarea
+            id="native-note"
+            rows="3"
+            maxlength="2000"
+            placeholder="记录工具、浏览器版本、实际字段、设备或不可用原因；不填私密资料。"
+          ></textarea>
+        </label>
+      </section>
+      <section id="release" hidden>
+        <h2>发布检查矩阵（人工记录）</h2>
+        <p>
+          逐项填写已见证据或未检查原因。页面不自动操作面板，也不产生 Lighthouse
+          分数、trace 或堆快照。
+        </p>
+        <div id="matrix"></div>
+      </section>
+      <section>
+        <h2>本轮观察</h2>
+        <button id="report" disabled>记录检查并回传</button>
+        <p id="check-status" role="status">尚未记录</p>
+        <details>
+          <summary>展开本页实际观察</summary>
+          <pre id="metrics">{}</pre>
+        </details>
+        <button id="export" class="secondary" disabled>导出观察 JSON</button>
+        <p class="muted">
+          本页结果可以被主动修改；本地练习、人工记录和真实原生结果分别保存，不能作为可信监考或全面质量认证。
+        </p>
+      </section>
+      <details id="instructions">
+        <summary>取证步骤与恢复</summary>
+        <ol id="steps"></ol>
+        <p>
+          关闭本页只清理本会话资源。另请恢复限速、Sensors、Workspace、虚拟认证器与实验选项；本页不改变
+          Chrome 个人资料。
+        </p>
+      </details>
+      <p id="environment" class="muted"></p>
+    </main>
+    <footer>DevTools 实验室 · 本地学习版 · 无真实交易</footer>
+  </body>
+</html>

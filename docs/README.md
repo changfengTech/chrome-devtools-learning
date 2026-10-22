@@ -17,8 +17,10 @@
 | [QA-FOUNDATIONS.md](QA-FOUNDATIONS.md) | 逐课演示、两种变体、重复运行及边界检查 |
 | [LIGHTHOUSE-TOOLS.md](LIGHTHOUSE-TOOLS.md) | 六课质量 / 辅助工具脚本、真实审计与检查边界 |
 | [QA-LIGHTHOUSE-TOOLS.md](QA-LIGHTHOUSE-TOOLS.md) | 真实 Lighthouse、商城流程、三视口与待补原生工具复核 |
+| [CAPSTONE-TOPICS.md](CAPSTONE-TOPICS.md) | 11 课综合 / 专题、三个新增章末合同与前置条件 |
+| [QA-CAPSTONE-TOPICS.md](QA-CAPSTONE-TOPICS.md) | 完整流程、自评、三视口、真实协议与原生待办 |
 | [DESIGN.md](DESIGN.md) | 界面与可读性设计 |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | 当前三个本地服务的架构、接口和检查边界 |
 | [STATUS.md](STATUS.md) | 已实现、已验证与剩余工作 |
 
-课程目录由 `src/data/curriculum.json` 生成，基础课脚本由 `src/data/foundations.json` 与合同补充生成。网络与状态脚本由 `src/data/network-state.json` 和生成器维护。性能脚本由 `src/data/performance.json` 和生成器维护。内存脚本由 `src/data/memory.json` 与生成器维护。质量脚本由 `src/data/quality.json` 与生成器维护。当前 01–52 共 52 课开放，11 课规划；正式范围保持 55 主线 + 8 专题及 8 个章末题。
+课程目录由 `src/data/curriculum.json` 生成，基础课脚本由 `src/data/foundations.json` 与合同补充生成。网络与状态脚本由 `src/data/network-state.json` 和生成器维护。性能脚本由 `src/data/performance.json` 和生成器维护。内存脚本由 `src/data/memory.json` 与生成器维护。质量脚本由 `src/data/quality.json` 与生成器维护。综合 / 专题脚本由 `src/data/advanced.json` 与生成器维护。当前 63 课学习流程与 8 章末功能开放，原生工具 / 设备退出验收仍分列；62 份生成脚本加第 21 课样板覆盖 55 主线 + 8 专题。

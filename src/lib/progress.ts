@@ -5,6 +5,7 @@ export interface LessonProgress {
   challengeAssisted?: boolean;
   note: string;
   hints: number;
+  capstoneScores?: number[];
 }
 export interface ChapterProgress {
   note: string;
@@ -75,6 +76,19 @@ export function parseProgress(
         throw new Error("辅助记录格式不正确。");
       record.challengeAssisted = item.challengeAssisted;
     }
+    if (item.capstoneScores !== undefined) {
+      const scores = item.capstoneScores;
+      if (
+        !["53", "54", "55"].includes(id) ||
+        !Array.isArray(scores) ||
+        scores.length !== 5 ||
+        scores.some(
+          (score) => !Number.isInteger(score) || score < 0 || score > 2,
+        )
+      )
+        throw new Error("综合自评格式不正确。");
+      record.capstoneScores = [...scores];
+    }
     records[id] = record;
   }
   if (value.chapters !== undefined) {
@@ -94,6 +108,9 @@ export function parseProgress(
           "performance",
           "memory",
           "lighthouse",
+          "elements",
+          "console",
+          "sources",
         ].includes(id) ||
         !c ||
         typeof c.note !== "string" ||
@@ -123,4 +140,17 @@ export function parseProgress(
     return { version: 1, records, chapters };
   }
   return { version: 1, records };
+}
+
+export function assessmentComplete(scores: readonly number[], report: string) {
+  return (
+    scores.length === 5 &&
+    scores.every(
+      (score) => Number.isInteger(score) && score >= 0 && score <= 2,
+    ) &&
+    scores.reduce((a, b) => a + b, 0) >= 8 &&
+    scores[2]! > 0 &&
+    scores[4]! > 0 &&
+    report.trim().length > 0
+  );
 }

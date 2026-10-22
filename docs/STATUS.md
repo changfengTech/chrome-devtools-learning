@@ -1,25 +1,27 @@
 # 实施状态
 
-更新：2026-10-22。**52/63 课可实战**：01–52；其余 11 课（53–55、T01–T08）规划。完整范围仍为 55 主线、8 专题及另列的 8 个面板章末题。
+更新：2026-10-22。**63/63 节学习流程已开放**：01–55、T01–T08；另列的 **8/8 面板章末功能已接入**。这表示本地课程与检查流程可用，不表示原生工具、真机与整体验收全部完成。
 
-## 本批功能
+## 本批交付
 
-阶段 6 Lighthouse / 辅助工具已接入 45–49、52 六课及 Lighthouse 章末。每课有独立原理交互、固定引导、两种迁移故障、三级提示、解析和复盘。覆盖审计模式 / 条件、四类审计与具体证据、优先级和多轮比较、Device Mode、Issues / 连接与内容限制、Local overrides / Changes / Workspaces 的范围。
+阶段 7 增加 53–55 综合实战、T01–T08 专题，以及 Elements / Console / Sources 三章末。每课含目标、前置关系、可复位模型、固定引导、两种迁移故障、三级提示、解析与复盘。综合现场先隐藏面板与根因，提交判断后解锁因果重放；发布题用可选证据生成关系图和遗漏提示，另填实际发布矩阵。综合挑战及八章末均要求报告与五维自评 ≥8/10，证据 / 修复验证非零；分数明确为自评。
 
-真实 Lighthouse 报告来自独立审计商品页，导入后显示原分数；47 每阶段三份 Navigation 报告比较中位数。48 是实际 CSS 溢出，49 是实际 CSP / Cookie Domain 拒绝，52 有稳定商品 URL，服务器对照与保持原始故障的手工覆盖入口分开。
+真实场景含搜索响应乱序、会话独有 Storage、详情对象 / 订阅保留、多项发布故障、JS / map / TS、实际本地视频与收货表单。WebAuthn 提供真实 create/get 入口与 ES256 签名验证；其原生虚拟认证器实操和课堂条件夹具分列。Android、Sensors、Autofill、AI 与 Protocol monitor 原生状态独立记录，不能用本地模型冒充完成。症状导航、速查、实验入口与 README 同步。
 
-Network / Application / Performance / Memory / Lighthouse 五个章末可用；Elements / Console / Sources 三个按原计划继续。旧 v1、笔记、提示标记与五章末兼容。阶段 2 关联的 48、52 功能随本批补齐。
+62 份生成详细脚本 + 独立的第 21 课样板覆盖全部 63 课。共同合同见 [CAPSTONE-TOPICS.md](CAPSTONE-TOPICS.md)，本批证据见 [QA-CAPSTONE-TOPICS.md](QA-CAPSTONE-TOPICS.md)。学习 v1 保持向后兼容，新综合自评为可选字段；不会补造旧记录的历史分数。
 
-## 验证与退出待办
+## 验证与待办
 
-构建、47 项测试、六个模型操作 / 复位及实际三视口检查已有记录。86 份真实审计、逐课流程与章末细项见 [QA-LIGHTHOUSE-TOOLS.md](QA-LIGHTHOUSE-TOOLS.md)；合同及 6 份脚本见 [LIGHTHOUSE-TOOLS.md](LIGHTHOUSE-TOOLS.md)。51 份生成详细脚本另加第 21 课样板，共覆盖 52 个开放课程。
+本批 11 课各三轮完整引导、两配置独立挑战，以及三章末共 12 组病例有浏览器证据；自评门槛、八章末导入往返、非法导入保护与跨窗口同步分别核对。响应式检查与最终构建 / 测试数量以本批 QA 表为准，不把页面结果等同原生面板操作。
 
-原生 Lighthouse Navigation / Timespan / Snapshot、Issues / Privacy and security、Overrides / Changes / Workspaces 的面板按钮与本地目录操作需按验收表补充人工复核。CLI、协议和页面检查分别记录，不冒称原生操作或全面质量认证。六课三轮完整引导、两组挑战、多窗口结果隔离及进度同步均已有实际证据；剩余原生工具人工复核仍按本批 QA 表保留。
+阶段 8 继续补齐原生退出验收：本批 Android 真机、Sensors 权限 / 方向、Workspace 实际落盘、Media / Autofill 面板、WebAuthn 虚拟认证器、可用地区 AI assistance 与 Protocol monitor 面板。IAB 可用的真实 CDP DOM 命令、属性与导航失效已有证据；不能冒称 Protocol monitor UI 已操作。
 
-阶段 5 原有原生待办继续保留：第三份快照 Comparison、Allocation timeline / sampling、Performance monitor 多点趋势、其余配置 Retainers，以及 Recorder 实际录制 / 编辑 / Replay / 导出。已有证据见 [QA-MEMORY.md](QA-MEMORY.md)。前批 [基础](QA-FOUNDATIONS.md)、[网络状态](QA-NETWORK-APPLICATION.md)、[性能渲染](QA-PERFORMANCE.md) 的历史检查不称为本轮重新全部实测。
+阶段 5 待办保留：第三份 Heap snapshot 的 Comparison、Allocation timeline / sampling、Performance monitor 多点趋势、其他 Retainers 配置及 Recorder 原生录制 / 编辑 / Replay / 导出。见 [QA-MEMORY.md](QA-MEMORY.md)。阶段 6 的原生 Lighthouse 三模式、Issues / Privacy and security、Overrides / Changes / Workspaces 按 [QA-LIGHTHOUSE-TOOLS.md](QA-LIGHTHOUSE-TOOLS.md) 补复核；既有 CLI、协议与页面证据保留。
 
-## 接续与运行
+更早的 [基础](QA-FOUNDATIONS.md)、[网络状态](QA-NETWORK-APPLICATION.md)、[性能渲染](QA-PERFORMANCE.md) 记录仍为各批历史实测，不声称这轮重新全部人工验证。
 
-下一批是综合与专题 53–55、T01–T08，以及其余三章末；再完成完整正式范围和原生工具退出验收。
+## 运行
 
-教程生产预览 http://127.0.0.1:4173/ ，商城 4174，同伴服务 4175。从课程准备会话；切换服务前停止旧服务。公开仓库：[changfengTech/chrome-devtools-learning](https://github.com/changfengTech/chrome-devtools-learning)。临时会话、依赖、构建产物、个人记录与本地环境文件不提交。
+项目目录运行 `pnpm dev`，或 `pnpm build && pnpm preview:all`。生产预览 http://127.0.0.1:4173/ ，商城 4174，同伴服务 4175。日常服务保持随机挑战；受控 QA 配置不作为日常默认。
+
+公开仓库：[changfengTech/chrome-devtools-learning](https://github.com/changfengTech/chrome-devtools-learning)。会话、依赖、构建产物、个人记录与本地环境文件不提交。

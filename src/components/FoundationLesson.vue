@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from "vue";
-import { chapters, type Lesson } from "../data/curriculum";
+import { chapters, lessons, type Lesson } from "../data/curriculum";
 import book from "../data/foundations.json";
 import networkBook from "../data/network-state.json";
 import NetworkStateDemo from "./NetworkStateDemo.vue";
@@ -8,10 +8,13 @@ import performanceBook from "../data/performance.json";
 import PerformanceDemo from "./PerformanceDemo.vue";
 import memoryBook from "../data/memory.json";
 import MemoryDemo from "./MemoryDemo.vue";
+import advancedBook from "../data/advanced.json";
+import AdvancedDemo from "./AdvancedDemo.vue";
 import qualityBook from "../data/quality.json";
 import QualityDemo from "./QualityDemo.vue";
 import AppIcon from "./AppIcon.vue";
 import FoundationDemo from "./FoundationDemo.vue";
+import { assessmentComplete } from "../lib/progress";
 import { useLearning } from "../composables/useLearning";
 import { labOrigin, labRequest, labWindowName } from "../lib/lab";
 const props = defineProps<{ lesson: Lesson }>();
@@ -23,7 +26,23 @@ const content = computed(
       ...performanceBook,
       ...memoryBook,
       ...qualityBook,
+      ...advancedBook,
     ].find((item) => item.id === props.lesson.id)!,
+);
+const isAdvanced = computed(() =>
+  advancedBook.some((item) => item.id === props.lesson.id),
+);
+const attempted = ref(
+  Boolean(
+    useLearning().record(props.lesson.id).practiceAt ||
+      useLearning().record(props.lesson.id).challengeAt,
+  ),
+);
+const prerequisites = computed(
+  () => advancedBook.find((item) => item.id === props.lesson.id)?.prerequisites,
+);
+const advancedBoundary = computed(
+  () => advancedBook.find((item) => item.id === props.lesson.id)?.boundary,
 );
 const isQuality = computed(() =>
   qualityBook.some((item) => item.id === props.lesson.id),
@@ -38,15 +57,17 @@ const isNetworkState = computed(() =>
   networkBook.some((item) => item.id === props.lesson.id),
 );
 const apiBase = computed(() =>
-  isQuality.value
-    ? "/api/quality"
-    : isMemory.value
-      ? "/api/memory"
-      : isPerformance.value
-        ? "/api/performance"
-        : isNetworkState.value
-          ? "/api/network-state"
-          : "/api/foundations",
+  isAdvanced.value
+    ? "/api/advanced"
+    : isQuality.value
+      ? "/api/quality"
+      : isMemory.value
+        ? "/api/memory"
+        : isPerformance.value
+          ? "/api/performance"
+          : isNetworkState.value
+            ? "/api/network-state"
+            : "/api/foundations",
 );
 const learning = useLearning();
 const step = ref(0),
@@ -77,8 +98,24 @@ const note = computed({
   get: () => learning.record(props.lesson.id).note,
   set: (value) => learning.update(props.lesson.id, { note: value }),
 });
-const nextId = computed(() =>
-  String(Number(props.lesson.id) + 1).padStart(2, "0"),
+const isCapstone = computed(() => ["53", "54", "55"].includes(props.lesson.id));
+const rubric = ["复现准确", "工具选择", "证据有效", "根因解释", "修复验证"];
+const selfScores = computed(
+  () => learning.record(props.lesson.id).capstoneScores || [0, 0, 0, 0, 0],
+);
+const selfTotal = computed(() => selfScores.value.reduce((a, b) => a + b, 0));
+function score(index: number, event: Event) {
+  const scores = [...selfScores.value];
+  scores[index] = Number((event.target as HTMLSelectElement).value);
+  learning.update(props.lesson.id, {
+    capstoneScores: scores,
+    challengeAt: undefined,
+  });
+}
+const nextId = computed(
+  () =>
+    lessons[lessons.findIndex((item) => item.id === props.lesson.id) + 1]?.id ||
+    "01",
 );
 function showHint() {
   hintLevel.value = Math.min(3, hintLevel.value + 1);
@@ -122,15 +159,17 @@ function open(mode: "practice" | "challenge") {
     tutorial: location.origin,
   });
   labWindow = window.open(
-    isQuality.value
-      ? `${labOrigin}/quality/${token}/?${query}`
-      : isMemory.value
-        ? `${labOrigin}/memory/${token}/?${query}`
-        : isPerformance.value
-          ? `${labOrigin}/performance/${token}/?${query}`
-          : isNetworkState.value
-            ? `${labOrigin}/labs/${token}/?${query}`
-            : `${labOrigin}/foundations/?${query}`,
+    isAdvanced.value
+      ? `${labOrigin}/advanced/${token}/?${query}`
+      : isQuality.value
+        ? `${labOrigin}/quality/${token}/?${query}`
+        : isMemory.value
+          ? `${labOrigin}/memory/${token}/?${query}`
+          : isPerformance.value
+            ? `${labOrigin}/performance/${token}/?${query}`
+            : isNetworkState.value
+              ? `${labOrigin}/labs/${token}/?${query}`
+              : `${labOrigin}/foundations/?${query}`,
     `${labWindowName}-lesson`,
   );
   if (!labWindow)
@@ -172,6 +211,7 @@ async function completePractice() {
       evidence: practiceEvidence.value,
       verification: "a",
     });
+    attempted.value = true;
     if (checked.passed) {
       learning.update(props.lesson.id, {
         practiceAt: new Date().toISOString(),
@@ -196,18 +236,38 @@ async function grade(reveal = false) {
       evidence: evidence.value,
       verification: verification.value,
     });
+    attempted.value = true;
     if (reveal) {
       answerViewed.value = true;
       learning.update(props.lesson.id, { hints: 3 });
       hintLevel.value = 3;
     }
-    result.value = checked;
-    if (checked.passed && !reveal)
+    const selfComplete =
+      !isCapstone.value || assessmentComplete(selfScores.value, note.value);
+    result.value = {
+      ...checked,
+      passed: checked.passed && selfComplete,
+      checks: [
+        ...checked.checks,
+        ...(isCapstone.value
+          ? [
+              {
+                label: "综合报告与五维自评 ≥8/10，证据和验证非零（自评）",
+                passed: selfComplete,
+              },
+            ]
+          : []),
+      ],
+    };
+    if (checked.passed && selfComplete && !reveal)
       learning.update(props.lesson.id, {
         challengeAt: new Date().toISOString(),
         challengeAssisted: answerViewed.value,
       });
-    feedback.value = "";
+    feedback.value =
+      isCapstone.value && !selfComplete
+        ? "案例与自评分别核对：请补齐综合报告和五维自评，不能把结构化答案当作能力认证。"
+        : "";
   } catch (error) {
     feedback.value =
       error instanceof Error ? error.message : "检查失败，请重试。";
@@ -234,6 +294,9 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
         </div>
         <h1>{{ content.hook }}</h1>
         <p>{{ lesson.goal }}</p>
+        <p v-if="prerequisites" class="boundary-note">
+          前置课程：{{ prerequisites }}。专题原生步骤按当前环境分别记录。
+        </p>
       </div>
       <span class="ready-badge"><span class="status-dot"></span>可实战</span>
     </div>
@@ -281,8 +344,13 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
           ><p class="section-kicker">用一个小模型理解关键关系</p>
           <h2>{{ lesson.demo }}</h2>
           <p class="body-copy">{{ content.principle }}</p>
+          <AdvancedDemo
+            v-if="isAdvanced"
+            :key="`${lesson.id}-${demoKey}`"
+            :lesson="lesson.id"
+            :unlocked="attempted" />
           <QualityDemo
-            v-if="isQuality"
+            v-else-if="isQuality"
             :key="`${lesson.id}-${demoKey}`"
             :lesson="lesson.id" />
           <MemoryDemo
@@ -370,7 +438,10 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
           >
             检查证据并记录练习<AppIcon name="check" :size="16" />
           </button>
-          <p v-if="isQuality" class="boundary-note">
+          <p v-if="isAdvanced" class="boundary-note">
+            {{ advancedBoundary }} 原生结果与本地练习分列，模型不计完成。
+          </p>
+          <p v-else-if="isQuality" class="boundary-note">
             Lighthouse
             只展示导入的真实报告；页面不生成模拟分数。服务器对照、手工 Overrides
             和原生工具操作分别取证；固定条件再复测。
@@ -453,6 +524,38 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
                 </option>
               </select></label
             >
+            <section v-if="isCapstone" class="capstone-assessment">
+              <h3>综合排查报告与五维自评</h3>
+              <label class="note-label" for="capstone-report"
+                >综合排查报告<span
+                  >起始条件 / 工具 / 原始证据 / 根因 /
+                  同条件复测与遗留问题</span
+                ></label
+              ><textarea
+                id="capstone-report"
+                v-model="note"
+                maxlength="4000"
+                rows="5"
+                class="capstone-report"
+              ></textarea>
+              <div class="chapter-rubric">
+                <label v-for="(dimension, index) in rubric" :key="dimension"
+                  >{{ dimension
+                  }}<select
+                    :value="selfScores[index]"
+                    @change="score(index, $event)"
+                  >
+                    <option :value="0">0 · 缺失或错误</option>
+                    <option :value="1">1 · 部分成立</option>
+                    <option :value="2">2 · 有充分依据</option>
+                  </select></label
+                >
+              </div>
+              <p class="boundary-note">
+                自评 {{ selfTotal }}/10；目标 ≥8，证据与修复验证不得为
+                0。报告与分数用于自查，不自动评分理解，也不证明原生工具操作。旧记录不会补造历史自评。
+              </p>
+            </section>
             <div class="fd-controls">
               <button
                 class="button primary"
@@ -610,3 +713,20 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
     </div>
   </div>
 </template>
+
+<style scoped>
+.capstone-assessment {
+  margin: 24px 0;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+.capstone-report {
+  width: 100%;
+  font: inherit;
+  line-height: 1.8;
+  padding: 14px;
+  border: 1px solid #cbd8ec;
+  border-radius: 6px;
+  resize: vertical;
+}
+</style>

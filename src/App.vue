@@ -7,6 +7,7 @@ import FoundationLesson from "./components/FoundationLesson.vue";
 import networkBook from "./data/network-state.json";
 import performanceBook from "./data/performance.json";
 import memoryBook from "./data/memory.json";
+import advancedBook from "./data/advanced.json";
 import qualityBook from "./data/quality.json";
 import ChapterChallenge from "./components/ChapterChallenge.vue";
 import { chapters, lessons, getLesson } from "./data/curriculum";
@@ -93,6 +94,18 @@ async function importFile(event: Event) {
 }
 const symptomLinks = [
   {
+    title: "发布前不知道从哪查起",
+    icon: "flag",
+    clues: "先列正常行为和检查矩阵，再关联八面板证据与遗留问题。",
+    lesson: "55",
+  },
+  {
+    title: "真机、定位或浏览器专题",
+    icon: "tools",
+    clues: "从前置依赖和可用条件开始；本地练习与真实设备分别取证。",
+    lesson: "T01",
+  },
+  {
     title: "请求失败，或者数据不对",
     icon: "network",
     clues: "找到对应请求，检查参数、状态与响应。",
@@ -114,13 +127,13 @@ const symptomLinks = [
     title: "反复操作后越来越慢",
     icon: "chip",
     clues: "观察内存与 DOM 趋势，再追保留引用。",
-    lesson: "40",
+    lesson: "54",
   },
   {
     title: "刷新后状态异常",
     icon: "database",
     clues: "区分页面状态、存储、HTTP 缓存和 Service Worker。",
-    lesson: "36",
+    lesson: "53",
   },
   {
     title: "样式不对，或者点不到",
@@ -321,7 +334,10 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
                       : "沿着路线，建立排查能力"
                   }}
                 </h2>
-                <p>第 01～52 课已开放实战，其余课程可查看课程安排。</p>
+                <p>
+                  55 节主线与 8
+                  节专题已开放，原生设备与工具验证按课内说明分别记录。
+                </p>
               </div>
               <label class="search-field"
                 ><AppIcon name="search" :size="17" /><input
@@ -337,7 +353,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
                 ><i class="status-dot"></i>{{ readyResults }} 节可实战<span
                   class="meta-divider"
                   >/</span
-                >其余按阶段开发</span
+                >原生验证分别记录</span
               >
             </div>
             <div v-if="!groups.length" class="empty-state">
@@ -413,6 +429,9 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
             v-if="
               activeChapter &&
               [
+                'elements',
+                'console',
+                'sources',
                 'network',
                 'application',
                 'performance',
@@ -428,13 +447,13 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
         <FoundationLesson
           v-else-if="
             activeLesson &&
-            Number(activeLesson.id) >= 1 &&
             (Number(activeLesson.id) <= 18 ||
               [
                 ...networkBook,
                 ...performanceBook,
                 ...memoryBook,
                 ...qualityBook,
+                ...advancedBook,
               ].some((item) => item.id === activeLesson?.id))
           "
           :key="activeLesson.id"
@@ -629,6 +648,29 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
                 >进入质量课程与章末挑战</a
               ><a class="button secondary" href="#lesson/48"
                 >Device Mode 与工具实战</a
+              >
+            </article>
+          </div>
+          <div class="lab-cases">
+            <article>
+              <AppIcon name="flag" :size="25" />
+              <h2>综合实战 · 53–55</h2>
+              <p>
+                先隐藏工具与根因；从搜索错乱、持续卡顿到发布检查，提交判断后重放证据。
+              </p>
+              <a class="button primary" href="#chapter/capstone"
+                >进入综合实战</a
+              >
+            </article>
+            <article>
+              <AppIcon name="tools" :size="25" />
+              <h2>专题拓展 · T01–T08</h2>
+              <p>
+                传感器、真机、映射、媒体、填充、认证、AI
+                与协议；原生结果独立记录。
+              </p>
+              <a class="button primary" href="#chapter/topics"
+                >进入专题工具箱</a
               >
             </article>
           </div>

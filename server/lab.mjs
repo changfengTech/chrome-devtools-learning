@@ -9,6 +9,7 @@ import { createPerformanceHandler, performanceIds } from "./performance.mjs";
 
 import { createMemoryHandler, memoryIds } from "./memory.mjs";
 
+import { createAdvancedHandler, advancedIds } from "./advanced.mjs";
 import { createQualityHandler, qualityIds } from "./quality.mjs";
 
 const publicDirectory = fileURLToPath(new URL("../public/", import.meta.url));
@@ -67,12 +68,14 @@ export function createLabServer({
   performanceOptions = {},
   memoryOptions = {},
   qualityOptions = {},
+  advancedOptions = {},
 } = {}) {
   const challenges = new Map();
   const foundations = createFoundationHandler(foundationOptions);
   const field = createNetworkState(networkOptions);
   const performanceLab = createPerformanceHandler(performanceOptions);
   const memoryLab = createMemoryHandler(memoryOptions);
+  const advancedLab = createAdvancedHandler(advancedOptions);
   const qualityLab = createQualityHandler(qualityOptions);
   function session(id) {
     const entry = challenges.get(id);
@@ -100,6 +103,7 @@ export function createLabServer({
       response.end(JSON.stringify(data));
     };
     try {
+      if (await advancedLab({ request, response, url, json, bodyJson })) return;
       if (await qualityLab({ request, response, url, json, bodyJson })) return;
       if (await memoryLab({ request, response, url, json, bodyJson })) return;
       if (await performanceLab({ request, response, url, json, bodyJson }))
@@ -126,8 +130,9 @@ export function createLabServer({
             ...performanceIds,
             ...memoryIds,
             ...qualityIds,
+            ...advancedIds,
           ].sort(),
-          version: 6,
+          version: 7,
         });
         return;
       }

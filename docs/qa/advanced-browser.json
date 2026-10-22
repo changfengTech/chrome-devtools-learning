@@ -1,0 +1,3305 @@
+{
+  "guides": [
+    {
+      "id": "53",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "latest": 1,
+          "restored": "current",
+          "cart": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "latest": 2,
+          "restored": "current",
+          "cart": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 618.7999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "53",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "latest": 1,
+          "restored": "current",
+          "cart": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 649.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "latest": 2,
+          "restored": "current",
+          "cart": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 600.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "53",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "latest": 1,
+          "restored": "current",
+          "cart": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.2999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "latest": 2,
+          "restored": "current",
+          "cart": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 635.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "54",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "retained": 5,
+          "subscriptions": 0,
+          "checksum": 84,
+          "work": "synchronous",
+          "taskDuration": 9.399999998509884,
+          "expected": 84,
+          "visible": true,
+          "duration": 652.3000000044703
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "retained": 0,
+          "subscriptions": 0,
+          "checksum": 84,
+          "work": "chunked",
+          "taskDuration": 128.69999999552965,
+          "expected": 84,
+          "visible": true,
+          "duration": 602.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "54",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "retained": 5,
+          "subscriptions": 0,
+          "checksum": 84,
+          "work": "synchronous",
+          "taskDuration": 5.300000004470348,
+          "expected": 84,
+          "visible": true,
+          "duration": 617.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "retained": 0,
+          "subscriptions": 0,
+          "checksum": 84,
+          "work": "chunked",
+          "taskDuration": 126.59999999403954,
+          "expected": 84,
+          "visible": true,
+          "duration": 619.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "54",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "retained": 5,
+          "subscriptions": 0,
+          "checksum": 84,
+          "work": "synchronous",
+          "taskDuration": 6.700000002980232,
+          "expected": 84,
+          "visible": true,
+          "duration": 630.7999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "retained": 0,
+          "subscriptions": 0,
+          "checksum": 84,
+          "work": "chunked",
+          "taskDuration": 129.19999999552965,
+          "expected": 84,
+          "visible": true,
+          "duration": 745.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "55",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "total": 840,
+          "name": false,
+          "overflow": 261,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 5,
+          "expected": 84,
+          "visible": true,
+          "duration": 750.1999999955297,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "total": 84,
+          "name": true,
+          "overflow": 0,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 0,
+          "expected": 84,
+          "visible": true,
+          "duration": 687.7000000029802,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "55",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "total": 840,
+          "name": false,
+          "overflow": 261,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 5,
+          "expected": 84,
+          "visible": true,
+          "duration": 717.2000000029802,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "total": 84,
+          "name": true,
+          "overflow": 0,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 0,
+          "expected": 84,
+          "visible": true,
+          "duration": 719.2000000029802,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "55",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "total": 840,
+          "name": false,
+          "overflow": 261,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 5,
+          "expected": 84,
+          "visible": true,
+          "duration": 733.8999999985099,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "total": 84,
+          "name": true,
+          "overflow": 0,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 0,
+          "expected": 84,
+          "visible": true,
+          "duration": 799.7000000029802,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T01",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "coordinates": "swapped",
+          "fallbacks": 3,
+          "expected": 84,
+          "visible": true,
+          "duration": 600.2999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "coordinates": "correct",
+          "fallbacks": 3,
+          "expected": 84,
+          "visible": true,
+          "duration": 635.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T01",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "coordinates": "swapped",
+          "fallbacks": 3,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.8000000044703
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "coordinates": "correct",
+          "fallbacks": 3,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.2999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T01",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "coordinates": "swapped",
+          "fallbacks": 3,
+          "expected": 84,
+          "visible": true,
+          "duration": 618.2999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "coordinates": "correct",
+          "fallbacks": 3,
+          "expected": 84,
+          "visible": true,
+          "duration": 599.2000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T02",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "reachable": true,
+          "mapping": 0,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.7999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "reachable": true,
+          "mapping": 4174,
+          "expected": 84,
+          "visible": true,
+          "duration": 635.7000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T02",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "reachable": true,
+          "mapping": 0,
+          "expected": 84,
+          "visible": true,
+          "duration": 635.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "reachable": true,
+          "mapping": 4174,
+          "expected": 84,
+          "visible": true,
+          "duration": 601.3000000044703
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T02",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "reachable": true,
+          "mapping": 0,
+          "expected": 84,
+          "visible": true,
+          "duration": 666.2000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "reachable": true,
+          "mapping": 4174,
+          "expected": 84,
+          "visible": true,
+          "duration": 613
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T03",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mapStatus": 404,
+          "sourceMatches": false,
+          "total": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 635.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mapStatus": 200,
+          "sourceMatches": true,
+          "total": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 687.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T03",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mapStatus": 404,
+          "sourceMatches": false,
+          "total": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 669.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mapStatus": 200,
+          "sourceMatches": true,
+          "total": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T03",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mapStatus": 404,
+          "sourceMatches": false,
+          "total": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 650.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mapStatus": 200,
+          "sourceMatches": true,
+          "total": 84,
+          "expected": 84,
+          "visible": true,
+          "duration": 619.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T04",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mediaError": 4,
+          "advanced": false,
+          "forcedPause": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 615.7000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mediaError": 0,
+          "advanced": true,
+          "forcedPause": false,
+          "mediaEvents": "play,playing,timeupdate",
+          "expected": 84,
+          "visible": true,
+          "duration": 1349.7000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T04",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mediaError": 4,
+          "advanced": false,
+          "forcedPause": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 684.1999999955297
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mediaError": 0,
+          "advanced": true,
+          "forcedPause": false,
+          "mediaEvents": "play,playing,timeupdate",
+          "expected": 84,
+          "visible": true,
+          "duration": 1351.9000000059605
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T04",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mediaError": 4,
+          "advanced": false,
+          "forcedPause": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 622
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mediaError": 0,
+          "advanced": true,
+          "forcedPause": false,
+          "mediaEvents": "play,playing,timeupdate",
+          "expected": 84,
+          "visible": true,
+          "duration": 1370.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T05",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "semanticErrors": 2,
+          "fixtureMatches": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 620
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "semanticErrors": 0,
+          "fixtureMatches": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 684.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T05",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "semanticErrors": 2,
+          "fixtureMatches": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 668.1999999955297
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "semanticErrors": 0,
+          "fixtureMatches": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.5999999940395
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T05",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "semanticErrors": 2,
+          "fixtureMatches": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "semanticErrors": 0,
+          "fixtureMatches": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 651.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T06",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "credentialMatch": false,
+          "uv": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 669.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "credentialMatch": true,
+          "uv": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 651
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T06",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "credentialMatch": false,
+          "uv": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 636.2999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "credentialMatch": true,
+          "uv": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 667.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T06",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "credentialMatch": false,
+          "uv": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "credentialMatch": true,
+          "uv": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 652.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T07",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "clicks": 0,
+          "hit": "shield",
+          "disabled": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 635.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "clicks": 1,
+          "hit": "add",
+          "disabled": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T07",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "clicks": 0,
+          "hit": "shield",
+          "disabled": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 618.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "clicks": 1,
+          "hit": "add",
+          "disabled": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 667.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T07",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "clicks": 0,
+          "hit": "shield",
+          "disabled": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 634.7000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "clicks": 1,
+          "hit": "add",
+          "disabled": false,
+          "expected": 84,
+          "visible": true,
+          "duration": 669.0999999940395
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T08",
+      "cycle": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "matched": false,
+          "fresh": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 635.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "matched": true,
+          "fresh": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 683.2999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T08",
+      "cycle": 2,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "matched": false,
+          "fresh": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 635
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "matched": true,
+          "fresh": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 636.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    },
+    {
+      "id": "T08",
+      "cycle": 3,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "matched": false,
+          "fresh": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 602.1999999955297
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "matched": true,
+          "fresh": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 667.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+    }
+  ],
+  "challenges": [
+    {
+      "id": "53",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "latest": 1,
+          "restored": "current",
+          "cart": 11456,
+          "expected": 11456,
+          "visible": true,
+          "duration": 746.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "latest": 2,
+          "restored": "current",
+          "cart": 11456,
+          "expected": 11456,
+          "visible": true,
+          "duration": 701
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过✓ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）过期搜索响应覆盖了当前查询。证据：两个真实搜索请求先新后旧完成，页面却提交旧序号。验证：只提交最新请求并保存当前筛选，重复快速搜索与恢复。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。",
+      "manualRubric": {
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "reportNonEmpty": true,
+        "emptyGuard": null
+      }
+    },
+    {
+      "id": "53",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "latest": 2,
+          "restored": "old",
+          "cart": 1902,
+          "expected": 1902,
+          "visible": true,
+          "duration": 583.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "latest": 2,
+          "restored": "current",
+          "cart": 1902,
+          "expected": 1902,
+          "visible": true,
+          "duration": 633.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过✓ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）旧版本筛选记录未经迁移就恢复。证据：本会话 Storage 的 schemaVersion=1，恢复后分类不符合当前输入。验证：迁移或拒绝旧结构，只清理本会话键并复测恢复。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。",
+      "manualRubric": {
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "reportNonEmpty": true,
+        "emptyGuard": "还有证据需要补齐。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过○ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+      }
+    },
+    {
+      "id": "54",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "retained": 5,
+          "subscriptions": 0,
+          "checksum": 19464,
+          "work": "synchronous",
+          "taskDuration": 5.899999998509884,
+          "expected": 19464,
+          "visible": true,
+          "duration": 766.7000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "retained": 0,
+          "subscriptions": 0,
+          "checksum": 19464,
+          "work": "chunked",
+          "taskDuration": 125.10000000149012,
+          "expected": 19464,
+          "visible": true,
+          "duration": 716.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过✓ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）关闭的详情被数组保留且每次重复同步计算。证据：五次关闭后数组仍持有五个节点，同步任务反复出现。验证：清空本页引用并拆分计算，按同样五次操作复测。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。",
+      "manualRubric": {
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "reportNonEmpty": true,
+        "emptyGuard": null
+      }
+    },
+    {
+      "id": "54",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "retained": 0,
+          "subscriptions": 5,
+          "checksum": 8850,
+          "work": "synchronous",
+          "taskDuration": 7.5,
+          "expected": 8850,
+          "visible": true,
+          "duration": 834.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "retained": 0,
+          "subscriptions": 0,
+          "checksum": 8850,
+          "work": "chunked",
+          "taskDuration": 121.20000000298023,
+          "expected": 8850,
+          "visible": true,
+          "duration": 756
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过✓ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）详情订阅未注销并执行重复布局读写。证据：五次关闭后仍有五个订阅，消息触发多次布局工作。验证：注销本页订阅并合并布局写入，再核对业务结果。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。",
+      "manualRubric": {
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "reportNonEmpty": true,
+        "emptyGuard": "还有证据需要补齐。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过○ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+      }
+    },
+    {
+      "id": "55",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "total": 240600,
+          "name": false,
+          "overflow": 285,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 5,
+          "expected": 24060,
+          "visible": true,
+          "duration": 833,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "total": 24060,
+          "name": true,
+          "overflow": 0,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 0,
+          "expected": 24060,
+          "visible": true,
+          "duration": 920.8999999985099,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过✓ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）价格类型、按钮名称与购物布局同时不符合契约。证据：真实响应 price 为 string、图标无名称且商品区横向溢出。验证：统一价格类型、恢复准确名称与弹性布局，再完成检查矩阵。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。",
+      "manualRubric": {
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "reportNonEmpty": true,
+        "emptyGuard": null
+      }
+    },
+    {
+      "id": "55",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "total": 22528,
+          "name": true,
+          "overflow": 0,
+          "schema": 1,
+          "handlers": 2,
+          "retained": 5,
+          "expected": 11264,
+          "visible": true,
+          "duration": 1012.5,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "total": 11264,
+          "name": true,
+          "overflow": 0,
+          "schema": 2,
+          "handlers": 1,
+          "retained": 0,
+          "expected": 11264,
+          "visible": true,
+          "duration": 884.3000000044703,
+          "releaseChecked": true
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过✓ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）过期状态、重复结算处理和详情引用共同残留。证据：Storage 为旧结构，一次点击执行两次且关闭详情仍被保留。验证：迁移状态、去重处理并清理引用，重复购买与详情流程。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。",
+      "manualRubric": {
+        "scores": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "reportNonEmpty": true,
+        "emptyGuard": "还有证据需要补齐。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过○ 综合报告与五维自评 ≥8/10，证据和验证非零（自评）页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+      }
+    },
+    {
+      "id": "T01",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "coordinates": "swapped",
+          "fallbacks": 3,
+          "expected": 14634,
+          "visible": true,
+          "duration": 603
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "coordinates": "correct",
+          "fallbacks": 3,
+          "expected": 14634,
+          "visible": true,
+          "duration": 581
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过业务把 latitude 与 longitude 颠倒。证据：输入 31.23/121.47 却传入 121.47/31.23。验证：保持坐标顺序，使用 Sensors 改位置并核对门店。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T01",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "coordinates": "correct",
+          "fallbacks": 0,
+          "expected": 11556,
+          "visible": true,
+          "duration": 668
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "coordinates": "correct",
+          "fallbacks": 3,
+          "expected": 11556,
+          "visible": true,
+          "duration": 650.7000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过定位错误没有清除加载状态和显示手动选择。证据：error.code=1/2/3 后仍处于 loading，手动选择不可用。验证：分别触发拒绝、不可用和超时，显示手动选店。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T02",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "reachable": true,
+          "mapping": 0,
+          "expected": 18006,
+          "visible": true,
+          "duration": 635
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "reachable": true,
+          "mapping": 4174,
+          "expected": 18006,
+          "visible": true,
+          "duration": 652.8000000044703
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过把手机 loopback 当成电脑，未配置对应转发。证据：本地健康端点正常，但拓扑中手机端口没有映射。验证：配置手机 4174→电脑 localhost:4174，再 Inspect 目标页。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T02",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "reachable": true,
+          "mapping": 4176,
+          "expected": 11274,
+          "visible": true,
+          "duration": 619.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "reachable": true,
+          "mapping": 4174,
+          "expected": 11274,
+          "visible": true,
+          "duration": 619.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过目标端口映射到不存在的 HTTP 服务。证据：转发目标不是电脑 4174，健康检查返回连接失败。验证：纠正转发目标到实际 4174，并检查相同会话地址。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T03",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mapStatus": 404,
+          "sourceMatches": false,
+          "total": 15008,
+          "expected": 15008,
+          "visible": true,
+          "duration": 616.9000000059605
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mapStatus": 200,
+          "sourceMatches": true,
+          "total": 15008,
+          "expected": 15008,
+          "visible": true,
+          "duration": 618.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过sourceMappingURL 指向不存在的 map。证据：Developer Resources / Network 中映射地址返回 404。验证：修正映射 URL，清除错误条件并核对断点行。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T03",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mapStatus": 200,
+          "sourceMatches": false,
+          "total": 6069,
+          "expected": 6069,
+          "visible": true,
+          "duration": 678.6999999955297
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mapStatus": 200,
+          "sourceMatches": true,
+          "total": 6069,
+          "expected": 6069,
+          "visible": true,
+          "duration": 673
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过map 的 sourcesContent 来自旧版本源码。证据：已加载 map 内容仍是加法版本，与实际乘法结果不一致。验证：同步当前源码与 map，确认磁盘文件和运行结果一致。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T04",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mediaError": 4,
+          "advanced": false,
+          "forcedPause": false,
+          "expected": 13494,
+          "visible": true,
+          "duration": 618.3000000044703
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mediaError": 0,
+          "advanced": true,
+          "forcedPause": false,
+          "mediaEvents": "play,playing,timeupdate",
+          "expected": 13494,
+          "visible": true,
+          "duration": 1497.6999999955297
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过媒体地址不存在，真实请求返回 404。证据：video.error 与媒体 404 对应，未进入正常播放。验证：修复资源地址，核对 loadedmetadata 和实际时间推进。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T04",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "mediaError": 0,
+          "advanced": false,
+          "forcedPause": true,
+          "mediaEvents": "play,playing,timeupdate,pause",
+          "expected": 5634,
+          "visible": true,
+          "duration": 1336.1999999955297
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "mediaError": 0,
+          "advanced": true,
+          "forcedPause": false,
+          "mediaEvents": "play,playing,timeupdate",
+          "expected": 5634,
+          "visible": true,
+          "duration": 1426.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过业务 play 监听器立即调用 pause()。证据：play / playing 后立刻 pause，资源已正常生成。验证：移除错误 pause 逻辑，在相同手势条件下复测。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T05",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "semanticErrors": 2,
+          "fixtureMatches": false,
+          "expected": 29972,
+          "visible": true,
+          "duration": 738.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "semanticErrors": 0,
+          "fixtureMatches": true,
+          "expected": 29972,
+          "visible": true,
+          "duration": 598.0999999940395
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过收货人与街道 autocomplete 用途互换。证据：实际 input autocomplete 与 label 用途不一致。验证：为名称与街道恢复正确 token，再检查标签与填充。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T05",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "semanticErrors": 3,
+          "fixtureMatches": false,
+          "expected": 22773,
+          "visible": true,
+          "duration": 633.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "semanticErrors": 0,
+          "fixtureMatches": true,
+          "expected": 22773,
+          "visible": true,
+          "duration": 671.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过配送表单使用 billing 分区。证据：配送字段 token 含 billing，本地夹具填入账单测试值。验证：统一 shipping 分区并检查两套地址互不覆盖。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T06",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "credentialMatch": false,
+          "uv": true,
+          "expected": 26607,
+          "visible": true,
+          "duration": 667.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "credentialMatch": true,
+          "uv": true,
+          "expected": 26607,
+          "visible": true,
+          "duration": 603.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过认证 allowCredentials 不包含刚注册的凭据 ID。证据：注册 ID 与候选 ID 不一致，get() 无匹配凭据。验证：保持同一 RP 和凭据 ID，使用新挑战完成认证。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T06",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "credentialMatch": true,
+          "uv": false,
+          "expected": 33620,
+          "visible": true,
+          "duration": 673.7999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "credentialMatch": true,
+          "uv": true,
+          "expected": 33620,
+          "visible": true,
+          "duration": 619.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过认证要求 UV，但认证器未报告用户验证。证据：authenticatorData 的 UV 位未置位，required 条件不成立。验证：配置支持并通过 User Verification 的虚拟认证器，保持 required。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T07",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "clicks": 0,
+          "hit": "shield",
+          "disabled": false,
+          "expected": 17688,
+          "visible": true,
+          "duration": 717.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "clicks": 1,
+          "hit": "add",
+          "disabled": false,
+          "expected": 17688,
+          "visible": true,
+          "duration": 751.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过按钮被透明层拦截，修改颜色无法恢复点击。证据：elementFromPoint 命中覆盖层，按钮并未收到点击。验证：移除拦截层的 pointer-events，验证业务与邻近交互。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T07",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "clicks": 0,
+          "hit": "add",
+          "disabled": true,
+          "expected": 15018,
+          "visible": true,
+          "duration": 651.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "clicks": 1,
+          "hit": "add",
+          "disabled": false,
+          "expected": 15018,
+          "visible": true,
+          "duration": 630.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过按钮自身 disabled，提升 z-index 无效。证据：元素 disabled=true，没有发生预期业务处理。验证：修复禁用条件并核对库存，不盲目覆盖 CSS。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T08",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "matched": false,
+          "fresh": true,
+          "expected": 16962,
+          "visible": true,
+          "duration": 600.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "matched": true,
+          "fresh": true,
+          "expected": 16962,
+          "visible": true,
+          "duration": 621
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过按消息到达顺序配对，误把事件当作响应。证据：响应 id 与当前请求不同，中间插入无 id 的事件。验证：按 id / sessionId 匹配，区分无 id 的事件。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    },
+    {
+      "id": "T08",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "matched": true,
+          "fresh": false,
+          "expected": 20048,
+          "visible": true,
+          "duration": 609.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "matched": true,
+          "fresh": true,
+          "expected": 20048,
+          "visible": true,
+          "duration": 644.2000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "挑战检查通过，证据与结果一致。✓ 本会话已记录实际故障✓ 根因符合本次配置✓ 证据符合本次配置✓ 验证针对实际原因✓ 正常对照已通过导航后继续使用上一文档的 nodeId。证据：新文档已更新，旧 nodeId 收到错误而非当前属性。验证：重新取得 root 与节点句柄，再发只读属性命令。 页面结果与结构化判断可被主动修改；原生面板、设备、AI、Autofill 与认证器操作需独立取证，不是能力认证。"
+    }
+  ],
+  "chapters": [
+    {
+      "chapter": "elements",
+      "guard": "案例检查通过；请补齐排查报告与自评，达到 8/10 且证据、验证非零后再记录。"
+    },
+    {
+      "chapter": "elements",
+      "id": "05",
+      "variant": 0,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "color": "rgb(184, 65, 84)",
+          "expected": 19644,
+          "visible": true,
+          "duration": 600.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "color": "rgb(22, 130, 103)",
+          "expected": 19644,
+          "visible": true,
+          "duration": 617.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "elements",
+      "id": "05",
+      "variant": 1,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "color": "rgb(184, 65, 84)",
+          "expected": 13188,
+          "visible": true,
+          "duration": 601.6999999955297
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "color": "rgb(22, 130, 103)",
+          "expected": 13188,
+          "visible": true,
+          "duration": 685.7000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "elements",
+      "id": "07",
+      "variant": 0,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "clicks": 0,
+          "hit": "shield",
+          "disabled": false,
+          "expected": 450,
+          "visible": true,
+          "duration": 630.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "clicks": 1,
+          "hit": "add",
+          "disabled": false,
+          "expected": 450,
+          "visible": true,
+          "duration": 616.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "elements",
+      "id": "07",
+      "variant": 1,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "clicks": 0,
+          "hit": "add",
+          "disabled": true,
+          "expected": 38552,
+          "visible": true,
+          "duration": 602.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "clicks": 1,
+          "hit": "add",
+          "disabled": false,
+          "expected": 38552,
+          "visible": true,
+          "duration": 600.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "console",
+      "guard": "案例检查通过；请补齐排查报告与自评，达到 8/10 且证据、验证非零后再记录。"
+    },
+    {
+      "chapter": "console",
+      "id": "09",
+      "variant": 0,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "total": 1136,
+          "stockBlocked": false,
+          "expected": 1136,
+          "visible": true,
+          "duration": 600.1999999955297
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "total": 1131,
+          "stockBlocked": false,
+          "expected": 1136,
+          "visible": true,
+          "duration": 584.7999999970198
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "console",
+      "id": "09",
+      "variant": 1,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "total": 19542,
+          "stockBlocked": false,
+          "expected": 19542,
+          "visible": true,
+          "duration": 600.8000000044703
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "total": 0,
+          "stockBlocked": true,
+          "expected": 19542,
+          "visible": true,
+          "duration": 635.5999999940395
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "console",
+      "id": "12",
+      "variant": 0,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "snapshot": "changed",
+          "awaited": true,
+          "expected": 34424,
+          "visible": true,
+          "duration": 636.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "snapshot": "original",
+          "awaited": true,
+          "expected": 34424,
+          "visible": true,
+          "duration": 586.1000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "console",
+      "id": "12",
+      "variant": 1,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "snapshot": "original",
+          "awaited": false,
+          "expected": 14484,
+          "visible": true,
+          "duration": 619.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "snapshot": "original",
+          "awaited": true,
+          "expected": 14484,
+          "visible": true,
+          "duration": 602.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "sources",
+      "guard": "案例检查通过；请补齐排查报告与自评，达到 8/10 且证据、验证非零后再记录。"
+    },
+    {
+      "chapter": "sources",
+      "id": "16",
+      "variant": 0,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "accepted": 9633,
+          "normalized": false,
+          "expected": 19266,
+          "visible": true,
+          "duration": 603
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "accepted": 19266,
+          "normalized": true,
+          "expected": 19266,
+          "visible": true,
+          "duration": 652.3000000044703
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "sources",
+      "id": "16",
+      "variant": 1,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "accepted": 8110,
+          "normalized": true,
+          "expected": 6488,
+          "visible": true,
+          "duration": 585.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "accepted": 6488,
+          "normalized": true,
+          "expected": 6488,
+          "visible": true,
+          "duration": 636.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "sources",
+      "id": "18",
+      "variant": 0,
+      "initial": {
+        "title": "独立商城案例",
+        "repairHidden": true,
+        "instructionsHidden": true
+      },
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "parsed": false,
+          "latest": 2,
+          "expected": 18741,
+          "visible": true,
+          "duration": 603
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "parsed": true,
+          "latest": 2,
+          "expected": 18741,
+          "visible": true,
+          "duration": 667.7000000029802
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    },
+    {
+      "chapter": "sources",
+      "id": "18",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "latest": 1,
+          "restored": "old",
+          "cart": 11718,
+          "parsed": true,
+          "expected": 11718,
+          "visible": true,
+          "duration": 633.5
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "latest": 2,
+          "restored": "current",
+          "cart": 11718,
+          "parsed": true,
+          "expected": 11718,
+          "visible": true,
+          "duration": 636.4000000059605
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "tutorial": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。"
+    }
+  ],
+  "models": [
+    {
+      "id": "53",
+      "initialLocked": true
+    },
+    {
+      "id": "54",
+      "initialLocked": true
+    },
+    {
+      "id": "55",
+      "initialLocked": true
+    },
+    {
+      "id": "55",
+      "initialLocked": true
+    },
+    {
+      "id": "55",
+      "initialLocked": true
+    },
+    {
+      "id": "T01",
+      "reset": true
+    },
+    {
+      "id": "T02",
+      "reset": true
+    },
+    {
+      "id": "T03",
+      "reset": true
+    },
+    {
+      "id": "T04",
+      "reset": true
+    },
+    {
+      "id": "T05",
+      "reset": true
+    },
+    {
+      "id": "T06",
+      "reset": true
+    },
+    {
+      "id": "T07",
+      "reset": true
+    },
+    {
+      "id": "T08",
+      "reset": true
+    },
+    {
+      "id": "55",
+      "finalGraph": true,
+      "checked": [
+        "Elements",
+        "Network",
+        "Console"
+      ],
+      "omissions": "仍缺：Sources、Performance、Memory、Application、Lighthouse。记录具体证据或未检查原因。"
+    }
+  ],
+  "layouts": [
+    {
+      "type": "lesson-model",
+      "id": "53",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "54",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "55",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "T01",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "T02",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "T03",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "T04",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "T05",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "T06",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "T07",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "T08",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "chapter",
+      "chapter": "elements",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "chapter",
+      "chapter": "console",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "chapter",
+      "chapter": "sources",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "lesson-model",
+      "id": "53",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "54",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "55",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "T01",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "T02",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "T03",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "T04",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "T05",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "T06",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "T07",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "T08",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "chapter",
+      "chapter": "elements",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "chapter",
+      "chapter": "console",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "chapter",
+      "chapter": "sources",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "lesson-model",
+      "id": "53",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "54",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "55",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "T01",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "T02",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "T03",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "T04",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "T05",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "T06",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "T07",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "lesson-model",
+      "id": "T08",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "chapter",
+      "chapter": "elements",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "chapter",
+      "chapter": "console",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "chapter",
+      "chapter": "sources",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "shop-normal",
+      "id": "55",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "shop-normal",
+      "id": "55",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "shop-normal",
+      "id": "55",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "shop-normal",
+      "id": "T04",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "shop-normal",
+      "id": "T04",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "shop-normal",
+      "id": "T04",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "shop-normal",
+      "id": "T05",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "shop-normal",
+      "id": "T05",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "shop-normal",
+      "id": "T05",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "shop-normal",
+      "id": "T06",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "shop-normal",
+      "id": "T06",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "shop-normal",
+      "id": "T06",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "53",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "54",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "55",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "53",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "54",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "55",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "53",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "54",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "capstone-graph-final",
+      "id": "55",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "53",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "active",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "53",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "53",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "54",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "active",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "54",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "54",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "55",
+      "width": 320,
+      "documentWidth": 305,
+      "offenders": [
+        {
+          "class": "active",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "BUTTON",
+          "width": 74
+        },
+        {
+          "class": "",
+          "id": "",
+          "tag": "SPAN",
+          "width": 17
+        }
+      ],
+      "overflow": false,
+      "viewport": 320
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "55",
+      "width": 768,
+      "documentWidth": 753,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 768
+    },
+    {
+      "type": "capstone-assessment",
+      "id": "55",
+      "width": 1440,
+      "documentWidth": 1425,
+      "offenders": [],
+      "overflow": false,
+      "viewport": 1440
+    }
+  ],
+  "native": [
+    {
+      "topic": "T08",
+      "type": "real CDP transport, not Protocol monitor UI",
+      "commands": [
+        {
+          "method": "DOM.getDocument",
+          "result": 1
+        },
+        {
+          "method": "DOM.querySelector",
+          "result": 27
+        },
+        {
+          "method": "DOM.getAttributes",
+          "result": {
+            "attributes": [
+              "id",
+              "product"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "topic": "T08",
+      "oldNodeError": "Could not find node with given id"
+    },
+    {
+      "topic": "T06",
+      "nativeVirtualAuthenticator": "raw CDP unsupported in IAB; real button path pending, ES256 validation tested via protocol fixtures"
+    },
+    {
+      "check": "final neutral Elements",
+      "symptom": "商城的价格样式或加购交互不符合预期。请自行选择工具，找出实际原因。"
+    },
+    {
+      "topic": "T06",
+      "exportAfterReport": {
+        "status": "unavailable",
+        "note": "QA：本地协议夹具已完成；IAB 不支持原生 WebAuthn 虚拟认证器协议，本次真实注册与认证未执行。",
+        "realResult": null,
+        "localFixture": {
+          "credentialMatch": true,
+          "uv": true,
+          "expected": 84,
+          "visible": true,
+          "duration": 733.1000000014901
+        },
+        "exportedAfterPageCheck": true
+      }
+    },
+    {
+      "check": "Console12 measured snapshot and Promise completion",
+      "variant": 0,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "snapshot": "changed",
+          "awaited": true,
+          "expected": 18732,
+          "visible": true,
+          "duration": 779.6000000014901
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "snapshot": "original",
+          "awaited": true,
+          "expected": 18732,
+          "visible": true,
+          "duration": 601.8999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      }
+    },
+    {
+      "check": "Console12 measured snapshot and Promise completion",
+      "variant": 1,
+      "baseline": {
+        "phase": "baseline",
+        "metrics": {
+          "snapshot": "original",
+          "awaited": false,
+          "expected": 18534,
+          "visible": true,
+          "duration": 684
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      },
+      "fixed": {
+        "phase": "fixed",
+        "metrics": {
+          "snapshot": "original",
+          "awaited": true,
+          "expected": 18534,
+          "visible": true,
+          "duration": 802.3999999985099
+        },
+        "status": "本轮页面检查通过，已回传教程。"
+      }
+    }
+  ],
+  "failures": [
+    {
+      "id": "55",
+      "reason": "宽屏 product 1030px 可容纳 900px 故障列，overflow=0",
+      "fix": "故障列最小宽度改为1200px，正常布局不变"
+    },
+    {
+      "area": "chapter initial symptom",
+      "reason": "复用课内 symptom 含有根因提示",
+      "fix": "三章末商城只显示中性问题，不显示根因、课号与步骤"
+    },
+    {
+      "id": "Sources18-v1",
+      "reason": "异步病例沿用了53-v0的故障条件，未产生乱序提交",
+      "fix": "按实际病例选择乱序条件，保留同一个真实搜索流程"
+    }
+  ],
+  "progress": {
+    "lessonRecords": 11,
+    "eightChapters": 8,
+    "eightRoundTrip": true,
+    "invalidPreserved": true,
+    "crossWindow": {
+      "T01": "QA-T01：本地位置夹具与原生 Sensors 分列。",
+      "T02": "QA-T02：手机与电脑 loopback 不同，真机验证另列。"
+    },
+    "final": {
+      "eightChapters": 8,
+      "capstoneScores": [
+        {
+          "id": "53",
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "54",
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "55",
+          "scores": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "invalidSelfScoresPreserved": true,
+      "originalRestored": true
+    }
+  },
+  "environment": {
+    "at": "2026-10-22T08:03:59.135Z",
+    "browser": "IAB Chrome/155.0.0.0 (rendered navigator.userAgent)",
+    "method": "CUA UI actions; CDP DOM / viewport separately recorded",
+    "scope": "local course workflows, not all native panel QA"
+  },
+  "capstoneAssessmentRechecks": 6
+}

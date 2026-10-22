@@ -64,6 +64,9 @@ export function useLearning() {
         "performance",
         "memory",
         "lighthouse",
+        "elements",
+        "console",
+        "sources",
       ].includes(id)
     )
       return;
