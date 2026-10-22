@@ -4,19 +4,31 @@ import { chapters, type Lesson } from "../data/curriculum";
 import book from "../data/foundations.json";
 import networkBook from "../data/network-state.json";
 import NetworkStateDemo from "./NetworkStateDemo.vue";
+import performanceBook from "../data/performance.json";
+import PerformanceDemo from "./PerformanceDemo.vue";
 import AppIcon from "./AppIcon.vue";
 import FoundationDemo from "./FoundationDemo.vue";
 import { useLearning } from "../composables/useLearning";
 import { labOrigin, labRequest } from "../lib/lab";
 const props = defineProps<{ lesson: Lesson }>();
 const content = computed(
-  () => [...book, ...networkBook].find((item) => item.id === props.lesson.id)!,
+  () =>
+    [...book, ...networkBook, ...performanceBook].find(
+      (item) => item.id === props.lesson.id,
+    )!,
+);
+const isPerformance = computed(() =>
+  performanceBook.some((item) => item.id === props.lesson.id),
 );
 const isNetworkState = computed(() =>
   networkBook.some((item) => item.id === props.lesson.id),
 );
 const apiBase = computed(() =>
-  isNetworkState.value ? "/api/network-state" : "/api/foundations",
+  isPerformance.value
+    ? "/api/performance"
+    : isNetworkState.value
+      ? "/api/network-state"
+      : "/api/foundations",
 );
 const learning = useLearning();
 const step = ref(0),
@@ -92,9 +104,11 @@ function open(mode: "practice" | "challenge") {
     tutorial: location.origin,
   });
   labWindow = window.open(
-    isNetworkState.value
-      ? `${labOrigin}/labs/${token}/?${query}`
-      : `${labOrigin}/foundations/?${query}`,
+    isPerformance.value
+      ? `${labOrigin}/performance/${token}/?${query}`
+      : isNetworkState.value
+        ? `${labOrigin}/labs/${token}/?${query}`
+        : `${labOrigin}/foundations/?${query}`,
     "devtools-foundation-lab",
   );
   if (!labWindow)
@@ -245,8 +259,12 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
           ><p class="section-kicker">用一个小模型理解关键关系</p>
           <h2>{{ lesson.demo }}</h2>
           <p class="body-copy">{{ content.principle }}</p>
+          <PerformanceDemo
+            v-if="isPerformance"
+            :key="`${lesson.id}-${demoKey}`"
+            :lesson="lesson.id" />
           <NetworkStateDemo
-            v-if="isNetworkState"
+            v-else-if="isNetworkState"
             :key="`${lesson.id}-${demoKey}`"
             :lesson="lesson.id" />
           <FoundationDemo
@@ -322,7 +340,11 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
           >
             检查证据并记录练习<AppIcon name="check" :size="16" />
           </button>
-          <p class="boundary-note">
+          <p v-if="isPerformance" class="boundary-note">
+            商城每次运行会重新导航；在录制中准备加载场景，再执行目标操作。页面核对实际计时、几何、资源与业务结果，不读取
+            DevTools 点击，也不代替你解释 trace。
+          </p>
+          <p v-else class="boundary-note">
             商城检查实际
             DOM、计算结果或请求次数，服务记录请求与检查报告。它不读取你的
             DevTools

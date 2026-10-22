@@ -51,11 +51,11 @@
 
 ## 进度
 
-localStorage 键 `devtools-lab.learning.v1`。读取/导入有版本、课号、时间、提示数与笔记长度校验。可选布尔值 `challengeAssisted` 保存挑战是否查看解析，兼容已有 v1。导入先完整验证并写入成功再替换内存记录；失败保留旧记录。当前 01–26、35–39 可以写入完成状态，规划课没有完成按钮。阅读由用户主动记录，练习/挑战经检查后写入。
+localStorage 键 `devtools-lab.learning.v1`。读取/导入有版本、课号、时间、提示数与笔记长度校验。可选布尔值 `challengeAssisted` 保存挑战是否查看解析，兼容已有 v1。导入先完整验证并写入成功再替换内存记录；失败保留旧记录。当前 01–39、51 可以写入完成状态，规划课没有完成按钮。阅读由用户主动记录，练习/挑战经检查后写入。
 
 ## 后续扩展
 
-按 ROADMAP.md 增加场景合同，独立管理重置与生命周期。内存、性能、HTTPS 等后续实验只有实现并验证后才列为开放；当前状态与验收见 STATUS.md。
+按 ROADMAP.md 增加场景合同，独立管理重置与生命周期。内存、质量、HTTPS 等后续实验只有实现并验证后才列为开放；当前状态与验收见 STATUS.md。
 
 ## Network / Application 阶段
 
@@ -77,4 +77,23 @@ localStorage 键 `devtools-lab.learning.v1`。读取/导入有版本、课号、
 
 Storage 键带 token，IndexedDB 数据库名与 Cache Storage 名分会话，Cookie 独立命名及 Path，worker 使用默认脚本目录 scope。没有全源 clear 或根路径 worker。存储刷新仅重读，IDB 以 transaction complete 确认提交。worker 切换核对完整 scriptURL（含策略）；39 课修复仍从旧缓存开始，要求 network 来源实际更新，不预填成功值。恢复 worker 故障必要时刷新释放旧 controller。过期会话保留可访问的清理页面及仅注销自己 Cookie 的入口，其他资源拒绝继续运行。
 
-学习 v1 可选 chapters 字段保存 network/application 报告、五项 0–2 自评、辅助标记和完成时间；更新逐课记录保留章末字段，旧 v1 可直接导入。章末须案例检查通过、报告非空、自评分数至少 8，证据和验证非零；修改报告或分数撤销完成时间。自评不冒充自动监考。浏览器 DOM/Storage 检查报告仍可被主动修改，服务验证边界见 NETWORK-APPLICATION.md。
+学习 v1 可选 chapters 字段保存 network/application/performance 报告、五项 0–2 自评、辅助标记和完成时间；更新逐课记录保留章末字段，旧 v1 可直接导入。章末须案例检查通过、报告非空、自评分数至少 8，证据和验证非零；修改报告或分数撤销完成时间。自评不冒充自动监考。浏览器 DOM/Storage 检查报告仍可被主动修改，服务验证边界见 NETWORK-APPLICATION.md。
+
+## Performance / 渲染阶段
+
+server/performance.mjs 独立管理性能会话，主服务在通用 OPTIONS / 路由前分派。入口 /performance/<token>/ 与既有 /labs/<token>/ worker scope 没有覆盖关系；静态 HTML / CSS / 原生模块不包含框架、HMR 或 worker。每次 begin 创建 runId 后导航到新文档，只有真实文档访问过的 run 才允许报告。
+
+| 接口 | 合同 |
+| --- | --- |
+| POST /api/performance/sessions | 指定课号与 practice / challenge；引导固定配置一，挑战随机输入和两组故障 |
+| POST /api/performance/chapter | 从 29 / 30 / 33 抽取交互成本案例，初始不返回课号 |
+| GET /api/performance/lesson?token&runId | 页面脚本与当前运行配置；章末界面隐藏课号与步骤 |
+| POST /api/performance/begin | baseline / fixed，对照选择决定实际执行路径 |
+| POST /api/performance/report | 核对单次文档访问、指标结构、可见性、服务端预期校验值和目标条件 |
+| POST /api/performance/grade | 故障、原因、证据、验证、正常对照均成立才通过 |
+
+会话 30 分钟、最多 500 个，每个 100 次运行；重启失效。scripts/qa-performance.mjs 0/1 仅为本地测试注入，不开放 HTTP 固定答案。CPU 负载有界、帧更新有限次，API 有超时；停止及 pagehide 取消本页请求、任务、观察器和 CSS 动画。无全源存储清理。
+
+页面使用实际 PerformanceObserver 记录 LCP 候选、Event Timing、LayoutShift、LongTask；User Timing 和自定义指标单列。meta 与占位准备在首次场景呈现前完成，反馈区预留尺寸，原始 JSON 按需展开，减少仪器自身的布局干扰。任务级让出仍保留全部校验工作；31 对照保留推荐请求或非关键 CPU 工作，改变依赖 / 呈现顺序；29 使用同一 SKU 的实际缓存复用。
+
+assessPerformance 的阈值仅用于本地受控素材，不是线上性能预算。服务可校验预期业务值与指标结构，但不能独立读取浏览器或抵御主动篡改。工具面板、选区、自由解释与 trace 解读需要学习者实际操作；五维自评不冒充自动认证。新 performance 章末兼容既有 v1 与两个旧章末。

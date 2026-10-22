@@ -1,0 +1,48 @@
+[
+  {
+    "document": 305,
+    "width": 320,
+    "before": {
+      "duration": 360,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "operationCount": 3,
+      "renderCalls": 3,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 120,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "operationCount": 1,
+      "renderCalls": 1,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "document": 1425,
+    "width": 1440,
+    "before": {
+      "duration": 360.1,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "operationCount": 3,
+      "renderCalls": 3,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 120,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "operationCount": 1,
+      "renderCalls": 1,
+      "markCount": 2
+    },
+    "passed": true
+  }
+]

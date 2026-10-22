@@ -43,6 +43,6 @@ for (const [id, title] of Object.entries(chapters)) {
   text += "\n";
 }
 text +=
-  "## 实施前逐课脚本要求\n\n每课实现前补齐：正常/故障合同、可调条件、观察证据、修复对照、恢复、三级提示、挑战答案与误区、自动检查边界、官方来源与实测 Chrome 版本。第 01–18 课见 [基础课脚本](FOUNDATIONS-01-18.md)，第 19–26、35–39 课见 [网络与状态合同](NETWORK-APPLICATION.md)，其中第 21 课沿用 [LESSON-21.md](LESSON-21.md)。\n";
+  "## 实施前逐课脚本要求\n\n每课实现前补齐：正常/故障合同、可调条件、观察证据、修复对照、恢复、三级提示、挑战答案与误区、自动检查边界、官方来源与实测 Chrome 版本。第 01–18 课见 [基础课脚本](FOUNDATIONS-01-18.md)，第 19–26、35–39 课见 [网络与状态合同](NETWORK-APPLICATION.md)，其中第 21 课沿用 [LESSON-21.md](LESSON-21.md)；第 27–34、51 课见 [性能与渲染合同](PERFORMANCE-RENDERING.md)。\n";
 await writeFile(new URL("docs/CURRICULUM.md", root), text);
 console.log(`已生成 ${lessons.length} 节课目录。`);

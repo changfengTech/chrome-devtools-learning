@@ -1,0 +1,54 @@
+[
+  {
+    "lesson": "33",
+    "phase": "baseline",
+    "metrics": {
+      "duration": 426.9,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "layoutReads": 864,
+      "frames": 24,
+      "animatedProperty": "left",
+      "markCount": 2
+    },
+    "native": {
+      "LayoutCount": 832,
+      "RecalcStyleCount": 871,
+      "LayoutDuration": 0.028568
+    },
+    "trace": {
+      "Layout": 833,
+      "Paint": 55,
+      "UpdateLayoutTree": 872,
+      "EventDispatch": 76
+    },
+    "complete": true
+  },
+  {
+    "lesson": "33",
+    "phase": "fixed",
+    "metrics": {
+      "duration": 429.1,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "layoutReads": 24,
+      "frames": 24,
+      "animatedProperty": "transform",
+      "markCount": 2
+    },
+    "native": {
+      "LayoutCount": 27,
+      "RecalcStyleCount": 31,
+      "LayoutDuration": 0.003441
+    },
+    "trace": {
+      "Layout": 28,
+      "Paint": 55,
+      "UpdateLayoutTree": 32,
+      "EventDispatch": 76
+    },
+    "complete": true
+  }
+]

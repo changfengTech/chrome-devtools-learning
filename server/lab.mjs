@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { createFoundationHandler, foundationIds } from "./foundations.mjs";
 import { createNetworkState, networkStateIds } from "./network-state.mjs";
+import { createPerformanceHandler, performanceIds } from "./performance.mjs";
 
 const publicDirectory = fileURLToPath(new URL("../public/", import.meta.url));
 const origins = new Set([
@@ -59,10 +60,12 @@ export function createLabServer({
   challengeTtl = 30 * 60_000,
   foundationOptions = {},
   networkOptions = {},
+  performanceOptions = {},
 } = {}) {
   const challenges = new Map();
   const foundations = createFoundationHandler(foundationOptions);
   const field = createNetworkState(networkOptions);
+  const performanceLab = createPerformanceHandler(performanceOptions);
   function session(id) {
     const entry = challenges.get(id);
     if (!entry || Date.now() - entry.created > challengeTtl) {
@@ -89,6 +92,8 @@ export function createLabServer({
       response.end(JSON.stringify(data));
     };
     try {
+      if (await performanceLab({ request, response, url, json, bodyJson }))
+        return;
       if (await field.handle({ request, response, url, json, bodyJson }))
         return;
       if (request.method === "OPTIONS") {
@@ -104,8 +109,13 @@ export function createLabServer({
         json({
           ok: true,
           lesson: "21",
-          lessons: [...foundationIds, "21", ...networkStateIds].sort(),
-          version: 3,
+          lessons: [
+            ...foundationIds,
+            "21",
+            ...networkStateIds,
+            ...performanceIds,
+          ].sort(),
+          version: 4,
         });
         return;
       }

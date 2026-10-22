@@ -1,0 +1,37 @@
+{
+  "before": {
+    "duration": 2.2,
+    "checksum": 84,
+    "expected": 84,
+    "visible": true,
+    "animationDuration": 1600,
+    "reducedPreview": true,
+    "configuredDuration": 1600,
+    "motionSuppressed": false,
+    "markCount": 2
+  },
+  "beforeStyle": {
+    "animation-duration": "1.6s",
+    "animation-iteration-count": "1",
+    "animation-name": "cart-feedback",
+    "transform": "matrix(1, 0, 0, 1, 0, -26.372)"
+  },
+  "after": {
+    "duration": 0.6,
+    "checksum": 84,
+    "expected": 84,
+    "visible": true,
+    "animationDuration": 0,
+    "reducedPreview": true,
+    "configuredDuration": 360,
+    "motionSuppressed": true,
+    "markCount": 2
+  },
+  "afterStyle": {
+    "animation-duration": "0s",
+    "animation-iteration-count": "1",
+    "animation-name": "none",
+    "transform": "none"
+  },
+  "environment": "465 × 849 / DPR 2 / visibility=visible / 当前媒体 reduced motion=true。没有读取 DevTools 的 CPU / Network 设置。"
+}

@@ -1,0 +1,335 @@
+{
+  "environment": {
+    "viewport": "465 × 849",
+    "dpr": 2,
+    "visibility": "visible",
+    "reducedMotion": false,
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "conditions": "CPU / Network / 缓存条件请在 DevTools 手工记录"
+  },
+  "browser": {
+    "lcp": [
+      {
+        "startTime": 92,
+        "renderTime": 92,
+        "loadTime": 0,
+        "size": 17972,
+        "element": "P",
+        "url": ""
+      }
+    ],
+    "events": [
+      {
+        "name": "pointerover",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.3,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "pointerenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "pointerenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "pointerenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "pointerenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "pointerenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "pointerenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "mouseover",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "mouseenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "mouseenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "mouseenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "mouseenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "mouseenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "mouseenter",
+        "startTime": 18182.5,
+        "duration": 16,
+        "processingStart": 18198.5,
+        "processingEnd": 18198.5,
+        "interactionId": 0
+      },
+      {
+        "name": "pointerdown",
+        "startTime": 18202.3,
+        "duration": 216,
+        "processingStart": 18202.7,
+        "processingEnd": 18202.7,
+        "interactionId": 4798
+      },
+      {
+        "name": "mousedown",
+        "startTime": 18202.3,
+        "duration": 216,
+        "processingStart": 18202.7,
+        "processingEnd": 18202.7,
+        "interactionId": 0
+      },
+      {
+        "name": "pointerup",
+        "startTime": 18203.2,
+        "duration": 216,
+        "processingStart": 18203.3,
+        "processingEnd": 18203.4,
+        "interactionId": 4798
+      },
+      {
+        "name": "mouseup",
+        "startTime": 18203.2,
+        "duration": 216,
+        "processingStart": 18203.4,
+        "processingEnd": 18203.4,
+        "interactionId": 0
+      },
+      {
+        "name": "click",
+        "startTime": 18203.2,
+        "duration": 216,
+        "processingStart": 18203.4,
+        "processingEnd": 18384.2,
+        "interactionId": 4798
+      }
+    ],
+    "shifts": [
+      {
+        "startTime": 65.8,
+        "value": 0.19687056020547514,
+        "hadRecentInput": false,
+        "sources": [
+          {
+            "node": "SECTION",
+            "previous": {
+              "x": 12,
+              "y": 357.390625,
+              "width": 426,
+              "height": 240,
+              "top": 357.390625,
+              "right": 438,
+              "bottom": 597.390625,
+              "left": 12
+            },
+            "current": {
+              "x": 12,
+              "y": 412.078125,
+              "width": 426,
+              "height": 267.78125,
+              "top": 412.078125,
+              "right": 438,
+              "bottom": 679.859375,
+              "left": 12
+            }
+          },
+          {
+            "node": "SECTION",
+            "previous": {
+              "x": 12,
+              "y": 617.390625,
+              "width": 426,
+              "height": 231.609375,
+              "top": 617.390625,
+              "right": 438,
+              "bottom": 849,
+              "left": 12
+            },
+            "current": {
+              "x": 12,
+              "y": 699.859375,
+              "width": 426,
+              "height": 149.140625,
+              "top": 699.859375,
+              "right": 438,
+              "bottom": 849,
+              "left": 12
+            }
+          },
+          {
+            "node": "DIV",
+            "previous": {
+              "x": 12,
+              "y": 168.296875,
+              "width": 426,
+              "height": 126.09375,
+              "top": 168.296875,
+              "right": 438,
+              "bottom": 294.390625,
+              "left": 12
+            },
+            "current": {
+              "x": 12,
+              "y": 208.796875,
+              "width": 426,
+              "height": 126.09375,
+              "top": 208.796875,
+              "right": 438,
+              "bottom": 334.890625,
+              "left": 12
+            }
+          },
+          {
+            "node": "status",
+            "previous": {
+              "x": 12,
+              "y": 307.390625,
+              "width": 426,
+              "height": 30,
+              "top": 307.390625,
+              "right": 438,
+              "bottom": 337.390625,
+              "left": 12
+            },
+            "current": {
+              "x": 12,
+              "y": 347.890625,
+              "width": 426,
+              "height": 44.1875,
+              "top": 347.890625,
+              "right": 438,
+              "bottom": 392.078125,
+              "left": 12
+            }
+          },
+          {
+            "node": "course",
+            "previous": {
+              "x": 354,
+              "y": 14,
+              "width": 84,
+              "height": 20.3984375,
+              "top": 14,
+              "right": 438,
+              "bottom": 34.3984375,
+              "left": 354
+            },
+            "current": {
+              "x": 329.609375,
+              "y": 14,
+              "width": 108.390625,
+              "height": 20.3984375,
+              "top": 14,
+              "right": 438,
+              "bottom": 34.3984375,
+              "left": 329.609375
+            }
+          }
+        ]
+      }
+    ],
+    "longtasks": [
+      {
+        "startTime": 18203.3,
+        "duration": 181,
+        "name": "self"
+      }
+    ]
+  },
+  "resources": [
+    {
+      "name": "http://127.0.0.1:4174/lab/performance/style.css",
+      "startTime": 15.4,
+      "duration": 12.6,
+      "transferSize": 5029
+    },
+    {
+      "name": "http://127.0.0.1:4174/lab/performance/runtime.js",
+      "startTime": 15.5,
+      "duration": 12.8,
+      "transferSize": 23578
+    },
+    {
+      "name": "http://127.0.0.1:4174/api/performance/lesson?token=9ac9f36d-416e-4bab-a3d5-0cdb4a3d6ad2&runId=16f8e0ab-f885-4946-9dbd-79c1356cca5c",
+      "startTime": 35.9,
+      "duration": 3.4,
+      "transferSize": 2884
+    }
+  ],
+  "userTiming": [
+    {
+      "name": "devtools:29:target",
+      "startTime": 18203.5,
+      "duration": 180.4
+    }
+  ],
+  "scope": "原始 LCP 候选 / Event Timing / LayoutShift / LongTask；不输出正式 INP 或 CLS"
+}

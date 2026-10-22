@@ -1,0 +1,77 @@
+[
+  {
+    "id": "30",
+    "before": {
+      "duration": 205.8,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "yields": 0,
+      "maxBlock": 204.09999999403954,
+      "feedbackPaint": 205.69999999552965,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 205.8,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "yields": 6,
+      "maxBlock": 34,
+      "feedbackPaint": 35.29999999701977,
+      "markCount": 2
+    },
+    "feedback": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+  },
+  {
+    "id": "31",
+    "before": {
+      "duration": 0,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "discoveryDelay": 395.2,
+      "renderDelay": 31.6,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 0.2,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "discoveryDelay": 30.4,
+      "renderDelay": 29.8,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "feedback": "引导练习已记录：商城观察与修复检查完成，证据选择一致。"
+  },
+  {
+    "id": "28",
+    "before": {
+      "duration": 360.1,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "operationCount": 3,
+      "renderCalls": 3,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 120,
+      "checksum": 84,
+      "expected": 84,
+      "visible": true,
+      "operationCount": 1,
+      "renderCalls": 1,
+      "markCount": 2
+    },
+    "selected": "a",
+    "feedback": "引导练习已记录：商城观察与修复检查完成，证据选择一致。",
+    "independent": "修复检查通过。当前页面未连接教程，请从课程入口重新打开实验。"
+  },
+  {
+    "restoredOriginal": true
+  }
+]

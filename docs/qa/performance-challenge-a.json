@@ -1,0 +1,214 @@
+[
+  {
+    "id": "27",
+    "before": {
+      "duration": 110,
+      "checksum": 1998,
+      "expected": 1998,
+      "visible": true,
+      "cpuMs": 110,
+      "discoveryDelay": 398.4,
+      "shiftPx": 261,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 4,
+      "checksum": 1998,
+      "expected": 1998,
+      "visible": true,
+      "cpuMs": 4,
+      "discoveryDelay": 17.2,
+      "shiftPx": 0,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "28",
+    "before": {
+      "duration": 360,
+      "checksum": 35060,
+      "expected": 35060,
+      "visible": true,
+      "operationCount": 3,
+      "renderCalls": 3,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 120.1,
+      "checksum": 35060,
+      "expected": 35060,
+      "visible": true,
+      "operationCount": 1,
+      "renderCalls": 1,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "29",
+    "before": {
+      "duration": 180.2,
+      "checksum": 18020,
+      "expected": 18020,
+      "visible": true,
+      "normalizeCalls": 1,
+      "normalizeMs": 180.09999999403954,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 60,
+      "checksum": 18020,
+      "expected": 18020,
+      "visible": true,
+      "normalizeCalls": 1,
+      "normalizeMs": 60,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "30",
+    "before": {
+      "duration": 205.8,
+      "checksum": 7104,
+      "expected": 7104,
+      "visible": true,
+      "yields": 0,
+      "maxBlock": 204,
+      "feedbackPaint": 205.60000000149012,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 205.9,
+      "checksum": 7104,
+      "expected": 7104,
+      "visible": true,
+      "yields": 6,
+      "maxBlock": 34,
+      "feedbackPaint": 35.100000001490116,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "31",
+    "before": {
+      "duration": 0.1,
+      "checksum": 17445,
+      "expected": 17445,
+      "visible": true,
+      "discoveryDelay": 391.8,
+      "renderDelay": 30.8,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 0.1,
+      "checksum": 17445,
+      "expected": 17445,
+      "visible": true,
+      "discoveryDelay": 22.4,
+      "renderDelay": 30.1,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "32",
+    "before": {
+      "duration": 0,
+      "checksum": 17288,
+      "expected": 17288,
+      "visible": true,
+      "shiftPx": 197,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 0.1,
+      "checksum": 17288,
+      "expected": 17288,
+      "visible": true,
+      "shiftPx": 0,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "33",
+    "before": {
+      "duration": 428.7,
+      "checksum": 33752,
+      "expected": 33752,
+      "visible": true,
+      "layoutReads": 864,
+      "frames": 24,
+      "animatedProperty": "left",
+      "markCount": 2
+    },
+    "after": {
+      "duration": 428.5,
+      "checksum": 33752,
+      "expected": 33752,
+      "visible": true,
+      "layoutReads": 24,
+      "frames": 24,
+      "animatedProperty": "transform",
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "34",
+    "before": {
+      "duration": 0.2,
+      "checksum": 18273,
+      "expected": 18273,
+      "visible": true,
+      "detailRequested": true,
+      "checkoutRequested": true,
+      "themeRequested": false,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 0.1,
+      "checksum": 18273,
+      "expected": 18273,
+      "visible": true,
+      "detailRequested": false,
+      "checkoutRequested": false,
+      "themeRequested": false,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "51",
+    "before": {
+      "duration": 2.1,
+      "checksum": 26706,
+      "expected": 26706,
+      "visible": true,
+      "animationDuration": 1600,
+      "reducedPreview": false,
+      "motionSuppressed": false,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 1.1,
+      "checksum": 26706,
+      "expected": 26706,
+      "visible": true,
+      "animationDuration": 360,
+      "reducedPreview": false,
+      "motionSuppressed": false,
+      "markCount": 2
+    },
+    "passed": true
+  }
+]

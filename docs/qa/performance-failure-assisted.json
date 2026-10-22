@@ -1,0 +1,23 @@
+{
+  "baseline": {
+    "duration": 168.1,
+    "checksum": 692,
+    "expected": 692,
+    "visible": true,
+    "normalizeCalls": 6,
+    "normalizeMs": 168,
+    "markCount": 2
+  },
+  "wrongFix": "当前对照未通过，请核对原因、环境与目标行为后重新运行。",
+  "correct": {
+    "duration": 28,
+    "checksum": 692,
+    "expected": 692,
+    "visible": true,
+    "normalizeCalls": 1,
+    "normalizeMs": 28,
+    "markCount": 2
+  },
+  "wrongAnswer": "还有证据需要补齐。",
+  "assisted": "✓ 已通过迁移挑战（使用解析）"
+}

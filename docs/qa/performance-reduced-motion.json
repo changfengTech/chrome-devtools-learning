@@ -1,0 +1,42 @@
+{
+  "before": {
+    "metrics": {
+      "duration": 1.3,
+      "checksum": 22760,
+      "expected": 22760,
+      "visible": true,
+      "animationDuration": 650,
+      "reducedPreview": true,
+      "motionSuppressed": false,
+      "markCount": 2
+    },
+    "environment": "465 × 849 / DPR 2 / visibility=visible / 系统 reduced motion=true。没有读取 DevTools 的 CPU / Network 设置。",
+    "preview": false,
+    "nativeStyle": {
+      "animation-duration": "0.65s",
+      "animation-iteration-count": "3",
+      "animation-name": "cart-feedback",
+      "transform": "matrix(1, 0, 0, 1, 0, -27.9854)"
+    }
+  },
+  "after": {
+    "metrics": {
+      "duration": 1,
+      "checksum": 22760,
+      "expected": 22760,
+      "visible": true,
+      "animationDuration": 0,
+      "reducedPreview": true,
+      "motionSuppressed": true,
+      "markCount": 2
+    },
+    "environment": "465 × 849 / DPR 2 / visibility=visible / 系统 reduced motion=true。没有读取 DevTools 的 CPU / Network 设置。",
+    "preview": false,
+    "nativeStyle": {
+      "animation-duration": "0s",
+      "animation-iteration-count": "1",
+      "animation-name": "none",
+      "transform": "none"
+    }
+  }
+}

@@ -1,0 +1,214 @@
+[
+  {
+    "id": "27",
+    "before": {
+      "duration": 243,
+      "checksum": 6666,
+      "expected": 6666,
+      "visible": true,
+      "cpuMs": 243,
+      "discoveryDelay": 72.4,
+      "shiftPx": 261,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 4.1,
+      "checksum": 6666,
+      "expected": 6666,
+      "visible": true,
+      "cpuMs": 4,
+      "discoveryDelay": 22.6,
+      "shiftPx": 0,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "28",
+    "before": {
+      "duration": 210,
+      "checksum": 11064,
+      "expected": 11064,
+      "visible": true,
+      "operationCount": 1,
+      "renderCalls": 3,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 120,
+      "checksum": 11064,
+      "expected": 11064,
+      "visible": true,
+      "operationCount": 1,
+      "renderCalls": 1,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "29",
+    "before": {
+      "duration": 168.2,
+      "checksum": 3414,
+      "expected": 3414,
+      "visible": true,
+      "normalizeCalls": 6,
+      "normalizeMs": 168,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 28,
+      "checksum": 3414,
+      "expected": 3414,
+      "visible": true,
+      "normalizeCalls": 1,
+      "normalizeMs": 28,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "30",
+    "before": {
+      "duration": 205.9,
+      "checksum": 30452,
+      "expected": 30452,
+      "visible": true,
+      "yields": 0,
+      "maxBlock": 204,
+      "feedbackPaint": 205.5,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 205.7,
+      "checksum": 30452,
+      "expected": 30452,
+      "visible": true,
+      "yields": 6,
+      "maxBlock": 34,
+      "feedbackPaint": 35.100000001490116,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "31",
+    "before": {
+      "duration": 0,
+      "checksum": 13928,
+      "expected": 13928,
+      "visible": true,
+      "discoveryDelay": 29,
+      "renderDelay": 230.3,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 0.1,
+      "checksum": 13928,
+      "expected": 13928,
+      "visible": true,
+      "discoveryDelay": 26.8,
+      "renderDelay": 30.5,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "32",
+    "before": {
+      "duration": 0,
+      "checksum": 11720,
+      "expected": 11720,
+      "visible": true,
+      "shiftPx": 64,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 0.1,
+      "checksum": 11720,
+      "expected": 11720,
+      "visible": true,
+      "shiftPx": 0,
+      "heroLoaded": true,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "33",
+    "before": {
+      "duration": 426.6,
+      "checksum": 18380,
+      "expected": 18380,
+      "visible": true,
+      "layoutReads": 0,
+      "frames": 24,
+      "animatedProperty": "left",
+      "markCount": 2
+    },
+    "after": {
+      "duration": 429.2,
+      "checksum": 18380,
+      "expected": 18380,
+      "visible": true,
+      "layoutReads": 0,
+      "frames": 24,
+      "animatedProperty": "transform",
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "34",
+    "before": {
+      "duration": 0.2,
+      "checksum": 7794,
+      "expected": 7794,
+      "visible": true,
+      "detailRequested": false,
+      "checkoutRequested": false,
+      "themeRequested": true,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 0.1,
+      "checksum": 7794,
+      "expected": 7794,
+      "visible": true,
+      "detailRequested": false,
+      "checkoutRequested": false,
+      "themeRequested": false,
+      "markCount": 2
+    },
+    "passed": true
+  },
+  {
+    "id": "51",
+    "before": {
+      "duration": 1.9,
+      "checksum": 1002,
+      "expected": 1002,
+      "visible": true,
+      "animationDuration": 650,
+      "reducedPreview": true,
+      "motionSuppressed": false,
+      "markCount": 2
+    },
+    "after": {
+      "duration": 0.8,
+      "checksum": 1002,
+      "expected": 1002,
+      "visible": true,
+      "animationDuration": 0,
+      "reducedPreview": true,
+      "motionSuppressed": true,
+      "markCount": 2
+    },
+    "passed": true
+  }
+]

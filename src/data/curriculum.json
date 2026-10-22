@@ -293,7 +293,7 @@
     "demo": "改变资源、任务和布局条件",
     "lab": "记录正常基线与三类异常",
     "challenge": "为新投诉选择测量目标",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -304,7 +304,7 @@
     "demo": "对应动作、截图和 Main 轨道",
     "lab": "录制搜索卡顿并缩小范围",
     "challenge": "提交覆盖故障且少干扰的录制",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -315,7 +315,7 @@
     "demo": "比较嵌套调用的聚合视角",
     "lab": "定位商品筛选昂贵计算",
     "challenge": "决定优化函数自身还是调用次数",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -326,7 +326,7 @@
     "demo": "比较计算、拆分任务和防抖",
     "lab": "改善搜索输入卡顿并复测",
     "challenge": "为新交互选方案且保证结果正确",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -337,7 +337,7 @@
     "demo": "改变主图发现、请求和处理时机",
     "lab": "排查商品主图或标题出现晚",
     "challenge": "用证据确定优先优化的阶段",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -348,7 +348,7 @@
     "demo": "切换图片占位、广告和字体条件",
     "lab": "修复主图加载引起的按钮位移",
     "challenge": "定位新的偏移并验证变化",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -359,7 +359,7 @@
     "demo": "对比布局读写和重绘区域",
     "lab": "优化滚动时频繁更新的商品浮层",
     "challenge": "区分计算、布局和绘制成本",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -370,7 +370,7 @@
     "demo": "随操作观察覆盖范围变化",
     "lab": "比较首页与详情的 JS/CSS 使用",
     "challenge": "提出按需加载并验证其他流程",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -557,7 +557,7 @@
     "demo": "改变时长、延迟和运动属性",
     "lab": "检查加购与侧栏展开动画",
     "challenge": "修复问题并验证 reduced motion",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {

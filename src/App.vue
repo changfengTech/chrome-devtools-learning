@@ -5,6 +5,7 @@ import TimingDemo from "./components/TimingDemo.vue";
 import LessonTwentyOne from "./components/LessonTwentyOne.vue";
 import FoundationLesson from "./components/FoundationLesson.vue";
 import networkBook from "./data/network-state.json";
+import performanceBook from "./data/performance.json";
 import ChapterChallenge from "./components/ChapterChallenge.vue";
 import { chapters, lessons, getLesson } from "./data/curriculum";
 import { useLearning } from "./composables/useLearning";
@@ -318,7 +319,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
                       : "沿着路线，建立排查能力"
                   }}
                 </h2>
-                <p>第 01～26、35～39 课已开放实战，其余课程可查看课程安排。</p>
+                <p>第 01～39、51 课已开放实战，其余课程可查看课程安排。</p>
               </div>
               <label class="search-field"
                 ><AppIcon name="search" :size="17" /><input
@@ -409,7 +410,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
           <ChapterChallenge
             v-if="
               activeChapter &&
-              ['network', 'application'].includes(activeChapter)
+              ['network', 'application', 'performance'].includes(activeChapter)
             "
             :key="activeChapter"
             :chapter="activeChapter"
@@ -421,7 +422,9 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
             activeLesson &&
             Number(activeLesson.id) >= 1 &&
             (Number(activeLesson.id) <= 18 ||
-              networkBook.some((item) => item.id === activeLesson?.id))
+              [...networkBook, ...performanceBook].some(
+                (item) => item.id === activeLesson?.id,
+              ))
           "
           :key="activeLesson.id"
           :lesson="activeLesson"
@@ -578,6 +581,18 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
               <p>Cookie、Storage、IndexedDB、worker 与独立缓存策略。</p>
               <a class="button primary" href="#chapter/application"
                 >进入状态课程与章末挑战</a
+              >
+            </article>
+          </div>
+          <div class="lab-cases">
+            <article>
+              <AppIcon name="performance" :size="25" />
+              <h2>Performance · 27–34 / Animations · 51</h2>
+              <p>
+                真实 CPU、任务切分、关键路径、布局、绘制、Coverage 和 CSS 动画。
+              </p>
+              <a class="button primary" href="#chapter/performance"
+                >进入性能课程与章末挑战</a
               >
             </article>
           </div>

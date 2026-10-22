@@ -18,7 +18,7 @@
     "prebuild": "pnpm lab:type-check && pnpm lab:build",
     "predev": "pnpm lab:build",
     "lab:type-check": "tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution Bundler --skipLibCheck public/lab/foundation/shop-cart.ts",
-    "docs:lessons": "node scripts/generate-foundations.mjs && node scripts/generate-network-state.mjs"
+    "docs:lessons": "node scripts/generate-foundations.mjs && node scripts/generate-network-state.mjs && node scripts/generate-performance.mjs"
   },
   "dependencies": {
     "vue": "^3.5.42",

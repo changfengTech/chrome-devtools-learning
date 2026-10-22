@@ -1,0 +1,14 @@
+{
+  "landing": {
+    "duration": 0.2,
+    "checksum": 6294,
+    "expected": 6294,
+    "visible": true,
+    "detailRequested": false,
+    "checkoutRequested": false,
+    "themeRequested": false,
+    "markCount": 2
+  },
+  "details": "详情正常：CUP-3147 / 数量 2 / 可用",
+  "checkout": "结算正常：CUP-3147 / 数量 2 / 可用"
+}

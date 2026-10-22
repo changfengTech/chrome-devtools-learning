@@ -1,0 +1,14 @@
+{
+  "status": "任务已停止",
+  "parentObserved": 1,
+  "restarted": {
+    "duration": 428.3,
+    "checksum": 84,
+    "expected": 84,
+    "visible": true,
+    "layoutReads": 864,
+    "frames": 24,
+    "animatedProperty": "left",
+    "markCount": 2
+  }
+}

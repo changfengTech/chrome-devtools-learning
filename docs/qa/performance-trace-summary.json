@@ -1,0 +1,50 @@
+{
+  "events": 3866,
+  "marks": [
+    {
+      "name": "devtools:29:target:start",
+      "ph": "I",
+      "ts": 47698139638
+    },
+    {
+      "name": "devtools:29:target:end",
+      "ph": "I",
+      "ts": 47698320129
+    },
+    {
+      "name": "devtools:29:target",
+      "ph": "b",
+      "ts": 47698139638
+    },
+    {
+      "name": "devtools:29:target",
+      "ph": "e",
+      "ts": 47698320129
+    }
+  ],
+  "longEvents": [
+    {
+      "name": "CpuProfiler::StartProfiling",
+      "durationMs": 83
+    },
+    {
+      "name": "EventDispatch",
+      "durationMs": 181
+    },
+    {
+      "name": "v8.callFunction",
+      "durationMs": 181
+    },
+    {
+      "name": "FunctionCall",
+      "durationMs": 181
+    }
+  ],
+  "profileChunks": 1370,
+  "sampledFunctions": [
+    "targetOperation",
+    "filterCatalog",
+    "normalizeProduct",
+    "consumeCPU"
+  ]
+}

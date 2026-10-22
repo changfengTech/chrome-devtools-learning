@@ -1,0 +1,6 @@
+{
+  "invalidRejected": "导入未完成：章末自评记录格式不正确。 原记录保留。",
+  "threeChaptersRetained": 3,
+  "noteAfterRefresh": "验收专用：固定条件，对照 normalizeProduct 的单次成本与调用次数；更新本课笔记不能丢失三个章末记录。",
+  "chaptersAfterLessonEdit": 3
+}

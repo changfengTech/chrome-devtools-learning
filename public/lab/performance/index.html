@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>日常好物 · 性能实验</title>
+    <link rel="stylesheet" href="/lab/performance/style.css" />
+    <script type="module" src="/lab/performance/runtime.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/shop/">日常好物 <small>Little goods</small></a
+      ><span id="course">性能与渲染实验</span>
+    </header>
+    <main>
+      <p class="kicker">从体验找到可验证的成本</p>
+      <h1 id="title">正在准备实验…</h1>
+      <p id="brief"></p>
+      <div class="controls">
+        <button id="run" disabled>运行故障</button
+        ><label
+          >对照方案<select id="correction" disabled>
+            <option value="">先观察再选择</option>
+          </select></label
+        ><button id="apply" disabled>应用所选对照</button
+        ><button id="reset" disabled>恢复故障</button
+        ><button id="stop" disabled>停止本页任务</button>
+      </div>
+      <p id="status" role="status">正在连接本地实验服务。</p>
+      <section class="scene" aria-label="商城实验区域">
+        <div id="promotion"></div>
+        <div id="hero"></div>
+        <h2 id="product">晨间陶瓷杯</h2>
+        <p id="sku"></p>
+        <p id="feedback" aria-live="polite">商品结果将在这里显示。</p>
+        <button id="target" disabled>执行目标操作</button>
+        <div id="workbench"></div>
+        <div id="optional">
+          <button id="detail" hidden>打开商品详情</button
+          ><button id="checkout" hidden>打开结算页</button
+          ><button id="pause" hidden>暂停动画</button
+          ><button id="replay" hidden>重放动画</button
+          ><label id="reduce-control" hidden
+            ><input
+              id="reduce-preview"
+              type="checkbox"
+            />站内减弱动态预览（不改变系统偏好）</label
+          >
+        </div>
+        <p id="secondary" aria-live="polite"></p>
+      </section>
+      <section>
+        <h2>本次观察</h2>
+        <p id="summary">一次只改变与当前原因对应的条件，再核对业务结果。</p>
+        <p>浏览器原始条目与自定义计时分列；页面不生成正式 INP / CLS 成绩。</p>
+        <details>
+          <summary>原始页面测量值</summary>
+          <pre id="metrics">等待实际操作。</pre>
+        </details>
+        <details>
+          <summary>浏览器条目与环境</summary>
+          <pre id="entries"></pre>
+        </details>
+        <ul id="checks"></ul>
+        <button id="export" disabled>导出本次观察 JSON</button>
+        <p class="boundary">
+          此 JSON 不是 Chrome trace。录制、选区、截图与保存 trace 请在
+          Performance 操作；CPU / Network 设置请手工记录。
+        </p>
+      </section>
+      <details id="guide">
+        <summary>本课取证步骤</summary>
+        <ol id="steps"></ol>
+      </details>
+      <section>
+        <h2>恢复与测量边界</h2>
+        <p>
+          每次运行会重新导航。恢复故障重新开始同一案例；停止只处理本页任务、观察器和动画。请恢复
+          CPU / Network、Rendering
+          高亮与媒体模拟。后台页测量不可作公平对照；计时与采样会有波动。
+        </p>
+        <p id="environment"></p>
+      </section>
+    </main>
+    <footer>DevTools 实验室 · 本地教学商城 · 无真实交易</footer>
+  </body>
+</html>

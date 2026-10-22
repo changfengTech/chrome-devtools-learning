@@ -1,0 +1,26 @@
+{
+  "initialText": "从体验找到可验证的成本\n\n请独立分析本次商城性能问题\n\n先定义正常表现并选择录制方法；初始不提供课号与操作步骤。\n\n运行故障\n对照方案\n先观察再选择\n分批处理并让出任务，核对完整结果\n用任务级让出替代微任务链\n改变所有条件且不复测\n应用所选对照\n恢复故障\n停止本页任务\n\n尚未运行。先打开 DevTools 开始录制，再运行故障。\n\n晨间陶瓷杯\n\nCUP-8522 / 数量 4 / 固定业务校验值 34088\n\n商品结果将在这里显示。\n\n执行目标操作\n\n本次观察\n\n浏览器原始条目与自定义计时分列；页面不生成正式 INP / CLS 成绩。\n\n等待实际操作。\n浏览器条目与环境\n导出本次观察 JSON\n\n此 JSON 不是 Chrome trace。录制、选区、截图与保存 trace 请在 Performance 操作；CPU / Network 设置请手工记录。\n\n恢复与测量边界\n\n每次运行会重新导航。恢复故障重新开始同一案例；停止只处理本页任务、观察器和动画。请恢复 CPU / Network、Rendering 高亮与媒体模拟。后台页测量不可作公平对照；计时与采样会有波动。\n\n1280 × 720 / DPR 2 / visibility=visible / 系统 reduced motion=false。没有读取 DevTools 的 CPU / Network 设置。",
+  "before": {
+    "duration": 205.7,
+    "checksum": 34088,
+    "expected": 34088,
+    "visible": true,
+    "yields": 0,
+    "maxBlock": 204.10000000149012,
+    "feedbackPaint": 205.5,
+    "markCount": 2
+  },
+  "after": {
+    "duration": 205.4,
+    "checksum": 34088,
+    "expected": 34088,
+    "visible": true,
+    "yields": 6,
+    "maxBlock": 34,
+    "feedbackPaint": 35,
+    "markCount": 2
+  },
+  "lowScore": "案例检查通过；请补齐排查报告与自评，达到 8/10 且证据、验证非零后再记录。",
+  "completed": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。",
+  "refreshed": "自评 10/10；目标 ≥8，证据和修复验证均不得为 0。已保存章末自评。"
+}

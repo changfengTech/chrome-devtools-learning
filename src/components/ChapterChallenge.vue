@@ -3,6 +3,17 @@ import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import { labOrigin, labRequest } from "../lib/lab";
 import { useLearning } from "../composables/useLearning";
 const props = defineProps<{ chapter: string }>();
+const apiBase = computed(() =>
+  props.chapter === "performance" ? "/api/performance" : "/api/network-state",
+);
+const chapterTitle = computed(
+  () =>
+    ({
+      network: "Network",
+      application: "Application",
+      performance: "Performance",
+    })[props.chapter as "network" | "application" | "performance"],
+);
 const learning = useLearning(),
   token = ref(""),
   busy = ref(false),
@@ -31,7 +42,7 @@ let popup: Window | null = null;
 async function prepare() {
   busy.value = true;
   try {
-    const data = await labRequest("/api/network-state/chapter", {
+    const data = await labRequest(`${apiBase.value}/chapter`, {
       chapter: props.chapter,
     });
     token.value = data.token;
@@ -49,7 +60,7 @@ async function prepare() {
 }
 function open() {
   popup = window.open(
-    `${labOrigin}/labs/${token.value}/?tutorial=${encodeURIComponent(location.origin)}`,
+    `${labOrigin}/${props.chapter === "performance" ? "performance" : "labs"}/${token.value}/?tutorial=${encodeURIComponent(location.origin)}`,
     "devtools-chapter-lab",
   );
 }
@@ -69,7 +80,7 @@ function receive(event: MessageEvent) {
 async function loadOptions() {
   try {
     options.value = await labRequest(
-      `/api/network-state/lesson?token=${token.value}`,
+      `${apiBase.value}/lesson?token=${token.value}`,
     );
   } catch (e) {
     message.value = e instanceof Error ? e.message : "读取失败";
@@ -83,7 +94,7 @@ function score(index: number, event: Event) {
 async function grade(showAnswer = false) {
   busy.value = true;
   try {
-    result.value = await labRequest("/api/network-state/grade", {
+    result.value = await labRequest(`${apiBase.value}/grade`, {
       token: token.value,
       ...selected.value,
     });
@@ -121,7 +132,7 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
 <template>
   <section class="chapter-task">
     <p class="section-kicker">将一章的方法用于新案例</p>
-    <h2>{{ chapter === "network" ? "Network" : "Application" }} 章末挑战</h2>
+    <h2>{{ chapterTitle }} 章末挑战</h2>
     <p>
       初始不指定具体课程与根因。自己选择工具，留下实际证据，再检查判断和修复。
     </p>
@@ -174,7 +185,11 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
         v-model="note"
         rows="5"
         maxlength="4000"
-        placeholder="记录请求、存储条目、控制关系或响应来源的具体值。"
+        :placeholder="
+          chapter === 'performance'
+            ? '记录动作、有效选区、耗时活动、相同条件下的复测与结果。'
+            : '记录请求、存储条目、控制关系或响应来源的具体值。'
+        "
       ></textarea>
     </label>
     <div class="chapter-rubric">

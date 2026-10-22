@@ -1,0 +1,40 @@
+[
+  {
+    "phase": "baseline",
+    "metrics": {
+      "duration": 428.1,
+      "checksum": 29852,
+      "expected": 29852,
+      "visible": true,
+      "layoutReads": 0,
+      "frames": 24,
+      "animatedProperty": "left",
+      "markCount": 2
+    },
+    "trace": {
+      "Layout": 28,
+      "Paint": 57,
+      "UpdateLayoutTree": 32
+    },
+    "complete": true
+  },
+  {
+    "phase": "fixed",
+    "metrics": {
+      "duration": 427.6,
+      "checksum": 29852,
+      "expected": 29852,
+      "visible": true,
+      "layoutReads": 0,
+      "frames": 24,
+      "animatedProperty": "transform",
+      "markCount": 2
+    },
+    "trace": {
+      "Layout": 5,
+      "Paint": 10,
+      "UpdateLayoutTree": 31
+    },
+    "complete": true
+  }
+]

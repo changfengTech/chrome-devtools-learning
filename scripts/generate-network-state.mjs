@@ -68,7 +68,7 @@ const contracts = {
 };
 await mkdir(new URL("docs/lessons/", root), { recursive: true });
 let index =
-  "# Network / Application 阶段实验合同\n\n新增 19、20、22–26、35–39 共 12 课，保留并回归第 21 课，合计本阶段 13 课。当前全站 31/63 课可实战。\n\n## 共同约定\n\n教程 5173/4173、商城 4174、跨源服务 4175，统一启动和停止。每次准备使用独立 `/labs/<token>/` 路径；Cookie、Storage、IndexedDB、Cache Storage、worker scope 仅属于当前实验。核心实验不需要真实账号和交易。\n\n引导案例固定配置一、seed=42；独立挑战随机两组故障与输入。故障报告、原因、证据、验证和修复五项全部成立才记录通过。服务校验会话、请求与报告格式；浏览器报告可被主动修改，不是可信监考，不证明实际点击过 DevTools。文字笔记不做关键词评分。\n\n恢复故障重新运行本案例；存储课刷新只读取已有状态。清理按钮仅处理本会话命名空间和注册，当前 controller 关闭或刷新后释放。即使会话过期，仍可打开原实验路径执行本会话清理。限速、离线、资源阻断需自行恢复；Offline 下可先观察，恢复 Online 后再报告。\n\n";
+  "# Network / Application 阶段实验合同\n\n新增 19、20、22–26、35–39 共 12 课，保留并回归第 21 课，合计本阶段 13 课。全站开放状态以 [实施状态](STATUS.md) 为准。\n\n## 共同约定\n\n教程 5173/4173、商城 4174、跨源服务 4175，统一启动和停止。每次准备使用独立 `/labs/<token>/` 路径；Cookie、Storage、IndexedDB、Cache Storage、worker scope 仅属于当前实验。核心实验不需要真实账号和交易。\n\n引导案例固定配置一、seed=42；独立挑战随机两组故障与输入。故障报告、原因、证据、验证和修复五项全部成立才记录通过。服务校验会话、请求与报告格式；浏览器报告可被主动修改，不是可信监考，不证明实际点击过 DevTools。文字笔记不做关键词评分。\n\n恢复故障重新运行本案例；存储课刷新只读取已有状态。清理按钮仅处理本会话命名空间和注册，当前 controller 关闭或刷新后释放。即使会话过期，仍可打开原实验路径执行本会话清理。限速、离线、资源阻断需自行恢复；Offline 下可先观察，恢复 Online 后再报告。\n\n";
 index += "| 课次 | 脚本 | 正常结果 |\n| --- | --- | --- |\n";
 for (const item of content) {
   const lesson = curriculum.find((c) => c.id === item.id),

@@ -1,0 +1,321 @@
+{
+  "before": [],
+  "cssBefore": {
+    "coverage": [
+      {
+        "endOffset": 193,
+        "startOffset": 162,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 161,
+        "startOffset": 0,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 215,
+        "startOffset": 194,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 424,
+        "startOffset": 216,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4465,
+        "startOffset": 4408,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4367,
+        "startOffset": 4348,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 493,
+        "startOffset": 425,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 540,
+        "startOffset": 494,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 608,
+        "startOffset": 541,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4405,
+        "startOffset": 4371,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4367,
+        "startOffset": 4348,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 762,
+        "startOffset": 730,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 729,
+        "startOffset": 681,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 654,
+        "startOffset": 609,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4497,
+        "startOffset": 4468,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4367,
+        "startOffset": 4348,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 859,
+        "startOffset": 763,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 1134,
+        "startOffset": 932,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4726,
+        "startOffset": 4686,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4367,
+        "startOffset": 4348,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 1415,
+        "startOffset": 1335,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 931,
+        "startOffset": 860,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4635,
+        "startOffset": 4557,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4367,
+        "startOffset": 4348,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4683,
+        "startOffset": 4638,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4367,
+        "startOffset": 4348,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 1484,
+        "startOffset": 1416,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 1622,
+        "startOffset": 1485,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 1654,
+        "startOffset": 1623,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4554,
+        "startOffset": 4500,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 4367,
+        "startOffset": 4348,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 1687,
+        "startOffset": 1655,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 680,
+        "startOffset": 655,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 2098,
+        "startOffset": 2065,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 1190,
+        "startOffset": 1135,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 2151,
+        "startOffset": 2099,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 3025,
+        "startOffset": 2992,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 3076,
+        "startOffset": 3026,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 2708,
+        "startOffset": 2500,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 2936,
+        "startOffset": 2888,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 2742,
+        "startOffset": 2709,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 2778,
+        "startOffset": 2743,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 2887,
+        "startOffset": 2815,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      },
+      {
+        "endOffset": 2991,
+        "startOffset": 2937,
+        "styleSheetId": "style-sheet-75068-2",
+        "used": true
+      }
+    ],
+    "timestamp": 47936.26899
+  },
+  "details": "详情正常：CUP-3147 / 数量 2 / 可用",
+  "checkout": "结算正常：CUP-3147 / 数量 2 / 可用",
+  "after": [
+    {
+      "url": "http://127.0.0.1:4174/performance/90c1be13-7165-401e-acdd-c38d62aa4783/details.js?run=a306c984-803f-40f8-bc15-d69df350b2cb",
+      "functions": 182,
+      "openFeature": [
+        {
+          "count": 1,
+          "endOffset": 89,
+          "startOffset": 7
+        }
+      ],
+      "unusedFunctions": 180
+    },
+    {
+      "url": "http://127.0.0.1:4174/performance/90c1be13-7165-401e-acdd-c38d62aa4783/checkout.js?run=a306c984-803f-40f8-bc15-d69df350b2cb",
+      "functions": 182,
+      "openFeature": [
+        {
+          "count": 1,
+          "endOffset": 90,
+          "startOffset": 7
+        }
+      ],
+      "unusedFunctions": 180
+    }
+  ],
+  "cssAfter": {
+    "coverage": [
+      {
+        "endOffset": 77,
+        "startOffset": 0,
+        "styleSheetId": "style-sheet-75068-1",
+        "used": true
+      }
+    ],
+    "timestamp": 47936.877383
+  },
+  "sheets": [
+    {
+      "id": "style-sheet-75068-1",
+      "url": "http://127.0.0.1:4174/performance/90c1be13-7165-401e-acdd-c38d62aa4783/themes.css?run=a306c984-803f-40f8-bc15-d69df350b2cb"
+    },
+    {
+      "id": "style-sheet-75068-2",
+      "url": "http://127.0.0.1:4174/lab/performance/style.css"
+    }
+  ]
+}
