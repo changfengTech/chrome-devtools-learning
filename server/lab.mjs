@@ -7,6 +7,8 @@ import { createFoundationHandler, foundationIds } from "./foundations.mjs";
 import { createNetworkState, networkStateIds } from "./network-state.mjs";
 import { createPerformanceHandler, performanceIds } from "./performance.mjs";
 
+import { createMemoryHandler, memoryIds } from "./memory.mjs";
+
 const publicDirectory = fileURLToPath(new URL("../public/", import.meta.url));
 const origins = new Set([
   "http://localhost:5173",
@@ -61,11 +63,13 @@ export function createLabServer({
   foundationOptions = {},
   networkOptions = {},
   performanceOptions = {},
+  memoryOptions = {},
 } = {}) {
   const challenges = new Map();
   const foundations = createFoundationHandler(foundationOptions);
   const field = createNetworkState(networkOptions);
   const performanceLab = createPerformanceHandler(performanceOptions);
+  const memoryLab = createMemoryHandler(memoryOptions);
   function session(id) {
     const entry = challenges.get(id);
     if (!entry || Date.now() - entry.created > challengeTtl) {
@@ -92,6 +96,7 @@ export function createLabServer({
       response.end(JSON.stringify(data));
     };
     try {
+      if (await memoryLab({request,response,url,json,bodyJson})) return;
       if (await performanceLab({ request, response, url, json, bodyJson }))
         return;
       if (await field.handle({ request, response, url, json, bodyJson }))
@@ -114,8 +119,9 @@ export function createLabServer({
             "21",
             ...networkStateIds,
             ...performanceIds,
+            ...memoryIds,
           ].sort(),
-          version: 4,
+          version: 5,
         });
         return;
       }

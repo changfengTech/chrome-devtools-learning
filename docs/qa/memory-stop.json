@@ -1,0 +1,51 @@
+{
+  "status": "本页资源已停止并释放；快照中是否已回收需另行检查。准备故障可重新开始。",
+  "metrics": {
+    "duration": 528,
+    "visible": true,
+    "expected": 10254,
+    "checksum": 10254,
+    "cycles": 2,
+    "featureWorks": true,
+    "history": 0,
+    "cacheEntries": 0,
+    "owners": 0,
+    "auditOwners": 0,
+    "previewHistory": 0,
+    "snapshotCache": 0,
+    "latestPreview": 0,
+    "detached": 0,
+    "listeners": 0,
+    "timers": 0,
+    "successfulFlows": 0,
+    "failedFlows": 0,
+    "ordersSeen": 0,
+    "delaysSeen": 0
+  },
+  "parent": "○ 待观察故障\n○ 待完成修复检查",
+  "retry": {
+    "metrics": {
+      "duration": 761,
+      "visible": true,
+      "expected": 10254,
+      "checksum": 10254,
+      "cycles": 5,
+      "featureWorks": true,
+      "history": 0,
+      "cacheEntries": 0,
+      "owners": 0,
+      "auditOwners": 0,
+      "previewHistory": 0,
+      "snapshotCache": 0,
+      "latestPreview": 0,
+      "detached": 0,
+      "listeners": 0,
+      "timers": 5,
+      "successfulFlows": 0,
+      "failedFlows": 0,
+      "ordersSeen": 0,
+      "delaysSeen": 0
+    },
+    "result": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+  }
+}

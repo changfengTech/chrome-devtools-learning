@@ -1,0 +1,112 @@
+{
+  "runs": [
+    {
+      "id": "44",
+      "baseline": {
+        "metrics": {
+          "duration": 456,
+          "visible": true,
+          "expected": 84,
+          "checksum": 84,
+          "cycles": 5,
+          "featureWorks": true,
+          "history": 0,
+          "cacheEntries": 0,
+          "owners": 0,
+          "auditOwners": 0,
+          "previewHistory": 0,
+          "snapshotCache": 0,
+          "latestPreview": 0,
+          "detached": 0,
+          "listeners": 5,
+          "timers": 0,
+          "successfulFlows": 0,
+          "failedFlows": 0,
+          "ordersSeen": 0,
+          "delaysSeen": 0
+        },
+        "result": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+      },
+      "fixed": {
+        "metrics": {
+          "duration": 443,
+          "visible": true,
+          "expected": 84,
+          "checksum": 84,
+          "cycles": 5,
+          "featureWorks": true,
+          "history": 0,
+          "cacheEntries": 0,
+          "owners": 0,
+          "auditOwners": 0,
+          "previewHistory": 0,
+          "snapshotCache": 0,
+          "latestPreview": 0,
+          "detached": 0,
+          "listeners": 0,
+          "timers": 0,
+          "successfulFlows": 0,
+          "failedFlows": 0,
+          "ordersSeen": 0,
+          "delaysSeen": 0
+        },
+        "result": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+      },
+      "parent": "✓ 故障已复现\n✓ 页面修复检查通过"
+    },
+    {
+      "id": "50",
+      "baseline": {
+        "duration": 552,
+        "visible": true,
+        "expected": 84,
+        "checksum": 98,
+        "cycles": 1,
+        "featureWorks": true,
+        "history": 0,
+        "cacheEntries": 0,
+        "owners": 0,
+        "auditOwners": 0,
+        "previewHistory": 0,
+        "snapshotCache": 0,
+        "latestPreview": 0,
+        "detached": 0,
+        "listeners": 0,
+        "timers": 0,
+        "successfulFlows": 0,
+        "failedFlows": 1,
+        "ordersSeen": 0,
+        "delaysSeen": 0
+      },
+      "missingReset": {
+        "text": "SKU CUP-42 / 数量 4 / 总额 168",
+        "complete": "false"
+      },
+      "fixed": {
+        "duration": 3326,
+        "visible": true,
+        "expected": 84,
+        "checksum": 84,
+        "cycles": 4,
+        "featureWorks": true,
+        "history": 0,
+        "cacheEntries": 0,
+        "owners": 0,
+        "auditOwners": 0,
+        "previewHistory": 0,
+        "snapshotCache": 0,
+        "latestPreview": 0,
+        "detached": 0,
+        "listeners": 0,
+        "timers": 0,
+        "successfulFlows": 3,
+        "failedFlows": 1,
+        "ordersSeen": 2,
+        "delaysSeen": 2
+      },
+      "status": "检查通过，已回传教程。实际快照 / Recorder 证据请自行保存。"
+    }
+  ],
+  "originalProgressRestored": true,
+  "temporaryViewportOverridesRestored": true
+}

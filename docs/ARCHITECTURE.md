@@ -51,11 +51,11 @@
 
 ## 进度
 
-localStorage 键 `devtools-lab.learning.v1`。读取/导入有版本、课号、时间、提示数与笔记长度校验。可选布尔值 `challengeAssisted` 保存挑战是否查看解析，兼容已有 v1。导入先完整验证并写入成功再替换内存记录；失败保留旧记录。当前 01–39、51 可以写入完成状态，规划课没有完成按钮。阅读由用户主动记录，练习/挑战经检查后写入。
+localStorage 键 `devtools-lab.learning.v1`。读取/导入有版本、课号、时间、提示数与笔记长度校验。可选布尔值 `challengeAssisted` 保存挑战是否查看解析，兼容已有 v1。导入先完整验证并写入成功再替换内存记录；失败保留旧记录。当前 01–44、50–51 可以写入完成状态，规划课没有完成按钮。阅读由用户主动记录，练习/挑战经检查后写入。
 
 ## 后续扩展
 
-按 ROADMAP.md 增加场景合同，独立管理重置与生命周期。内存、质量、HTTPS 等后续实验只有实现并验证后才列为开放；当前状态与验收见 STATUS.md。
+按 ROADMAP.md 增加场景合同，独立管理重置与生命周期。质量、HTTPS 等后续实验只有实现并验证后才列为开放；当前状态与验收见 STATUS.md。
 
 ## Network / Application 阶段
 
@@ -97,3 +97,25 @@ server/performance.mjs 独立管理性能会话，主服务在通用 OPTIONS / �
 页面使用实际 PerformanceObserver 记录 LCP 候选、Event Timing、LayoutShift、LongTask；User Timing 和自定义指标单列。meta 与占位准备在首次场景呈现前完成，反馈区预留尺寸，原始 JSON 按需展开，减少仪器自身的布局干扰。任务级让出仍保留全部校验工作；31 对照保留推荐请求或非关键 CPU 工作，改变依赖 / 呈现顺序；29 使用同一 SKU 的实际缓存复用。
 
 assessPerformance 的阈值仅用于本地受控素材，不是线上性能预算。服务可校验预期业务值与指标结构，但不能独立读取浏览器或抵御主动篡改。工具面板、选区、自由解释与 trace 解读需要学习者实际操作；五维自评不冒充自动认证。新 performance 章末兼容既有 v1 与两个旧章末。
+
+## Memory / 回归阶段
+
+server/memory.mjs 管理 40–44、50 与 Memory 章末会话。静态路径 /memory/<token>/ 与既有 worker scope 隔离，无 Vue / HMR / worker；40–44 的故障与对照在同一文档、同一 VM 内执行，不通过刷新偷偷换环境。
+
+| 接口 | 用途 |
+| --- | --- |
+| POST /api/memory/sessions | 固定 practice 或随机 challenge，变化输入及两组故障 |
+| POST /api/memory/chapter | 随机选 42 / 43 / 44，初始不返回课号 |
+| GET /api/memory/lesson?token&runId | 当前脚本、输入、到期时间及本轮配置 |
+| POST /api/memory/begin | 已访问文档后创建 baseline / fixed 运行编号 |
+| GET /memory/<token>/activate?run=ID | 标记本会话运行已实际访问 |
+| POST /api/memory/report | 校验单次运行、标量结构、业务结果、自有资源和课内条件 |
+| POST /api/memory/grade | 真实故障 / 对照报告和原因、证据、验证共同检查 |
+
+每会话 30 分钟、最多 100 次运行，全局 500 个活动会话；重启失效。仅本地 scripts/qa-memory.mjs 0/1 可注入测试配置，HTTP 不开放固定答案参数。正常服务保留随机行为。
+
+MemoryLabState 是显式业务根。实际数组 / Map、命名载荷、DOM 子树、事件闭包和 interval 可沿 Retainers 检查。应用对照先取消旧注册与任务、清空旧根，再执行同样批次；每批 5 次、每运行上限 20 次。pagehide、手动停止和会话到期执行清理；API 超时 6 秒。没有全源清理，统计历史只保留标量，不把目标对象输出 Console。
+
+50 使用实际 DOM 搜索结果及异步任务，可变商品顺序 / 延迟。业务断言由实际选择的 SKU、数量、单价产生；两种条件下至少两次成功才满足对照。下载 Recorder 示例带运行上下文和必需点击坐标，默认导航后可继续操作；跨条件需编辑 / 移除默认导航，参考课程说明。示例脚本、格式逐步执行和真正 Chrome Recorder Replay 分列。
+
+服务校验不能独立读取整个堆或防止主动篡改页面报告。自有计数不称作浏览器整体 DOM / listener，容器归零不等于 GC 完成；快照、分配栈、面板操作与自由解释另行留证。学习 v1 新增可选 memory 章末，与旧三个章末及旧课程向后兼容。

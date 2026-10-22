@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>日常好物 · 内存与回归实验</title>
+    <link rel="stylesheet" href="/lab/memory/style.css" />
+    <script type="module" src="/lab/memory/runtime.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="#">日常好物 <small>Little goods</small></a
+      ><span id="context">独立实验</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p id="intro-kicker">沿着引用找到保留</p>
+        <h1 id="title">正在准备实验…</h1>
+        <p id="symptom"></p>
+        <div class="controls">
+          <button id="baseline">准备故障</button
+          ><label
+            >对照方案
+            <select id="correction" aria-label="对照方案"></select></label
+          ><button id="fixed" class="secondary">应用所选对照</button
+          ><button id="restore" class="secondary">恢复故障</button
+          ><button id="dispose" class="secondary">停止并清理本页</button>
+        </div>
+        <p id="status" role="status">
+          从课程入口准备会话；此页没有框架或 worker。
+        </p>
+      </section>
+      <section id="memory-scene" hidden>
+        <div class="scene-heading">
+          <div>
+            <h2>晨间陶瓷杯</h2>
+            <p id="product"></p>
+          </div>
+          <button id="batch" disabled>重复 5 次开关</button>
+        </div>
+        <div id="preview-host"></div>
+        <p id="feature" aria-live="polite">
+          每轮会真实创建、打开、更新并关闭商品预览。
+        </p>
+        <div class="summary" id="summary">先准备故障，再执行相同操作批次。</div>
+        <p>
+          先记录浏览器证据，再记录本轮检查；可在同一运行追加批次，最多 20
+          次开关。
+        </p>
+      </section>
+      <section id="flow-scene" hidden>
+        <h2>一条可重复的购物流程</h2>
+        <p>目标：晨间陶瓷杯。每轮从空购物车开始，核对 SKU、数量和总额。</p>
+        <div class="controls">
+          <button data-testid="reset-flow" id="reset-flow" class="secondary">
+            重置购物流程</button
+          ><label><input type="checkbox" id="reverse" />商品换序</label
+          ><label><input type="checkbox" id="slow" />搜索变慢（1200ms）</label>
+        </div>
+        <form id="search-form">
+          <label
+            >搜索商品
+            <input
+              data-testid="search"
+              id="search"
+              placeholder="输入杯"
+              autocomplete="off" /></label
+          ><button data-testid="search-submit" type="submit">搜索</button>
+        </form>
+        <p id="search-status" role="status">尚未搜索</p>
+        <div id="results" data-ready="false"></div>
+        <div id="detail"></div>
+        <p id="cart" data-testid="cart" data-complete="false">购物车为空</p>
+        <div class="controls">
+          <button id="fragile" class="secondary">运行脆弱示例</button
+          ><button id="stable" class="secondary">运行稳定条件示例</button
+          ><button id="recorder" class="secondary">
+            下载 Recorder JSON 示例
+          </button>
+        </div>
+        <p class="muted">
+          上述两个示例是本页教学脚本。请在 Chrome Recorder 实际录制、编辑和
+          Replay；它们不计作工具操作证明。
+        </p>
+      </section>
+      <section>
+        <h2>本轮观察</h2>
+        <button id="report" disabled>记录本轮检查并回传</button>
+        <p id="check-status" role="status">尚未报告</p>
+        <details>
+          <summary id="observation-label">自有资源计数（不是堆快照）</summary>
+          <pre id="metrics">{}</pre>
+        </details>
+        <button id="export" class="secondary" disabled>导出观察 JSON</button>
+        <p class="muted" id="observation-boundary">
+          这里仅统计实验自己拥有的引用和资源，不是整个浏览器的 DOM / listener
+          数量，不测 Shallow / Retained Size，也不证明对象已被 GC。
+        </p>
+      </section>
+      <details id="instructions">
+        <summary>本课取证步骤</summary>
+        <ol id="steps"></ol>
+      </details>
+      <section>
+        <h2 id="recovery-title">恢复与测量边界</h2>
+        <p id="recovery-behavior">
+          故障与对照在同一文档内执行；应用对照先撤销本页旧资源，再做相同批次。停止只清理本会话对象、监听器、定时器与请求；离页也会清理。刷新建立新对象环境，不能与刷新前按同一对象身份作比较。
+        </p>
+        <p id="recovery-limits">
+          内存最多 20 次开关 / 运行，资源有界。拍快照前排除
+          Console、$0、选中节点等调试器引用。请勿将对象日志保存成全局变量来验证释放。强制
+          GC 和 Memory / Recorder 操作请在 DevTools 完成。
+        </p>
+        <p id="environment" class="muted"></p>
+      </section>
+    </main>
+    <footer>DevTools 实验室 · 本地教学商城 · 无真实交易</footer>
+  </body>
+</html>

@@ -4,7 +4,11 @@ import { labOrigin, labRequest } from "../lib/lab";
 import { useLearning } from "../composables/useLearning";
 const props = defineProps<{ chapter: string }>();
 const apiBase = computed(() =>
-  props.chapter === "performance" ? "/api/performance" : "/api/network-state",
+  props.chapter === "memory"
+    ? "/api/memory"
+    : props.chapter === "performance"
+      ? "/api/performance"
+      : "/api/network-state",
 );
 const chapterTitle = computed(
   () =>
@@ -12,7 +16,8 @@ const chapterTitle = computed(
       network: "Network",
       application: "Application",
       performance: "Performance",
-    })[props.chapter as "network" | "application" | "performance"],
+      memory: "Memory",
+    })[props.chapter as "network" | "application" | "performance" | "memory"],
 );
 const learning = useLearning(),
   token = ref(""),
@@ -60,7 +65,7 @@ async function prepare() {
 }
 function open() {
   popup = window.open(
-    `${labOrigin}/${props.chapter === "performance" ? "performance" : "labs"}/${token.value}/?tutorial=${encodeURIComponent(location.origin)}`,
+    `${labOrigin}/${props.chapter === "memory" ? "memory" : props.chapter === "performance" ? "performance" : "labs"}/${token.value}/?tutorial=${encodeURIComponent(location.origin)}`,
     "devtools-chapter-lab",
   );
 }

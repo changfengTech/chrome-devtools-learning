@@ -1,0 +1,82 @@
+{
+  "title": "日常好物：目标 SKU 的稳定购物流程（会话专用示例）",
+  "timeout": 5000,
+  "steps": [
+    {
+      "type": "navigate",
+      "url": "http://127.0.0.1:4174/memory/3fded20f-d2fc-46b6-9415-fc6d6253fc62/?lesson=50&token=3fded20f-d2fc-46b6-9415-fc6d6253fc62&tutorial=http%3A%2F%2F127.0.0.1%3A4173&run=122f80c9-0d91-42b7-9e98-65ce822f525f&reverse=true&slow=false"
+    },
+    {
+      "type": "click",
+      "offsetX": 8,
+      "offsetY": 8,
+      "selectors": [
+        [
+          "[data-testid=\"reset-flow\"]"
+        ]
+      ]
+    },
+    {
+      "type": "change",
+      "selectors": [
+        [
+          "[data-testid=\"search\"]"
+        ]
+      ],
+      "value": "杯"
+    },
+    {
+      "type": "click",
+      "offsetX": 8,
+      "offsetY": 8,
+      "selectors": [
+        [
+          "[data-testid=\"search-submit\"]"
+        ]
+      ]
+    },
+    {
+      "type": "waitForElement",
+      "selectors": [
+        [
+          "#results[data-ready=\"true\"]"
+        ]
+      ],
+      "visible": true
+    },
+    {
+      "type": "click",
+      "offsetX": 8,
+      "offsetY": 8,
+      "selectors": [
+        [
+          "[data-testid=\"open-primary\"]"
+        ]
+      ]
+    },
+    {
+      "type": "click",
+      "offsetX": 8,
+      "offsetY": 8,
+      "selectors": [
+        [
+          "[data-testid=\"add-to-cart\"]"
+        ]
+      ]
+    },
+    {
+      "type": "waitForElement",
+      "selectors": [
+        [
+          "[data-testid=\"cart\"][data-complete=\"true\"]"
+        ]
+      ],
+      "attributes": {
+        "data-sku": "CUP-42",
+        "data-quantity": "2",
+        "data-total": "84"
+      },
+      "visible": true
+    }
+  ]
+}

@@ -436,7 +436,7 @@
     "demo": "对比暂时分配、稳定缓存与持续保留",
     "lab": "反复开关弹窗记录堆、DOM 和监听器",
     "challenge": "设计重复操作与正常对照",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -447,7 +447,7 @@
     "demo": "操作引用图观察保留关系",
     "lab": "检查较大商品缓存和路径",
     "challenge": "解释大对象与保留大量对象的差异",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -458,7 +458,7 @@
     "demo": "比较重复操作后的增量和位置",
     "lab": "定位持续保留的弹窗对象",
     "challenge": "区分正常存活和可疑增量",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -469,7 +469,7 @@
     "demo": "移除 DOM 并切换外部引用",
     "lab": "追踪被数组保留的关闭弹窗",
     "challenge": "追踪新残留节点并验证释放趋势",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -480,7 +480,7 @@
     "demo": "切换清理操作比较引用图",
     "lab": "修复订阅或定时刷新未清理",
     "challenge": "修复新保留问题并保证功能正常",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {
@@ -546,7 +546,7 @@
     "demo": "改变定位和等待条件观察回放",
     "lab": "录制搜索、详情、加购并重复验证",
     "challenge": "制作不依赖易变商品顺序的流程",
-    "status": "planned",
+    "status": "ready",
     "minutes": 20
   },
   {

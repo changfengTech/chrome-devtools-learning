@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "40",
+    "rounds": [
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 719,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 10,
+            "cacheEntries": 2,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 707,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 2,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 708,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 10,
+            "cacheEntries": 2,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 711,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 2,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 710,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 10,
+            "cacheEntries": 2,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 710,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 2,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      }
+    ],
+    "recorded": true
+  },
+  {
+    "id": "41",
+    "rounds": [
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 716,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 10,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 707,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 1,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 704,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 10,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 709,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 1,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 696,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 10,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 709,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 1,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      }
+    ],
+    "recorded": true
+  },
+  {
+    "id": "42",
+    "rounds": [
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 708,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 10,
+            "snapshotCache": 0,
+            "latestPreview": 1,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 708,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 1,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 711,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 10,
+            "snapshotCache": 0,
+            "latestPreview": 1,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 712,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 1,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 708,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 10,
+            "snapshotCache": 0,
+            "latestPreview": 1,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 707,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 1,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      }
+    ],
+    "recorded": true
+  },
+  {
+    "id": "43",
+    "rounds": [
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 712,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 10,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 707,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 708,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 10,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 706,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 710,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 10,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 710,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      }
+    ],
+    "recorded": true
+  },
+  {
+    "id": "44",
+    "rounds": [
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 707,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 10,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 708,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 709,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 10,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 707,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 708,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 10,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 710,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 10,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 0,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      }
+    ],
+    "recorded": true
+  },
+  {
+    "id": "50",
+    "rounds": [
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 712,
+            "visible": true,
+            "expected": 84,
+            "checksum": 98,
+            "cycles": 1,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 1,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 3322,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 3,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 3,
+            "failedFlows": 0,
+            "ordersSeen": 2,
+            "delaysSeen": 2
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 712,
+            "visible": true,
+            "expected": 84,
+            "checksum": 98,
+            "cycles": 1,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 1,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 3414,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 3,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 3,
+            "failedFlows": 0,
+            "ordersSeen": 2,
+            "delaysSeen": 2
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      },
+      {
+        "baseline": {
+          "phase": "baseline",
+          "metrics": {
+            "duration": 710,
+            "visible": true,
+            "expected": 84,
+            "checksum": 98,
+            "cycles": 1,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 0,
+            "failedFlows": 1,
+            "ordersSeen": 0,
+            "delaysSeen": 0
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+        },
+        "fixed": {
+          "phase": "fixed",
+          "metrics": {
+            "duration": 3323,
+            "visible": true,
+            "expected": 84,
+            "checksum": 84,
+            "cycles": 3,
+            "featureWorks": true,
+            "history": 0,
+            "cacheEntries": 0,
+            "owners": 0,
+            "auditOwners": 0,
+            "previewHistory": 0,
+            "snapshotCache": 0,
+            "latestPreview": 0,
+            "detached": 0,
+            "listeners": 0,
+            "timers": 0,
+            "successfulFlows": 3,
+            "failedFlows": 0,
+            "ordersSeen": 2,
+            "delaysSeen": 2
+          },
+          "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+        }
+      }
+    ],
+    "recorded": true
+  }
+]

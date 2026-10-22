@@ -6,6 +6,7 @@ import LessonTwentyOne from "./components/LessonTwentyOne.vue";
 import FoundationLesson from "./components/FoundationLesson.vue";
 import networkBook from "./data/network-state.json";
 import performanceBook from "./data/performance.json";
+import memoryBook from "./data/memory.json";
 import ChapterChallenge from "./components/ChapterChallenge.vue";
 import { chapters, lessons, getLesson } from "./data/curriculum";
 import { useLearning } from "./composables/useLearning";
@@ -319,7 +320,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
                       : "沿着路线，建立排查能力"
                   }}
                 </h2>
-                <p>第 01～39、51 课已开放实战，其余课程可查看课程安排。</p>
+                <p>第 01～44、50～51 课已开放实战，其余课程可查看课程安排。</p>
               </div>
               <label class="search-field"
                 ><AppIcon name="search" :size="17" /><input
@@ -410,7 +411,9 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
           <ChapterChallenge
             v-if="
               activeChapter &&
-              ['network', 'application', 'performance'].includes(activeChapter)
+              ['network', 'application', 'performance', 'memory'].includes(
+                activeChapter,
+              )
             "
             :key="activeChapter"
             :chapter="activeChapter"
@@ -422,7 +425,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
             activeLesson &&
             Number(activeLesson.id) >= 1 &&
             (Number(activeLesson.id) <= 18 ||
-              [...networkBook, ...performanceBook].some(
+              [...networkBook, ...performanceBook, ...memoryBook].some(
                 (item) => item.id === activeLesson?.id,
               ))
           "
@@ -594,6 +597,19 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
               <a class="button primary" href="#chapter/performance"
                 >进入性能课程与章末挑战</a
               >
+            </article>
+          </div>
+          <div class="lab-cases">
+            <article>
+              <AppIcon name="chip" :size="25" />
+              <h2>Memory · 40–44 / Recorder · 50</h2>
+              <p>
+                真实对象、Detached
+                DOM、订阅与定时器；沿引用验证清理，再用稳定流程回归。
+              </p>
+              <a class="button primary" href="#chapter/memory"
+                >进入内存课程与章末挑战</a
+              ><a class="button secondary" href="#lesson/50">Recorder 回归</a>
             </article>
           </div>
           <h2>Network 时序快捷实验 · 第 21 课</h2>

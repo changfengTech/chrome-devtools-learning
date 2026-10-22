@@ -1,0 +1,26 @@
+[
+  {
+    "id": "40",
+    "observed": "原理模型 · 数量与大小为示意，不读取浏览器堆，不计实战完成。\n\n生命周期\n临时分配\n有界缓存\n持续保留\n重复 5 次操作\n模拟 GC\n相同操作批次（示意）\n5 个累计分配\n5 个当前可达\nGC 不会回收仍从根可达的对象。缓存可以有正常平台。"
+  },
+  {
+    "id": "41",
+    "observed": "原理模型 · 数量与大小为示意，不读取浏览器堆，不计实战完成。\n\n主缓存引用\n审计缓存引用\nWindow → 主缓存 owner\nShallow 2 单位\n共享载荷\n100 示意单位 · 仍可达\nWindow → 审计 owner\nShallow 2 单位\n\n主 owner 的示意 Retained：0。共享载荷有第二条根路径时，不能重复计入每个 owner 的独占保留。"
+  },
+  {
+    "id": "42",
+    "observed": "原理模型 · 数量与大小为示意，不读取浏览器堆，不计实战完成。\n\n生命周期\n临时分配\n有界缓存\n持续保留\n重复 5 次操作\n模拟 GC\n相同操作批次（示意）\n5 个累计分配\n5 个当前可达\nComparison 要比较空闲且相同 VM；分配区间只缩小来源。\n保存快照 A\n保存快照 B\n查看分配位置\ncreatePreviewAllocation\nretainPreviewSnapshot\n\nComparison：A 0 / B 5；存活增量 5。\n\n分配来源 retainPreviewSnapshot → snapshotCache。区间与来源只能缩小候选，还需追到实际保留根。"
+  },
+  {
+    "id": "43",
+    "observed": "原理模型 · 数量与大小为示意，不读取浏览器堆，不计实战完成。\n\n节点连接文档\nclosedDialogs 数组引用\nselectedDetails Map 引用\nDocument\nDOM 父子关系\n商品弹窗 → 子树\nDetached，但仍可达\nWindow → 外部容器\n数组 / Map 强引用\n\nremove() 只改变文档关系。还要检查调试器的 $0、Console 输出和全局变量是否保留节点。"
+  },
+  {
+    "id": "44",
+    "observed": "原理模型 · 数量与大小为示意，不读取浏览器堆，不计实战完成。\n\n资源\n事件监听器\n定时器\n仅移除 DOM\n完整 dispose\n调度器 → callback\n注册已撤销\n闭包 → 会话 → 数据\n清理登记也已释放\nDOM\n已移除\n\n清理使用原函数或原 timer ID；完成后丢弃 cleanup 闭包，重新打开仍要有一次有效订阅。"
+  },
+  {
+    "id": "50",
+    "observed": "原理模型 · 数量与大小为示意，不读取浏览器堆，不计实战完成。\n\n商品换序\n搜索变慢\nSKU 定位 + 条件等待\n演算流程\n重置购物车\n搜索“杯”\n等待结果已就绪\n查看 CUP-42\n加购并核对 SKU / 数量 / 总额\n\n业务断言通过：目标 CUP-42，数量 2，总额 84。\n\n这是流程模型。真实 Recorder 的录制、编辑、Replay 与导出在 Chrome 进行。"
+  }
+]

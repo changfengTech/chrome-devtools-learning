@@ -1,0 +1,27 @@
+{
+  "tool": "Google Chrome Memory / Heap snapshot",
+  "configuration": "43 practice / array retaining removed nodes",
+  "before": {
+    "snapshot": 1
+  },
+  "after": {
+    "snapshot": 2,
+    "instances": 5,
+    "shallowDisplayed": "0.2 kB",
+    "retainedDisplayed": "23.0 kB"
+  },
+  "retainerPath": [
+    "DetachedProductDialog",
+    "[0] in Array",
+    "closedDialogs in MemoryLabState",
+    "memoryLab in Window",
+    "GC roots"
+  ],
+  "note": "Native UI observations, not page counters. Full heap contains browser extensions, so only project-filtered evidence is published.",
+  "thirdSnapshot": {
+    "captured": true,
+    "gcButtonUsed": true,
+    "ownDetachedRootsAfterCleanup": 0,
+    "nativeFilteredComparison": "pending"
+  }
+}

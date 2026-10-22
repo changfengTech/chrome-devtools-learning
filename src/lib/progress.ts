@@ -88,7 +88,7 @@ export function parseProgress(
     for (const [id, raw] of Object.entries(value.chapters)) {
       const c = raw as ChapterProgress;
       if (
-        !["network", "application", "performance"].includes(id) ||
+        !["network", "application", "performance", "memory"].includes(id) ||
         !c ||
         typeof c.note !== "string" ||
         c.note.length > 4000 ||

@@ -1,0 +1,67 @@
+{
+  "initialHidden": true,
+  "stepsHidden": true,
+  "baseline": {
+    "phase": "baseline",
+    "metrics": {
+      "duration": 1326,
+      "visible": true,
+      "expected": 18930,
+      "checksum": 18930,
+      "cycles": 10,
+      "featureWorks": true,
+      "history": 0,
+      "cacheEntries": 0,
+      "owners": 0,
+      "auditOwners": 0,
+      "previewHistory": 0,
+      "snapshotCache": 0,
+      "latestPreview": 0,
+      "detached": 0,
+      "listeners": 0,
+      "timers": 10,
+      "successfulFlows": 0,
+      "failedFlows": 0,
+      "ordersSeen": 0,
+      "delaysSeen": 0
+    },
+    "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+  },
+  "fixed": {
+    "phase": "fixed",
+    "metrics": {
+      "duration": 1304,
+      "visible": true,
+      "expected": 18930,
+      "checksum": 18930,
+      "cycles": 10,
+      "featureWorks": true,
+      "history": 0,
+      "cacheEntries": 0,
+      "owners": 0,
+      "auditOwners": 0,
+      "previewHistory": 0,
+      "snapshotCache": 0,
+      "latestPreview": 0,
+      "detached": 0,
+      "listeners": 0,
+      "timers": 0,
+      "successfulFlows": 0,
+      "failedFlows": 0,
+      "ordersSeen": 0,
+      "delaysSeen": 0
+    },
+    "status": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+  },
+  "lowScore": "案例检查通过；请补齐排查报告与自评，达到 8/10 且证据、验证非零后再记录。",
+  "completed": "案例检查与章末自评已完成。分数为自评，不是自动能力认证。",
+  "refreshed": "将一章的方法用于新案例\n\nMemory 章末挑战\n\n初始不指定具体课程与根因。自己选择工具，留下实际证据，再检查判断和修复。\n\n生成章末任务\n章末排查报告\n起始条件 / 工具 / 实际证据 / 根因 / 修复与恢复\n复现准确\n0 · 缺失或错误\n1 · 部分成立\n2 · 有充分依据\n工具选择\n0 · 缺失或错误\n1 · 部分成立\n2 · 有充分依据\n证据有效\n0 · 缺失或错误\n1 · 部分成立\n2 · 有充分依据\n根因解释\n0 · 缺失或错误\n1 · 部分成立\n2 · 有充分依据\n修复验证\n0 · 缺失或错误\n1 · 部分成立\n2 · 有充分依据\n\n自评 10/10；目标 ≥8，证据和修复验证均不得为 0。已保存章末自评。\n\n服务检查案例请求与结构化答案。五维分数与文字报告由你自评，不靠关键词冒充理解评分。章末记录与课内状态分开，随学习记录一同导出。",
+  "refreshedNote": "QA 流程样本：同一文档每组 5 次开关，关闭后 TimerLease 仍由 interval 闭包保留；原 ID clearInterval 后同批次为零且刷新功能仍可用。页面计数与实际快照分开记录。",
+  "refreshedScores": [
+    "2",
+    "2",
+    "2",
+    "2",
+    "2"
+  ]
+}

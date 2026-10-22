@@ -1,0 +1,47 @@
+{
+  "note": "Downloaded Recorder-format sample, navigation and each selector executed through browser UI automation; this is not native Chrome Recorder Replay.",
+  "steps": [
+    {
+      "type": "click",
+      "selector": "[data-testid=\"reset-flow\"]",
+      "observed": true
+    },
+    {
+      "type": "change",
+      "selector": "[data-testid=\"search\"]",
+      "observed": true
+    },
+    {
+      "type": "click",
+      "selector": "[data-testid=\"search-submit\"]",
+      "observed": true
+    },
+    {
+      "type": "waitForElement",
+      "selector": "#results[data-ready=\"true\"]",
+      "observed": "旅行随行杯\n\nGIFT-42 / 单价 49\n\n查看 旅行随行杯\n晨间陶瓷杯\n\nCUP-42 / 单价 42\n\n查看 晨间陶瓷杯"
+    },
+    {
+      "type": "click",
+      "selector": "[data-testid=\"open-primary\"]",
+      "observed": true
+    },
+    {
+      "type": "click",
+      "selector": "[data-testid=\"add-to-cart\"]",
+      "observed": true
+    },
+    {
+      "type": "waitForElement",
+      "selector": "[data-testid=\"cart\"][data-complete=\"true\"]",
+      "observed": "SKU CUP-42 / 数量 2 / 总额 84"
+    }
+  ],
+  "cart": "SKU CUP-42 / 数量 2 / 总额 84",
+  "attributes": {
+    "complete": "true",
+    "quantity": "2",
+    "sku": "CUP-42",
+    "total": "84"
+  }
+}

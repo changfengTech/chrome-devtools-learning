@@ -52,7 +52,7 @@ export function useLearning() {
     );
   }
   function updateChapter(id: string, patch: Partial<ChapterProgress>) {
-    if (!["network", "application", "performance"].includes(id)) return;
+    if (!["network", "application", "performance", "memory"].includes(id)) return;
     state.value = {
       ...state.value,
       chapters: {

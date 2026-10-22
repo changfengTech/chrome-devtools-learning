@@ -1,0 +1,494 @@
+[
+  {
+    "id": "40",
+    "kind": "40",
+    "hook": "内存上去了，先别急着叫它泄漏。",
+    "symptom": "商品预览反复开关后，页面仍能用，但已关闭预览对应的业务记录不断增加。",
+    "principle": "对象不可达后才可能回收；分配高峰、缓存平台和持续保留是不同现象。先建立重复操作、静置、GC 后的同条件趋势。",
+    "concepts": [
+      {
+        "title": "可达性决定回收资格",
+        "body": "关闭弹窗只是业务生命周期结束。全局数组、缓存、监听器等仍可能使对象可达；不可达也不保证立即回收。"
+      },
+      {
+        "title": "观察多个信号",
+        "body": "Performance monitor 的 JS heap、DOM Nodes、JS event listeners 是浏览器信号。页面只统计自己拥有的资源，不将这些计数冒充整个堆。"
+      },
+      {
+        "title": "平台与增长",
+        "body": "正常缓存可有有界平台。按相同 5 次开关分组，先预热，再比较 GC 后多个点；一次上升或一次下降都不能证明泄漏。"
+      }
+    ],
+    "demoSteps": [
+      "改变临时分配、缓存或持续保留模式",
+      "重复相同批次，再模拟一次 GC",
+      "比较回收后的基线和平台；这是示意单位，不是浏览器字节"
+    ],
+    "steps": [
+      "打开 More tools > Performance monitor，固定页面与每组 5 次开关，先记录空闲基线。",
+      "准备故障，在同一文档重复 5 次开关至少两组，记录 JS heap、DOM 和监听器趋势。",
+      "在 Memory 使用 Collect garbage 后再次记录；不要把临时峰值直接称为泄漏。",
+      "在 Heap snapshot 用 MemoryVisit / CatalogEntry 筛选，沿 history / cache 查看可达路径。",
+      "选择对应清理或有界缓存对照，在同一文档再做相同批次；功能结果应保持。",
+      "记录正常平台、仍保留的根、观察条件和不能由计数推出的结论，再记录本轮检查。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "关闭预览后历史数组持续保留 MemoryVisit"
+      },
+      {
+        "id": "b",
+        "label": "每次打开使用新键写入无界商品缓存"
+      },
+      {
+        "id": "c",
+        "label": "只看单个 JS heap 数值便确认泄漏"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "相同批次后 history 中存活对象持续增长"
+      },
+      {
+        "id": "b",
+        "label": "相同商品在 cache 中产生多个键且 GC 后仍可达"
+      },
+      {
+        "id": "c",
+        "label": "一次分配峰值，没有重复或回收后对照"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "关闭后移除历史记录引用，保留正常业务"
+      },
+      {
+        "id": "b",
+        "label": "用商品键复用并限制缓存容量"
+      },
+      {
+        "id": "c",
+        "label": "隐藏数值或只减少打开次数"
+      }
+    ],
+    "hints": [
+      "打开 More tools > Performance monitor，固定页面与每组 5 次开关，先记录空闲基线。",
+      "在 Memory 使用 Collect garbage 后再次记录；不要把临时峰值直接称为泄漏。",
+      "核对两条可能的保留或回归原因：关闭预览后历史数组持续保留 MemoryVisit；每次打开使用新键写入无界商品缓存。保持正常结果并复测。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/memory-problems"
+  },
+  {
+    "id": "41",
+    "kind": "41",
+    "hook": "对象自己很小，为什么留住这么多内存？",
+    "symptom": "商品缓存管理器只含几个字段，却通过 entries 留住大量商品载荷；另一组有两个所有者共享载荷。",
+    "principle": "Shallow Size 是对象自身成本，Retained Size 依赖支配关系；共享对象不能随意重复归给每个所有者。沿 Retainers 追到根，再判断该引用是否必要。",
+    "concepts": [
+      {
+        "title": "Shallow 与 Retained",
+        "body": "一个很小的 owner 可以经数组保留大量载荷。Retained Size 描述它消失后可随之不可达的对象，不能用字段数量推算。"
+      },
+      {
+        "title": "共享与支配",
+        "body": "两个根共享同一载荷，删除一个引用不一定释放载荷；要观察所有通往根的保留路径。"
+      },
+      {
+        "title": "快照中的对象身份",
+        "body": "Summary 按构造函数查找 CatalogCacheOwner、ProductPayload，展开实例与 Retainers。不要通过 Console 临时变量或选中 DOM 人为增加根。"
+      }
+    ],
+    "demoSteps": [
+      "选中 owner、载荷并比较示意 shallow / retained",
+      "切换第二个根引用",
+      "断开一个或全部根，再解释共享对象何时不可达"
+    ],
+    "steps": [
+      "准备空闲页，拍 Heap snapshot A，并在 Summary 认识构造函数和 Shallow / Retained Size。",
+      "准备故障，重复打开商品；拍 B，筛选 CatalogCacheOwner 和 ProductPayload。",
+      "展开 owner 的 entries 与 Retainers，记录 Window → memoryLab → owners 的路径。",
+      "另一配置有主缓存与审计缓存共享载荷，检查两个根，不能只删一个引用就宣布释放。",
+      "应用对应对照并重复相同操作，拍 C；确认根引用减少，且正常商品仍能打开。",
+      "报告实际 Retainers、共享路径及快照条件；页面对象计数不冒充 Retained Size。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "多余缓存 owner 持有重复商品载荷"
+      },
+      {
+        "id": "b",
+        "label": "主缓存与审计缓存共同保留已结束的载荷"
+      },
+      {
+        "id": "c",
+        "label": "Shallow Size 最大的对象必定是根因"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "CatalogCacheOwner.entries 指向 ProductPayload"
+      },
+      {
+        "id": "b",
+        "label": "同一 ProductPayload 有 owners 和 audit 两条保留路径"
+      },
+      {
+        "id": "c",
+        "label": "只按总快照大小排序，不检查根"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "只保留当前商品 owner，关闭后清理多余载荷"
+      },
+      {
+        "id": "b",
+        "label": "同时撤销两条过期引用，保留当前业务载荷"
+      },
+      {
+        "id": "c",
+        "label": "只删共享对象的一条引用"
+      }
+    ],
+    "hints": [
+      "准备空闲页，拍 Heap snapshot A，并在 Summary 认识构造函数和 Shallow / Retained Size。",
+      "展开 owner 的 entries 与 Retainers，记录 Window → memoryLab → owners 的路径。",
+      "核对两条可能的保留或回归原因：多余缓存 owner 持有重复商品载荷；主缓存与审计缓存共同保留已结束的载荷。保持正常结果并复测。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/memory-problems/heap-snapshots"
+  },
+  {
+    "id": "42",
+    "kind": "42",
+    "hook": "这批新增对象，是在哪一步留下的？",
+    "symptom": "每次关闭商品预览都会留下新会话，或保存一次新的预览快照；现象只有重复后才明显。",
+    "principle": "Comparison 缩小存活增量，Allocation instrumentation on timeline 关联分配区间，Allocation sampling 用统计方式定位分配栈。分配多不等于保留多。",
+    "concepts": [
+      {
+        "title": "比较同一 VM",
+        "body": "A：预热且空闲；B：相同操作；C：修复后重做。比较同一文档的快照身份，关注 # Delta / Size Delta，再看 Retainers。"
+      },
+      {
+        "title": "分配区间",
+        "body": "开始 Allocation instrumentation on timeline，重复开关，停止并选操作区间，区分仍存活与已回收对象。录制本身有开销。"
+      },
+      {
+        "title": "抽样与精确计数",
+        "body": "Allocation sampling 是统计估计。用 createPreviewAllocation / retainPreviewSnapshot 的分配栈找线索，再用快照和业务生命周期确认。"
+      }
+    ],
+    "demoSteps": [
+      "增加相同操作批次",
+      "切换正常缓存与泄漏保留",
+      "比较分配总量和回收后存活增量"
+    ],
+    "steps": [
+      "预热页面并记录 A，在相同 VM 进行 5 次预览开关，再拍 B。",
+      "在 Comparison 选择 A，筛选 PreviewAllocation，记录 # Delta 和 Retainers。",
+      "开启 Allocation instrumentation on timeline 后重复一组，停止并选择操作区间检查存活条目。",
+      "另用 Allocation sampling 找 createPreviewAllocation / retainPreviewSnapshot；抽样次数不等于精确对象数。",
+      "应用当前配置对应对照，保持同样工作量做 C；正常 latestPreview 可以保留一个。",
+      "至少比较两批趋势，记录增量、分配来源、引用根和修复后正常功能。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "previewHistory 每次追加关闭后的预览对象"
+      },
+      {
+        "id": "b",
+        "label": "snapshotCache 按每次访问 ID 保存快照"
+      },
+      {
+        "id": "c",
+        "label": "分配量大就一定泄漏"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "Comparison 中 PreviewAllocation 随批次净增，根为 previewHistory"
+      },
+      {
+        "id": "b",
+        "label": "分配栈 retainPreviewSnapshot，根为 snapshotCache 的不同键"
+      },
+      {
+        "id": "c",
+        "label": "只有抽样热点，没有存活与引用证据"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "移除关闭预览历史，保留至多一个当前预览"
+      },
+      {
+        "id": "b",
+        "label": "按商品复用快照并限制缓存"
+      },
+      {
+        "id": "c",
+        "label": "仅强制 GC，不断开引用"
+      }
+    ],
+    "hints": [
+      "预热页面并记录 A，在相同 VM 进行 5 次预览开关，再拍 B。",
+      "开启 Allocation instrumentation on timeline 后重复一组，停止并选择操作区间检查存活条目。",
+      "核对两条可能的保留或回归原因：previewHistory 每次追加关闭后的预览对象；snapshotCache 按每次访问 ID 保存快照。保持正常结果并复测。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/memory-problems/allocation-profiler"
+  },
+  {
+    "id": "43",
+    "kind": "43",
+    "hook": "弹窗已移除，谁还抓着它？",
+    "symptom": "关闭的商品弹窗已从页面消失，却仍被数组或选中项索引持有，子树继续可达。",
+    "principle": "Detached 只说明节点不在文档中，不自动表示泄漏。要沿 Retainers 找业务结束后仍不必要的强引用，并在相同操作下验证。",
+    "concepts": [
+      {
+        "title": "文档连接与可达性不同",
+        "body": "remove() 断开 DOM 父子关系，却不会删除 JS 数组或 Map 里的引用。父节点被保留时，其子树也可能被保留。"
+      },
+      {
+        "title": "沿根追踪",
+        "body": "在 Heap snapshot 用 Detached 或 DetachedProductDialog 筛选，检查 closedDialogs / selectedDetails，再追到 window.memoryLab。"
+      },
+      {
+        "title": "避免调试器制造保留",
+        "body": "Elements 的选中节点、$0、Console 输出或全局变量都可能保留节点。快照前清理调试器引用，再重复；不要用页面计数当作 GC 证明。"
+      }
+    ],
+    "demoSteps": [
+      "从文档移除节点",
+      "切换数组和 Map 的外部引用",
+      "释放最后一条根，观察可达标记而非立即 GC"
+    ],
+    "steps": [
+      "预热后拍 A，重复 5 次开关并拍 B；不要先将目标节点存成全局变量。",
+      "在快照筛选 Detached 与 DetachedProductDialog，区分文档内和脱离节点。",
+      "选一个实例，在 Retainers 追到 closedDialogs 或 selectedDetails 以及 window.memoryLab。",
+      "只 remove DOM 的对照不会清理外部引用；先预测结果再复测。",
+      "选择释放相应外部引用的对照，重复相同批次，比较 C 的存活增量。",
+      "记录根路径、正常弹窗是否可用和调试器自身保留的排除方法。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "closedDialogs 数组保留已关闭弹窗子树"
+      },
+      {
+        "id": "b",
+        "label": "selectedDetails Map 仍指向已关闭节点"
+      },
+      {
+        "id": "c",
+        "label": "只要 Detached 就必然是漏洞"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "DetachedProductDialog.node 已断开文档且 closedDialogs 仍可达"
+      },
+      {
+        "id": "b",
+        "label": "同一 detached 节点由 selectedDetails 的访问键保留"
+      },
+      {
+        "id": "c",
+        "label": "页面已不可见，所以对象一定不可达"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "清空关闭弹窗对应数组引用"
+      },
+      {
+        "id": "b",
+        "label": "删除 Map 中已结束详情引用"
+      },
+      {
+        "id": "c",
+        "label": "只再次调用 node.remove()"
+      }
+    ],
+    "hints": [
+      "预热后拍 A，重复 5 次开关并拍 B；不要先将目标节点存成全局变量。",
+      "选一个实例，在 Retainers 追到 closedDialogs 或 selectedDetails 以及 window.memoryLab。",
+      "核对两条可能的保留或回归原因：closedDialogs 数组保留已关闭弹窗子树；selectedDetails Map 仍指向已关闭节点。保持正常结果并复测。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/memory-problems/heap-snapshots"
+  },
+  {
+    "id": "44",
+    "kind": "44",
+    "hook": "订阅结束了，回调也结束了吗？",
+    "symptom": "商品详情反复关闭后，库存事件仍触发多份回调，或定时刷新继续持有已经结束的会话。",
+    "principle": "监听器和定时器会保留回调及其闭包。业务结束时必须撤销注册并放下清理记录；只隐藏节点或重新赋值变量都不够。",
+    "concepts": [
+      {
+        "title": "监听器的身份",
+        "body": "removeEventListener 需要对应事件类型、原函数与 capture 条件。每次创建新箭头函数不能移除旧回调。"
+      },
+      {
+        "title": "定时器与闭包",
+        "body": "clearInterval 使用原 ID；回调仍注册时，它捕获的 TimerLease 也可能可达。清理后再丢弃 cleanup 闭包本身。"
+      },
+      {
+        "title": "清理与可用性",
+        "body": "为自己的每次订阅登记 dispose，并在关闭 / reset / pagehide 撤销。修复后再次打开仍应收到一次库存更新，不能用禁用功能蒙混。"
+      }
+    ],
+    "demoSteps": [
+      "创建监听器或定时器引用链",
+      "尝试只移除 DOM，再执行完整 dispose",
+      "检查零活跃资源与新会话仍可用"
+    ],
+    "steps": [
+      "记录基线 JS event listeners 与快照，准备故障并反复 5 次开关。",
+      "触发库存事件，观察回调数；定时配置等两个 tick，再拍快照。",
+      "筛选 SubscriptionLease / TimerLease，沿回调闭包追到事件目标或调度器。",
+      "应用对应取消注册 / clearInterval 对照，同时清空已结束的清理登记。",
+      "重复相同开关，验证闲置资源为零；重新打开，库存或刷新仍能更新一次。",
+      "离开前停止并清理本页资源，比较多批存活趋势；计数只覆盖实验自己注册的资源。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "window 库存事件回调未在关闭时注销"
+      },
+      {
+        "id": "b",
+        "label": "setInterval 未在关闭时 clearInterval"
+      },
+      {
+        "id": "c",
+        "label": "只是浏览器 GC 不够积极"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "SubscriptionLease 经库存监听器闭包可达，关闭后事件仍触发"
+      },
+      {
+        "id": "b",
+        "label": "TimerLease 经 interval 闭包可达，关闭后仍有 tick"
+      },
+      {
+        "id": "c",
+        "label": "只看 DOM 是否从页面消失"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "用原回调注销库存事件并释放登记"
+      },
+      {
+        "id": "b",
+        "label": "clearInterval 原 ID 并释放闭包登记"
+      },
+      {
+        "id": "c",
+        "label": "只删除弹窗节点"
+      }
+    ],
+    "hints": [
+      "记录基线 JS event listeners 与快照，准备故障并反复 5 次开关。",
+      "筛选 SubscriptionLease / TimerLease，沿回调闭包追到事件目标或调度器。",
+      "核对两条可能的保留或回归原因：window 库存事件回调未在关闭时注销；setInterval 未在关闭时 clearInterval。保持正常结果并复测。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/memory-problems"
+  },
+  {
+    "id": "50",
+    "kind": "50",
+    "hook": "同一条录制，换个顺序还能回放吗？",
+    "symptom": "按第一个商品录制的流程在排序变化后买错商品；固定等待的流程在搜索变慢后找不到结果。",
+    "principle": "稳定回归需要明确起点、语义或业务定位、条件等待与结果断言。Recorder 负责录制和回放，示例流程只帮助解释失败，不替代工具操作。",
+    "concepts": [
+      {
+        "title": "定位业务对象",
+        "body": "nth-child 与易变顺序绑定。使用稳定的 data-testid 或可访问名称，并检查目标 SKU；不要复制会话 token 到长期测试环境。"
+      },
+      {
+        "title": "等待状态",
+        "body": "Recorder 自动等待可交互元素，也可以添加 waitForElement / asserted events。固定 sleep 无法表达结果已准备好；录制真实异步状态。"
+      },
+      {
+        "title": "可复现的起点",
+        "body": "每轮先重置搜索与购物车，再执行搜索→目标详情→加购；重复两种排序与两种延迟，断言 SKU、数量、总额。会话 30 分钟过期后需重新生成链接。"
+      }
+    ],
+    "demoSteps": [
+      "切换商品排序和搜索延迟",
+      "比较第一项 / 固定等待与 SKU / 条件等待",
+      "查看定位失败、等待失败和业务断言的不同结果"
+    ],
+    "steps": [
+      "准备实验，打开 More tools > Recorder；记录前先点重置购物流程，保证购物车为空。",
+      "先运行脆弱示例观察失败；示例是页面教学脚本，不是 Recorder 回放。",
+      "Start new recording，设置 Selector attribute 为 data-testid；录制重置→输入杯→搜索→查看晨间陶瓷杯→加入购物车。",
+      "结束录制，检查步骤；用 Recorder 编辑稳定定位、添加结果条件或 waitForElement，断言目标 SKU 与购物车完成状态。",
+      "首次 Replay 核对起点。测试新顺序 / 延迟时，移除 Recorder 默认 navigate 步骤（保留重置），或编辑导航 URL 条件；至少两种条件都断言相同 SKU、数量与总额。会话专用 JSON 示例可下载作编辑参考。",
+      "保存 / 导出 Recorder 用户流程与回放证据，回教程选择证据。页面只检查实际购物结果，不能证明你操作过 Recorder。"
+    ],
+    "diagnoses": [
+      {
+        "id": "a",
+        "label": "按第一项定位把商品顺序当作身份"
+      },
+      {
+        "id": "b",
+        "label": "固定等待比真实搜索完成更短"
+      },
+      {
+        "id": "c",
+        "label": "只要按钮点击成功就算回归通过"
+      }
+    ],
+    "evidences": [
+      {
+        "id": "a",
+        "label": "换序后第一项变为另一 SKU，购物车断言失败"
+      },
+      {
+        "id": "b",
+        "label": "结果未就绪时固定等待已结束；条件等待仍能完成"
+      },
+      {
+        "id": "c",
+        "label": "只有一次成功截图，没有多条件回放"
+      }
+    ],
+    "fixes": [
+      {
+        "id": "a",
+        "label": "使用目标商品业务定位并核对购物车 SKU"
+      },
+      {
+        "id": "b",
+        "label": "等待结果就绪与业务条件后继续"
+      },
+      {
+        "id": "c",
+        "label": "把等待写得很长且不检查结果"
+      }
+    ],
+    "hints": [
+      "准备实验，打开 More tools > Recorder；记录前先点重置购物流程，保证购物车为空。",
+      "Start new recording，设置 Selector attribute 为 data-testid；录制重置→输入杯→搜索→查看晨间陶瓷杯→加入购物车。",
+      "核对两条可能的保留或回归原因：按第一项定位把商品顺序当作身份；固定等待比真实搜索完成更短。保持正常结果并复测。"
+    ],
+    "source": "https://developer.chrome.com/docs/devtools/recorder/reference"
+  }
+]

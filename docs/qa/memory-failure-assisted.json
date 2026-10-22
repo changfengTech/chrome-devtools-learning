@@ -1,0 +1,80 @@
+{
+  "baseline": {
+    "metrics": {
+      "duration": 736,
+      "visible": true,
+      "expected": 24933,
+      "checksum": 24933,
+      "cycles": 5,
+      "featureWorks": true,
+      "history": 0,
+      "cacheEntries": 0,
+      "owners": 0,
+      "auditOwners": 0,
+      "previewHistory": 0,
+      "snapshotCache": 0,
+      "latestPreview": 0,
+      "detached": 0,
+      "listeners": 0,
+      "timers": 5,
+      "successfulFlows": 0,
+      "failedFlows": 0,
+      "ordersSeen": 0,
+      "delaysSeen": 0
+    },
+    "result": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标异常已在本次观察中出现"
+  },
+  "wrongFix": {
+    "metrics": {
+      "duration": 742,
+      "visible": true,
+      "expected": 24933,
+      "checksum": 24933,
+      "cycles": 5,
+      "featureWorks": true,
+      "history": 0,
+      "cacheEntries": 0,
+      "owners": 0,
+      "auditOwners": 0,
+      "previewHistory": 0,
+      "snapshotCache": 0,
+      "latestPreview": 0,
+      "detached": 0,
+      "listeners": 0,
+      "timers": 5,
+      "successfulFlows": 0,
+      "failedFlows": 0,
+      "ordersSeen": 0,
+      "delaysSeen": 0
+    },
+    "result": "目标条件尚未成立。✓ 输入与业务校验值一致；○ 目标对照条件成立"
+  },
+  "wrongAnswer": "还有证据需要补齐。\n✓ 本会话已观察故障\n○ 根因与本次案例一致\n○ 证据与本次案例一致\n○ 验证针对实际原因\n○ 本会话正常对照已通过\n\n服务校验本页自有资源与业务报告，报告可被修改；不证明 GC、真实堆字节或 Recorder 操作。",
+  "fixed": {
+    "metrics": {
+      "duration": 734,
+      "visible": true,
+      "expected": 24933,
+      "checksum": 24933,
+      "cycles": 5,
+      "featureWorks": true,
+      "history": 0,
+      "cacheEntries": 0,
+      "owners": 0,
+      "auditOwners": 0,
+      "previewHistory": 0,
+      "snapshotCache": 0,
+      "latestPreview": 0,
+      "detached": 0,
+      "listeners": 0,
+      "timers": 0,
+      "successfulFlows": 0,
+      "failedFlows": 0,
+      "ordersSeen": 0,
+      "delaysSeen": 0
+    },
+    "result": "本轮检查通过。✓ 输入与业务校验值一致；✓ 目标对照条件成立"
+  },
+  "assisted": "挑战检查通过，证据与结果一致。\n✓ 本会话已观察故障\n✓ 根因与本次案例一致\n✓ 证据与本次案例一致\n✓ 验证针对实际原因\n✓ 本会话正常对照已通过\n\nsetInterval 未在关闭时 clearInterval。证据：TimerLease 经 interval 闭包可达，关闭后仍有 tick。验证：clearInterval 原 ID 并释放闭包登记。\n\n已查看解析；通过后会记录为使用辅助完成。\n\n服务校验本页自有资源与业务报告，报告可被修改；不证明 GC、真实堆字节或 Recorder 操作。",
+  "persistedAssisted": true
+}
