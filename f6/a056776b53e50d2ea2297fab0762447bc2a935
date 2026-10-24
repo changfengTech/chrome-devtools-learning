@@ -1,0 +1,19 @@
+scripts/qa-online.mjs
+  s_63e6d855d49c69::t_11c099d7bcbd3b 48-59
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "f6a056776b53e50d2ea2297fab0762447bc2a935",
+  "prompts": {},
+  "sessions": {
+    "s_63e6d855d49c69": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15933-194e-7481-b765-3aa2250061cf",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "changfeng <167777927+changfengTech@users.noreply.github.com>"
+    }
+  }
+}
