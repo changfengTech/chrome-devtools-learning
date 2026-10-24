@@ -20,7 +20,7 @@ const chapterLessons = {
   console: ["09", "12"],
   sources: ["16", "18"],
 };
-const origins = new Set([
+const localOrigins = new Set([
   "http://127.0.0.1:4173",
   "http://localhost:4173",
   "http://127.0.0.1:5173",
@@ -196,11 +196,12 @@ export function assessAdvanced(id, v, m, expected) {
   return { valid, healthy: Boolean(healthy), fault: Boolean(fault) };
 }
 export function createAdvancedHandler({
+  sessions = new Map(),
+  origins = localOrigins,
   ttl = 1800000,
   variantForChallenge = () => randomInt(2),
   chapterLesson = (c) => chapterLessons[c][randomInt(2)],
 } = {}) {
-  const sessions = new Map();
   const session = (t) => {
     const s = sessions.get(t);
     if (!s || Date.now() - s.created > ttl) {

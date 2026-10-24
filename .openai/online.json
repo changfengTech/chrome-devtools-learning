@@ -1,0 +1,14 @@
+{
+  "tutorial": {
+    "project_id": "appgprj_6adcca5cf76c8191af7d5b385eade324",
+    "origin": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site"
+  },
+  "shop": {
+    "project_id": "appgprj_6adccda9d5508191836e3b4ec32da060",
+    "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site"
+  },
+  "cors": {
+    "project_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef",
+    "origin": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site"
+  }
+}

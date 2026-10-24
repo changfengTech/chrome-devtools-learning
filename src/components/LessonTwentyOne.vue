@@ -3,7 +3,7 @@ import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 import AppIcon from "./AppIcon.vue";
 import TimingDemo from "./TimingDemo.vue";
 import { useLearning } from "../composables/useLearning";
-import { labOrigin, labRequest, labUrl, labWindowName } from "../lib/lab";
+import { isHosted, labOrigin, labRequest, labUrl, labWindowName } from "../lib/lab";
 const learning = useLearning();
 const step = ref(0);
 const steps = ["故障现场", "理解时序", "真实实战", "独立挑战", "排查复盘"];
@@ -115,7 +115,7 @@ async function createChallenge() {
       "案例已创建。打开挑战商城，先运行故障，再选择判断并运行修复对照。";
   } catch {
     challengeMessage.value =
-      "无法连接实验服务。请在项目目录运行 pnpm dev，确认 4174 端口可用后重试。";
+      isHosted ? "暂时无法连接在线实验服务，请检查网络后重试。" : "无法连接实验服务。请在项目目录运行 pnpm dev，确认 4174 端口可用后重试。";
   } finally {
     pending.value = false;
   }

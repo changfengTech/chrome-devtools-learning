@@ -1,4 +1,6 @@
-export const labOrigin = "http://127.0.0.1:4174";
+import online from "../../.openai/online.json";
+export const isHosted = import.meta.env.MODE === "site";
+export const labOrigin = isHosted ? online.shop.origin : "http://127.0.0.1:4174";
 // 在同一教程文档内复用窗口，同时隔离不同教程窗口的 opener 与结果接收方。
 export const labWindowName = `devtools-lab-${crypto.randomUUID()}`;
 export function labUrl(scenario = "waiting", token?: string) {

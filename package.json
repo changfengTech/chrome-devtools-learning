@@ -18,7 +18,12 @@
     "prebuild": "pnpm lab:type-check && pnpm lab:build",
     "predev": "pnpm lab:build",
     "lab:type-check": "tsc --ignoreConfig --noEmit --strict --target ES2022 --module ESNext --moduleResolution Bundler --skipLibCheck public/lab/foundation/shop-cart.ts",
-    "docs:lessons": "node scripts/generate-foundations.mjs && node scripts/generate-network-state.mjs && node scripts/generate-performance.mjs && node scripts/generate-memory.mjs && node scripts/generate-quality.mjs && node scripts/generate-advanced.mjs"
+    "docs:lessons": "node scripts/generate-foundations.mjs && node scripts/generate-network-state.mjs && node scripts/generate-performance.mjs && node scripts/generate-memory.mjs && node scripts/generate-quality.mjs && node scripts/generate-advanced.mjs",
+    "build:site": "pnpm build --mode site",
+    "preview:site": "vite preview --outDir out --host 127.0.0.1 --port 4176 --strictPort",
+    "build:shop": "node scripts/build-hosted.mjs shop",
+    "build:cors": "node scripts/build-hosted.mjs cors",
+    "test:hosted": "pnpm build:shop && pnpm build:cors && node --test tests/hosted/*.test.mjs"
   },
   "dependencies": {
     "vue": "^3.5.42",
@@ -29,6 +34,7 @@
     "@types/node": "^24.13.4",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vue/tsconfig": "^0.9.1",
+    "miniflare": "^4.20260730.0",
     "npm-run-all2": "^9.0.3",
     "typescript": "~6.0.0",
     "vite": "^8.2.2",

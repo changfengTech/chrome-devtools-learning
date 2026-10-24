@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-24",
+  "provider": "ChatGPT Sites",
+  "audience": "public, explicitly requested by project owner",
+  "current": [
+    {
+      "role": "tutorial",
+      "origin": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adcca5cf76c8191af7d5b385eade324",
+      "access_mode": "public",
+      "commit_sha": "fcdacac1b80e5c3fd3ac3b584d3c0350c98f4e14",
+      "version_id": "appgprj_6adcca5cf76c8191af7d5b385eade324~appgver_6f9da3edfa148191993a0fe3b97a5df8",
+      "version_number": 2,
+      "archive_hash": "sha256:e25a5f3d484ca4410d4fcee0804c1d4068db6327c140abdf162e1fa85f34b553",
+      "deployment_id": "appgdep_6adcd458e04c819185eaa24cda7a6b80",
+      "status": "succeeded",
+      "url": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:53:13.441433+00:00"
+    },
+    {
+      "role": "shop",
+      "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adccda9d5508191836e3b4ec32da060",
+      "access_mode": "public",
+      "commit_sha": "69c0c3cfd53a18b44b6a815d6bc2dfc04264f08f",
+      "version_id": "appgprj_6adccda9d5508191836e3b4ec32da060~appgver_b611eb51e8908191bcc23fe325e78d10",
+      "version_number": 2,
+      "archive_hash": "sha256:4936a8d5c6dbd98394baea6f9621a4a97185b8f4756697d9df69fba50900ba42",
+      "deployment_id": "appgdep_6adcd494aa148191860ca6224b9d02d2",
+      "status": "succeeded",
+      "url": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:54:16.549869+00:00"
+    },
+    {
+      "role": "cors",
+      "origin": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef",
+      "access_mode": "public",
+      "commit_sha": "33a79b4bc62930065ea1b3b8fbe592c360ae896d",
+      "version_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef~appgver_8cefa15951748191bc8f48c61519c64a",
+      "version_number": 2,
+      "archive_hash": "sha256:765c75616fc77591752914b6960d079c0aefaaed47431bc8c7314dce43535662",
+      "deployment_id": "appgdep_6adcd4ca853881919254c56ae1cb0389",
+      "status": "succeeded",
+      "url": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:55:09.374669+00:00"
+    }
+  ],
+  "initial": [
+    {
+      "role": "tutorial",
+      "origin": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adcca5cf76c8191af7d5b385eade324",
+      "access_mode": "public",
+      "commit_sha": "cc96ea9b7b4b24a02795d5b81085f51d7b426e79",
+      "version_id": "appgprj_6adcca5cf76c8191af7d5b385eade324~appgver_87b5d3b81b38819191c418d2e722e11c",
+      "version_number": 1,
+      "archive_hash": "sha256:b306cc3ff14b92bcef821a21fa408127595469e0644dca57265ec6c579755b43",
+      "deployment_id": "appgdep_6adcd296e2f08191ae8ef578b5768c81",
+      "status": "succeeded",
+      "url": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:45:45.037826+00:00"
+    },
+    {
+      "role": "shop",
+      "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adccda9d5508191836e3b4ec32da060",
+      "access_mode": "public",
+      "commit_sha": "fabd566dd6c21614fd56a0074b06a58ed822166d",
+      "version_id": "appgprj_6adccda9d5508191836e3b4ec32da060~appgver_69949f1470bc81918ba91ca7338e17b6",
+      "version_number": 1,
+      "archive_hash": "sha256:e58ce211e416c761f2f454715c5b90cea18f9c6b83f7b55b25cd8ef8bcfc216d",
+      "deployment_id": "appgdep_6adcd24e3b6c8191862a5c46bba7d99c",
+      "status": "succeeded",
+      "url": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:44:35.504942+00:00"
+    },
+    {
+      "role": "cors",
+      "origin": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef",
+      "access_mode": "public",
+      "commit_sha": "0cfed31e3ac430e7f296b4ff598e3952939a9471",
+      "version_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef~appgver_8933ddbedaf4819187f3913d206a62af",
+      "version_number": 1,
+      "archive_hash": "sha256:5b4706e8edef5edacd51702e3493177d96713f44a575df53abbd412485b8d198",
+      "deployment_id": "appgdep_6adcd27ca0b081918dd66b70302e2fed",
+      "status": "succeeded",
+      "url": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:45:19.541331+00:00"
+    }
+  ],
+  "verification": "Native deployment success and public access confirmed. Browser end-to-end not verified: local HTTPS route resets before HTTP response."
+}

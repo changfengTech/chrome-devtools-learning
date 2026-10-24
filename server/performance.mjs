@@ -7,7 +7,7 @@ const book = JSON.parse(
   ),
 );
 export const performanceIds = book.map((x) => x.id);
-const origins = new Set([
+const localOrigins = new Set([
   "http://127.0.0.1:5173",
   "http://localhost:5173",
   "http://127.0.0.1:4173",
@@ -77,11 +77,12 @@ export function assessPerformance(id, variant, m, expected = m?.expected) {
   return { valid: Boolean(valid), healthy: Boolean(healthy) };
 }
 export function createPerformanceHandler({
+  sessions = new Map(),
+  origins = localOrigins,
   ttl = 30 * 60_000,
   variantForChallenge = () => randomInt(2),
   chapterLesson = () => ["29", "30", "33"][randomInt(3)],
 } = {}) {
-  const sessions = new Map();
   const session = (t) => {
     const s = sessions.get(t);
     if (!s || Date.now() - s.created > ttl) {

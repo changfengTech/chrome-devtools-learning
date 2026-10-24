@@ -18,7 +18,8 @@
 </p>
 
 <p align="center">
-  <a href="#快速开始">快速开始</a> ·
+  <a href="https://devtools-learning-changfeng.cloudysky2.chatgpt.site">在线完整课程</a> ·
+  <a href="#快速开始">本地运行</a> ·
   <a href="#看看它的样子">界面预览</a> ·
   <a href="#现在可以学什么">课程范围</a> ·
   <a href="docs/CURRICULUM.md">完整目录</a> ·
@@ -27,6 +28,28 @@
 </p>
 
 ---
+
+## 在线访问
+
+**[打开 DevTools 实验室 · ChatGPT 站点 →](https://devtools-learning-changfeng.cloudysky2.chatgpt.site)**
+
+公开访问，无需安装项目即可学习。建议使用桌面 Chrome，DevTools 保持英文。**课程前端、真实商城后端和跨域同伴服务均部署在 ChatGPT Sites**，实战会发出真实 HTTP 请求，保留真实延迟、缓存、SSE / WebSocket 和浏览器存储行为。
+
+| 能力 | 在线完整版 | 本地运行 |
+| --- | --- | --- |
+| 63 节课程、原理模型、提示与排查速查 | 可直接使用 | 可使用 |
+| 真实商城、逐课实战、独立挑战与 8 个章末 | 在线实验服务提供会话与证据检查 | 本地 Node 服务提供相同流程 |
+| 阅读、笔记及练习记录 | 保存在当前浏览器，可导入 / 导出 | 保存在当前浏览器，可导入 / 导出 |
+| 原生 DevTools、设备与账户功能 | 按课程在 Chrome 操作；受浏览器和设备条件影响 | 同样需要相应条件 |
+| 修改工程源码、Workspaces 磁盘映射 | 需要本地项目或专用测试目录 | 可直接使用本地工程 |
+
+从课程点击「准备引导实验」再打开商城，保留教程窗口接收检查结果。线上实验会话约 **30 分钟**过期，过期后重新准备；学习记录不随会话过期。在线与本地是不同来源，记录用 JSON 导出 / 导入迁移，导入会替换目标记录，先备份。
+
+无需真实业务账号或支付信息；表单、认证等课程请使用合成测试资料。Android 真机、地理位置授权、AI assistance 可用账户及磁盘映射等需要额外条件，见[部署说明与能力边界](docs/DEPLOYMENT.md)。
+
+本次发布的三个 Site 均已由平台确认成功且为公开权限。本机访问新域名时遇到 HTTPS 连接重置，**线上完整商城链路仍待在可达网络复验**；本地 Workers / D1 与 Node 回归已通过。实际范围见[部署验收记录](docs/qa/site/browser.json)。
+
+维护者使用 `pnpm build:site` 构建课程到 `out/`，`pnpm build:shop` / `pnpm build:cors` 构建两个服务。完整发布、存储和验收记录见[部署说明](docs/DEPLOYMENT.md)。
 
 ## 把「好像有问题」变成有证据的判断
 
@@ -39,7 +62,7 @@
 - **换条件独立排查**：挑战更换数据和故障配置，要求原因、证据与验证方案相互对应。
 - **留下自己的方法**：三级提示按需展开；阅读、练习、挑战分别记录，笔记和辅助标记保存在本机，可导入导出。
 
-> 当前是**本地学习版**。**55 节主线 + 8 节专题，63 节学习流程已开放**，另有 **8 个面板章末挑战**。专题的本地条件练习与原生工具 / 真机实操分别记录；功能开放不代表全部人工退出验收完成。
+> 项目提供**在线完整版与本地运行方式**。**55 节主线 + 8 节专题，63 节学习流程已开放**，另有 **8 个面板章末挑战**。专题的本地条件练习与原生工具 / 真机实操分别记录；功能开放不代表全部人工退出验收完成。
 
 ## 看看它的样子
 
@@ -244,7 +267,7 @@ pnpm dev
 
 Elements、Console、Sources、Network、Performance、Memory、Application、Lighthouse 八个章末均已开放。初始不指定课号和根因，先独立取证，再读取选项；案例检查、排查报告与五维自评分开。综合三课使用同样的 ≥8/10 自评门槛，证据 / 验证不得为零。
 
-本地专题练习包含可复现业务条件，原生步骤与课堂夹具分别记录。本轮已补验 Sensors 方向、Media、WebAuthn 虚拟认证器、Workspace 磁盘保存及 Protocol monitor 部分命令链；后续在 Guest 中补齐 Autofill 内置地址实际填充与预测对照；Android 真机、定位权限、可用账户下的 AI 和剩余细项按环境继续验证。没有设备或功能时明确标记待验证，不能把模型点击当作实际完成。真实 WebAuthn 从 T06 提供的 `localhost:4174` 独立原生页进入。
+专题练习包含可复现业务条件，原生步骤与课堂夹具分别记录。本轮已补验 Sensors 方向、Media、WebAuthn 虚拟认证器、Workspace 磁盘保存及 Protocol monitor 部分命令链；后续在 Guest 中补齐 Autofill 内置地址实际填充与预测对照；Android 真机、定位权限、可用账户下的 AI 和剩余细项按环境继续验证。没有设备或功能时明确标记待验证，不能把模型点击当作实际完成。真实 WebAuthn 从 T06 提供的独立原生页进入；线上使用商城 HTTPS 来源，本地使用 `localhost:4174`。
 
 具体阶段见 [开发阶段](docs/ROADMAP.md)，本轮完整回归与原生证据见 [整体验收](docs/QA-RELEASE.md)，剩余事项见 [当前状态](docs/STATUS.md)。
 
@@ -255,13 +278,13 @@ flowchart LR
     Learner[学习者] --> Tutorial[教程 · Vue + TypeScript]
     Learner --> DevTools[Chrome DevTools]
     DevTools --> Shop[独立商城 · HTML / CSS / JS]
-    Tutorial -->|准备实验会话| API[本地 Node HTTP 服务]
+    Tutorial -->|准备实验会话| API[实验服务 · 在线 Worker / 本地 Node]
     Shop -->|真实请求与页面检查报告| API
     Shop -->|校验来源的 postMessage| Tutorial
     Tutorial --> Progress[本机学习记录 · 导入 / 导出]
 ```
 
-教程负责教学流程；商城提供可检查的实际页面、事件、日志和请求，不注入教程的 Vue 实例或 HMR。两个源使用不同端口，减少教程本身对实验的干扰。核心实验不需要业务账号、真实交易或外部商品接口。
+教程负责教学流程；商城提供可检查的实际页面、事件、日志和请求，不注入教程的 Vue 实例或 HMR。线上使用三个独立 HTTPS 来源，本地使用不同端口，减少教程本身对实验的干扰。核心实验不需要业务账号、真实交易或外部商品接口。
 
 - **源码可以追进去**：`shop-cart.ts` 实际编译为 JavaScript，并生成含源码的 `.map`。
 - **状态各有边界**：真实 HTTP 缓存、IndexedDB、Cookie、SSE / WebSocket 和 Service Worker 分开观察；worker scope、数据库、键和缓存按会话隔离，清理只处理自己的实验，过期会话也能清理。
@@ -277,6 +300,8 @@ flowchart LR
 | `pnpm dev` | 同时启动教程 5173、商城 4174 与跨源服务 4175 |
 | `pnpm build` | 商城 TS 检查与编译、Source Map、Vue 类型检查、生产构建 |
 | `pnpm preview:all` | 同时启动生产预览 4173、商城 4174 与跨源服务 4175 |
+| `pnpm build:site` | 构建在线课程到 `out/`，连接已配置的 HTTPS 实验服务 |
+| `pnpm test:hosted` | 在本地 Workers / D1 运行时检查在线适配、持久化、真实流与来源约束 |
 | `pnpm test` | 运行 Node 测试，覆盖场景接口、判定、Source Map 与记录校验 |
 | `pnpm docs:curriculum` | 根据课程数据重新生成完整目录 |
 | `pnpm docs:lessons` | 生成 01–18、19–20、22–26、35–39、27–34、51、40–44、50、45–49、52 以及 53–55、T01–T08 共 62 份脚本与共同合同 |
@@ -370,21 +395,21 @@ chrome-devtools-learning/
 <details>
 <summary>教程能打开，为什么显示「实验服务未连接」？</summary>
 
-请在项目根目录运行 `pnpm dev` 或 `pnpm preview:all`，让 4174 商城服务也启动。只启动 Vite 前端不足以完成实战。检查终端中的端口占用信息，并优先使用文档中的 `127.0.0.1` 地址。
+在线版请检查网络能否访问商城 HTTPS 地址，再点击连接重试；无需启动本机服务。本地运行时，请在项目根目录运行 `pnpm dev` 或 `pnpm preview:all`，让 4174 商城服务也启动。只启动 Vite 前端不足以完成实战。检查终端中的端口占用信息，并优先使用文档中的 `127.0.0.1` 地址。
 
 </details>
 
 <details>
 <summary>准备了实验，却打不开商城窗口？</summary>
 
-先点击准备，再手动点击「打开引导商城」或「打开挑战商城」。若浏览器提示拦截弹窗，允许当前本地站点打开实验窗口后重试，并保留教程窗口接收结果。
+先点击准备，再手动点击「打开引导商城」或「打开挑战商城」。若浏览器提示拦截弹窗，允许当前教程站点打开实验窗口后重试，并保留教程窗口接收结果。
 
 </details>
 
 <details>
 <summary>服务重启或页面刷新后，还能接着练吗？</summary>
 
-学习笔记、阅读、练习及挑战记录保存在 localStorage，刷新后保留。临时会话在服务内存中，30 分钟后或服务重启会失效；回课程重新准备即可。重新准备不会删除已保存的学习记录。
+学习笔记、阅读、练习及挑战记录保存在 localStorage，刷新后保留。线上临时会话保存在 D1，约 30 分钟过期；本地会话在服务内存中，30 分钟后或服务重启会失效。回课程重新准备即可。重新准备不会删除已保存的学习记录。
 
 </details>
 
@@ -405,7 +430,7 @@ Elements 中的 DOM/CSS 修改是临时实验。刷新、恢复故障或重新�
 <details>
 <summary>公开仓库能直接用 GitHub Pages 完成全部实战吗？</summary>
 
-当前版本需要本地 Node HTTP 服务来制造真实响应时序、管理会话和检查结果，单独静态托管前端不能提供完整实战。请按上面的本地启动步骤运行；当前没有附带公开在线实验后端。
+单独 GitHub Pages 静态托管无法运行实验后端。仓库提供的 [ChatGPT 在线完整版](https://devtools-learning-changfeng.cloudysky2.chatgpt.site) 已将后端迁移到 Workers / D1，打开即可实战；也可以按上面的步骤运行本地版。
 
 </details>
 

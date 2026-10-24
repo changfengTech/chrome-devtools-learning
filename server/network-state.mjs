@@ -8,7 +8,7 @@ const book = JSON.parse(
   ),
 );
 export const networkStateIds = book.map((item) => item.id);
-const allowedOrigins = new Set([
+const localOrigins = new Set([
   "http://127.0.0.1:5173",
   "http://localhost:5173",
   "http://127.0.0.1:4173",
@@ -21,11 +21,12 @@ const pause = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const svg = (label = "日常好物") =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256"><rect width="256" height="256" rx="36" fill="#e8efeb"/><path d="M75 75h95v66a44 44 0 0 1-88 0V75m88 8h13a25 25 0 0 1 0 50h-13" fill="#fff" stroke="#567669" stroke-width="6"/><text x="128" y="216" text-anchor="middle" font-size="20" fill="#355447">${label}</text></svg>`;
 export function createNetworkState({
+  sessions = new Map(),
+  allowedOrigins = localOrigins,
   ttl = 30 * 60_000,
   variantForChallenge = () => randomInt(2),
   delayMs = 350,
 } = {}) {
-  const sessions = new Map();
   const wss = new WebSocketServer({ noServer: true, maxPayload: 8192 });
   const session = (token) => {
     const s = sessions.get(token);

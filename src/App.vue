@@ -12,7 +12,7 @@ import qualityBook from "./data/quality.json";
 import ChapterChallenge from "./components/ChapterChallenge.vue";
 import { chapters, lessons, getLesson } from "./data/curriculum";
 import { useLearning } from "./composables/useLearning";
-import { labRequest, labUrl, labWindowName } from "./lib/lab";
+import { isHosted, labRequest, labUrl, labWindowName } from "./lib/lab";
 const learning = useLearning();
 const route = ref(location.hash.slice(1) || "home");
 const search = ref("");
@@ -231,7 +231,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
             class="service-status"
             :aria-label="
               service === 'online'
-                ? '本地实验已连接，点击重新检查'
+                ? '实验服务已连接，点击重新检查'
                 : '实验服务未连接，点击重试'
             "
             @click="checkService"
@@ -239,7 +239,7 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
             <span class="status-dot" :class="service"></span
             ><span>{{
               service === "online"
-                ? "本地实验已连接"
+                ? "实验服务已连接"
                 : service === "offline"
                   ? "实验服务未连接"
                   : "正在连接实验"
@@ -554,8 +554,9 @@ onBeforeUnmount(() => window.removeEventListener("hashchange", syncRoute));
             课提供 DOM、日志与断点实验；第 21 课提供真实慢请求。
           </p>
           <div v-if="service !== 'online'" class="setup-note">
-            <h3>先连接本地实验服务</h3>
-            <p>项目目录运行 <code>pnpm dev</code>，同时启动教程和商城。</p>
+            <h3>{{ isHosted ? "在线实验服务暂未连接" : "先连接本地实验服务" }}</h3>
+            <p v-if="isHosted">请检查当前网络是否能访问商城站点，稍后重新检查连接。已保存的学习记录不受影响。</p>
+            <p v-else>项目目录运行 <code>pnpm dev</code>，同时启动教程和商城。</p>
             <button class="button secondary" @click="checkService">
               重新检查连接
             </button>

@@ -44,3 +44,7 @@ __screenshots__/
 
 # Vite
 *.timestamp-*-*.mjs
+
+# Isolated Sites source mirror (contains its own Git metadata)
+.sites/
+out/

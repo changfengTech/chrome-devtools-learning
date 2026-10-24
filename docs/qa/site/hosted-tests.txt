@@ -1,0 +1,36 @@
+vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 19 modules transformed.
+rendering chunks...
+computing gzip size...
+.sites/build-shop/server/index.js  1,159.10 kB │ gzip: 560.02 kB
+
+✓ built in 64ms
+{"role":"shop","destination":"/Users/majialu/Desktop/github/chrome-devtools-learning/.sites/build-shop","assets":42}
+vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 3 modules transformed.
+rendering chunks...
+computing gzip size...
+.sites/build-cors/server/index.js  1.02 kB │ gzip: 0.61 kB
+
+✓ built in 25ms
+{"role":"cors","destination":"/Users/majialu/Desktop/github/chrome-devtools-learning/.sites/build-cors","assets":0}
+✔ Workers 健康响应、63 课会话和八章末在 D1 中可跨隔离实例读取 (1107.638958ms)
+✔ 跨请求保留引导的故障 / 修复证据，错误答案仍拒绝 (14.984083ms)
+✔ 并行资源观察不覆盖 D1 中其他请求的证据 (35.576ms)
+✔ 真实 OPTIONS / POST CORS 故障与修复保留不同响应头 (12.677375ms)
+✔ SSE 与 WebSocket 发送真实两条消息，并保存连接证据 (297.549834ms)
+✔ 慢请求的等待与分块传输是真实流式响应 (2417.552292ms)
+✔ HTTPS WebAuthn 的 RP 绑定、一次性挑战与公开密钥可跨请求持久化 (37.640333ms)
+✔ HTTPS 审计报告只接受本会话的商城 URL，拒绝异源和旧运行（协议夹具） (24.172667ms)
+✔ 托管资源指向实际 HTTPS 来源，手机入口与 WebSocket 不降为本机地址 (45.514708ms)
+✔ 独立 CORS 同伴转发真实 Origin 和请求体，不转发身份或内部路由头 (63.044209ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4466.534541

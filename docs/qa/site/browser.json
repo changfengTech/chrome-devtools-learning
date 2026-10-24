@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-24",
+  "overall": "Published; online browser end-to-end awaiting reachable network",
+  "local_build": {
+    "site": "passed: Vue / TS checks and production build",
+    "node_contracts": {
+      "passed": 60,
+      "failed": 0
+    },
+    "workers_contracts": {
+      "passed": 10,
+      "failed": 0,
+      "output": "hosted-tests.txt",
+      "scope": [
+        "63 lesson sessions and 8 chapter sessions",
+        "cross-isolate D1 state",
+        "parallel resource observations without overwrite",
+        "baseline/fixed protocol evidence and rejection without evidence",
+        "OPTIONS CORS rejection and fixed exact origin",
+        "real SSE and WebSocket messages",
+        "actual waiting and streamed download",
+        "HTTPS WebAuthn registration, RP binding and replay rejection (synthetic protocol credential)",
+        "HTTPS audit URL ownership and run matching (synthetic report)",
+        "HTTPS mobile / WebSocket resource URLs",
+        "companion request body, Origin and removal of identity/internal routing headers"
+      ]
+    },
+    "default_local_mode": "passed: pnpm build outputs dist/; local lab origin preserved"
+  },
+  "local_browser": {
+    "origin": "http://127.0.0.1:4176",
+    "artifact": "Final site production build, same bundles as tutorial Site version 2",
+    "checks": [
+      {
+        "lesson": "T02",
+        "online_guidance": true
+      },
+      {
+        "lesson": "T03",
+        "online_guidance": true
+      },
+      {
+        "lesson": "T06",
+        "online_guidance": true
+      },
+      {
+        "lesson": "52",
+        "online_guidance": true
+      },
+      {
+        "page": "lab",
+        "online_failure_help": true
+      },
+      {
+        "page": "home",
+        "model_interaction": "Waiting 80ms / Content Download 1000ms; transfer explanation updated"
+      }
+    ],
+    "screenshot": "preview-home.png",
+    "scope": "UI-specific online guidance and model only; no backend end-to-end pass claimed."
+  },
+  "production": {
+    "native_deployments": "All three version 2 deployments succeeded; Sites get_site confirms active/public/live URL",
+    "direct_https": {
+      "node_fetch": "ECONNRESET on all 3 public URLs before HTTP response",
+      "curl": "connection reset for default address route and IPv4",
+      "browser": "IAB net::ERR_CONNECTION_RESET"
+    },
+    "server_routes": "worker-routes.json contains sanitized successful shop asset/document/health observations from version 1; not a version 2 end-to-end test",
+    "unchanged_network_settings": true
+  },
+  "pending": [
+    "Open the public course and confirm health from a reachable network",
+    "Complete guided fault/fix and one challenge with real cross-window result return",
+    "Verify browser CORS preflight + response through the companion origin",
+    "Recheck service worker, cookies, storage, SSE/WebSocket and browser-native tools over deployed HTTPS",
+    "Repeat device/account-dependent native checks only when their required conditions are available"
+  ]
+}

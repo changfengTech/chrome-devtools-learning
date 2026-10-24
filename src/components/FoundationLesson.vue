@@ -16,7 +16,7 @@ import AppIcon from "./AppIcon.vue";
 import FoundationDemo from "./FoundationDemo.vue";
 import { assessmentComplete } from "../lib/progress";
 import { useLearning } from "../composables/useLearning";
-import { labOrigin, labRequest, labWindowName } from "../lib/lab";
+import { isHosted, labOrigin, labRequest, labWindowName } from "../lib/lab";
 const props = defineProps<{ lesson: Lesson }>();
 const content = computed(
   () =>
@@ -293,6 +293,11 @@ onBeforeUnmount(() => window.removeEventListener("message", receive));
           ><span>约 {{ lesson.minutes }} 分钟</span>
         </div>
         <h1>{{ content.hook }}</h1>
+        <p v-if="isHosted && ['T02', 'T03', 'T06', '52'].includes(lesson.id)" class="setup-note">
+          {{ lesson.id === 'T02' ? '在线环境：手机可以直接打开本次 HTTPS 商城地址，再从桌面 Chrome Inspect 目标页；端口转发练习仍需本地服务和 Android 真机。'
+            : lesson.id === 'T06' ? '在线环境：真实 WebAuthn 使用商城 HTTPS 来源的独立原生页和对应 RP 域名，无需改成 localhost；课堂夹具与原生认证分别记录。'
+            : '在线环境：覆盖响应与源码映射仍需你授权专用本地目录。Workspaces 保存工程源码需要下载本地项目；站点不会代写你的磁盘。' }}
+        </p>
         <p>{{ lesson.goal }}</p>
         <p v-if="prerequisites" class="boundary-note">
           前置课程：{{ prerequisites }}。专题原生步骤按当前环境分别记录。

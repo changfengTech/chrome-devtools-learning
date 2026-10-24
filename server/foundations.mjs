@@ -11,10 +11,10 @@ export const foundationIds = Array.from({ length: 18 }, (_, index) =>
   String(index + 1).padStart(2, "0"),
 );
 export function createFoundationHandler({
+  sessions = new Map(),
   ttl = 30 * 60_000,
   variantForChallenge = () => randomInt(2),
 } = {}) {
-  const sessions = new Map();
   function get(id) {
     const session = sessions.get(id);
     if (!session || Date.now() - session.created > ttl) {

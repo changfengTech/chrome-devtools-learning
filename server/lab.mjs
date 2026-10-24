@@ -13,7 +13,7 @@ import { createAdvancedHandler, advancedIds } from "./advanced.mjs";
 import { createQualityHandler, qualityIds } from "./quality.mjs";
 
 const publicDirectory = fileURLToPath(new URL("../public/", import.meta.url));
-const origins = new Set([
+const localOrigins = new Set([
   "http://localhost:5173",
   "http://127.0.0.1:5173",
   "http://localhost:4173",
@@ -59,6 +59,8 @@ async function bodyJson(request) {
 }
 
 export function createLabServer({
+  origins = localOrigins,
+  challenges = new Map(),
   waitingMs = 1200,
   chunkMs = 145,
   fixedMs = 45,
@@ -70,7 +72,6 @@ export function createLabServer({
   qualityOptions = {},
   advancedOptions = {},
 } = {}) {
-  const challenges = new Map();
   const foundations = createFoundationHandler(foundationOptions);
   const field = createNetworkState(networkOptions);
   const performanceLab = createPerformanceHandler(performanceOptions);

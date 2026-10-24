@@ -1,0 +1,164 @@
+{
+  "date": "2026-10-24",
+  "note": "Sanitized production route observations from Sites logs after initial publication; no user headers, IPs, tokens or cookies retained. These do not establish browser end-to-end success.",
+  "sites": [
+    {
+      "role": "tutorial",
+      "events": []
+    },
+    {
+      "role": "shop",
+      "events": [
+        {
+          "time": 1792856792344,
+          "path": "/health",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "OPTIONS https://devtools-shop-changfeng.cloudysky2.chatgpt.site/health"
+        },
+        {
+          "time": 1792856724865,
+          "path": "/favicon.svg",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/favicon.svg"
+        },
+        {
+          "time": 1792856724698,
+          "path": "/lab/shop.js",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/lab/shop.js"
+        },
+        {
+          "time": 1792856724689,
+          "path": "/lab/shop.css",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/lab/shop.css"
+        },
+        {
+          "time": 1792856724685,
+          "path": "/lab/hosting-config.js",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/lab/hosting-config.js"
+        },
+        {
+          "time": 1792856724624,
+          "path": "/shop/",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/shop/"
+        },
+        {
+          "time": 1792856721834,
+          "path": "/favicon.svg",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/favicon.svg"
+        },
+        {
+          "time": 1792856721652,
+          "path": "/lab/shop.css",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/lab/shop.css"
+        },
+        {
+          "time": 1792856721650,
+          "path": "/lab/shop.js",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/lab/shop.js"
+        },
+        {
+          "time": 1792856721625,
+          "path": "/lab/hosting-config.js",
+          "status": 200,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-shop-changfeng.cloudysky2.chatgpt.site/lab/hosting-config.js"
+        }
+      ]
+    },
+    {
+      "role": "cors",
+      "events": [
+        {
+          "time": 1792856840158,
+          "path": "/favicon.ico",
+          "status": 404,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-cors-changfeng.cloudysky2.chatgpt.site/favicon.ico"
+        },
+        {
+          "time": 1792856840025,
+          "path": "/",
+          "status": 404,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-cors-changfeng.cloudysky2.chatgpt.site/"
+        },
+        {
+          "time": 1792856796165,
+          "path": "/favicon.ico",
+          "status": 404,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-cors-changfeng.cloudysky2.chatgpt.site/favicon.ico"
+        },
+        {
+          "time": 1792856796104,
+          "path": "/",
+          "status": 404,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-cors-changfeng.cloudysky2.chatgpt.site/"
+        },
+        {
+          "time": 1792856772844,
+          "path": "/favicon.ico",
+          "status": 404,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-cors-changfeng.cloudysky2.chatgpt.site/favicon.ico"
+        },
+        {
+          "time": 1792856772763,
+          "path": "/",
+          "status": 404,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-cors-changfeng.cloudysky2.chatgpt.site/"
+        },
+        {
+          "time": 1792856759845,
+          "path": "/favicon.ico",
+          "status": 404,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-cors-changfeng.cloudysky2.chatgpt.site/favicon.ico"
+        },
+        {
+          "time": 1792856759734,
+          "path": "/",
+          "status": 404,
+          "outcome": "ok",
+          "level": "info",
+          "message": "GET https://devtools-cors-changfeng.cloudysky2.chatgpt.site/"
+        }
+      ]
+    }
+  ]
+}
