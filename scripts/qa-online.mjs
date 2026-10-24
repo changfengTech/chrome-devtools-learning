@@ -45,6 +45,18 @@ const shopReady = await check('health:shop', async () => {
   assert.equal(health.ok, true); assert.equal(health.lessons.length, 63);
   return { lessons: health.lessons.length, hosting: health.hosting };
 });
+await check('tutorial:bundles-and-popup-policy', async () => {
+  const page = await request('tutorial', '/'); assert.equal(page.status, 200);
+  const html = await page.text(); assert.ok(html.includes('id="app"'));
+  const assets = [...html.matchAll(/(?:src|href)="(\/assets\/[^"?#]+\.(?:js|css))"/g)].map(match => match[1]);
+  assert.ok(assets.some(x => x.endsWith('.js')) && assets.some(x => x.endsWith('.css')));
+  for (const path of new Set(assets)) {
+    const asset = await request('tutorial', path); assert.equal(asset.status, 200);
+    assert.ok((await asset.text()).length > 1000);
+  }
+  const shop = await request('shop', '/shop/'); assert.equal(shop.status, 200); await shop.text();
+  return { assets: [...new Set(assets)], tutorialOpenerPolicy: page.headers.get('cross-origin-opener-policy'), shopOpenerPolicy: shop.headers.get('cross-origin-opener-policy') };
+});
 await check('health:cors', async () => {
   const r = await request('cors', '/health'); assert.equal(r.status, 200);
   assert.equal((await r.json()).role, 'cors-companion');
