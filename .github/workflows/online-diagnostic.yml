@@ -1,0 +1,30 @@
+name: Online public HTTP diagnostic
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-http:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Read the exact public source commit
+        shell: bash
+        run: |
+          git init .
+          git remote add origin "https://github.com/${GITHUB_REPOSITORY}.git"
+          git fetch --depth=1 origin "$GITHUB_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Check published sites and real HTTP experiments
+        shell: bash
+        run: node scripts/qa-online.mjs /tmp/devtools-online-http.json
+      - name: Save diagnostic summary
+        if: always()
+        shell: bash
+        run: |
+          if test -f /tmp/devtools-online-http.json; then
+            echo 'Live HTTP contract checks; browser UI and DevTools are verified separately.' >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat /tmp/devtools-online-http.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi

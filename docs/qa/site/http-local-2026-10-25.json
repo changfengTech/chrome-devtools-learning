@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-10-24T16:11:25.328Z",
+  "kind": "live HTTP contracts, not browser UI certification",
+  "node": "v25.9.0",
+  "origins": {
+    "tutorial": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+    "shop": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+    "cors": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site"
+  },
+  "passed": 0,
+  "failed": 5,
+  "skippedBackendChecks": true,
+  "results": [
+    {
+      "name": "homepage:cors",
+      "passed": false,
+      "durationMs": 228,
+      "error": "fetch failed",
+      "code": "ECONNRESET"
+    },
+    {
+      "name": "homepage:tutorial",
+      "passed": false,
+      "durationMs": 455,
+      "error": "fetch failed",
+      "code": "ECONNRESET"
+    },
+    {
+      "name": "homepage:shop",
+      "passed": false,
+      "durationMs": 1331,
+      "error": "fetch failed",
+      "code": "ECONNRESET"
+    },
+    {
+      "name": "health:shop",
+      "passed": false,
+      "durationMs": 273,
+      "error": "fetch failed",
+      "code": "ECONNRESET"
+    },
+    {
+      "name": "health:cors",
+      "passed": false,
+      "durationMs": 220,
+      "error": "fetch failed",
+      "code": "ECONNRESET"
+    }
+  ]
+}

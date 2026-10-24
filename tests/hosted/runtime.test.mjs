@@ -113,6 +113,9 @@ test('独立 CORS 同伴转发真实 Origin 和请求体，不转发身份或内
  mock.get(online.shop.origin).intercept({path:'/labs/worker-test/remote?run=one',method:'POST',headers:h=>h.origin===online.shop.origin&&!h.cookie&&!h.authorization&&!h['x-dispatched-app']}).reply(200,async ({body})=>{assert.equal(await new Response(body).text(),'{"sku":"test"}');return '{"ok":true}';},{headers:{'Content-Type':'application/json','Access-Control-Allow-Origin':online.shop.origin}});
  const proxy=new Miniflare({modules:true,scriptPath:root+'/.sites/build-cors/server/index.js',compatibilityDate:'2026-07-30',fetchMock:mock});
  try{
+  const home=await proxy.dispatchFetch(online.cors.origin+'/');assert.equal(home.status,200);assert.match(home.headers.get('content-type'),/text\/html/);const html=await home.text();assert.ok(html.includes('跨源实验同伴已运行'));assert.ok(html.includes(online.tutorial.origin+'/#lesson/24'));
+  const health=await proxy.dispatchFetch(online.cors.origin+'/health');assert.equal((await health.json()).role,'cors-companion');
+  assert.equal((await proxy.dispatchFetch(online.cors.origin+'/',{method:'POST'})).status,405);
   const r=await proxy.dispatchFetch(online.cors.origin+'/labs/worker-test/remote?run=one',{method:'POST',headers:{Origin:online.shop.origin,'Content-Type':'application/json','Cookie':'private=test','Authorization':'test-only','X-Dispatched-App':'wrong-app'},body:'{"sku":"test"}'});assert.equal(r.status,200,await r.clone().text());assert.equal(r.headers.get('access-control-allow-origin'),online.shop.origin);assert.equal((await r.json()).ok,true);mock.assertNoPendingInterceptors();
   assert.equal((await proxy.dispatchFetch(online.cors.origin+'/unrelated')).status,404);
  }finally{await proxy.dispose();}
