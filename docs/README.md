@@ -23,6 +23,8 @@
 | [ARCHITECTURE.md](ARCHITECTURE.md) | 当前三个本地服务的架构、接口和检查边界 |
 | [STATUS.md](STATUS.md) | 已实现、已验证与剩余工作 |
 | [QA-SITES.md](QA-SITES.md) | ChatGPT Sites 发布结果、自动回归与线上待复验范围 |
+| [SITES-SUPPORT-REPORT.md](SITES-SUPPORT-REPORT.md) | 待提交的平台默认域名访问故障报告（尚未外发） |
+| [NETWORK-ACCESS.md](NETWORK-ACCESS.md) | 公司 VPN 下的精确域名范围、连接证据和恢复后验收步骤 |
 | [DEPLOYMENT.md](DEPLOYMENT.md) | ChatGPT 站点链接、在线 / 本地范围、构建与发布维护 |
 | [QA-NATIVE-TOOLS.md](QA-NATIVE-TOOLS.md) | Guest 中 Overrides / Changes 与 Autofill 原生闭环、截图、清理和设备 / 账户条件 |
 | [QA-RELEASE.md](QA-RELEASE.md) | 本轮 63 课 / 8 章末整体验收、两处修复、原生截图与剩余项 |

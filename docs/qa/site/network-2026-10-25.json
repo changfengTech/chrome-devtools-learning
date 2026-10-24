@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-25",
+  "kind": "read-only local connection diagnosis",
+  "sites": [
+    {
+      "role": "tutorial",
+      "origin": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "dns": "resolved",
+      "tcp443": "connected",
+      "tls": "ECONNRESET before HTTP"
+    },
+    {
+      "role": "shop",
+      "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "dns": "resolved",
+      "tcp443": "connected",
+      "tls": "ECONNRESET before HTTP"
+    },
+    {
+      "role": "cors",
+      "origin": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "dns": "resolved",
+      "tcp443": "connected",
+      "tls": "ECONNRESET before HTTP"
+    }
+  ],
+  "comparisons": [
+    {
+      "host": "chatgpt.site",
+      "tls": "ECONNRESET"
+    },
+    {
+      "host": "goblin-tales.openai.chatgpt.site",
+      "source": "official Sites documentation example; comparison only",
+      "tls": "ECONNRESET"
+    },
+    {
+      "host": "example.com",
+      "tls": "TLSv1.2",
+      "httpStatus": 404
+    },
+    {
+      "host": "learn.chatgpt.com",
+      "tls": "TLSv1.3"
+    },
+    {
+      "host": "developers.cloudflare.com",
+      "tls": "TLSv1.3"
+    }
+  ],
+  "siteVariants": {
+    "ipv4Endpoints": [
+      "104.18.22.186",
+      "104.18.23.186"
+    ],
+    "defaultTLS": "ECONNRESET",
+    "forcedTLS12": "ECONNRESET"
+  },
+  "routeComparison": {
+    "siteAddress": {
+      "interface": "en0"
+    },
+    "workingDocumentationAddress": {
+      "interface": "utun0"
+    },
+    "privateAddressesRetained": false
+  },
+  "proxySettings": {
+    "macOSExplicitHTTPProxy": false,
+    "macOSExplicitHTTPSProxy": false,
+    "macOSPAC": false,
+    "macOSSocksProxy": false,
+    "processProxyVariableNames": []
+  },
+  "inference": "Independent GitHub-hosted HTTP checks succeeded (79/79). Local Sites and working documentation take different interfaces, but the exact routing policy is unknown. User also reports phone failure without confirmed connection type. Network-path or platform-ingress cause remains unconfirmed; company VPN is not established as the sole cause.",
+  "changesToSystemNetwork": false,
+  "userReportedEnvironment": "Company VPN/proxy on desktop; user reports the same URL also fails on a phone. Phone Wi-Fi/cellular path and error code were not confirmed."
+}

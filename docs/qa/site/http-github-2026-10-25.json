@@ -1,0 +1,433 @@
+{
+  "checkedAt": "2026-10-24T16:13:43.490Z",
+  "kind": "live HTTP contracts, not browser UI certification",
+  "node": "v22.23.3",
+  "origins": {
+    "tutorial": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+    "shop": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+    "cors": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site"
+  },
+  "passed": 78,
+  "failed": 0,
+  "skippedBackendChecks": false,
+  "results": [
+    {
+      "name": "homepage:tutorial",
+      "passed": true,
+      "durationMs": 1458,
+      "origin": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "status": 200,
+      "bytes": 1644
+    },
+    {
+      "name": "homepage:cors",
+      "passed": true,
+      "durationMs": 869,
+      "origin": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "status": 200,
+      "bytes": 2144
+    },
+    {
+      "name": "homepage:shop",
+      "passed": true,
+      "durationMs": 1437,
+      "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "status": 200,
+      "bytes": 3949
+    },
+    {
+      "name": "health:shop",
+      "passed": true,
+      "durationMs": 60,
+      "lessons": 63,
+      "hosting": "Workers / D1"
+    },
+    {
+      "name": "health:cors",
+      "passed": true,
+      "durationMs": 132
+    },
+    {
+      "name": "lesson21:real-request-challenge",
+      "passed": true,
+      "durationMs": 3958,
+      "observedScenario": "download",
+      "realRequests": 2,
+      "challengePassed": true,
+      "elapsedMs": 3062
+    },
+    {
+      "name": "lesson24:companion-cors",
+      "passed": true,
+      "durationMs": 3832,
+      "preflight": [
+        403,
+        204
+      ],
+      "fixedBusinessResponse": 200,
+      "browserEnforcement": "not tested by HTTP client"
+    },
+    {
+      "name": "lesson26:real-event-stream",
+      "passed": true,
+      "durationMs": 1870,
+      "events": 2
+    },
+    {
+      "name": "session:01",
+      "passed": true,
+      "durationMs": 1242
+    },
+    {
+      "name": "session:02",
+      "passed": true,
+      "durationMs": 1268
+    },
+    {
+      "name": "session:04",
+      "passed": true,
+      "durationMs": 1405
+    },
+    {
+      "name": "session:03",
+      "passed": true,
+      "durationMs": 1573
+    },
+    {
+      "name": "session:08",
+      "passed": true,
+      "durationMs": 1206
+    },
+    {
+      "name": "session:07",
+      "passed": true,
+      "durationMs": 1252
+    },
+    {
+      "name": "session:05",
+      "passed": true,
+      "durationMs": 1258
+    },
+    {
+      "name": "session:06",
+      "passed": true,
+      "durationMs": 1963
+    },
+    {
+      "name": "session:11",
+      "passed": true,
+      "durationMs": 1227
+    },
+    {
+      "name": "session:12",
+      "passed": true,
+      "durationMs": 1240
+    },
+    {
+      "name": "session:09",
+      "passed": true,
+      "durationMs": 1276
+    },
+    {
+      "name": "session:10",
+      "passed": true,
+      "durationMs": 1336
+    },
+    {
+      "name": "session:13",
+      "passed": true,
+      "durationMs": 1229
+    },
+    {
+      "name": "session:16",
+      "passed": true,
+      "durationMs": 1250
+    },
+    {
+      "name": "session:15",
+      "passed": true,
+      "durationMs": 1272
+    },
+    {
+      "name": "session:14",
+      "passed": true,
+      "durationMs": 1378
+    },
+    {
+      "name": "session:19",
+      "passed": true,
+      "durationMs": 1232
+    },
+    {
+      "name": "session:20",
+      "passed": true,
+      "durationMs": 1254
+    },
+    {
+      "name": "session:18",
+      "passed": true,
+      "durationMs": 1295
+    },
+    {
+      "name": "session:17",
+      "passed": true,
+      "durationMs": 1320
+    },
+    {
+      "name": "session:24",
+      "passed": true,
+      "durationMs": 1215
+    },
+    {
+      "name": "session:22",
+      "passed": true,
+      "durationMs": 1280
+    },
+    {
+      "name": "session:25",
+      "passed": true,
+      "durationMs": 1305
+    },
+    {
+      "name": "session:23",
+      "passed": true,
+      "durationMs": 1423
+    },
+    {
+      "name": "session:37",
+      "passed": true,
+      "durationMs": 1188
+    },
+    {
+      "name": "session:36",
+      "passed": true,
+      "durationMs": 1266
+    },
+    {
+      "name": "session:35",
+      "passed": true,
+      "durationMs": 1271
+    },
+    {
+      "name": "session:26",
+      "passed": true,
+      "durationMs": 1326
+    },
+    {
+      "name": "session:28",
+      "passed": true,
+      "durationMs": 1217
+    },
+    {
+      "name": "session:39",
+      "passed": true,
+      "durationMs": 1244
+    },
+    {
+      "name": "session:38",
+      "passed": true,
+      "durationMs": 1301
+    },
+    {
+      "name": "session:27",
+      "passed": true,
+      "durationMs": 1321
+    },
+    {
+      "name": "session:32",
+      "passed": true,
+      "durationMs": 1216
+    },
+    {
+      "name": "session:29",
+      "passed": true,
+      "durationMs": 1230
+    },
+    {
+      "name": "session:30",
+      "passed": true,
+      "durationMs": 1245
+    },
+    {
+      "name": "session:31",
+      "passed": true,
+      "durationMs": 1320
+    },
+    {
+      "name": "session:33",
+      "passed": true,
+      "durationMs": 1249
+    },
+    {
+      "name": "session:51",
+      "passed": true,
+      "durationMs": 1449
+    },
+    {
+      "name": "session:34",
+      "passed": true,
+      "durationMs": 1455
+    },
+    {
+      "name": "session:40",
+      "passed": true,
+      "durationMs": 1583
+    },
+    {
+      "name": "session:44",
+      "passed": true,
+      "durationMs": 1533
+    },
+    {
+      "name": "session:41",
+      "passed": true,
+      "durationMs": 1596
+    },
+    {
+      "name": "session:42",
+      "passed": true,
+      "durationMs": 1599
+    },
+    {
+      "name": "session:43",
+      "passed": true,
+      "durationMs": 1707
+    },
+    {
+      "name": "session:47",
+      "passed": true,
+      "durationMs": 1544
+    },
+    {
+      "name": "session:46",
+      "passed": true,
+      "durationMs": 1546
+    },
+    {
+      "name": "session:50",
+      "passed": true,
+      "durationMs": 1568
+    },
+    {
+      "name": "session:45",
+      "passed": true,
+      "durationMs": 1608
+    },
+    {
+      "name": "session:53",
+      "passed": true,
+      "durationMs": 1572
+    },
+    {
+      "name": "session:49",
+      "passed": true,
+      "durationMs": 1610
+    },
+    {
+      "name": "session:48",
+      "passed": true,
+      "durationMs": 1612
+    },
+    {
+      "name": "session:52",
+      "passed": true,
+      "durationMs": 1733
+    },
+    {
+      "name": "session:54",
+      "passed": true,
+      "durationMs": 1557
+    },
+    {
+      "name": "session:T01",
+      "passed": true,
+      "durationMs": 1564
+    },
+    {
+      "name": "session:55",
+      "passed": true,
+      "durationMs": 1628
+    },
+    {
+      "name": "session:T02",
+      "passed": true,
+      "durationMs": 1656
+    },
+    {
+      "name": "session:T03",
+      "passed": true,
+      "durationMs": 1554
+    },
+    {
+      "name": "session:T06",
+      "passed": true,
+      "durationMs": 1581
+    },
+    {
+      "name": "session:T04",
+      "passed": true,
+      "durationMs": 1591
+    },
+    {
+      "name": "session:T05",
+      "passed": true,
+      "durationMs": 1627
+    },
+    {
+      "name": "session:T08",
+      "passed": true,
+      "durationMs": 1557
+    },
+    {
+      "name": "session:T07",
+      "passed": true,
+      "durationMs": 1593
+    },
+    {
+      "name": "chapter:elements",
+      "passed": true,
+      "durationMs": 585
+    },
+    {
+      "name": "chapter:console",
+      "passed": true,
+      "durationMs": 592
+    },
+    {
+      "name": "chapter:sources",
+      "passed": true,
+      "durationMs": 556
+    },
+    {
+      "name": "chapter:network",
+      "passed": true,
+      "durationMs": 576
+    },
+    {
+      "name": "chapter:application",
+      "passed": true,
+      "durationMs": 558
+    },
+    {
+      "name": "chapter:performance",
+      "passed": true,
+      "durationMs": 555
+    },
+    {
+      "name": "chapter:memory",
+      "passed": true,
+      "durationMs": 575
+    },
+    {
+      "name": "chapter:lighthouse",
+      "passed": true,
+      "durationMs": 602
+    }
+  ],
+  "source": {
+    "kind": "GitHub-hosted ubuntu-latest, independent public network",
+    "workflowRun": "https://github.com/changfengTech/chrome-devtools-learning/actions/runs/40110497699",
+    "jobId": 120921025481,
+    "commitSha": "1a14a536c9a82dd2a5de5315055d9b4239ca1005"
+  }
+}

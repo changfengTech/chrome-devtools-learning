@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-24",
-  "overall": "Published; online browser end-to-end awaiting reachable network",
+  "date": "2026-10-25",
+  "overall": "Independent public HTTP checks passed; desktop and mobile access remain unresolved",
   "local_build": {
     "site": "passed: Vue / TS checks and production build",
     "node_contracts": {
@@ -60,20 +60,39 @@
     "scope": "UI-specific online guidance and model only; no backend end-to-end pass claimed."
   },
   "production": {
-    "native_deployments": "All three version 2 deployments succeeded; Sites get_site confirms active/public/live URL",
+    "native_deployments": "Tutorial/shop version 2 and CORS version 3 succeeded; audience public",
     "direct_https": {
       "node_fetch": "ECONNRESET on all 3 public URLs before HTTP response",
       "curl": "connection reset for default address route and IPv4",
       "browser": "IAB net::ERR_CONNECTION_RESET"
     },
     "server_routes": "worker-routes.json contains sanitized successful shop asset/document/health observations from version 1; not a version 2 end-to-end test",
-    "unchanged_network_settings": true
+    "unchanged_network_settings": true,
+    "independent_http": {
+      "passed": 79,
+      "failed": 0,
+      "report": "http-github-2026-10-25-v2.json",
+      "workflow": "https://github.com/changfengTech/chrome-devtools-learning/actions/runs/40110980968",
+      "scope": "62 ordinary lesson sessions/documents plus real lesson 21 request challenge, eight chapter sessions, homepages, actual Vue assets, CORS and SSE; no browser observations fabricated"
+    },
+    "local_network_diagnosis": "network-2026-10-25.json",
+    "local_http": "http-local-2026-10-25.json",
+    "companion_homepage_fix": "404 replaced with service instructions, tutorial/shop links and health link; local focused Worker test passed and independent HTTP returned 200",
+    "user_mobile": "User reports the same Sites URL fails on a phone; Wi-Fi/cellular route and error code were not confirmed. Company VPN is not established as the sole cause.",
+    "popup_policy": "Independent HTTP check: no Cross-Origin-Opener-Policy header on tutorial or shop; this is not a browser popup / postMessage test",
+    "manager_check": {
+      "url": "https://chatgpt.com/sites",
+      "cloudflare_verification": "completed after explicit user authorization",
+      "current_state": "redirected to /auth/login?next=%2Fsites; awaiting user sign-in",
+      "credentials_collected": false
+    }
   },
   "pending": [
-    "Open the public course and confirm health from a reachable network",
+    "Resolve access to the existing Sites domains from the user desktop and mobile networks; network-path vs platform-ingress cause not yet confirmed",
+    "Open the public Vue course and confirm runtime health in the browser",
     "Complete guided fault/fix and one challenge with real cross-window result return",
-    "Verify browser CORS preflight + response through the companion origin",
-    "Recheck service worker, cookies, storage, SSE/WebSocket and browser-native tools over deployed HTTPS",
-    "Repeat device/account-dependent native checks only when their required conditions are available"
+    "Verify browser-enforced CORS and session-scoped storage / workers / live connections",
+    "Recheck browser-native tools on deployed HTTPS and device/account-dependent checks when available",
+    "Official Sites manager verification completed with explicit user approval; owner-account login in the browser is required before UI-only settings can be inspected"
   ]
 }

@@ -47,7 +47,7 @@
 
 无需真实业务账号或支付信息；表单、认证等课程请使用合成测试资料。Android 真机、地理位置授权、AI assistance 可用账户及磁盘映射等需要额外条件，见[部署说明与能力边界](docs/DEPLOYMENT.md)。
 
-本次发布的三个 Site 均已由平台确认成功且为公开权限。本机访问新域名时遇到 HTTPS 连接重置，**线上完整商城链路仍待在可达网络复验**；本地 Workers / D1 与 Node 回归已通过。实际范围见[部署验收记录](docs/qa/site/browser.json)。
+三个首页已从独立 GitHub 托管网络验证返回 200，79 项线上 HTTP 检查通过，包含真实慢请求挑战、CORS 预检与业务响应、SSE、63 课会话 / 请求入口和 8 章末入口。电脑和手机访问仍失败，具体网络 / 平台入口原因尚未确定，**浏览器实战、跨窗口回传与原生工具尚未完成线上验收**，不能将 HTTP 检查等同于完整浏览器流程。详见[部署验收记录](docs/QA-SITES.md)。
 
 维护者使用 `pnpm build:site` 构建课程到 `out/`，`pnpm build:shop` / `pnpm build:cors` 构建两个服务。完整发布、存储和验收记录见[部署说明](docs/DEPLOYMENT.md)。
 

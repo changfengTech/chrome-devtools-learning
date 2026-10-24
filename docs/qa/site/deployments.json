@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-24",
+  "date": "2026-10-25",
   "provider": "ChatGPT Sites",
   "audience": "public, explicitly requested by project owner",
   "current": [
@@ -36,14 +36,14 @@
       "origin": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
       "project_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef",
       "access_mode": "public",
-      "commit_sha": "33a79b4bc62930065ea1b3b8fbe592c360ae896d",
-      "version_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef~appgver_8cefa15951748191bc8f48c61519c64a",
-      "version_number": 2,
-      "archive_hash": "sha256:765c75616fc77591752914b6960d079c0aefaaed47431bc8c7314dce43535662",
-      "deployment_id": "appgdep_6adcd4ca853881919254c56ae1cb0389",
+      "commit_sha": "37bc25bfb1896c3caedd7bee04c429ccdcf15a7d",
+      "version_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef~appgver_85607bf6eb708191a88316d274e034a6",
+      "version_number": 3,
+      "archive_hash": "sha256:16edd4ba7885196e6b68fede134db99374ae9ee179c1f4d1335edc97a94f7250",
+      "deployment_id": "appgdep_6adcd8dca90c819195d660113bb6fc14",
       "status": "succeeded",
       "url": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
-      "published_at": "2026-10-24T15:55:09.374669+00:00"
+      "published_at": "2026-10-24T16:12:30.112668+00:00"
     }
   ],
   "initial": [
@@ -90,5 +90,49 @@
       "published_at": "2026-10-24T15:45:19.541331+00:00"
     }
   ],
-  "verification": "Native deployment success and public access confirmed. Browser end-to-end not verified: local HTTPS route resets before HTTP response."
+  "verification": "Independent GitHub-hosted network: 79 live HTTP checks passed, all three root pages return 200 and actual lesson 21 request challenge passes. User desktop and mobile access remain unresolved; browser UI and DevTools end-to-end not verified.",
+  "previous": [
+    {
+      "role": "tutorial",
+      "origin": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adcca5cf76c8191af7d5b385eade324",
+      "access_mode": "public",
+      "commit_sha": "fcdacac1b80e5c3fd3ac3b584d3c0350c98f4e14",
+      "version_id": "appgprj_6adcca5cf76c8191af7d5b385eade324~appgver_6f9da3edfa148191993a0fe3b97a5df8",
+      "version_number": 2,
+      "archive_hash": "sha256:e25a5f3d484ca4410d4fcee0804c1d4068db6327c140abdf162e1fa85f34b553",
+      "deployment_id": "appgdep_6adcd458e04c819185eaa24cda7a6b80",
+      "status": "succeeded",
+      "url": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:53:13.441433+00:00"
+    },
+    {
+      "role": "shop",
+      "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adccda9d5508191836e3b4ec32da060",
+      "access_mode": "public",
+      "commit_sha": "69c0c3cfd53a18b44b6a815d6bc2dfc04264f08f",
+      "version_id": "appgprj_6adccda9d5508191836e3b4ec32da060~appgver_b611eb51e8908191bcc23fe325e78d10",
+      "version_number": 2,
+      "archive_hash": "sha256:4936a8d5c6dbd98394baea6f9621a4a97185b8f4756697d9df69fba50900ba42",
+      "deployment_id": "appgdep_6adcd494aa148191860ca6224b9d02d2",
+      "status": "succeeded",
+      "url": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:54:16.549869+00:00"
+    },
+    {
+      "role": "cors",
+      "origin": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "project_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef",
+      "access_mode": "public",
+      "commit_sha": "33a79b4bc62930065ea1b3b8fbe592c360ae896d",
+      "version_id": "appgprj_6adccdb98d9c819199e7653ae09ee1ef~appgver_8cefa15951748191bc8f48c61519c64a",
+      "version_number": 2,
+      "archive_hash": "sha256:765c75616fc77591752914b6960d079c0aefaaed47431bc8c7314dce43535662",
+      "deployment_id": "appgdep_6adcd4ca853881919254c56ae1cb0389",
+      "status": "succeeded",
+      "url": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-24T15:55:09.374669+00:00"
+    }
+  ]
 }
