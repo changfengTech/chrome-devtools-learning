@@ -81,10 +81,28 @@
     "user_mobile": "User reports the same Sites URL fails on a phone; Wi-Fi/cellular route and error code were not confirmed. Company VPN is not established as the sole cause.",
     "popup_policy": "Independent HTTP check: no Cross-Origin-Opener-Policy header on tutorial or shop; this is not a browser popup / postMessage test",
     "manager_check": {
-      "url": "https://chatgpt.com/sites",
+      "url": "https://chatgpt.com/space/sites",
       "cloudflare_verification": "completed after explicit user authorization",
-      "current_state": "redirected to /auth/login?next=%2Fsites; awaiting user sign-in",
-      "credentials_collected": false
+      "current_state": "Owner-account sign-in completed by user; settings pages for all three original Sites inspected",
+      "credentials_collected": false,
+      "public_access": "All three settings pages show visible to everyone; native get_site confirms active/public and disabled_by null",
+      "url_controls": "Change URL dialog allows only the slug; .cloudysky2.chatgpt.site suffix is fixed",
+      "available_controls": [
+        "title",
+        "hosted URL slug",
+        "add custom domain",
+        "sharing",
+        "environment variables",
+        "delete"
+      ],
+      "default_domain_repair_control": "No TLS certificate, default ingress or edge route repair control found in inspected settings pages",
+      "changes_applied": false,
+      "screenshot": "manager-url-settings.png"
+    },
+    "after_login_retry": {
+      "http_report": "http-local-after-login-2026-10-25.json",
+      "result": "All three direct HTTPS requests still fail with ECONNRESET outside restricted network sandbox",
+      "browser": "Public tutorial navigation still reports net::ERR_CONNECTION_RESET; logged-in companion preview also cannot load"
     }
   },
   "pending": [
@@ -93,6 +111,6 @@
     "Complete guided fault/fix and one challenge with real cross-window result return",
     "Verify browser-enforced CORS and session-scoped storage / workers / live connections",
     "Recheck browser-native tools on deployed HTTPS and device/account-dependent checks when available",
-    "Official Sites manager verification completed with explicit user approval; owner-account login in the browser is required before UI-only settings can be inspected"
+    "Platform or network-path investigation is required; owner UI exposes no default-domain TLS/ingress repair. Support draft is prepared but has not been sent externally."
   ]
 }

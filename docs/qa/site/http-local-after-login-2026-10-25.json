@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-24T16:31:58.192Z",
+  "scope": "Local HTTPS retry outside restricted network sandbox after owner-account sign-in; no proxy, DNS, routing or TLS validation settings changed",
+  "checks": [
+    {
+      "role": "tutorial",
+      "url": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "error": "ECONNRESET",
+      "message": "read ECONNRESET"
+    },
+    {
+      "role": "shop",
+      "url": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "error": "ECONNRESET",
+      "message": "read ECONNRESET"
+    },
+    {
+      "role": "cors",
+      "url": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "error": "ECONNRESET",
+      "message": "read ECONNRESET"
+    }
+  ]
+}

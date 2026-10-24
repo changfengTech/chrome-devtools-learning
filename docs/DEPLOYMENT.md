@@ -30,6 +30,8 @@
 
 本机仍在 TLS 握手阶段连接重置。对照发现 Sites 地址走 `en0`，可访问的文档域名走 `utun0`；同一环境连官方文档示例的 Sites 域名也重置。用户已确认电脑使用公司 VPN，但手机访问也失败。因此问题不能唯一归因于公司 VPN；独立网络成功与用户电脑 / 手机访问失败的差异（手机连接方式未确认），还需要继续定位网络链路或平台公网入口的可达性。公司网络核对所需的精确域名和复测步骤见 [NETWORK-ACCESS](NETWORK-ACCESS.md)。[诊断记录](qa/site/network-2026-10-25.json) 不保留私网地址和凭据。[待提交的平台报告](SITES-SUPPORT-REPORT.md) 汇总了精确站点与复现证据。没有修改系统代理、DNS、路由或证书检查。
 
+2026-10-25 用户自行登录后，已逐一检查三个原站点的管理设置：均对所有人可见，域名后缀固定；未发现默认域名 TLS / 入口修复控件。登录后三站 HTTPS 重试仍均为 `ECONNRESET`。[本轮证据](qa/site/http-local-after-login-2026-10-25.json)与[管理页截图](qa/site/manager-url-settings.png)已保存，支持报告尚未外发。
+
 **浏览器完整实战仍待验**：HTTP 成功不能证明 Vue 页面已正确挂载、浏览器实际执行了 CORS、跨窗口回传、Cookie / IndexedDB / Service Worker 或 DevTools 原生操作。网络恢复后必须完成浏览器流程再关闭这些项目。完整范围见 [QA-SITES](QA-SITES.md)。
 
 手动运行 HTTP 检查：`node scripts/qa-online.mjs <输出JSON路径>`。这会在已发布商城创建合成的短期实验会话。独立网络的手动工作流为 `.github/workflows/online-diagnostic.yml`，不设定时任务，不读取账户秘密，不自动发布站点。

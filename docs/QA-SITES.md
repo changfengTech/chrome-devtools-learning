@@ -12,6 +12,7 @@
 | 独立网络 HTTP 检查 | 79/79 通过 | [GitHub run](https://github.com/changfengTech/chrome-devtools-learning/actions/runs/40110980968)、[结果](qa/site/http-github-2026-10-25-v2.json)：首页、会话、真实请求挑战、CORS 与 SSE；不认证浏览器行为 |
 | 托管端路由 | 部分成功请求可见 | [初版商城静态资源、文档和健康端点日志摘要](qa/site/worker-routes.json)；不保留 IP、请求头、Cookie、个人信息或凭据 |
 | 当前电脑访问公开域名 | 未通过 | Node、curl 与 IAB 均在 HTTP 响应前连接重置；IPv4 检查同样失败，未改变系统网络设置 |
+| 登录后原站点设置检查 | 已完成，访问仍失败 | 三站均对所有人可见，固定域名后缀；未发现默认 TLS / 入口修复控件。[截图](qa/site/manager-url-settings.png)、[三站重试结果](qa/site/http-local-after-login-2026-10-25.json) |
 | 线上完整商城流程 | 待复验 | 尚未从公开课程完成实战 / 修复 / 挑战、跨窗口回传和真实浏览器存储链路，不据本地自动测试宣称已通过 |
 
 完整机器记录见 [browser.json](qa/site/browser.json)。WebAuthn 的协议测试用程序生成的合成密钥；审计 URL 测试用明确标识的协议夹具，均不冒称原生认证器操作或真实 Lighthouse 报告。
@@ -34,3 +35,7 @@
 5. Android、定位权限、AI 可用账户和目录授权按 [额外条件](DEPLOYMENT.md#原生工具与额外条件) 补验；不具备条件时保留待验。
 
 CORS 同伴首页从 404 改为服务说明页，独立网络已验证三站首页返回 200。当前本机的 Sites 访问走 en0 直连并在 TLS 握手时被重置；可工作的文档域名走 utun0。用户也报告手机访问失败，不能将故障唯一归因于公司 VPN；网络链路与平台公网入口的可达性仍需继续定位，不能将未完成的浏览器验收记为通过。没有绕过证书检查、改写 DNS、建立代理或用另一网址冒充这三个已授权的 Site。
+
+## 登录后管理页复核
+
+用户自行登录后逐一检查三个原站点设置，确认不是未公开或登录未完成。URL 对话框只可改前缀，后缀固定为 `.cloudysky2.chatgpt.site`；没有自有域名，也未发现默认证书 / 入口修复按钮。网络沙箱外的三个 HTTPS 重试均为 `ECONNRESET`，公开课程浏览器仍为连接重置。保持三个原站点和公开权限不变。后续需要平台或网络链路进一步排查，[支持报告](SITES-SUPPORT-REPORT.md)已补齐本轮证据，尚未外发；完整线上浏览器实战继续待验。
