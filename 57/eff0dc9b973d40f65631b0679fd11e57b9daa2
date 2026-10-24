@@ -1,0 +1,43 @@
+docs/qa/site/network-2026-10-25.json
+  s_63e6d855d49c69::t_7497db89ba2724 1-77
+  s_63e6d855d49c69::t_172a9d5752fb1f 78
+docs/SITES-SUPPORT-REPORT.md
+  s_63e6d855d49c69::t_ee017827cd430e 1-42
+  s_63e6d855d49c69::t_2c41ee871012e5 43-46
+docs/NETWORK-ACCESS.md
+  s_63e6d855d49c69::t_c4363fd0c920c4 1-42
+README.md
+  s_63e6d855d49c69::t_b28d3ea2998cae 50
+docs/DEPLOYMENT.md
+  s_63e6d855d49c69::t_693e355d70f6cf 3,27,29-35
+docs/QA-SITES.md
+  s_63e6d855d49c69::t_413b914e3b8ce8 3,11-12,36
+docs/README.md
+  s_63e6d855d49c69::t_2abf3a3651f66a 26-27
+docs/STATUS.md
+  s_63e6d855d49c69::t_ffbb1b2e0c83ff 3,7
+docs/qa/site/browser.json
+  s_63e6d855d49c69::t_ff20fb1d5ac2e2 2-3,63,70-88,91-92,94-96
+docs/qa/site/deployments.json
+  s_63e6d855d49c69::t_21307fd287f4d0 2,39-43,46,93-137
+docs/qa/site/http-github-2026-10-25-v2.json
+  s_63e6d855d49c69::t_aeab94a288d438 1-444
+docs/qa/site/http-github-2026-10-25.json
+  s_63e6d855d49c69::t_22e0502f431c75 1-433
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "57eff0dc9b973d40f65631b0679fd11e57b9daa2",
+  "prompts": {},
+  "sessions": {
+    "s_63e6d855d49c69": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15933-194e-7481-b765-3aa2250061cf",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "changfeng <167777927+changfengTech@users.noreply.github.com>"
+    }
+  }
+}
