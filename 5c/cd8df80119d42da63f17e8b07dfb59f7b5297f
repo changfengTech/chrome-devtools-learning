@@ -1,0 +1,31 @@
+README.md
+  s_63e6d855d49c69::t_6d2a13189788cd 50
+docs/DEPLOYMENT.md
+  s_63e6d855d49c69::t_e673e6ab0631c2 33-34
+docs/QA-SITES.md
+  s_63e6d855d49c69::t_899c2320887216 15,38-41
+docs/SITES-SUPPORT-REPORT.md
+  s_63e6d855d49c69::t_99317e532e7778 46-52
+docs/STATUS.md
+  s_63e6d855d49c69::t_941db3945cb9ac 7
+docs/qa/site/browser.json
+  s_63e6d855d49c69::t_a81471b228c5e7 84,86-105,114
+docs/qa/site/http-local-after-login-2026-10-25.json
+  s_63e6d855d49c69::t_aa19528a2b96a7 1-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "5ccd8df80119d42da63f17e8b07dfb59f7b5297f",
+  "prompts": {},
+  "sessions": {
+    "s_63e6d855d49c69": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15933-194e-7481-b765-3aa2250061cf",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "changfeng <167777927+changfengTech@users.noreply.github.com>"
+    }
+  }
+}
