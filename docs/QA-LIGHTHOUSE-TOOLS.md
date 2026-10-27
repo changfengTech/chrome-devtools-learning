@@ -84,3 +84,7 @@ CLI 只审计本机专用静态商品页，无教程框架、HMR 或 Service Wor
 ## 后续原生专项补验（2026-10-22）
 
 上述当批待办保留历史范围；最新状态见 [Overrides / Changes 与 Autofill 专项](QA-NATIVE-TOOLS.md)。访客环境已完成响应覆盖 / 禁用回归、Changes CSS 增删 / 恢复，以及内置地址真实填充和字段预测对照；Workspace 自动映射、Changes Revert 按钮版本细项、Autofill 双地址组及设备 / 账户条件仍单列。
+
+## 2026-10-27 线上原生补验
+
+修复导入报告缺少审计模式的比较条件；第 47 课仅接受 Navigation。商城 v5 发布成功，61 项 Node / 10 项 Workers 测试和构建通过。本轮线上原生三模式、真实报告导入与三次中位数仍待验，不复用本地历史报告作为线上证据。 证据、阻塞与继续条件见[线上原生验收](QA-SITES-NATIVE.md)。

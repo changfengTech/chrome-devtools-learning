@@ -67,3 +67,7 @@ Node.js 25.9.0、pnpm 12.14.0，构建预览教程 4173、原生商城 4174。�
 本轮 40–44、50 与 Memory 章末功能回归通过，修复新运行残留上一批功能提示。新增第三份 Heap snapshot Comparison（删除 5 个 DetachedProductDialog）、Map 引用配置、Allocation sampling / timeline、Performance monitor 多点趋势，以及原生 Recorder 录制、UI 编辑、导入导出与换序 / 延迟两条件 Replay。以下历史待办已由新证据部分关闭；分配窄选区等细项仍保留。
 
 最新逐项证据、剩余项和用户状态恢复见 [整体验收记录](QA-RELEASE.md)。本文件前文保留当批历史结论，不计作本轮重复三轮。
+
+## 2026-10-27 线上原生补验
+
+第 41 课已取得线上同文档空闲 / 故障 / 修复三快照、实际 owners → memoryLab → Window / GC roots 引用链与 Comparison。故障 5 个 owner；修复后新增 1、删除 5、净减 4，只保留当前 owner。三快照保存，修复文件回载仍显示 1 个 owner / 16.7 kB，两轮业务校验均为 84。Allocation 工具、Detached DOM 和第二根配置未在本轮重测。 证据、阻塞与继续条件见[线上原生验收](QA-SITES-NATIVE.md)。

@@ -309,7 +309,7 @@ async function importAudit(file) {
     latestDetails = details;
     targetDone = true;
     $("audit-status").textContent =
-      `已接收 ${accepted.count} / ${accepted.required} 份报告；版本 ${report.version}，${report.formFactor}。`;
+      `已接收 ${accepted.count} / ${accepted.required} 份报告；版本 ${report.version}，模式 ${report.gatherMode}，${report.formFactor}。`;
     $("audit-scores").replaceChildren();
     for (const id of qualityCategories) {
       const item = document.createElement("div"),

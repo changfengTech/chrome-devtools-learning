@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-27",
+  "source": "Google Chrome native Performance UI, Guest window, public HTTPS shop",
+  "lesson": "29",
+  "shopVersions": {
+    "fault": 4,
+    "fixed": 5
+  },
+  "implementationDifference": "v5 only changes Lighthouse import validation; Performance runtime unchanged",
+  "conditions": {
+    "cpu": "No throttling",
+    "network": "No throttling",
+    "screenshots": true,
+    "operation": "one target operation per prepared scene",
+    "scenePreparationIncluded": false,
+    "range": "whole baseline recording; fixed UI selected range around operation",
+    "comparisonBoundary": "same business operation and CPU work; not equal trace duration or sample-wide totals"
+  },
+  "observations": {
+    "fault": {
+      "normalizeProductCalls": 1,
+      "pageDurationMs": 180.1,
+      "consumeCPUSelfMs": 176.3,
+      "consumeCPUTotalMs": 177.8,
+      "nativeInpMs": 273,
+      "quantity": 2,
+      "checksum": 84
+    },
+    "fixed": {
+      "normalizeProductCalls": 1,
+      "pageDurationMs": 60,
+      "consumeCPUSelfMs": 58.4,
+      "consumeCPUTotalMs": 59.6,
+      "nativeInpMs": 115,
+      "quantity": 2,
+      "checksum": 84
+    }
+  },
+  "nativeActions": [
+    "Record / Stop for fault and fixed",
+    "Bottom-up consumeCPU expanded to normalizeProduct",
+    "Save both traces with gzip and without resource content",
+    "Load fault trace and verify same INP / Bottom-up",
+    "Open actual runtime.js source at line 131",
+    "Select Call tree view; detailed call tree expansion not completed"
+  ],
+  "artifacts": [
+    {
+      "file": "performance-29-fault.json.gz",
+      "sha256": "7b02616e3b08f7461bc73a6d4756862d16f910f67b5cd8464200c76862bab4a9",
+      "bytes": 342372,
+      "source": "DevTools",
+      "startedAt": "2026-10-27T12:35:18.423Z",
+      "events": 11316,
+      "storage": "dedicated local temporary directory; raw trace not published",
+      "nativeReloadVerified": true
+    },
+    {
+      "file": "performance-29-fixed.json.gz",
+      "sha256": "ade1a678e032e2cb30db01f215e4d537c06ccc56ec3b34e5fdde65d596c32442",
+      "bytes": 220281,
+      "source": "DevTools",
+      "startedAt": "2026-10-27T12:45:09.107Z",
+      "events": 7511,
+      "storage": "dedicated local temporary directory; raw trace not published",
+      "nativeReloadVerified": false
+    }
+  ],
+  "limitations": [
+    "not a 63-lesson native regression",
+    "INP is the native recording result in this environment, not a general guarantee",
+    "fixed trace reload and detailed Call tree verification remain pending"
+  ]
+}

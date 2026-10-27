@@ -69,6 +69,7 @@ const metrics = (id, v, good, expected) => ({
 const report = (f, token, run, id, v, good, i = 0) => ({
   url: `${f.base}/quality/${token}/audit/?run=${run}`,
   version: "contract-fixture",
+  gatherMode: "navigation",
   fetchTime: new Date(Date.now() + i).toISOString(),
   condition: "same-test-condition",
   formFactor: id === "45" && !v && good ? "mobile" : "desktop",
@@ -151,6 +152,7 @@ test("审计导入拒绝异源、旧运行、运行错误和非法分数；中�
     raw = {
       finalUrl: target,
       lighthouseVersion: "13.0.1",
+      gatherMode: "navigation",
       fetchTime: new Date().toISOString(),
       configSettings: { formFactor: "desktop" },
       categories: { performance: { score: 0.8 } },
@@ -161,6 +163,8 @@ test("审计导入拒绝异源、旧运行、运行错误和非法分数；中�
     { finalUrl: target.replace("4174", "4175") },
     { finalUrl: target.replace("one", "two") },
     { runtimeError: { code: "FAILED" } },
+    { gatherMode: undefined },
+    { gatherMode: "unknown" },
     { categories: { performance: { score: 2 } } },
   ])
     assert.throws(() => summarizeLighthouse({ ...raw, ...change }, target));
@@ -168,12 +172,18 @@ test("审计导入拒绝异源、旧运行、运行错误和非法分数；中�
   assert.equal(median([9, 1]), 5);
   assert.equal(median([]), null);
   const m = metrics("47", 0, true, 84),
-    rs = [1, 2, 3].map(() => ({ condition: "same", lcp: 600 }));
+    rs = [1, 2, 3].map(() => ({ condition: "same", lcp: 600, gatherMode: "navigation" }));
   assert.equal(
     assessQuality("47", 0, m, 84, rs, { condition: "same", median: 1000 })
       .healthy,
     true,
   );
+  rs[1].gatherMode = "timespan";
+  assert.equal(assessQuality("47", 0, m, 84, rs, { condition: "same", median: 1000 }).healthy, false);
+  rs[1].gatherMode = "navigation";
+  const modes = ["navigation", "timespan", "snapshot"].map(gatherMode => summarizeLighthouse({ ...raw, gatherMode }, target));
+  assert.equal(new Set(modes.map(r => r.condition)).size, 3);
+  assert.deepEqual(modes.map(r => r.gatherMode), ["navigation", "timespan", "snapshot"]);
   rs[1].condition = "different";
   assert.equal(
     assessQuality("47", 0, m, 84, rs, { condition: "same", median: 1000 })
@@ -187,6 +197,20 @@ test("审计导入拒绝异源、旧运行、运行错误和非法分数；中�
     }).healthy,
     false,
   );
+});
+test("性能审计拒绝非 Navigation 报告，拒绝不消耗当前运行的报告名额", async (t) => {
+  const f = await fixture(t);
+  const { token } = await f.create("47");
+  await f.get(`/quality/${token}/`);
+  const runId = await f.prepare(token);
+  for (const gatherMode of ["timespan", "snapshot"]) {
+    const rejected = await f.post("audit", { token, runId, report: { ...report(f, token, runId, "47", 0, false), gatherMode } });
+    assert.equal(rejected.status, 400);
+    assert.match((await rejected.json()).error, /Navigation/);
+  }
+  const accepted = await f.post("audit", { token, runId, report: report(f, token, runId, "47", 0, false) });
+  assert.equal(accepted.status, 200);
+  assert.equal((await accepted.json()).count, 1);
 });
 test("资源是实际响应：Cookie 范围、稳定商品 URL、人工覆盖与 CSP", async (t) => {
   for (const v of [0, 1]) {

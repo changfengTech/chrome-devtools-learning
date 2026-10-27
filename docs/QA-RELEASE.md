@@ -189,3 +189,7 @@ WebAuthn 原生页不携带教程来源参数，课堂夹具与教程回传继�
 | application | 2/2 | 通过 | 通过 |
 | memory | 2/2 | 通过 | 通过 |
 | lighthouse | 2/2 | 通过 | 通过 |
+
+## 2026-10-27 公开 HTTPS 原生补验
+
+本轮补第 29 课原生两轮录制 / Bottom-up / 源码 / trace 保存与故障回载、第 41 课同文档三快照 / Retainers / Comparison / 三份保存和修复回载。Lighthouse 模式校验修复已发布商城 v5，61 项 Node、10 项 Workers / D1、构建及 79 项线上 HTTP 检查通过。原生 Lighthouse 与 Performance 两项细节未完成，不扩大既有本地 63 课 / 8 章末结论为线上全量原生通过。[截图、哈希、条件与剩余项](QA-SITES-NATIVE.md)。

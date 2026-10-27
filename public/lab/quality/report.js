@@ -26,6 +26,8 @@ export function summarizeLighthouse(input, targetURL) {
     !Number.isFinite(Date.parse(input.fetchTime))
   )
     throw Error("缺少 Lighthouse 版本、时间或运行条件。");
+  if (!["navigation", "timespan", "snapshot"].includes(input.gatherMode))
+    throw Error("缺少或不支持的审计模式，请重新导出原始 Lighthouse JSON。");
   const scores = {};
   for (const id of qualityCategories) {
     if (categories[id]) {
@@ -38,6 +40,7 @@ export function summarizeLighthouse(input, targetURL) {
   if (!Object.keys(scores).length) throw Error("报告没有支持的类别。");
   const condition = JSON.stringify({
     version: input.lighthouseVersion,
+    gatherMode: input.gatherMode,
     formFactor: settings.formFactor,
     throttlingMethod: settings.throttlingMethod,
     throttling: settings.throttling,
@@ -73,6 +76,7 @@ export function summarizeLighthouse(input, targetURL) {
   return {
     url: reportURL.href,
     version: String(input.lighthouseVersion),
+    gatherMode: input.gatherMode,
     fetchTime: input.fetchTime,
     formFactor: settings.formFactor,
     condition,

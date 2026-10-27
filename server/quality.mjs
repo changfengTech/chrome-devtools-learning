@@ -76,6 +76,7 @@ export function assessQuality(
     const values = reports.map((x) => (variant === 0 ? x.lcp : x.tbt));
     const mid = median(values);
     const consistent =
+      reports.every((x) => x.gatherMode === "navigation") &&
       reports.every((x) => x.condition === reports[0].condition) &&
       values.every((x) => Number.isFinite(x));
     fault = consistent && mid > (variant === 0 ? 400 : 100);
@@ -284,6 +285,7 @@ export function createQualityHandler({
           !correctURL ||
           typeof r.version !== "string" ||
           r.version.length > 40 ||
+          !["navigation", "timespan", "snapshot"].includes(r.gatherMode) ||
           typeof r.condition !== "string" ||
           r.condition.length > 4000 ||
           !["mobile", "desktop"].includes(r.formFactor) ||
@@ -317,9 +319,14 @@ export function createQualityHandler({
           json({ error: "报告不属于本轮、重复、过期或字段无效" }, 400);
           return true;
         }
+        if (s.lesson === "47" && r.gatherMode !== "navigation") {
+          json({ error: "第 47 课需要三份独立 Navigation 报告，请保持相同审计模式。" }, 400);
+          return true;
+        }
         run.reports.push({
           url: r.url,
           version: r.version,
+          gatherMode: r.gatherMode,
           fetchTime: r.fetchTime,
           condition: r.condition,
           formFactor: r.formFactor,

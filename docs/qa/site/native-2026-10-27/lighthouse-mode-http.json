@@ -1,0 +1,20 @@
+{
+  "checkedAt": "2026-10-27T13:03:19.353Z",
+  "shopVersion": 5,
+  "kind": "live negative HTTP contract; synthetic invalid reports only; not native Lighthouse output",
+  "results": [
+    {
+      "gatherMode": "timespan",
+      "status": 400,
+      "error": "第 47 课需要三份独立 Navigation 报告，请保持相同审计模式。"
+    },
+    {
+      "gatherMode": "snapshot",
+      "status": 400,
+      "error": "第 47 课需要三份独立 Navigation 报告，请保持相同审计模式。"
+    }
+  ],
+  "modeDisplayedInDeployedRuntime": true,
+  "submittedNavigationReports": 0,
+  "learnerRecordsWritten": 0
+}

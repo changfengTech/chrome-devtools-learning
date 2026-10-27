@@ -88,3 +88,7 @@
 本轮 27–34、51 与 Performance 章末功能回归通过；补原生 Performance Record / Save / Load、Bottom-up 业务成本，Coverage Reload / Stop 、Animations 分组 / 暂停 / Replay 和 Rendering 开关 / 恢复。新录制只有故障侧，不冒称已补同条件原生修复 trace；阶段 4 原协议证据仍独立保留。
 
 最新逐项证据、剩余项和用户状态恢复见 [整体验收记录](QA-RELEASE.md)。本文件前文保留当批历史结论，不计作本轮重复三轮。
+
+## 2026-10-27 线上原生补验
+
+第 29 课已取得线上原生故障 / 修复 trace、Bottom-up 调用链、实际源码、保存与故障文件回载；Total time 177.8 → 59.6 ms，业务校验均 84。修复文件回载和 Call tree 详细展开待补。 证据、阻塞与继续条件见[线上原生验收](QA-SITES-NATIVE.md)。

@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-27",
+  "source": "native Chrome Memory panel, Guest, public HTTPS shop v5",
+  "lesson": "41",
+  "sameDocument": true,
+  "faultOperations": 5,
+  "fixedOperations": 5,
+  "business": {
+    "sku": "CUP-42",
+    "quantity": 2,
+    "checksum": 84,
+    "healthyBothPhases": true
+  },
+  "nativeSummary": {
+    "snapshot1": "idle before fault preparation, 5.9 MB",
+    "snapshot2": {
+      "owners": 5,
+      "shallowKb": 0.2,
+      "retainedKb": 82.7
+    },
+    "snapshot3": {
+      "owners": 1,
+      "shallowKb": 0.0,
+      "retainedKb": 16.7
+    }
+  },
+  "retainers": [
+    "CatalogCacheOwner",
+    "[0] in Array",
+    "owners in MemoryLabState",
+    "memoryLab in Window",
+    "NativeContext / Global handles",
+    "GC roots"
+  ],
+  "comparison": {
+    "current": "Snapshot 3",
+    "base": "Snapshot 2",
+    "constructor": "CatalogCacheOwner",
+    "new": 1,
+    "deleted": 5,
+    "delta": -4,
+    "allocatedBytes": 16,
+    "freedBytes": 240,
+    "sizeDeltaBytes": -224
+  },
+  "nativeActions": [
+    "Heap snapshot A before fault",
+    "Prepare fault and repeat five operations",
+    "Heap snapshot B; Summary and Retainers",
+    "Apply selected fix in same document and repeat five operations",
+    "Collect garbage and heap snapshot C",
+    "Comparison C vs B",
+    "Export A, B, C via Save profile",
+    "Load C via file chooser; select imported profile and verify one owner / 16.7 kB"
+  ],
+  "artifacts": [
+    {
+      "file": "memory-41-idle.heapsnapshot",
+      "phase": "idle",
+      "bytes": 9864554,
+      "sha256": "f2c36816a5478af5242349e8eb8ef74e98370765fb789d655568c4191250c51b",
+      "objects": {
+        "CatalogCacheOwner": 0,
+        "ProductPayload": 0,
+        "MemoryLabState": 1
+      },
+      "nativeReloadVerified": false,
+      "storage": "raw heap remains in dedicated local temporary directory; not published"
+    },
+    {
+      "file": "memory-41-fault.heapsnapshot",
+      "phase": "fault",
+      "bytes": 9972316,
+      "sha256": "536ce1f131aecffa80b4639956790e2a34a9176351b6f829f62702dd60aa634c",
+      "objects": {
+        "CatalogCacheOwner": 5,
+        "ProductPayload": 5,
+        "MemoryLabState": 1
+      },
+      "nativeReloadVerified": false,
+      "storage": "raw heap remains in dedicated local temporary directory; not published"
+    },
+    {
+      "file": "memory-41-fixed.heapsnapshot",
+      "phase": "fixed",
+      "bytes": 10003756,
+      "sha256": "adefb4deade7d5a2e8e6345c950dde14bd05a75b14b8068bbf5cb002b4ddd31f",
+      "objects": {
+        "CatalogCacheOwner": 1,
+        "ProductPayload": 1,
+        "MemoryLabState": 1
+      },
+      "nativeReloadVerified": true,
+      "storage": "raw heap remains in dedicated local temporary directory; not published"
+    }
+  ],
+  "cleanup": {
+    "pageStopAndClear": true,
+    "pageOwnedReferencesAfterClear": 0,
+    "labTabClosed": true,
+    "postCleanupGcSnapshotTaken": false
+  },
+  "limits": [
+    "not every Memory lesson or variant",
+    "post-cleanup page zero is not a heap GC claim",
+    "Allocation timeline / sampling, detached DOM and second root config not rerun online"
+  ]
+}

@@ -100,7 +100,7 @@ test('HTTPS WebAuthn 的 RP 绑定、一次性挑战与公开密钥可跨请求�
 test('HTTPS 审计报告只接受本会话的商城 URL，拒绝异源和旧运行（协议夹具）',async()=>{
  const {token}=await create('quality','45');await(await get('/quality/'+token+'/')).text();
  const run=await(await post('/api/quality/begin',{token,phase:'baseline'})).json();await(await get('/quality/'+token+'/activate?run='+run.runId)).text();
- const report={url:online.shop.origin+'/quality/'+token+'/audit/?run='+run.runId,version:'worker-contract-fixture',condition:'same',fetchTime:new Date().toISOString(),formFactor:'desktop',categories:{performance:0.8},buttonName:1,description:1,lcp:1400,tbt:400};
+ const report={url:online.shop.origin+'/quality/'+token+'/audit/?run='+run.runId,version:'worker-contract-fixture',gatherMode:'navigation',condition:'same',fetchTime:new Date().toISOString(),formFactor:'desktop',categories:{performance:0.8},buttonName:1,description:1,lcp:1400,tbt:400};
  for(const url of [report.url.replace(online.shop.origin,online.tutorial.origin),report.url.replace(run.runId,'old-run')])assert.equal((await post('/api/quality/audit',{token,runId:run.runId,report:{...report,url}})).status,400);
  const good=await post('/api/quality/audit',{token,runId:run.runId,report});assert.equal(good.status,200,await good.clone().text());
 });

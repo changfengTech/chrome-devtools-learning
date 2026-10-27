@@ -1,10 +1,10 @@
 # 实施状态
 
-更新：2026-10-25。**63/63 课和 8/8 章末的本轮功能回归通过**，修复两处问题；阶段 8 的原生验收已补齐多项，设备、账户、授权和部分面板细项仍未全部关闭。当前依据为 [整体验收](QA-RELEASE.md)，不把功能通过等同于原生能力认证。
+更新：2026-10-27。**63/63 课和 8/8 章末的本轮功能回归通过**，修复两处问题；阶段 8 的原生验收已补齐多项，设备、账户、授权和部分面板细项仍未全部关闭。当前依据为 [整体验收](QA-RELEASE.md)，不把功能通过等同于原生能力认证。
 
 ## ChatGPT 站点部署
 
-新增[公开在线完整版](https://devtools-learning-changfeng.cloudysky2.chatgpt.site)：课程使用 `site` 构建，商城运行于 Workers / D1，第三个 Site 提供真实跨源端点。2026-10-27 三站恢复并在本机浏览器验证；当前课程 v3、商城 v4、同伴 v3，均公开。79 项线上 HTTP 检查、9 节引导实战、2 个挑战与真实回传通过；CORS、SSE / WebSocket、Cookie、存储、worker 升级和原生 Offline 回退已有线上证据。已修复在线超时 / 提示、跨源说明和第 36 课刷新入口。Performance / Memory / Lighthouse 等其余原生流程与剩余课章继续单独复验，具体边界见[线上验收](QA-SITES.md)。10-25 连接重置原因未确定，支持报告未外发；历史记录保留。
+新增[公开在线完整版](https://devtools-learning-changfeng.cloudysky2.chatgpt.site)：课程使用 `site` 构建，商城运行于 Workers / D1，第三个 Site 提供真实跨源端点。2026-10-27 三站恢复并在本机浏览器验证；当前课程 v3、商城 v5、同伴 v3，均公开。79 项线上 HTTP 检查、9 节引导实战、2 个挑战与真实回传通过；CORS、SSE / WebSocket、Cookie、存储、worker 升级和原生 Offline 回退已有线上证据。已修复在线超时 / 提示、跨源说明和第 36 课刷新入口。追加第 29 课线上原生故障 / 修复 trace，Bottom-up 177.8 → 59.6 ms、源码定位、保存及故障回载通过。商城 v5 修复 Lighthouse 审计模式遗漏，61 项 Node / 10 项 Workers 测试和构建通过。Memory 同文档三快照、Retainers、Comparison 与回载通过；Lighthouse 原生报告因持续窗口切换仍待验；详见[线上原生记录](QA-SITES-NATIVE.md)和[线上验收](QA-SITES.md)。10-25 连接重置原因未确定，支持报告未外发；历史记录保留。
 
 ## 本轮交付
 

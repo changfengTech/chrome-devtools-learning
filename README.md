@@ -47,7 +47,7 @@
 
 无需真实业务账号或支付信息；表单、认证等课程请使用合成测试资料。Android 真机、地理位置授权、AI assistance 可用账户及磁盘映射等需要额外条件，见[部署说明与能力边界](docs/DEPLOYMENT.md)。
 
-2026-10-27 已确认三个站点恢复可访问，本机 **79/79 项线上 HTTP 检查通过**。浏览器已走通 05、21、24、26、35–39 共 **9 节引导实战**和 05 / 26 两个独立挑战，覆盖跨窗口回传、真实 CORS、SSE / WebSocket、Cookie、存储与 worker；原生 Chrome Offline 也验证了实际断网后的缓存回退。在线超时提示、跨源说明和刷新后丢失的新标签验证入口已修复上线。Performance / Memory / Lighthouse 等其余原生流程继续单独复验，不将这轮抽样记成 63 课全部原生通过。详见[线上验收与下一阶段](docs/QA-SITES.md)。
+2026-10-27 已确认三个站点恢复可访问，本机 **79/79 项线上 HTTP 检查通过**。浏览器已走通 05、21、24、26、35–39 共 **9 节引导实战**和 05 / 26 两个独立挑战，覆盖跨窗口回传、真实 CORS、SSE / WebSocket、Cookie、存储与 worker；原生 Chrome Offline 也验证了实际断网后的缓存回退。在线超时提示、跨源说明和刷新后丢失的新标签验证入口已修复上线。追加线上原生 Performance 故障 / 修复录制、Bottom-up、源码定位、trace 保存和故障文件回载；`consumeCPU` Total time 约 177.8 → 59.6 ms，业务校验保持 84。商城 v5 修复 Lighthouse 跨审计模式比较。Memory 同文档三快照、实际 Retainers、Comparison 与快照回载通过；Lighthouse 原生复验继续待补，不将抽样记成 63 课全部原生通过。详见[线上原生验收与待办](docs/QA-SITES-NATIVE.md)及[线上验收](docs/QA-SITES.md)。
 
 维护者使用 `pnpm build:site` 构建课程到 `out/`，`pnpm build:shop` / `pnpm build:cors` 构建两个服务。完整发布、存储和验收记录见[部署说明](docs/DEPLOYMENT.md)。
 
@@ -383,6 +383,7 @@ chrome-devtools-learning/
 | 第 21 课的完整教学设计 | [Network 样板课](docs/LESSON-21.md) |
 | 53–55、T01–T08 的前置、真实场景、三章末与检查边界 | [综合与专题合同](docs/CAPSTONE-TOPICS.md) |
 | 本批三轮引导、两种挑战、原生能力与待办 | [综合与专题验收](docs/QA-CAPSTONE-TOPICS.md) |
+| 线上 Performance 录制与同条件修复、Memory / Lighthouse 待办 | [线上原生验收](docs/QA-SITES-NATIVE.md) |
 | Overrides / Changes、Autofill 原生截图与设备 / 账户条件 | [原生专项补验](docs/QA-NATIVE-TOOLS.md) |
 | 全 63 课 / 8 章末回归、修复与最新原生证据 | [整体验收](docs/QA-RELEASE.md) |
 | 自动检查边界与章末评分规则 | [验收标准](docs/ACCEPTANCE.md) |
