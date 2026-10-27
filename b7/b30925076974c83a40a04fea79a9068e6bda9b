@@ -1,0 +1,81 @@
+src/components/FoundationLesson.vue
+  s_63e6d855d49c69::t_991dc72b9a633d 148-151
+src/data/network-state.json
+  s_63e6d855d49c69::t_991dc72b9a633d 334,359
+src/data/curriculum.json
+  s_63e6d855d49c69::t_991dc72b9a633d 261
+src/lib/lab.ts
+  s_63e6d855d49c69::t_991dc72b9a633d 17
+docs/qa/site/online-2026-10-27/release.json
+  s_63e6d855d49c69::t_e611aa43e84339 1-27
+public/lab/network-state/runtime.js
+  s_63e6d855d49c69::t_539c1e010907da 776-777
+docs/qa/site/online-2026-10-27/shop-v4-release.json
+  s_63e6d855d49c69::t_827a06594f92c1 1-13
+README.md
+  s_63e6d855d49c69::t_7d0be636b96d81 50
+docs/CURRICULUM.md
+  s_63e6d855d49c69::t_95b7e97cd02944 62
+docs/DEPLOYMENT.md
+  s_63e6d855d49c69::t_ca8d3bf5a5b909 3,27,29,31,33,35-37
+docs/NETWORK-ACCESS.md
+  s_63e6d855d49c69::t_4349a53443aef5 3,5-9
+docs/QA-SITES.md
+  s_63e6d855d49c69::t_6dbae8b08ebfd5 3-5,9-52
+docs/SITES-SUPPORT-REPORT.md
+  s_63e6d855d49c69::t_779f7d1aa4ea1f 1,3-5
+docs/STATUS.md
+  s_63e6d855d49c69::t_1d7d302b6a34ee 7
+docs/lessons/24.md
+  s_63e6d855d49c69::t_aa61f1bf46121c 33,42
+docs/qa/site/browser.json
+  s_63e6d855d49c69::t_66c65fdeb11f2b 2-3,63,74,76,95-101,103-110,114-115,118-120
+docs/qa/site/deployments.json
+  s_63e6d855d49c69::t_ae3d2b97fc3129 2,11-15,18,25-29,32,93,136-149
+docs/qa/site/http-local-2026-10-27-v3.json
+  s_63e6d855d49c69::t_35eeb27fce76d4 1-438
+docs/qa/site/http-local-2026-10-27.json
+  s_63e6d855d49c69::t_5ea1f10c736b51 1-438
+docs/qa/site/online-2026-10-27/38-worker.json
+  s_f18065c30455d8::t_70fc798499c99b 1-18
+docs/qa/site/online-2026-10-27/cors-browser.json
+  s_63e6d855d49c69::t_a730f0797d621a 1-47
+public/lab/advanced/index.html
+  s_63e6d855d49c69::t_22adf86288cfc1 17
+public/lab/foundation/index.html
+  s_63e6d855d49c69::t_92719fa1ca2a7d 75
+public/lab/memory/index.html
+  s_63e6d855d49c69::t_667902a5299c62 117
+public/lab/network-state/index.html
+  s_63e6d855d49c69::t_2df8c514c8cb60 79
+public/lab/performance/index.html
+  s_63e6d855d49c69::t_24b550e1207251 85
+public/lab/quality/index.html
+  s_63e6d855d49c69::t_215a53f6169f8e 140
+public/lab/shop.html
+  s_63e6d855d49c69::t_29b210933b1783 70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.24",
+  "base_commit_sha": "b7b30925076974c83a40a04fea79a9068e6bda9b",
+  "prompts": {},
+  "sessions": {
+    "s_63e6d855d49c69": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a15933-194e-7481-b765-3aa2250061cf",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "changfeng <167777927+changfengTech@users.noreply.github.com>"
+    },
+    "s_f18065c30455d8": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a10526-f2c4-7511-a341-758c4be8d250",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "changfeng <167777927+changfengTech@users.noreply.github.com>"
+    }
+  }
+}
