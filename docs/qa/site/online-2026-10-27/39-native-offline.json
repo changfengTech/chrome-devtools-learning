@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-27",
+  "environment": "Google Chrome, newly created incognito test window; English DevTools",
+  "online": {
+    "productVersion": 2,
+    "source": "network",
+    "manifestIconStatus": 200
+  },
+  "offline": {
+    "control": "Native Network → Throttling → Offline",
+    "workerRequestError": "net::ERR_INTERNET_DISCONNECTED",
+    "pageRequestStatus": 200,
+    "pageRequestSource": "ServiceWorker",
+    "productVersion": 2,
+    "source": "cache-storage-fallback"
+  },
+  "cleanup": {
+    "noThrottlingRestored": true,
+    "previousFilterRestored": true,
+    "ownSessionCleanupConfirmed": true,
+    "dedicatedIncognitoWindowClosed": true
+  },
+  "scope": "Actual native Network UI and page readout; no system VPN/DNS/routes/certificate settings changed; unrelated browser content not retained"
+}

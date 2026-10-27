@@ -1,0 +1,438 @@
+{
+  "checkedAt": "2026-10-27T11:50:00.928Z",
+  "kind": "live HTTP contracts, not browser UI certification",
+  "node": "v25.9.0",
+  "origins": {
+    "tutorial": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+    "shop": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+    "cors": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site"
+  },
+  "passed": 79,
+  "failed": 0,
+  "skippedBackendChecks": false,
+  "results": [
+    {
+      "name": "homepage:shop",
+      "passed": true,
+      "durationMs": 353,
+      "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "status": 200,
+      "bytes": 3943
+    },
+    {
+      "name": "homepage:tutorial",
+      "passed": true,
+      "durationMs": 456,
+      "origin": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "status": 200,
+      "bytes": 1644
+    },
+    {
+      "name": "homepage:cors",
+      "passed": true,
+      "durationMs": 2713,
+      "origin": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
+      "status": 200,
+      "bytes": 2144
+    },
+    {
+      "name": "health:shop",
+      "passed": true,
+      "durationMs": 140,
+      "lessons": 63,
+      "hosting": "Workers / D1"
+    },
+    {
+      "name": "tutorial:bundles-and-popup-policy",
+      "passed": true,
+      "durationMs": 863,
+      "assets": [
+        "/assets/index-DHE1UEaB.js",
+        "/assets/index-BVNUDnaj.css"
+      ],
+      "tutorialOpenerPolicy": null,
+      "shopOpenerPolicy": null
+    },
+    {
+      "name": "health:cors",
+      "passed": true,
+      "durationMs": 182
+    },
+    {
+      "name": "lesson21:real-request-challenge",
+      "passed": true,
+      "durationMs": 8042,
+      "observedScenario": "download",
+      "realRequests": 2,
+      "challengePassed": true,
+      "elapsedMs": 7317
+    },
+    {
+      "name": "lesson24:companion-cors",
+      "passed": true,
+      "durationMs": 6591,
+      "preflight": [
+        403,
+        204
+      ],
+      "fixedBusinessResponse": 200,
+      "browserEnforcement": "not tested by HTTP client"
+    },
+    {
+      "name": "lesson26:real-event-stream",
+      "passed": true,
+      "durationMs": 2893,
+      "events": 2
+    },
+    {
+      "name": "session:02",
+      "passed": true,
+      "durationMs": 958
+    },
+    {
+      "name": "session:03",
+      "passed": true,
+      "durationMs": 1029
+    },
+    {
+      "name": "session:04",
+      "passed": true,
+      "durationMs": 1112
+    },
+    {
+      "name": "session:01",
+      "passed": true,
+      "durationMs": 1546
+    },
+    {
+      "name": "session:08",
+      "passed": true,
+      "durationMs": 814
+    },
+    {
+      "name": "session:05",
+      "passed": true,
+      "durationMs": 912
+    },
+    {
+      "name": "session:07",
+      "passed": true,
+      "durationMs": 919
+    },
+    {
+      "name": "session:06",
+      "passed": true,
+      "durationMs": 925
+    },
+    {
+      "name": "session:11",
+      "passed": true,
+      "durationMs": 712
+    },
+    {
+      "name": "session:10",
+      "passed": true,
+      "durationMs": 793
+    },
+    {
+      "name": "session:12",
+      "passed": true,
+      "durationMs": 1046
+    },
+    {
+      "name": "session:09",
+      "passed": true,
+      "durationMs": 1094
+    },
+    {
+      "name": "session:14",
+      "passed": true,
+      "durationMs": 937
+    },
+    {
+      "name": "session:15",
+      "passed": true,
+      "durationMs": 1037
+    },
+    {
+      "name": "session:13",
+      "passed": true,
+      "durationMs": 1064
+    },
+    {
+      "name": "session:16",
+      "passed": true,
+      "durationMs": 1132
+    },
+    {
+      "name": "session:19",
+      "passed": true,
+      "durationMs": 1015
+    },
+    {
+      "name": "session:17",
+      "passed": true,
+      "durationMs": 1045
+    },
+    {
+      "name": "session:20",
+      "passed": true,
+      "durationMs": 1110
+    },
+    {
+      "name": "session:18",
+      "passed": true,
+      "durationMs": 1226
+    },
+    {
+      "name": "session:24",
+      "passed": true,
+      "durationMs": 681
+    },
+    {
+      "name": "session:22",
+      "passed": true,
+      "durationMs": 875
+    },
+    {
+      "name": "session:23",
+      "passed": true,
+      "durationMs": 875
+    },
+    {
+      "name": "session:25",
+      "passed": true,
+      "durationMs": 953
+    },
+    {
+      "name": "session:37",
+      "passed": true,
+      "durationMs": 828
+    },
+    {
+      "name": "session:26",
+      "passed": true,
+      "durationMs": 892
+    },
+    {
+      "name": "session:36",
+      "passed": true,
+      "durationMs": 908
+    },
+    {
+      "name": "session:35",
+      "passed": true,
+      "durationMs": 1007
+    },
+    {
+      "name": "session:28",
+      "passed": true,
+      "durationMs": 2822
+    },
+    {
+      "name": "session:38",
+      "passed": true,
+      "durationMs": 2926
+    },
+    {
+      "name": "session:39",
+      "passed": true,
+      "durationMs": 2926
+    },
+    {
+      "name": "session:27",
+      "passed": true,
+      "durationMs": 3043
+    },
+    {
+      "name": "session:29",
+      "passed": true,
+      "durationMs": 1738
+    },
+    {
+      "name": "session:31",
+      "passed": true,
+      "durationMs": 1738
+    },
+    {
+      "name": "session:30",
+      "passed": true,
+      "durationMs": 1857
+    },
+    {
+      "name": "session:32",
+      "passed": true,
+      "durationMs": 2021
+    },
+    {
+      "name": "session:51",
+      "passed": true,
+      "durationMs": 2698
+    },
+    {
+      "name": "session:33",
+      "passed": true,
+      "durationMs": 2698
+    },
+    {
+      "name": "session:34",
+      "passed": true,
+      "durationMs": 2720
+    },
+    {
+      "name": "session:40",
+      "passed": true,
+      "durationMs": 3517
+    },
+    {
+      "name": "session:44",
+      "passed": true,
+      "durationMs": 2930
+    },
+    {
+      "name": "session:41",
+      "passed": true,
+      "durationMs": 2930
+    },
+    {
+      "name": "session:43",
+      "passed": true,
+      "durationMs": 3144
+    },
+    {
+      "name": "session:42",
+      "passed": true,
+      "durationMs": 3263
+    },
+    {
+      "name": "session:50",
+      "passed": true,
+      "durationMs": 1054
+    },
+    {
+      "name": "session:45",
+      "passed": true,
+      "durationMs": 1061
+    },
+    {
+      "name": "session:47",
+      "passed": true,
+      "durationMs": 1146
+    },
+    {
+      "name": "session:46",
+      "passed": true,
+      "durationMs": 1241
+    },
+    {
+      "name": "session:53",
+      "passed": true,
+      "durationMs": 893
+    },
+    {
+      "name": "session:49",
+      "passed": true,
+      "durationMs": 927
+    },
+    {
+      "name": "session:48",
+      "passed": true,
+      "durationMs": 1050
+    },
+    {
+      "name": "session:52",
+      "passed": true,
+      "durationMs": 1098
+    },
+    {
+      "name": "session:T01",
+      "passed": true,
+      "durationMs": 888
+    },
+    {
+      "name": "session:T02",
+      "passed": true,
+      "durationMs": 888
+    },
+    {
+      "name": "session:55",
+      "passed": true,
+      "durationMs": 1684
+    },
+    {
+      "name": "session:54",
+      "passed": true,
+      "durationMs": 2099
+    },
+    {
+      "name": "session:T06",
+      "passed": true,
+      "durationMs": 770
+    },
+    {
+      "name": "session:T04",
+      "passed": true,
+      "durationMs": 862
+    },
+    {
+      "name": "session:T03",
+      "passed": true,
+      "durationMs": 870
+    },
+    {
+      "name": "session:T05",
+      "passed": true,
+      "durationMs": 994
+    },
+    {
+      "name": "session:T07",
+      "passed": true,
+      "durationMs": 698
+    },
+    {
+      "name": "session:T08",
+      "passed": true,
+      "durationMs": 738
+    },
+    {
+      "name": "chapter:elements",
+      "passed": true,
+      "durationMs": 247
+    },
+    {
+      "name": "chapter:console",
+      "passed": true,
+      "durationMs": 191
+    },
+    {
+      "name": "chapter:sources",
+      "passed": true,
+      "durationMs": 254
+    },
+    {
+      "name": "chapter:network",
+      "passed": true,
+      "durationMs": 242
+    },
+    {
+      "name": "chapter:application",
+      "passed": true,
+      "durationMs": 256
+    },
+    {
+      "name": "chapter:performance",
+      "passed": true,
+      "durationMs": 231
+    },
+    {
+      "name": "chapter:memory",
+      "passed": true,
+      "durationMs": 214
+    },
+    {
+      "name": "chapter:lighthouse",
+      "passed": true,
+      "durationMs": 273
+    }
+  ]
+}

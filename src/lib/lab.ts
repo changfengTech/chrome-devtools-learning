@@ -14,7 +14,7 @@ export async function labRequest(path: string, body?: object) {
     method: body ? "POST" : "GET",
     headers: body ? { "Content-Type": "application/json" } : {},
     body: body ? JSON.stringify(body) : undefined,
-    signal: AbortSignal.timeout(5000),
+    signal: AbortSignal.timeout(isHosted ? 30000 : 5000),
   });
   const data = await response.json();
   if (!response.ok) throw new Error(data.error || "实验服务返回错误。");

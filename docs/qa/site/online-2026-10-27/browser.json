@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-27",
+  "kind": "Live public Sites browser smoke and selected native Network checks; not all 63 native lessons re-certified",
+  "current_versions": {
+    "tutorial": 3,
+    "shop": 4,
+    "cors": 3
+  },
+  "initial_checks_versions": {
+    "tutorial": 2,
+    "shop": 2,
+    "cors": 3
+  },
+  "accessibility": {
+    "three_public_homepages": "opened in in-app Chromium",
+    "tutorial_runtime": "Vue mounted and shop health connected",
+    "user_report": "All three Sites are accessible again",
+    "previous_tls_reset_root_cause": "not established; no system VPN, DNS, route or certificate changes made",
+    "support_report_sent": false
+  },
+  "checks": [
+    {
+      "lesson": "05",
+      "guided": "passed",
+      "challenge": "passed",
+      "observed": "ID rule wins over class; computed color rgb(184, 65, 84) changes to rgb(22, 130, 103)",
+      "negative": "Correct diagnosis with wrong evidence was rejected",
+      "cross_window_return": true,
+      "reload_progress_preserved": true,
+      "artifact": "05-challenge.png"
+    },
+    {
+      "lesson": "21",
+      "guided": "both waiting and download passed",
+      "waiting_ms": {
+        "baseline": 1617,
+        "first_fixed_outlier": 3027,
+        "fixed_repeat": 170
+      },
+      "download_ms": {
+        "baseline": 1159,
+        "fixed": 1
+      },
+      "scope": "Real Resource Timing readout and cross-window return; public network variance retained, not treated as a performance guarantee",
+      "artifact": "21-download.png"
+    },
+    {
+      "lesson": "24",
+      "guided": "passed",
+      "browser_preflight_baseline": 403,
+      "browser_failure": "PreflightMissingAllowOriginHeader",
+      "fixed_preflight": 204,
+      "fixed_post": 200,
+      "json_readable": true,
+      "cross_window_return": true,
+      "artifact": "cors-browser.json"
+    },
+    {
+      "lesson": "26",
+      "guided": "SSE passed",
+      "challenge": "WebSocket passed",
+      "sse_messages": [
+        2,
+        3
+      ],
+      "sse_display_before": 0,
+      "sse_display_after": 3,
+      "websocket_messages": [
+        2,
+        3
+      ],
+      "websocket_display_before": "undefined",
+      "websocket_display_after": 3,
+      "cross_window_return": true,
+      "artifacts": [
+        "26-sse.png",
+        "26-websocket.png"
+      ]
+    },
+    {
+      "lesson": "35",
+      "guided": "passed",
+      "profile_before": false,
+      "profile_after": true,
+      "native_cookie_attributes": "Scoped CDP Network.getCookies confirmed owned test Cookie HttpOnly=true, SameSite=Lax, /labs/<session>/account/; Cookie values not saved",
+      "artifact": "35-cookie.json"
+    },
+    {
+      "lesson": "36",
+      "guided": "passed",
+      "baseline": {
+        "local_cart": null,
+        "session_cart": 2
+      },
+      "fixed_and_reloaded": {
+        "local_cart": 2,
+        "session_cart": null
+      },
+      "new_tab": {
+        "rel": "noopener",
+        "local_cart": 2,
+        "session_cart": null
+      },
+      "refresh_probe_link_bug": "Reproduced in shop v3; fixed and browser rechecked in shop v4",
+      "cleanup": "Own session keys cleaned"
+    },
+    {
+      "lesson": "37",
+      "guided": "passed",
+      "baseline": "Current SKU read returned undefined after transaction complete",
+      "fixed": "CUP-42 favorite=true, price=36; still readable after reload",
+      "scope": "Real browser IndexedDB API via exercise UI; IndexedDB raw CDP method unavailable, native Application pane not claimed",
+      "cleanup": "Own database cleaned"
+    },
+    {
+      "lesson": "38",
+      "guided": "passed",
+      "baseline": {
+        "workerVersion": 1,
+        "activeBuild": 1,
+        "waitingBuild": 2
+      },
+      "fixed": {
+        "workerVersion": 2,
+        "activeBuild": 2,
+        "waiting": "none"
+      },
+      "native_network_from_service_worker": true,
+      "artifact": "38-worker.json",
+      "cleanup": "Own registration cleaned"
+    },
+    {
+      "lesson": "39",
+      "guided": "passed",
+      "baseline": {
+        "version": 1,
+        "source": "cache-storage"
+      },
+      "fixed": {
+        "version": 2,
+        "source": "network",
+        "manifest_icon_status": 200
+      },
+      "native_offline": "passed: worker fetch ERR_INTERNET_DISCONNECTED; document fetch 200 from ServiceWorker, version 2 / cache-storage-fallback",
+      "artifact": "39-native-offline.json",
+      "cleanup": "Own registrations and cache cleaned in in-app browser and dedicated Chrome incognito window"
+    }
+  ],
+  "progress": {
+    "guided_lessons": [
+      "05",
+      "21",
+      "24",
+      "26",
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "guided_count": 9,
+    "challenge_lessons": [
+      "05",
+      "26"
+    ],
+    "challenge_count": 2,
+    "read_count": 0,
+    "reload_and_new_course_tab": "preserved",
+    "export": "Actual JSON download, version 1",
+    "invalid_import": "version 99 rejected; all existing records preserved",
+    "valid_import": "Actual exported file reimported successfully, then subsequent checks completed",
+    "record_scope": "Only actual completed QA activities were recorded, no learner state fabricated",
+    "artifact": "progress.png",
+    "summary_artifact": "progress-summary.png"
+  },
+  "fixes": {
+    "tutorial_v3": [
+      "Hosted requests allow 30 seconds, local requests remain 5 seconds; no automatic POST retry",
+      "Hosted preparation errors ask to retry online instead of starting pnpm",
+      "CORS instructions distinguish local 4175 and online independent HTTPS origins"
+    ],
+    "shop_v3": [
+      "Shared CORS instructions and generic teaching-shop wording"
+    ],
+    "shop_v4": [
+      "Storage reload preserves the new-tab verification link without rewriting storage"
+    ]
+  },
+  "error_path_regression": {
+    "method": "Temporarily block real session preparation request using CDP Network.setBlockedURLs",
+    "observed": "Online preparation failed with retry/shop-access guidance; no local-server command shown",
+    "request_blocking_restored": true,
+    "artifact": "online-error.png",
+    "recovery_after_unblock": "Real online session preparation succeeded again; open-lab button returned"
+  },
+  "pending": [
+    "Re-certify deployed Performance, Memory, Lighthouse and remaining native tool workflows with real Chrome evidence",
+    "Remaining lesson/chapter browser workflows, including browser HTTP 304 and the second sessionStorage filtering variant, are not covered by this selected smoke",
+    "Android device, location permission, AI account and disk directory-dependent checks remain conditional"
+  ],
+  "cleanup": {
+    "native_no_throttling_restored": true,
+    "native_original_filter_restored": true,
+    "native_dedicated_incognito_closed": true,
+    "in_app_own_session_cleanup": true,
+    "system_network_settings_changed": false,
+    "unrelated_browser_content_in_public_artifacts": false
+  }
+}

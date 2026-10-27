@@ -1,0 +1,18 @@
+{
+  "baseline": {
+    "workerVersion": 1,
+    "activeBuild": 1,
+    "waitingBuild": 2
+  },
+  "fixed": {
+    "workerVersion": 2,
+    "activeBuild": 2
+  },
+  "responses": [
+    {
+      "endpoint": "/labs/<session>/controlled-version.json",
+      "status": 200,
+      "fromServiceWorker": true
+    }
+  ]
+}

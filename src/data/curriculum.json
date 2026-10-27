@@ -258,7 +258,7 @@
     "title": "浏览器为什么拦截请求",
     "goal": "理解同源、CORS、预检与相关响应头",
     "demo": "改变源、方法和请求头",
-    "lab": "重现本地跨域问题并关联 Issues",
+    "lab": "重现跨源请求问题并关联 Issues",
     "challenge": "区分未发送、预检失败和响应不可读取",
     "status": "ready",
     "minutes": 20

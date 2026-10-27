@@ -1,0 +1,12 @@
+{
+  "scope": "Only the synthetic session Cookie attributes for account/profile; values never persisted",
+  "cookies": [
+    {
+      "name": "lab_<session>",
+      "path": "/labs/<session>/account/",
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ]
+}

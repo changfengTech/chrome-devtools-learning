@@ -1,6 +1,6 @@
 # ChatGPT 站点部署
 
-更新：2026-10-25。公开访问范围由维护者明确选择，持链接者可学习；不需要业务账号或真实支付资料。
+更新：2026-10-27。公开访问范围由维护者明确选择，持链接者可学习；不需要业务账号或真实支付资料。
 
 ## 三个来源
 
@@ -24,15 +24,17 @@
 
 ## 本次验证范围
 
-课程 / 商城版本 2、CORS 同伴版本 3 的原生部署均返回 `succeeded`，公开权限保持。CORS 同伴原本只提供接口，直接访问首页会 404；版本 3 新增用途说明、课程入口及健康链接，限定转发规则保持。
+当前课程版本 3、商城版本 4、CORS 同伴版本 3 原生部署均为 `succeeded`，保留三个原站点及公开权限。[发布记录](qa/site/deployments.json)含精确源码 SHA、版本、部署 ID 与归档哈希。
 
-独立 GitHub-hosted Ubuntu 网络已执行[线上 HTTP 检查](https://github.com/changfengTech/chrome-devtools-learning/actions/runs/40110980968)，**79/79 通过**：三个首页 200、健康状态、真实慢请求故障 / 修复和挑战判定、CORS 预检 403→204 与固定来源业务响应、SSE、62 课普通会话 / 实验文档以及第 21 课真实请求挑战、8 章末会话。见[机器结果](qa/site/http-github-2026-10-25-v2.json)。脚本不提交伪造浏览器检查报告，不写学习记录。
+2026-10-27 用户报告三个站点恢复，本机也已在浏览器打开三站并验证 Vue 页面和商城连接；课程 / 商城版本 3 的[79 项线上 HTTP 检查](qa/site/http-local-2026-10-27-v3.json)全部通过。随后商城版本 4 的存储入口修复在原浏览器会话刷新后定向复验。
 
-本机仍在 TLS 握手阶段连接重置。对照发现 Sites 地址走 `en0`，可访问的文档域名走 `utun0`；同一环境连官方文档示例的 Sites 域名也重置。用户已确认电脑使用公司 VPN，但手机访问也失败。因此问题不能唯一归因于公司 VPN；独立网络成功与用户电脑 / 手机访问失败的差异（手机连接方式未确认），还需要继续定位网络链路或平台公网入口的可达性。公司网络核对所需的精确域名和复测步骤见 [NETWORK-ACCESS](NETWORK-ACCESS.md)。[诊断记录](qa/site/network-2026-10-25.json) 不保留私网地址和凭据。[待提交的平台报告](SITES-SUPPORT-REPORT.md) 汇总了精确站点与复现证据。没有修改系统代理、DNS、路由或证书检查。
+本轮[真实浏览器验收](qa/site/online-2026-10-27/browser.json)覆盖 05、21、24、26、35–39 九节引导实战，05 与 26 两个挑战、错误证据拒绝、真实跨窗口结果回传和刷新保留。CORS 的预检 403→204、业务 POST 200 及浏览器读取已取证；SSE / WebSocket 实际消息更新页面；Cookie、Local Storage、IndexedDB 与 worker 升级分别观察。原生 Chrome 无痕窗口的 Network Offline 证实 worker 请求真正 `ERR_INTERNET_DISCONNECTED` 后，页面仍从 ServiceWorker 取得版本 2 的 `cache-storage-fallback`；已恢复 No throttling 和原筛选，清理并关闭专用窗口。
 
-2026-10-25 用户自行登录后，已逐一检查三个原站点的管理设置：均对所有人可见，域名后缀固定；未发现默认域名 TLS / 入口修复控件。登录后三站 HTTPS 重试仍均为 `ECONNRESET`。[本轮证据](qa/site/http-local-after-login-2026-10-25.json)与[管理页截图](qa/site/manager-url-settings.png)已保存，支持报告尚未外发。
+修复了在线会话准备的 5 秒超时与本地启动命令误导：在线允许 30 秒，失败提示在线重试，不自动重放 POST；本地仍为 5 秒。共享 CORS 文案区分本地端口与在线 HTTPS 来源；第 36 课刷新后继续显示新标签验证入口，不重写存储。构建 / 类型检查及实际请求阻断失败提示、刷新回归均通过。
 
-**浏览器完整实战仍待验**：HTTP 成功不能证明 Vue 页面已正确挂载、浏览器实际执行了 CORS、跨窗口回传、Cookie / IndexedDB / Service Worker 或 DevTools 原生操作。网络恢复后必须完成浏览器流程再关闭这些项目。完整范围见 [QA-SITES](QA-SITES.md)。
+**高级原生流程仍待复验**：本轮不是 63 课与 8 个章末的完整浏览器重测，也未把协议测试或历史本地原生证据算成线上 Performance / Memory / Lighthouse 通过。下一阶段及额外条件见 [QA-SITES](QA-SITES.md)。
+
+2026-10-25 的 TLS 重置、分流对照与管理页检查保留在[历史诊断](qa/site/network-2026-10-25.json)和[历史支持报告](SITES-SUPPORT-REPORT.md)。截至本次恢复尚未确定原因，没有调整系统代理、DNS、路由或证书检查；报告未向外部客服提交。
 
 手动运行 HTTP 检查：`node scripts/qa-online.mjs <输出JSON路径>`。这会在已发布商城创建合成的短期实验会话。独立网络的手动工作流为 `.github/workflows/online-diagnostic.yml`，不设定时任务，不读取账户秘密，不自动发布站点。
 

@@ -145,7 +145,10 @@ async function prepare(mode: "practice" | "challenge") {
     feedback.value =
       "实验已准备。打开独立商城，先运行故障；保留教程窗口用于接收结果。";
   } catch (error) {
-    feedback.value = `无法准备实验：${error instanceof Error ? error.message : "连接失败"}。请确认已运行 pnpm dev 或 pnpm preview:all。`;
+    const reason = error instanceof Error ? error.message : "连接失败";
+    feedback.value = isHosted
+      ? `在线实验准备失败：${reason}。请稍后重新准备；若持续失败，请检查商城站点是否能打开。`
+      : `无法准备实验：${reason}。请确认已运行 pnpm dev 或 pnpm preview:all。`;
   } finally {
     busy.value = false;
   }

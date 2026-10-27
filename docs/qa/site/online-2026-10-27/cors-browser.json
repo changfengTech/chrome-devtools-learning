@@ -1,0 +1,47 @@
+{
+  "scope": "Real browser requests observed with CDP through Browser Use; no fabricated reports or console requests",
+  "baseline": [
+    {
+      "event": "Network.requestWillBeSent",
+      "httpMethod": "POST",
+      "endpoint": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site/labs/<session>/remote"
+    },
+    {
+      "event": "Network.requestWillBeSent",
+      "httpMethod": "OPTIONS",
+      "endpoint": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site/labs/<session>/remote"
+    },
+    {
+      "event": "Network.responseReceived",
+      "status": 403,
+      "endpoint": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site/labs/<session>/remote"
+    },
+    {
+      "event": "Network.loadingFailed",
+      "corsError": "PreflightMissingAllowOriginHeader",
+      "error": "net::ERR_FAILED"
+    }
+  ],
+  "fixed": [
+    {
+      "event": "Network.requestWillBeSent",
+      "httpMethod": "POST",
+      "endpoint": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site/labs/<session>/remote"
+    },
+    {
+      "event": "Network.requestWillBeSent",
+      "httpMethod": "OPTIONS",
+      "endpoint": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site/labs/<session>/remote"
+    },
+    {
+      "event": "Network.responseReceived",
+      "status": 204,
+      "endpoint": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site/labs/<session>/remote"
+    },
+    {
+      "event": "Network.responseReceived",
+      "status": 200,
+      "endpoint": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site/labs/<session>/remote"
+    }
+  ]
+}

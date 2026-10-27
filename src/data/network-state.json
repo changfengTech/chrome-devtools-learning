@@ -331,7 +331,7 @@
     "id": "24",
     "kind": "24",
     "hook": "请求根本没发，还是响应读不到？",
-    "symptom": "跨到另一个本机端口后，fetch 出现 TypeError。",
+    "symptom": "请求独立来源的实验同伴时，fetch 出现 TypeError。",
     "principle": "CORS 是浏览器对跨源响应访问的限制；跨源不等于跨站，预检也不是业务请求。",
     "concepts": [
       {
@@ -356,7 +356,7 @@
       "从本课准备并打开独立商城；先打开 DevTools，再运行故障。",
       "Network 同时看 OPTIONS 和 remote 请求，不只看 Console 的一句报错。",
       "比较 Access-Control-Request-Headers 与 Allow-Headers，以及实际响应 Allow-Origin。",
-      "本机 4175 是独立跨源服务；对照后恢复可读取 JSON，记录预检与实际请求分别发生了什么。",
+      "实验同伴使用独立来源（本地版为端口 4175，在线版为独立 HTTPS 站点）；对照后恢复可读取 JSON，分别记录预检与实际请求。",
       "先保存证据，再应用针对性的对照；错误对照不会通过页面检查。",
       "回到教程选择真实证据，完成独立挑战后写下排查与恢复步骤。"
     ],

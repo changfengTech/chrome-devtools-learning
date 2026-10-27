@@ -773,6 +773,8 @@ try {
       if (meta.id === "36") {
         rereadStorage();
         $("reread").hidden = false;
+        $("probe-tab").hidden = false;
+        $("probe-tab").href = location.pathname + "?probe=1";
       }
       if (meta.id === "37") {
         await rereadDatabase();

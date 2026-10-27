@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-27",
+  "roles": {
+    "tutorial": {
+      "project_id": "appgprj_6adcca5cf76c8191af7d5b385eade324",
+      "commit_sha": "83eda1eda7889089ac941c5777d7b4c93a2e4b40",
+      "version_id": "appgprj_6adcca5cf76c8191af7d5b385eade324~appgver_7734e571d9588191a7365fb590ef2f88",
+      "version_number": 3,
+      "archive_hash": "sha256:4a101989c076349042fea5351aba8d62c50d76aee10eae11e8ccf4c0aaf07938",
+      "deployment_id": "appgdep_6ae08f4417d08191957bf89bded1f772",
+      "status": "succeeded",
+      "url": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-27T11:47:35.481176+00:00"
+    },
+    "shop": {
+      "project_id": "appgprj_6adccda9d5508191836e3b4ec32da060",
+      "commit_sha": "8ba3b5156daa625f5c65527ebc5c01db39c43b43",
+      "version_id": "appgprj_6adccda9d5508191836e3b4ec32da060~appgver_275ce8ad666481919ae0d461e9701db7",
+      "version_number": 3,
+      "archive_hash": "sha256:31ec280c42eea11ac0ccf7c21532a5238a296e35698ba5778f6ce9e24722fcc3",
+      "deployment_id": "appgdep_6ae08f61acdc8191888e648114a62b42",
+      "status": "succeeded",
+      "url": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-27T11:48:06.989683+00:00"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-25",
+  "date": "2026-10-27",
   "provider": "ChatGPT Sites",
   "audience": "public, explicitly requested by project owner",
   "current": [
@@ -8,28 +8,28 @@
       "origin": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
       "project_id": "appgprj_6adcca5cf76c8191af7d5b385eade324",
       "access_mode": "public",
-      "commit_sha": "fcdacac1b80e5c3fd3ac3b584d3c0350c98f4e14",
-      "version_id": "appgprj_6adcca5cf76c8191af7d5b385eade324~appgver_6f9da3edfa148191993a0fe3b97a5df8",
-      "version_number": 2,
-      "archive_hash": "sha256:e25a5f3d484ca4410d4fcee0804c1d4068db6327c140abdf162e1fa85f34b553",
-      "deployment_id": "appgdep_6adcd458e04c819185eaa24cda7a6b80",
+      "commit_sha": "83eda1eda7889089ac941c5777d7b4c93a2e4b40",
+      "version_id": "appgprj_6adcca5cf76c8191af7d5b385eade324~appgver_7734e571d9588191a7365fb590ef2f88",
+      "version_number": 3,
+      "archive_hash": "sha256:4a101989c076349042fea5351aba8d62c50d76aee10eae11e8ccf4c0aaf07938",
+      "deployment_id": "appgdep_6ae08f4417d08191957bf89bded1f772",
       "status": "succeeded",
       "url": "https://devtools-learning-changfeng.cloudysky2.chatgpt.site",
-      "published_at": "2026-10-24T15:53:13.441433+00:00"
+      "published_at": "2026-10-27T11:47:35.481176+00:00"
     },
     {
       "role": "shop",
       "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
       "project_id": "appgprj_6adccda9d5508191836e3b4ec32da060",
       "access_mode": "public",
-      "commit_sha": "69c0c3cfd53a18b44b6a815d6bc2dfc04264f08f",
-      "version_id": "appgprj_6adccda9d5508191836e3b4ec32da060~appgver_b611eb51e8908191bcc23fe325e78d10",
-      "version_number": 2,
-      "archive_hash": "sha256:4936a8d5c6dbd98394baea6f9621a4a97185b8f4756697d9df69fba50900ba42",
-      "deployment_id": "appgdep_6adcd494aa148191860ca6224b9d02d2",
+      "commit_sha": "1f9a5f641846ed8841792aa2e3eba3e51989741c",
+      "version_id": "appgprj_6adccda9d5508191836e3b4ec32da060~appgver_fc5c4688d7048191b82b6eb881fb0756",
+      "version_number": 4,
+      "archive_hash": "sha256:934ad23d7e1bd8b921ecf4d88040114fb05cfc4de0282ca282f33478b33f4418",
+      "deployment_id": "appgdep_6ae09130ebb08191bc57f6416ac09884",
       "status": "succeeded",
       "url": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
-      "published_at": "2026-10-24T15:54:16.549869+00:00"
+      "published_at": "2026-10-27T11:55:48.763152+00:00"
     },
     {
       "role": "cors",
@@ -90,7 +90,7 @@
       "published_at": "2026-10-24T15:45:19.541331+00:00"
     }
   ],
-  "verification": "Independent GitHub-hosted network: 79 live HTTP checks passed, all three root pages return 200 and actual lesson 21 request challenge passes. User desktop and mobile access remain unresolved; browser UI and DevTools end-to-end not verified.",
+  "verification": "2026-10-27 local network: all 3 Sites open in browser; 79/79 live HTTP checks on tutorial/shop v3; selected browser smoke covers 9 guided lessons and 2 challenges. Shop v4 storage-reload fix directly rechecked; native Chrome Offline worker cache fallback passed. Advanced native workflows and remaining browser lessons are pending.",
   "previous": [
     {
       "role": "tutorial",
@@ -133,6 +133,20 @@
       "status": "succeeded",
       "url": "https://devtools-cors-changfeng.cloudysky2.chatgpt.site",
       "published_at": "2026-10-24T15:55:09.374669+00:00"
+    },
+    {
+      "project_id": "appgprj_6adccda9d5508191836e3b4ec32da060",
+      "commit_sha": "8ba3b5156daa625f5c65527ebc5c01db39c43b43",
+      "version_id": "appgprj_6adccda9d5508191836e3b4ec32da060~appgver_275ce8ad666481919ae0d461e9701db7",
+      "version_number": 3,
+      "archive_hash": "sha256:31ec280c42eea11ac0ccf7c21532a5238a296e35698ba5778f6ce9e24722fcc3",
+      "deployment_id": "appgdep_6ae08f61acdc8191888e648114a62b42",
+      "status": "succeeded",
+      "url": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "published_at": "2026-10-27T11:48:06.989683+00:00",
+      "role": "shop",
+      "origin": "https://devtools-shop-changfeng.cloudysky2.chatgpt.site",
+      "access_mode": "public"
     }
   ]
 }

@@ -4,7 +4,7 @@
 
 ## ChatGPT 站点部署
 
-新增[公开在线完整版](https://devtools-learning-changfeng.cloudysky2.chatgpt.site)：课程使用独立 `site` 构建，商城后端迁移到 Workers / D1，第三个 Site 提供真实跨域实验入口。全部逐课与章末会话保留真实接口、页面报告和答案检查；学习进度与笔记仍保存在访问来源的浏览器中。在线迁移的构建、回归和发布证据独立记录在[部署说明](DEPLOYMENT.md)，不将本地原生验收自动算作线上重新验收。三个原生部署已成功并公开；CORS 首页 404 已修复。独立 GitHub 网络 79 项真实线上 HTTP 检查通过，本机仍在直连路径 TLS 握手时被重置，手机访问也失败，具体网络链路或平台入口原因未确认。浏览器完整链路和原生操作保持待验，不用 HTTP 结果代替。用户自行登录后已检查三站设置：均公开，URL 后缀固定，未发现默认域名 TLS / 入口修复控件；登录后三站仍连接重置，证据与待提交的平台报告已更新。
+新增[公开在线完整版](https://devtools-learning-changfeng.cloudysky2.chatgpt.site)：课程使用 `site` 构建，商城运行于 Workers / D1，第三个 Site 提供真实跨源端点。2026-10-27 三站恢复并在本机浏览器验证；当前课程 v3、商城 v4、同伴 v3，均公开。79 项线上 HTTP 检查、9 节引导实战、2 个挑战与真实回传通过；CORS、SSE / WebSocket、Cookie、存储、worker 升级和原生 Offline 回退已有线上证据。已修复在线超时 / 提示、跨源说明和第 36 课刷新入口。Performance / Memory / Lighthouse 等其余原生流程与剩余课章继续单独复验，具体边界见[线上验收](QA-SITES.md)。10-25 连接重置原因未确定，支持报告未外发；历史记录保留。
 
 ## 本轮交付
 
